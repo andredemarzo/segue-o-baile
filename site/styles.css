@@ -413,6 +413,76 @@ h2 {
   white-space: nowrap;
 }
 
+/* "Quem leva?" — probabilidade pré-jogo (índice Elo) */
+.predict {
+  margin: 0 0 18px;
+}
+
+.predict .eyebrow {
+  margin: 0 0 8px;
+}
+
+.predict-bar {
+  display: flex;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--glass-3);
+  border: 1px solid var(--hair);
+}
+
+.predict-bar .seg {
+  height: 100%;
+  min-width: 0;
+  transition: width 0.4s ease;
+}
+
+.predict-bar .seg.home { background: var(--green-deep); }
+.predict-bar .seg.draw { background: rgba(20, 42, 28, 0.22); }
+.predict-bar .seg.away { background: var(--lime); }
+
+.predict-legend {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 6px 12px;
+  align-items: start;
+  margin-top: 10px;
+  font-size: 0.76rem;
+  color: var(--ink-1);
+}
+
+.predict-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.predict-legend span:nth-child(2) { justify-self: center; }
+.predict-legend span:nth-child(3) { justify-self: end; text-align: right; }
+
+.predict-legend b {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.predict-legend .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.dot.home { background: var(--green-deep); }
+.dot.draw { background: rgba(20, 42, 28, 0.30); }
+.dot.away { background: var(--lime); }
+
+.predict-note {
+  margin: 8px 0 0;
+  font-size: 0.68rem;
+  color: var(--ink-2);
+}
+
 /* Meta (cidade / horários) */
 .match-meta {
   display: grid;

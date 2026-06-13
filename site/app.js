@@ -14,6 +14,7 @@ const el = {
   nextTitle: document.querySelector("#next-title"),
   matchState: document.querySelector("#match-state"),
   scoreline: document.querySelector("#scoreline"),
+  predict: document.querySelector("#predict"),
   city: document.querySelector("#city"),
   timeBr: document.querySelector("#time-br"),
   timePt: document.querySelector("#time-pt"),
@@ -707,6 +708,32 @@ function compactBroadcastSummary(match) {
 let renderedMatchId = null;
 let renderedPhase = null;
 
+// "Quem leva?" — probabilidade pré-jogo (índice Elo), só na fase de pré-jogo.
+function renderPredict(match, phase) {
+  if (!el.predict) return;
+  const p = match.prob;
+  if (phase !== "upcoming" || !p) {
+    el.predict.hidden = true;
+    el.predict.innerHTML = "";
+    return;
+  }
+  el.predict.hidden = false;
+  el.predict.innerHTML = `
+    <p class="eyebrow">Quem leva?</p>
+    <div class="predict-bar" role="img" aria-label="${match.home} ${p.home}%, empate ${p.draw}%, ${match.away} ${p.away}%">
+      <span class="seg home" style="width:${p.home}%"></span>
+      <span class="seg draw" style="width:${p.draw}%"></span>
+      <span class="seg away" style="width:${p.away}%"></span>
+    </div>
+    <div class="predict-legend">
+      <span><i class="dot home"></i>${match.home} <b>${p.home}%</b></span>
+      <span><i class="dot draw"></i>Empate <b>${p.draw}%</b></span>
+      <span><i class="dot away"></i>${match.away} <b>${p.away}%</b></span>
+    </div>
+    <p class="predict-note">estimativa pelo índice Elo (força das seleções) · não é aposta</p>
+  `;
+}
+
 function renderNext() {
   const now = new Date();
   const match = getNextMatch(now);
@@ -724,6 +751,7 @@ function renderNext() {
     el.timePt.textContent = formatTime(start, PT_TZ, "pt-PT");
     if (!selectedMatchId) renderBroadcasts(match);
     renderLiveStreams(match, phase === "live");
+    renderPredict(match, phase);
     renderedMatchId = match.id;
     renderedPhase = phase;
   }

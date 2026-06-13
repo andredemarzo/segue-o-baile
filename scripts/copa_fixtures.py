@@ -272,6 +272,83 @@ def should_run_now():
     return False
 
 
+# ---------------------------------------------------------------------------
+# "Quem leva?" — probabilidade pré-jogo pelo índice Elo (eloratings.net).
+# Transparente: força das seleções (rating Elo) -> vitória/empate/vitória.
+# ---------------------------------------------------------------------------
+ELO_TSV = "https://www.eloratings.net/World.tsv"
+
+# Nossos 48 times (pt-BR) -> código de 2 letras do eloratings (validado por nome).
+ELO_CODE = {
+    "Alemanha": "DE", "Argentina": "AR", "Argélia": "DZ", "Arábia Saudita": "SA",
+    "Austrália": "AU", "Brasil": "BR", "Bélgica": "BE", "Bósnia e Herzegovina": "BA",
+    "Cabo Verde": "CV", "Canadá": "CA", "Catar": "QA", "Colômbia": "CO",
+    "Coreia do Sul": "KR", "Costa do Marfim": "CI", "Croácia": "HR", "Curaçao": "CW",
+    "Egito": "EG", "Equador": "EC", "Escócia": "SQ", "Espanha": "ES",
+    "Estados Unidos": "US", "França": "FR", "Gana": "GH", "Haiti": "HT",
+    "Inglaterra": "EN", "Iraque": "IQ", "Irã": "IR", "Japão": "JP", "Jordânia": "JO",
+    "Marrocos": "MA", "México": "MX", "Noruega": "NO", "Nova Zelândia": "NZ",
+    "Panamá": "PA", "Paraguai": "PY", "Países Baixos": "NL", "Portugal": "PT",
+    "RD Congo": "CD", "República Tcheca": "CZ", "Senegal": "SN", "Suécia": "SE",
+    "Suíça": "CH", "Tunísia": "TN", "Turquia": "TR", "Uruguai": "UY",
+    "Uzbequistão": "UZ", "África do Sul": "ZA", "Áustria": "AT",
+}
+
+
+def fetch_elo():
+    """{code: rating} a partir do World.tsv (col 3 = código, col 4 = Elo atual)."""
+    req = urllib.request.Request(ELO_TSV, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=20) as response:
+        raw = response.read().decode()
+    elo = {}
+    for line in raw.splitlines():
+        cols = line.split("\t")
+        if len(cols) > 3 and cols[2] and cols[3].lstrip("-−").isdigit():
+            elo[cols[2]] = int(cols[3])
+    return elo
+
+
+def win_probabilities(elo_home, elo_away):
+    """Elo -> (casa, empate, fora) em % inteiras somando 100. Mando neutro (Copa).
+    We = 1/(1+10^(-Δ/400)); empate = 0.30·(1-|2We-1|) (máx em jogo equilibrado)."""
+    we = 1.0 / (1.0 + 10 ** (-(elo_home - elo_away) / 400.0))
+    p_draw = 0.30 * (1 - abs(2 * we - 1))
+    p_home = max(0.0, we - p_draw / 2)
+    p_away = max(0.0, (1 - we) - p_draw / 2)
+    total = p_home + p_draw + p_away
+    home = round(p_home / total * 100)
+    draw = round(p_draw / total * 100)
+    away = max(0, 100 - home - draw)
+    return {"home": home, "draw": draw, "away": away}
+
+
+def enrich_probabilities(matches, prev_by_id):
+    """Adiciona match['prob'] aos jogos FUTUROS (status 1) com os dois times definidos.
+    Se o Elo não carregar agora, preserva a prob da versão anterior."""
+    upcoming = [m for m in matches
+                if m.get("status") == 1 and m["home"] in ELO_CODE and m["away"] in ELO_CODE]
+    if not upcoming:
+        return 0
+    try:
+        elo = fetch_elo()
+    except Exception as exc:  # eloratings fora do ar — não perde a prob anterior
+        for m in upcoming:
+            prev = prev_by_id.get(m["id"]) or {}
+            if prev.get("prob"):
+                m["prob"] = prev["prob"]
+        print(f"  aviso: Elo indisponível ({exc}); prob preservada")
+        return 0
+    done = 0
+    for m in upcoming:
+        home_elo = elo.get(ELO_CODE[m["home"]])
+        away_elo = elo.get(ELO_CODE[m["away"]])
+        if home_elo is None or away_elo is None:
+            continue
+        m["prob"] = win_probabilities(home_elo, away_elo)
+        done += 1
+    return done
+
+
 def main():
     # COPA_FORCE=1 ignora o gate de janela (útil para testar o deploy na nuvem).
     if os.environ.get("COPA_FORCE") != "1" and not should_run_now():
@@ -292,6 +369,7 @@ def main():
     prev_by_id = {m["id"]: m for m in previous}
 
     fetched = enrich_scorers(matches, stage_by_id, prev_by_id)
+    probs = enrich_probabilities(matches, prev_by_id)
 
     errors = validate(matches)
     if errors:
