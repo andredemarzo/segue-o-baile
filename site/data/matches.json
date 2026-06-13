@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-13T18:57:00+00:00",
+  "updatedAt": "2026-06-13T20:12:15+00:00",
   "matches": [
     {
       "id": 1,
@@ -150,7 +150,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Foxborough",
-      "venue": "Gillette Stadium"
+      "venue": "Gillette Stadium",
+      "prob": {
+        "home": 14,
+        "draw": 12,
+        "away": 74
+      }
     },
     {
       "id": 6,
@@ -167,7 +172,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Vancouver",
-      "venue": "BC Place"
+      "venue": "BC Place",
+      "prob": {
+        "home": 22,
+        "draw": 19,
+        "away": 59
+      }
     },
     {
       "id": 7,
@@ -184,7 +194,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "East Rutherford",
-      "venue": "MetLife Stadium"
+      "venue": "MetLife Stadium",
+      "prob": {
+        "home": 64,
+        "draw": 17,
+        "away": 19
+      }
     },
     {
       "id": 8,
@@ -197,9 +212,9 @@
       "offset": -7,
       "home": "Catar",
       "away": "Suíça",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 3,
+      "homeScore": 0,
+      "awayScore": 1,
       "city": "Santa Clara",
       "venue": "Levi's Stadium"
     },
@@ -218,7 +233,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Filadélfia",
-      "venue": "Lincoln Financial Field"
+      "venue": "Lincoln Financial Field",
+      "prob": {
+        "home": 14,
+        "draw": 12,
+        "away": 74
+      }
     },
     {
       "id": 10,
@@ -235,7 +255,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Houston",
-      "venue": "NRG Stadium"
+      "venue": "NRG Stadium",
+      "prob": {
+        "home": 93,
+        "draw": 3,
+        "away": 4
+      }
     },
     {
       "id": 11,
@@ -252,7 +277,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Arlington",
-      "venue": "AT&T Stadium"
+      "venue": "AT&T Stadium",
+      "prob": {
+        "home": 43,
+        "draw": 26,
+        "away": 31
+      }
     },
     {
       "id": 12,
@@ -269,7 +299,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Guadalupe",
-      "venue": "Estadio BBVA"
+      "venue": "Estadio BBVA",
+      "prob": {
+        "home": 50,
+        "draw": 23,
+        "away": 27
+      }
     },
     {
       "id": 13,
@@ -286,7 +321,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Miami Gardens",
-      "venue": "Hard Rock Stadium"
+      "venue": "Hard Rock Stadium",
+      "prob": {
+        "home": 10,
+        "draw": 8,
+        "away": 82
+      }
     },
     {
       "id": 14,
@@ -303,7 +343,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Atlanta",
-      "venue": "Mercedes-Benz Stadium"
+      "venue": "Mercedes-Benz Stadium",
+      "prob": {
+        "home": 96,
+        "draw": 2,
+        "away": 2
+      }
     },
     {
       "id": 15,
@@ -320,7 +365,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Inglewood",
-      "venue": "SoFi Stadium"
+      "venue": "SoFi Stadium",
+      "prob": {
+        "home": 70,
+        "draw": 14,
+        "away": 16
+      }
     },
     {
       "id": 16,
@@ -337,7 +387,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Seattle",
-      "venue": "Lumen Field"
+      "venue": "Lumen Field",
+      "prob": {
+        "home": 68,
+        "draw": 15,
+        "away": 17
+      }
     },
     {
       "id": 17,
@@ -354,7 +409,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "East Rutherford",
-      "venue": "MetLife Stadium"
+      "venue": "MetLife Stadium",
+      "prob": {
+        "home": 69,
+        "draw": 14,
+        "away": 17
+      }
     },
     {
       "id": 18,
@@ -371,7 +431,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Foxborough",
-      "venue": "Gillette Stadium"
+      "venue": "Gillette Stadium",
+      "prob": {
+        "home": 10,
+        "draw": 9,
+        "away": 81
+      }
     },
     {
       "id": 19,
@@ -388,7 +453,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Kansas City",
-      "venue": "Arrowhead Stadium"
+      "venue": "Arrowhead Stadium",
+      "prob": {
+        "home": 84,
+        "draw": 7,
+        "away": 9
+      }
     },
     {
       "id": 20,
@@ -405,7 +475,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Santa Clara",
-      "venue": "Levi's Stadium"
+      "venue": "Levi's Stadium",
+      "prob": {
+        "home": 61,
+        "draw": 18,
+        "away": 21
+      }
     },
     {
       "id": 21,
@@ -422,7 +497,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Toronto",
-      "venue": "BMO Field"
+      "venue": "BMO Field",
+      "prob": {
+        "home": 15,
+        "draw": 13,
+        "away": 72
+      }
     },
     {
       "id": 22,
@@ -439,7 +519,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Arlington",
-      "venue": "AT&T Stadium"
+      "venue": "AT&T Stadium",
+      "prob": {
+        "home": 55,
+        "draw": 21,
+        "away": 24
+      }
     },
     {
       "id": 23,
@@ -456,7 +541,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Houston",
-      "venue": "NRG Stadium"
+      "venue": "NRG Stadium",
+      "prob": {
+        "home": 84,
+        "draw": 8,
+        "away": 8
+      }
     },
     {
       "id": 24,
@@ -473,7 +563,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Cidade do México",
-      "venue": "Estadio Azteca"
+      "venue": "Estadio Azteca",
+      "prob": {
+        "home": 12,
+        "draw": 11,
+        "away": 77
+      }
     },
     {
       "id": 25,
@@ -490,7 +585,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Atlanta",
-      "venue": "Mercedes-Benz Stadium"
+      "venue": "Mercedes-Benz Stadium",
+      "prob": {
+        "home": 69,
+        "draw": 14,
+        "away": 17
+      }
     },
     {
       "id": 26,
@@ -507,7 +607,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Inglewood",
-      "venue": "SoFi Stadium"
+      "venue": "SoFi Stadium",
+      "prob": {
+        "home": 78,
+        "draw": 10,
+        "away": 12
+      }
     },
     {
       "id": 27,
@@ -524,7 +629,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Vancouver",
-      "venue": "BC Place"
+      "venue": "BC Place",
+      "prob": {
+        "home": 84,
+        "draw": 7,
+        "away": 9
+      }
     },
     {
       "id": 28,
@@ -541,7 +651,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Zapopan",
-      "venue": "Estadio Akron"
+      "venue": "Estadio Akron",
+      "prob": {
+        "home": 52,
+        "draw": 22,
+        "away": 26
+      }
     },
     {
       "id": 29,
@@ -558,7 +673,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Filadélfia",
-      "venue": "Lincoln Financial Field"
+      "venue": "Lincoln Financial Field",
+      "prob": {
+        "home": 91,
+        "draw": 4,
+        "away": 5
+      }
     },
     {
       "id": 30,
@@ -575,7 +695,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Foxborough",
-      "venue": "Gillette Stadium"
+      "venue": "Gillette Stadium",
+      "prob": {
+        "home": 30,
+        "draw": 26,
+        "away": 44
+      }
     },
     {
       "id": 31,
@@ -592,7 +717,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Santa Clara",
-      "venue": "Levi's Stadium"
+      "venue": "Levi's Stadium",
+      "prob": {
+        "home": 58,
+        "draw": 19,
+        "away": 23
+      }
     },
     {
       "id": 32,
@@ -609,7 +739,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Seattle",
-      "venue": "Lumen Field"
+      "venue": "Lumen Field",
+      "prob": {
+        "home": 36,
+        "draw": 30,
+        "away": 34
+      }
     },
     {
       "id": 33,
@@ -626,7 +761,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Toronto",
-      "venue": "BMO Field"
+      "venue": "BMO Field",
+      "prob": {
+        "home": 74,
+        "draw": 12,
+        "away": 14
+      }
     },
     {
       "id": 34,
@@ -643,7 +783,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Kansas City",
-      "venue": "Arrowhead Stadium"
+      "venue": "Arrowhead Stadium",
+      "prob": {
+        "home": 93,
+        "draw": 3,
+        "away": 4
+      }
     },
     {
       "id": 35,
@@ -660,7 +805,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Houston",
-      "venue": "NRG Stadium"
+      "venue": "NRG Stadium",
+      "prob": {
+        "home": 73,
+        "draw": 12,
+        "away": 15
+      }
     },
     {
       "id": 36,
@@ -677,7 +827,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Guadalupe",
-      "venue": "Estadio BBVA"
+      "venue": "Estadio BBVA",
+      "prob": {
+        "home": 12,
+        "draw": 10,
+        "away": 78
+      }
     },
     {
       "id": 37,
@@ -694,7 +849,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Miami Gardens",
-      "venue": "Hard Rock Stadium"
+      "venue": "Hard Rock Stadium",
+      "prob": {
+        "home": 82,
+        "draw": 8,
+        "away": 10
+      }
     },
     {
       "id": 38,
@@ -711,7 +871,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Atlanta",
-      "venue": "Mercedes-Benz Stadium"
+      "venue": "Mercedes-Benz Stadium",
+      "prob": {
+        "home": 96,
+        "draw": 2,
+        "away": 2
+      }
     },
     {
       "id": 39,
@@ -728,7 +893,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Inglewood",
-      "venue": "SoFi Stadium"
+      "venue": "SoFi Stadium",
+      "prob": {
+        "home": 57,
+        "draw": 20,
+        "away": 23
+      }
     },
     {
       "id": 40,
@@ -745,7 +915,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Vancouver",
-      "venue": "BC Place"
+      "venue": "BC Place",
+      "prob": {
+        "home": 22,
+        "draw": 19,
+        "away": 59
+      }
     },
     {
       "id": 41,
@@ -762,7 +937,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "East Rutherford",
-      "venue": "MetLife Stadium"
+      "venue": "MetLife Stadium",
+      "prob": {
+        "home": 45,
+        "draw": 25,
+        "away": 30
+      }
     },
     {
       "id": 42,
@@ -779,7 +959,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Filadélfia",
-      "venue": "Lincoln Financial Field"
+      "venue": "Lincoln Financial Field",
+      "prob": {
+        "home": 91,
+        "draw": 4,
+        "away": 5
+      }
     },
     {
       "id": 43,
@@ -796,7 +981,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Arlington",
-      "venue": "AT&T Stadium"
+      "venue": "AT&T Stadium",
+      "prob": {
+        "home": 79,
+        "draw": 10,
+        "away": 11
+      }
     },
     {
       "id": 44,
@@ -813,7 +1003,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Santa Clara",
-      "venue": "Levi's Stadium"
+      "venue": "Levi's Stadium",
+      "prob": {
+        "home": 26,
+        "draw": 22,
+        "away": 52
+      }
     },
     {
       "id": 45,
@@ -830,7 +1025,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Foxborough",
-      "venue": "Gillette Stadium"
+      "venue": "Gillette Stadium",
+      "prob": {
+        "home": 94,
+        "draw": 3,
+        "away": 3
+      }
     },
     {
       "id": 46,
@@ -847,7 +1047,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Toronto",
-      "venue": "BMO Field"
+      "venue": "BMO Field",
+      "prob": {
+        "home": 18,
+        "draw": 16,
+        "away": 66
+      }
     },
     {
       "id": 47,
@@ -864,7 +1069,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Houston",
-      "venue": "NRG Stadium"
+      "venue": "NRG Stadium",
+      "prob": {
+        "home": 78,
+        "draw": 10,
+        "away": 12
+      }
     },
     {
       "id": 48,
@@ -881,7 +1091,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Zapopan",
-      "venue": "Estadio Akron"
+      "venue": "Estadio Akron",
+      "prob": {
+        "home": 83,
+        "draw": 8,
+        "away": 9
+      }
     },
     {
       "id": 49,
@@ -898,7 +1113,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Miami Gardens",
-      "venue": "Hard Rock Stadium"
+      "venue": "Hard Rock Stadium",
+      "prob": {
+        "home": 16,
+        "draw": 14,
+        "away": 70
+      }
     },
     {
       "id": 50,
@@ -915,7 +1135,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Atlanta",
-      "venue": "Mercedes-Benz Stadium"
+      "venue": "Mercedes-Benz Stadium",
+      "prob": {
+        "home": 78,
+        "draw": 10,
+        "away": 12
+      }
     },
     {
       "id": 51,
@@ -932,7 +1157,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Vancouver",
-      "venue": "BC Place"
+      "venue": "BC Place",
+      "prob": {
+        "home": 57,
+        "draw": 20,
+        "away": 23
+      }
     },
     {
       "id": 52,
@@ -949,7 +1179,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Seattle",
-      "venue": "Lumen Field"
+      "venue": "Lumen Field",
+      "prob": {
+        "home": 68,
+        "draw": 15,
+        "away": 17
+      }
     },
     {
       "id": 53,
@@ -966,7 +1201,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Cidade do México",
-      "venue": "Estadio Azteca"
+      "venue": "Estadio Azteca",
+      "prob": {
+        "home": 19,
+        "draw": 16,
+        "away": 65
+      }
     },
     {
       "id": 54,
@@ -983,7 +1223,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Guadalupe",
-      "venue": "Estadio BBVA"
+      "venue": "Estadio BBVA",
+      "prob": {
+        "home": 12,
+        "draw": 10,
+        "away": 78
+      }
     },
     {
       "id": 55,
@@ -1000,7 +1245,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Filadélfia",
-      "venue": "Lincoln Financial Field"
+      "venue": "Lincoln Financial Field",
+      "prob": {
+        "home": 13,
+        "draw": 11,
+        "away": 76
+      }
     },
     {
       "id": 56,
@@ -1017,7 +1267,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "East Rutherford",
-      "venue": "MetLife Stadium"
+      "venue": "MetLife Stadium",
+      "prob": {
+        "home": 36,
+        "draw": 29,
+        "away": 35
+      }
     },
     {
       "id": 57,
@@ -1034,7 +1289,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Arlington",
-      "venue": "AT&T Stadium"
+      "venue": "AT&T Stadium",
+      "prob": {
+        "home": 68,
+        "draw": 15,
+        "away": 17
+      }
     },
     {
       "id": 58,
@@ -1051,7 +1311,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Kansas City",
-      "venue": "Arrowhead Stadium"
+      "venue": "Arrowhead Stadium",
+      "prob": {
+        "home": 10,
+        "draw": 8,
+        "away": 82
+      }
     },
     {
       "id": 59,
@@ -1068,7 +1333,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Inglewood",
-      "venue": "SoFi Stadium"
+      "venue": "SoFi Stadium",
+      "prob": {
+        "home": 58,
+        "draw": 19,
+        "away": 23
+      }
     },
     {
       "id": 60,
@@ -1085,7 +1355,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Santa Clara",
-      "venue": "Levi's Stadium"
+      "venue": "Levi's Stadium",
+      "prob": {
+        "home": 36,
+        "draw": 30,
+        "away": 34
+      }
     },
     {
       "id": 61,
@@ -1102,7 +1377,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Foxborough",
-      "venue": "Gillette Stadium"
+      "venue": "Gillette Stadium",
+      "prob": {
+        "home": 21,
+        "draw": 18,
+        "away": 61
+      }
     },
     {
       "id": 62,
@@ -1119,7 +1399,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Toronto",
-      "venue": "BMO Field"
+      "venue": "BMO Field",
+      "prob": {
+        "home": 75,
+        "draw": 11,
+        "away": 14
+      }
     },
     {
       "id": 63,
@@ -1136,7 +1421,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Seattle",
-      "venue": "Lumen Field"
+      "venue": "Lumen Field",
+      "prob": {
+        "home": 27,
+        "draw": 24,
+        "away": 49
+      }
     },
     {
       "id": 64,
@@ -1153,7 +1443,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Vancouver",
-      "venue": "BC Place"
+      "venue": "BC Place",
+      "prob": {
+        "home": 9,
+        "draw": 8,
+        "away": 83
+      }
     },
     {
       "id": 65,
@@ -1170,7 +1465,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Houston",
-      "venue": "NRG Stadium"
+      "venue": "NRG Stadium",
+      "prob": {
+        "home": 35,
+        "draw": 30,
+        "away": 35
+      }
     },
     {
       "id": 66,
@@ -1187,7 +1487,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Zapopan",
-      "venue": "Estadio Akron"
+      "venue": "Estadio Akron",
+      "prob": {
+        "home": 13,
+        "draw": 11,
+        "away": 76
+      }
     },
     {
       "id": 67,
@@ -1204,7 +1509,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "East Rutherford",
-      "venue": "MetLife Stadium"
+      "venue": "MetLife Stadium",
+      "prob": {
+        "home": 11,
+        "draw": 9,
+        "away": 80
+      }
     },
     {
       "id": 68,
@@ -1221,7 +1531,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Filadélfia",
-      "venue": "Lincoln Financial Field"
+      "venue": "Lincoln Financial Field",
+      "prob": {
+        "home": 88,
+        "draw": 5,
+        "away": 7
+      }
     },
     {
       "id": 69,
@@ -1238,7 +1553,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Kansas City",
-      "venue": "Arrowhead Stadium"
+      "venue": "Arrowhead Stadium",
+      "prob": {
+        "home": 29,
+        "draw": 25,
+        "away": 46
+      }
     },
     {
       "id": 70,
@@ -1255,7 +1575,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Arlington",
-      "venue": "AT&T Stadium"
+      "venue": "AT&T Stadium",
+      "prob": {
+        "home": 5,
+        "draw": 5,
+        "away": 90
+      }
     },
     {
       "id": 71,
@@ -1272,7 +1597,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Miami Gardens",
-      "venue": "Hard Rock Stadium"
+      "venue": "Hard Rock Stadium",
+      "prob": {
+        "home": 34,
+        "draw": 29,
+        "away": 37
+      }
     },
     {
       "id": 72,
@@ -1289,7 +1619,12 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Atlanta",
-      "venue": "Mercedes-Benz Stadium"
+      "venue": "Mercedes-Benz Stadium",
+      "prob": {
+        "home": 29,
+        "draw": 25,
+        "away": 46
+      }
     },
     {
       "id": 73,
