@@ -109,6 +109,11 @@ a {
   margin-bottom: 14px;
 }
 
+/* Respiro entre o header e o primeiro card (antes vinha da margem do alert-status). */
+.hero {
+  margin-top: 22px;
+}
+
 /* ---------- Tipografia ---------- */
 .eyebrow {
   margin: 0 0 7px;

@@ -1,9 +1,9 @@
-const CACHE_NAME = "copa-2026-alertas-v52";
+const CACHE_NAME = "copa-2026-alertas-v53";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=52",
-  "./app.js?v=52",
+  "./styles.css?v=53",
+  "./app.js?v=53",
   "./manifest.webmanifest",
   "./data/matches.json",
   "./data/broadcasts.json",
