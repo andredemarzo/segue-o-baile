@@ -5,6 +5,11 @@ name: Atualiza dados da Copa
 on:
   schedule:
     - cron: "*/15 * * * *"   # a cada ~15 min (agendador do GitHub é best-effort)
+  push:                       # mudanças de código/dados publicam na hora
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/**"
   workflow_dispatch:
     inputs:
       force:
@@ -49,8 +54,8 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Publica no Netlify (só se mudou)
-        if: steps.commit.outputs.changed == 'true'
+      - name: Publica no Netlify (se mudou, ou em push/disparo manual)
+        if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
