@@ -228,6 +228,11 @@ h2 {
   font-size: 0.74rem;
 }
 
+/* Sem texto (estado inicial) não ocupa espaço; o JS preenche quando há status. */
+.alert-status:empty {
+  display: none;
+}
+
 .icon-bell,
 .icon-calendar,
 .icon-check {
