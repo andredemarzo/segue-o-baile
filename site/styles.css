@@ -1197,6 +1197,81 @@ summary:focus-visible {
   white-space: nowrap;
 }
 
+/* ---------- Classificação ---------- */
+.standings-note {
+  margin: 0 0 16px;
+}
+
+.standings {
+  display: grid;
+  gap: 20px;
+}
+
+.standings-group h3 {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.standings-table th {
+  padding: 0 5px 6px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
+.standings-table td {
+  padding: 8px 5px;
+  text-align: center;
+  border-top: 1px solid var(--hair);
+  color: var(--ink-1);
+}
+
+.standings-table .c-pos {
+  width: 24px;
+  color: var(--ink-2);
+}
+
+.standings-table .c-team {
+  text-align: left;
+  color: var(--green-deep);
+  overflow-wrap: anywhere;
+}
+
+.standings-table td b {
+  color: var(--green-deep);
+}
+
+.standings-table tr.qualified td {
+  background: rgba(19, 138, 82, 0.08);
+}
+
+.standings-table tr.qualified .c-pos {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.standings-table tr.qualified .c-team {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .standings-table .c-vd {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .badge::before,
   .field-bg .node {

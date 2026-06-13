@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Segue o Baile">
-    <link rel="stylesheet" href="styles.css?v=54">
+    <link rel="stylesheet" href="styles.css?v=55">
   </head>
   <body>
     <div class="field-photo" aria-hidden="true"></div>
@@ -194,6 +194,20 @@
         </div>
       </details>
 
+      <details class="expand section-standings">
+        <summary>
+          <span class="summary-title">
+            <span class="eyebrow">Classificação</span>
+            <strong>Fase de grupos</strong>
+          </span>
+          <span class="chev" aria-hidden="true">⌄</span>
+        </summary>
+        <div class="expand-body">
+          <p class="small-muted standings-note">Classificam-se os 2 primeiros de cada grupo (destacados) e os 8 melhores terceiros. Desempate: pontos, saldo de gols, gols pró.</p>
+          <div class="standings" id="standings"></div>
+        </div>
+      </details>
+
       <details class="expand section-results" hidden>
         <summary>
           <span class="summary-title">
@@ -213,6 +227,6 @@
       </footer>
     </main>
 
-    <script src="app.js?v=54"></script>
+    <script src="app.js?v=55"></script>
   </body>
 </html>

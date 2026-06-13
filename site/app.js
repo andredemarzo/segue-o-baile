@@ -34,6 +34,7 @@ const el = {
   broadcastTitle: document.querySelector("#broadcast-title"),
   matchList: document.querySelector("#match-list"),
   resultList: document.querySelector("#result-list"),
+  standings: document.querySelector("#standings"),
   resultPager: document.querySelector("#result-pager"),
   enableAlerts: document.querySelector("#enable-alerts"),
   testAlert: document.querySelector("#test-alert"),
@@ -813,6 +814,70 @@ function renderSchedule(filter = "all") {
 const HISTORY_PAGE_SIZE = 10;
 let historyPage = 0;
 
+// Classificação por grupos — calculada no app a partir dos jogos encerrados.
+function computeStandings() {
+  const groups = {};
+  for (const m of MATCHES) {
+    if (!m.group) continue;
+    const g = (groups[m.group] = groups[m.group] || {});
+    for (const team of [m.home, m.away]) {
+      if (team && team !== "A definir" && !g[team]) {
+        g[team] = { team, j: 0, v: 0, e: 0, d: 0, gf: 0, ga: 0, pts: 0 };
+      }
+    }
+    if (m.status === 0 && m.homeScore != null && m.awayScore != null) {
+      const h = g[m.home];
+      const a = g[m.away];
+      if (!h || !a) continue;
+      h.j++; a.j++;
+      h.gf += m.homeScore; h.ga += m.awayScore;
+      a.gf += m.awayScore; a.ga += m.homeScore;
+      if (m.homeScore > m.awayScore) { h.v++; h.pts += 3; a.d++; }
+      else if (m.homeScore < m.awayScore) { a.v++; a.pts += 3; h.d++; }
+      else { h.e++; a.e++; h.pts++; a.pts++; }
+    }
+  }
+  const out = {};
+  for (const key of Object.keys(groups)) {
+    out[key] = Object.values(groups[key])
+      .map((t) => ({ ...t, sg: t.gf - t.ga }))
+      .sort((x, y) => y.pts - x.pts || y.sg - x.sg || y.gf - x.gf || x.team.localeCompare(y.team, "pt-BR"));
+  }
+  return out;
+}
+
+function renderStandings() {
+  if (!el.standings) return;
+  const table = computeStandings();
+  const groups = Object.keys(table).sort();
+  const sg = (n) => (n > 0 ? "+" : "") + n;
+  el.standings.innerHTML = groups
+    .map((g) => `
+      <div class="standings-group">
+        <h3>Grupo ${g}</h3>
+        <table class="standings-table">
+          <thead>
+            <tr>
+              <th class="c-pos">#</th><th class="c-team">Time</th>
+              <th>J</th><th class="c-vd">V</th><th class="c-vd">E</th><th class="c-vd">D</th><th>SG</th><th>Pts</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${table[g].map((t, i) => `
+              <tr class="${i < 2 ? "qualified" : ""}">
+                <td class="c-pos">${i + 1}</td>
+                <td class="c-team">${t.team}</td>
+                <td>${t.j}</td>
+                <td class="c-vd">${t.v}</td><td class="c-vd">${t.e}</td><td class="c-vd">${t.d}</td>
+                <td>${sg(t.sg)}</td>
+                <td><b>${t.pts}</b></td>
+              </tr>`).join("")}
+          </tbody>
+        </table>
+      </div>`)
+    .join("");
+}
+
 function renderHistory() {
   const section = document.querySelector(".section-results");
   const finished = MATCHES
@@ -1109,6 +1174,7 @@ async function boot() {
   renderNext();
   renderSchedule();
   renderHistory();
+  renderStandings();
 
   if (localStorage.getItem("alertsEnabled") === "true" && "Notification" in window && Notification.permission === "granted") {
     scheduleAlerts();
