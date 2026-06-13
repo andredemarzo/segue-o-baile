@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-13T21:37:26+00:00",
+  "updatedAt": "2026-06-13T22:44:16+00:00",
   "matches": [
     {
       "id": 1,
@@ -190,16 +190,11 @@
       "offset": -4,
       "home": "Brasil",
       "away": "Marrocos",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 3,
+      "homeScore": 1,
+      "awayScore": 1,
       "city": "East Rutherford",
-      "venue": "MetLife Stadium",
-      "prob": {
-        "home": 64,
-        "draw": 17,
-        "away": 19
-      }
+      "venue": "MetLife Stadium"
     },
     {
       "id": 8,
@@ -616,9 +611,9 @@
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "prob": {
-        "home": 78,
-        "draw": 10,
-        "away": 12
+        "home": 75,
+        "draw": 12,
+        "away": 13
       }
     },
     {
@@ -638,9 +633,9 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "prob": {
-        "home": 84,
-        "draw": 7,
-        "away": 9
+        "home": 82,
+        "draw": 8,
+        "away": 10
       }
     },
     {
@@ -1166,9 +1161,9 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "prob": {
-        "home": 57,
-        "draw": 20,
-        "away": 23
+        "home": 53,
+        "draw": 22,
+        "away": 25
       }
     },
     {
@@ -1188,9 +1183,9 @@
       "city": "Seattle",
       "venue": "Lumen Field",
       "prob": {
-        "home": 68,
-        "draw": 15,
-        "away": 17
+        "home": 64,
+        "draw": 16,
+        "away": 20
       }
     },
     {
