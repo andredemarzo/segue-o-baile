@@ -1,0 +1,58 @@
+name: Atualiza dados da Copa
+
+# Roda na nuvem (independente de qualquer Mac). A coleta é "gated" por janela de
+# jogo dentro do script, então a maioria das execuções é um no-op barato.
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # a cada ~15 min (agendador do GitHub é best-effort)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Forçar coleta + deploy mesmo fora de janela de jogo (teste)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: copa-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Coleta fixtures (API da FIFA)
+        env:
+          COPA_PROJECT_DIR: ${{ github.workspace }}/site
+          COPA_FORCE: ${{ (github.event_name == 'workflow_dispatch' && inputs.force) && '1' || '0' }}
+        run: python scripts/copa_fixtures.py
+
+      - name: Commit se os dados mudaram
+        id: commit
+        run: |
+          if [ -n "$(git status --porcelain site/data)" ]; then
+            git config user.name "copa-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add site/data
+            git commit -m "auto: dados da Copa atualizados"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publica no Netlify (só se mudou)
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          npm install -g netlify-cli@26
+          netlify deploy --prod --dir site --site "${{ secrets.NETLIFY_SITE_ID }}" --message "auto: GitHub Actions"

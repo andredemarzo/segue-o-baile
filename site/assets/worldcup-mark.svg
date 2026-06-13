@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Copa 2026 Alertas">
+  <rect width="96" height="96" fill="#0c3b27"/>
+  <g transform="scale(2.087)" fill="none" stroke="#e8ff3a" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="23" cy="23" r="14"/>
+    <path d="M16.6 13.7 C 20.3 11.5 25.7 11.5 29.4 13.7 C 28.5 17 25.8 18.9 23 18.9 C 20.2 18.9 17.5 17 16.6 13.7 Z"/>
+    <path d="M11.3 18.5 C 13.8 17.6 16.2 18.6 17.1 21.2 C 16.4 24.1 14.4 26 11.8 26.5 C 10.5 24 10.3 21.1 11.3 18.5 Z"/>
+    <path d="M34.7 18.5 C 32.2 17.6 29.8 18.6 28.9 21.2 C 29.6 24.1 31.6 26 34.2 26.5 C 35.5 24 35.7 21.1 34.7 18.5 Z"/>
+    <path d="M18.7 23.9 C 21.3 22.9 24.7 22.9 27.3 23.9 C 27.7 27.4 26.1 30.5 23 32 C 19.9 30.5 18.3 27.4 18.7 23.9 Z"/>
+  </g>
+</svg>

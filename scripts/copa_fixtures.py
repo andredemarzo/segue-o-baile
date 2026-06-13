@@ -1,0 +1,333 @@
+#!/usr/bin/env python3
+"""Coletor de fixtures da Copa do Mundo 2026 (fonte oficial: API da FIFA).
+
+Determinístico, sem LLM. Busca os 104 jogos da api.fifa.com, normaliza para o
+schema do app (data/matches.json), preserva os nomes de sede/cidade curados,
+VALIDA o resultado e só então sobrescreve o arquivo — sempre com backup .bak.
+Se a validação falhar, o arquivo de produção NÃO é tocado (saída com erro).
+
+Uso: python3 copa_fixtures.py
+Agendar no Hermes:
+  hermes cron create "every 6h" --no-agent --script copa_fixtures.py \
+    --name "Copa 2026 fixtures" --deliver local
+"""
+import datetime
+import json
+import os
+import shutil
+import sys
+import urllib.request
+
+API_URL = (
+    "https://api.fifa.com/api/v3/calendar/matches"
+    "?idCompetition=17&idSeason=285023&count=400&language=pt-BR"
+)
+TIMELINE_URL = (
+    "https://api.fifa.com/api/v3/timelines/17/285023/{stage}/{match}?language=pt-BR"
+)
+# Diretório do site. Local = Mac; na nuvem (GitHub Actions) vem por COPA_PROJECT_DIR.
+PROJECT_DIR = os.environ.get(
+    "COPA_PROJECT_DIR",
+    "/Users/andrelpdemarzo/Documents/Codex/2026-06-11/quero-criar-um-app-que-me",
+)
+OUT = os.path.join(PROJECT_DIR, "data", "matches.json")
+TBD = "A definir"
+
+# Mapa cidade(API FIFA) -> cidade-sede e estádio reais (curado uma vez, estável).
+# A FIFA usa nomes metropolitanos (Los Angeles, Dallas, Miami); preservamos a sede real.
+VENUE_BY_API_CITY = {
+    "Cidade do México": {"city": "Cidade do México", "venue": "Estadio Azteca"},
+    "Guadalajara": {"city": "Zapopan", "venue": "Estadio Akron"},
+    "Toronto": {"city": "Toronto", "venue": "BMO Field"},
+    "Los Angeles": {"city": "Inglewood", "venue": "SoFi Stadium"},
+    "Área da baía de São Francisco": {"city": "Santa Clara", "venue": "Levi's Stadium"},
+    "Nova Jersey": {"city": "East Rutherford", "venue": "MetLife Stadium"},
+    "Boston": {"city": "Foxborough", "venue": "Gillette Stadium"},
+    "Vancouver": {"city": "Vancouver", "venue": "BC Place"},
+    "Houston": {"city": "Houston", "venue": "NRG Stadium"},
+    "Dallas": {"city": "Arlington", "venue": "AT&T Stadium"},
+    "Filadélfia": {"city": "Filadélfia", "venue": "Lincoln Financial Field"},
+    "Monterrey": {"city": "Guadalupe", "venue": "Estadio BBVA"},
+    "Atlanta": {"city": "Atlanta", "venue": "Mercedes-Benz Stadium"},
+    "Seattle": {"city": "Seattle", "venue": "Lumen Field"},
+    "Miami": {"city": "Miami Gardens", "venue": "Hard Rock Stadium"},
+    "Kansas City": {"city": "Kansas City", "venue": "Arrowhead Stadium"},
+}
+
+# Normalização editorial de nomes de seleção: a FIFA define QUEM joga;
+# aqui escolhemos COMO exibir (formas mais usuais para o público BR/PT).
+TEAM_NAME_OVERRIDES = {
+    "República da Coreia": "Coreia do Sul",
+    "Tchéquia": "República Tcheca",
+    "EUA": "Estados Unidos",
+    "Curaçau": "Curaçao",
+    "Holanda": "Países Baixos",
+    "RI do Irã": "Irã",
+    "RD do Congo": "RD Congo",
+}
+
+# Rótulos de fase: do texto pt-BR da FIFA para um rótulo claro e consistente.
+STAGE_MAP = {
+    "Primeira fase": "Fase de grupos",
+    "Segundas de final": "16-avos de final",
+    "Oitavas de final": "Oitavas de final",
+    "Quartas de final": "Quartas de final",
+    "Semifinal": "Semifinal",
+    "Decisão do 3º lugar": "Disputa de 3º lugar",
+    "Final": "Final",
+}
+
+
+def text(value):
+    if isinstance(value, list):
+        return "".join(n.get("Description", "") for n in value)
+    return "" if value is None else str(value)
+
+
+def fetch():
+    req = urllib.request.Request(API_URL, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=30) as response:
+        return json.load(response)
+
+
+def prettify_name(name):
+    """FIFA entrega o sobrenome em CAIXA ALTA (RAÚL, KREJCI). Deixa em Title Case
+    preservando hífens e acentos: "Julian QUINONES" -> "Julian Quinones"."""
+    words = []
+    for word in name.split():
+        words.append("-".join(p.capitalize() for p in word.split("-")))
+    return " ".join(words)
+
+
+def fetch_scorers(id_stage, id_match):
+    """Lê o timeline oficial do jogo e devolve os gols (Type 0 = "Gol!").
+    O lado (home/away) é inferido pelo placar que sobe — robusto até para gol
+    contra. O nome vem do EventDescription localizado ("Fulano (Time) marca...")."""
+    url = TIMELINE_URL.format(stage=id_stage, match=id_match)
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=20) as response:
+        data = json.load(response)
+    scorers = []
+    prev_h = prev_a = 0
+    for event in data.get("Event") or []:
+        if event.get("Type") != 0:
+            continue
+        home = event.get("HomeGoals")
+        away = event.get("AwayGoals")
+        if home is None or away is None:
+            continue
+        if home > prev_h:
+            side = "home"
+        elif away > prev_a:
+            side = "away"
+        else:
+            prev_h, prev_a = home, away
+            continue  # disputa de pênaltis ou evento sem mudança de placar
+        prev_h, prev_a = home, away
+        desc = text(event.get("EventDescription"))
+        name = desc.split(" (")[0].strip() if "(" in desc else text(event.get("PlayerName"))
+        if not name:
+            continue
+        low = desc.lower()
+        note = ""
+        if "contra" in low:
+            note = "gc"
+        elif "pênalti" in low or "penalti" in low or "penálti" in low:
+            note = "p"
+        scorer = {
+            "name": prettify_name(name),
+            "minute": text(event.get("MatchMinute")),
+            "side": side,
+        }
+        if note:
+            scorer["note"] = note
+        scorers.append(scorer)
+    return scorers
+
+
+def enrich_scorers(matches, stage_by_id, prev_by_id):
+    """Para cada jogo ENCERRADO, anexa match['scorers']. Reaproveita o cache do
+    arquivo anterior quando o placar não mudou (evita refazer 100+ chamadas)."""
+    fetched = 0
+    for m in matches:
+        if m.get("status") != 0 or m.get("homeScore") is None or m.get("awayScore") is None:
+            continue
+        prev = prev_by_id.get(m["id"]) or {}
+        cached = prev.get("scorers")
+        if (cached is not None
+                and prev.get("homeScore") == m["homeScore"]
+                and prev.get("awayScore") == m["awayScore"]):
+            m["scorers"] = cached
+            continue
+        if (m["homeScore"] or 0) + (m["awayScore"] or 0) == 0:
+            m["scorers"] = []
+            continue
+        try:
+            m["scorers"] = fetch_scorers(stage_by_id.get(m["id"]), m["idMatch"])
+            fetched += 1
+        except Exception as exc:  # um timeline falho não derruba o coletor
+            print(f"  aviso: timeline do jogo {m['id']} falhou: {exc}")
+            if cached is not None:
+                m["scorers"] = cached
+    return fetched
+
+
+def offset_hours(local_iso, utc_iso):
+    parse = lambda s: datetime.datetime.strptime(s[:19], "%Y-%m-%dT%H:%M:%S")
+    return round((parse(local_iso) - parse(utc_iso)).total_seconds() / 3600)
+
+
+def team_name(side):
+    if not side:
+        return TBD
+    name = text(side.get("TeamName"))
+    if not name:
+        return TBD
+    return TEAM_NAME_OVERRIDES.get(name, name)
+
+
+def build():
+    results = fetch().get("Results") or []
+    matches = []
+    stage_by_id = {}
+    for m in results:
+        num = m.get("MatchNumber")
+        local = m.get("LocalDate")
+        utc = m.get("Date")
+        if not num or not local or not utc:
+            continue
+        stage_by_id[num] = m.get("IdStage")
+        city_api = text((m.get("Stadium") or {}).get("CityName"))
+        venue_info = VENUE_BY_API_CITY.get(city_api)
+        group_raw = text(m.get("GroupName"))
+        stage_raw = text(m.get("StageName"))
+        matches.append({
+            "id": num,
+            "idMatch": m.get("IdMatch"),
+            "idStage": m.get("IdStage"),
+            "stage": STAGE_MAP.get(stage_raw, stage_raw),
+            "group": group_raw.replace("Grupo ", "").strip() if group_raw else "",
+            "date": local[:10],
+            "time": local[11:16],
+            "offset": offset_hours(local, utc),
+            "home": team_name(m.get("Home")),
+            "away": team_name(m.get("Away")),
+            "status": m.get("MatchStatus"),
+            "homeScore": m.get("HomeTeamScore"),
+            "awayScore": m.get("AwayTeamScore"),
+            "city": venue_info["city"] if venue_info else city_api,
+            "venue": venue_info["venue"] if venue_info else text((m.get("Stadium") or {}).get("Name")),
+        })
+    matches.sort(key=lambda x: x["id"])
+    return matches, stage_by_id
+
+
+def validate(matches):
+    errors = []
+    if len(matches) != 104:
+        errors.append(f"esperado 104 jogos, veio {len(matches)}")
+    if sorted(m["id"] for m in matches) != list(range(1, 105)):
+        errors.append("ids dos jogos não formam a sequência 1..104")
+    group_games = [m for m in matches if m["group"]]
+    if len(group_games) != 72:
+        errors.append(f"esperado 72 jogos de fase de grupos, veio {len(group_games)}")
+    for m in group_games:
+        if m["home"] == TBD or m["away"] == TBD:
+            errors.append(f"jogo de grupo {m['id']} sem times definidos")
+        if not (m["date"].startswith("2026-06") or m["date"].startswith("2026-07")):
+            errors.append(f"data implausível no jogo {m['id']}: {m['date']}")
+        if not (-8 <= m["offset"] <= -3):
+            errors.append(f"offset implausível no jogo {m['id']}: {m['offset']}")
+    return errors
+
+
+HOT_BEFORE = datetime.timedelta(minutes=30)  # começa a atualizar 30min antes do apito
+HOT_AFTER = datetime.timedelta(hours=3)       # segue até 3h depois (captura placar/gols finais)
+
+
+def should_run_now():
+    """Em dia de jogo queremos rodar de pouco em pouco; nos demais momentos, evitar.
+    True se estamos numa janela de partida (ao vivo / recém-encerrada / prestes a
+    começar) ou num horário-base (~4x/dia, p/ pegar mudanças de tabela/mata-mata)."""
+    now = datetime.datetime.now(datetime.timezone.utc)
+    if now.hour % 6 == 0 and now.minute < 20:  # ~00/06/12/18 UTC: refresh de base
+        return True
+    if not os.path.exists(OUT):
+        return True  # sem schedule local ainda — roda (fail-open)
+    try:
+        matches = json.load(open(OUT, encoding="utf-8")).get("matches", [])
+    except Exception:
+        return True  # arquivo ilegível — roda por segurança
+    for m in matches:
+        date, time, offset = m.get("date"), m.get("time"), m.get("offset")
+        if not date or not time or offset is None:
+            continue
+        try:
+            local = datetime.datetime.strptime(f"{date} {time}", "%Y-%m-%d %H:%M")
+            kickoff = (local - datetime.timedelta(hours=offset)).replace(tzinfo=datetime.timezone.utc)
+        except Exception:
+            continue
+        if kickoff - HOT_BEFORE <= now <= kickoff + HOT_AFTER:
+            return True
+    return False
+
+
+def main():
+    # COPA_FORCE=1 ignora o gate de janela (útil para testar o deploy na nuvem).
+    if os.environ.get("COPA_FORCE") != "1" and not should_run_now():
+        return  # fora de janela de jogo e de horário-base — não faz nada (silencioso)
+
+    try:
+        matches, stage_by_id = build()
+    except Exception as exc:  # rede/parse — não toca produção
+        print(f"ERRO ao buscar/parsear a API da FIFA: {exc}")
+        sys.exit(1)
+
+    previous = []
+    if os.path.exists(OUT):
+        try:
+            previous = json.load(open(OUT, encoding="utf-8")).get("matches", [])
+        except Exception:
+            previous = []
+    prev_by_id = {m["id"]: m for m in previous}
+
+    fetched = enrich_scorers(matches, stage_by_id, prev_by_id)
+
+    errors = validate(matches)
+    if errors:
+        print("VALIDAÇÃO FALHOU — data/matches.json NÃO foi alterado:")
+        for e in errors[:12]:
+            print("  -", e)
+        sys.exit(1)
+
+    changed = sum(1 for m in matches if prev_by_id.get(m["id"]) != m)
+    if previous and changed == 0:
+        # Nada mudou nos jogos — não reescreve nem notifica (watchdog silencioso).
+        return
+    knockout = [m for m in matches if not m["group"]]
+    knockout_defined = sum(1 for m in knockout if m["home"] != TBD and m["away"] != TBD)
+
+    doc = {
+        "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
+        "sourceUrl": API_URL,
+        "phase": "all",
+        "updatedAt": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+        "matches": matches,
+    }
+
+    if os.path.exists(OUT):
+        shutil.copy2(OUT, OUT + ".bak")
+    with open(OUT, "w", encoding="utf-8") as f:
+        json.dump(doc, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+
+    print(
+        f"OK — {len(matches)} jogos gravados em data/matches.json "
+        f"({len(knockout)} de mata-mata, {knockout_defined} já com times definidos). "
+        f"{changed} registro(s) alterado(s) vs versão anterior; "
+        f"gols buscados em {fetched} jogo(s)."
+    )
+
+
+if __name__ == "__main__":
+    main()
