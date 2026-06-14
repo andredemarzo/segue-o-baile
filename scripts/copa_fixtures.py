@@ -31,6 +31,8 @@ PROJECT_DIR = os.environ.get(
     "/Users/andrelpdemarzo/Documents/Codex/2026-06-11/quero-criar-um-app-que-me",
 )
 OUT = os.path.join(PROJECT_DIR, "data", "matches.json")
+# Backup fica FORA da pasta publicada — senão o .bak é enviado junto no deploy.
+BACKUP = os.path.abspath(os.path.join(PROJECT_DIR, os.pardir, "matches.json.bak"))
 TBD = "A definir"
 
 # Mapa cidade(API FIFA) -> cidade-sede e estádio reais (curado uma vez, estável).
@@ -398,7 +400,7 @@ def main():
     }
 
     if os.path.exists(OUT):
-        shutil.copy2(OUT, OUT + ".bak")
+        shutil.copy2(OUT, BACKUP)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=2)
         f.write("\n")

@@ -1,0 +1,6 @@
+# Backup do coletor (fica FORA da pasta publicada, não versionar)
+matches.json.bak
+*.bak
+
+# macOS / editores
+.DS_Store
