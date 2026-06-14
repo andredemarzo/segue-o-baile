@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-13T12:23:51+01:00",
+  "updatedAt": "2026-06-14T10:27:57+01:00",
   "matches": [
     {
       "id": 1,
@@ -146,16 +146,18 @@
       "offset": -4,
       "home": "Haiti",
       "away": "Escócia",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 1,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
-      "prob": {
-        "home": 14,
-        "draw": 12,
-        "away": 74
-      }
+      "scorers": [
+        {
+          "name": "John Mcginn",
+          "minute": "28'",
+          "side": "away"
+        }
+      ]
     },
     {
       "id": 6,
@@ -168,16 +170,23 @@
       "offset": -7,
       "home": "Austrália",
       "away": "Turquia",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 0,
       "city": "Vancouver",
       "venue": "BC Place",
-      "prob": {
-        "home": 22,
-        "draw": 19,
-        "away": 59
-      }
+      "scorers": [
+        {
+          "name": "Nestory Irankunda",
+          "minute": "27'",
+          "side": "home"
+        },
+        {
+          "name": "Connor Metcalfe",
+          "minute": "75'",
+          "side": "home"
+        }
+      ]
     },
     {
       "id": 7,
@@ -190,16 +199,23 @@
       "offset": -4,
       "home": "Brasil",
       "away": "Marrocos",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
-      "prob": {
-        "home": 64,
-        "draw": 17,
-        "away": 19
-      }
+      "scorers": [
+        {
+          "name": "Saibari",
+          "minute": "21'",
+          "side": "away"
+        },
+        {
+          "name": "Vini Jr.",
+          "minute": "32'",
+          "side": "home"
+        }
+      ]
     },
     {
       "id": 8,
@@ -212,16 +228,12 @@
       "offset": -7,
       "home": "Catar",
       "away": "Suíça",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
-      "prob": {
-        "home": 4,
-        "draw": 4,
-        "away": 92
-      }
+      "scorers": []
     },
     {
       "id": 9,
@@ -614,9 +626,9 @@
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "prob": {
-        "home": 78,
-        "draw": 10,
-        "away": 12
+        "home": 75,
+        "draw": 12,
+        "away": 13
       }
     },
     {
@@ -636,9 +648,9 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "prob": {
-        "home": 84,
-        "draw": 7,
-        "away": 9
+        "home": 82,
+        "draw": 8,
+        "away": 10
       }
     },
     {
@@ -680,8 +692,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
-        "home": 91,
-        "draw": 4,
+        "home": 90,
+        "draw": 5,
         "away": 5
       }
     },
@@ -702,9 +714,9 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "prob": {
-        "home": 30,
-        "draw": 26,
-        "away": 44
+        "home": 29,
+        "draw": 25,
+        "away": 46
       }
     },
     {
@@ -1120,9 +1132,9 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "prob": {
-        "home": 16,
-        "draw": 14,
-        "away": 70
+        "home": 17,
+        "draw": 15,
+        "away": 68
       }
     },
     {
@@ -1142,9 +1154,9 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "prob": {
-        "home": 78,
-        "draw": 10,
-        "away": 12
+        "home": 80,
+        "draw": 9,
+        "away": 11
       }
     },
     {
@@ -1164,9 +1176,9 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "prob": {
-        "home": 57,
-        "draw": 20,
-        "away": 23
+        "home": 53,
+        "draw": 22,
+        "away": 25
       }
     },
     {
@@ -1186,9 +1198,9 @@
       "city": "Seattle",
       "venue": "Lumen Field",
       "prob": {
-        "home": 68,
-        "draw": 15,
-        "away": 17
+        "home": 64,
+        "draw": 16,
+        "away": 20
       }
     },
     {

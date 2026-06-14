@@ -212,9 +212,13 @@ def build():
             "offset": offset_hours(local, utc),
             "home": team_name(m.get("Home")),
             "away": team_name(m.get("Away")),
-            "status": m.get("MatchStatus"),
-            "homeScore": m.get("HomeTeamScore"),
-            "awayScore": m.get("AwayTeamScore"),
+            # Só persiste placar de jogo ENCERRADO. O placar ao vivo é client-side
+            # (vem direto da FIFA), então gravá-lo aqui só gerava deploy a cada tick
+            # de 15min durante os jogos — sem valor e caro. Status colapsado em
+            # 0 (encerrado) / 1 (não encerrado): o cliente pega "ao vivo" da FIFA.
+            "status": 0 if m.get("MatchStatus") == 0 else 1,
+            "homeScore": m.get("HomeTeamScore") if m.get("MatchStatus") == 0 else None,
+            "awayScore": m.get("AwayTeamScore") if m.get("MatchStatus") == 0 else None,
             "city": venue_info["city"] if venue_info else city_api,
             "venue": venue_info["venue"] if venue_info else text((m.get("Stadium") or {}).get("Name")),
         })
