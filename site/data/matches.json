@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-14T10:27:57+01:00",
+  "updatedAt": "2026-06-14T11:03:30+01:00",
   "matches": [
     {
       "id": 1,
@@ -692,8 +692,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
-        "home": 90,
-        "draw": 5,
+        "home": 91,
+        "draw": 4,
         "away": 5
       }
     },
@@ -714,9 +714,9 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "prob": {
-        "home": 29,
-        "draw": 25,
-        "away": 46
+        "home": 30,
+        "draw": 26,
+        "away": 44
       }
     },
     {
@@ -736,9 +736,9 @@
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "prob": {
-        "home": 58,
-        "draw": 19,
-        "away": 23
+        "home": 48,
+        "draw": 24,
+        "away": 28
       }
     },
     {
@@ -758,9 +758,9 @@
       "city": "Seattle",
       "venue": "Lumen Field",
       "prob": {
-        "home": 36,
-        "draw": 30,
-        "away": 34
+        "home": 29,
+        "draw": 25,
+        "away": 46
       }
     },
     {
@@ -1132,9 +1132,9 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "prob": {
-        "home": 17,
+        "home": 18,
         "draw": 15,
-        "away": 68
+        "away": 67
       }
     },
     {
@@ -1154,9 +1154,9 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "prob": {
-        "home": 80,
+        "home": 81,
         "draw": 9,
-        "away": 11
+        "away": 10
       }
     },
     {
@@ -1352,9 +1352,9 @@
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "prob": {
-        "home": 58,
-        "draw": 19,
-        "away": 23
+        "home": 48,
+        "draw": 24,
+        "away": 28
       }
     },
     {
@@ -1374,9 +1374,9 @@
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "prob": {
-        "home": 36,
-        "draw": 30,
-        "away": 34
+        "home": 29,
+        "draw": 25,
+        "away": 46
       }
     },
     {
