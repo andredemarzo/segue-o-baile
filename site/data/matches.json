@@ -114,6 +114,12 @@
       "venue": "SoFi Stadium",
       "scorers": [
         {
+          "name": "Damian Bobadilla",
+          "minute": "7'",
+          "side": "home",
+          "note": "gc"
+        },
+        {
           "name": "Folarin Balogun",
           "minute": "31'",
           "side": "home"
@@ -233,7 +239,20 @@
       "awayScore": 1,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
-      "scorers": []
+      "scorers": [
+        {
+          "name": "Embolo",
+          "minute": "17'",
+          "side": "away",
+          "note": "p"
+        },
+        {
+          "name": "Miro Muheim",
+          "minute": "90'+4'",
+          "side": "home",
+          "note": "gc"
+        }
+      ]
     },
     {
       "id": 9,

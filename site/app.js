@@ -90,7 +90,11 @@ function formatDistance(ms) {
 
 function getActiveMatch(now = new Date()) {
   return MATCHES.find((match) => {
-    if (match.status === 0) return false; // já encerrado não é o jogo "ativo"
+    if (match.status === 0) return false; // já encerrado pelo matches.json
+    // A FIFA já avisou que encerrou? O placar ao vivo é a fonte da verdade e chega
+    // ANTES do coletor virar o status no JSON. Sem isto, o card ficava PRESO no
+    // jogo recém-encerrado por até 3,5h, em vez de pular para o próximo.
+    if (liveScore && liveScore.id === match.id && liveScore.status === 0) return false;
     const start = utcDate(match);
     return start <= now && now < new Date(start.getTime() + FOCAL_WINDOW_MS);
   });
@@ -137,8 +141,10 @@ function prettyName(name) {
     .join(" ");
 }
 
-// Lê o timeline oficial e devolve os gols (Type 0). Mesmo critério do coletor:
-// lado pelo placar que sobe (robusto p/ gol contra), nome do EventDescription.
+// Lê o timeline oficial e devolve os gols. Detecta pelo PLACAR que sobe (não
+// pelo Type): gol de bola rolando = Type 0, mas pênalti = 41 e gol contra = 34
+// — o placar que incrementa pega qualquer um. Lado pelo placar que sobe; nome
+// do EventDescription. Mesmo critério do coletor.
 async function fetchScorers(idStage, idMatch) {
   const url = `https://api.fifa.com/api/v3/timelines/17/285023/${idStage}/${idMatch}?language=pt-BR`;
   const response = await fetch(url, { cache: "no-store" });
@@ -147,7 +153,6 @@ async function fetchScorers(idStage, idMatch) {
   let prevHome = 0;
   let prevAway = 0;
   for (const event of data.Event || []) {
-    if (event.Type !== 0) continue;
     const home = event.HomeGoals;
     const away = event.AwayGoals;
     if (home == null || away == null) continue;
@@ -162,8 +167,8 @@ async function fetchScorers(idStage, idMatch) {
     if (!name) continue;
     const low = desc.toLowerCase();
     let note = "";
-    if (low.includes("contra")) note = "gc";
-    else if (low.includes("pênalti") || low.includes("penalti") || low.includes("penálti")) note = "p";
+    if (low.includes("contra") || low.includes("own goal")) note = "gc";
+    else if (["pênalti", "penalti", "penálti", "penalty"].some((k) => low.includes(k))) note = "p";
     scorers.push({ name: prettyName(name), minute: fifaText(event.MatchMinute), side, note });
   }
   return scorers;

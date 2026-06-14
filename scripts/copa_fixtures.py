@@ -102,9 +102,13 @@ def prettify_name(name):
 
 
 def fetch_scorers(id_stage, id_match):
-    """Lê o timeline oficial do jogo e devolve os gols (Type 0 = "Gol!").
-    O lado (home/away) é inferido pelo placar que sobe — robusto até para gol
-    contra. O nome vem do EventDescription localizado ("Fulano (Time) marca...")."""
+    """Lê o timeline oficial do jogo e devolve os gols.
+    Detecta gol pelo PLACAR que sobe (HomeGoals/AwayGoals incrementando), NÃO
+    pelo Type: a FIFA marca gol de bola rolando como Type 0, mas PÊNALTI como
+    Type 41 e GOL CONTRA como Type 34 — filtrar só Type 0 perdia esses (ex.:
+    Catar 1-1 Suíça = pênalti + gol contra, ficava sem marcador). O placar que
+    incrementa identifica QUALQUER gol; o lado (home/away) sai do placar que
+    sobe (robusto p/ gol contra); o nome, do EventDescription ("Fulano (Time)...")."""
     url = TIMELINE_URL.format(stage=id_stage, match=id_match)
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=20) as response:
@@ -112,8 +116,6 @@ def fetch_scorers(id_stage, id_match):
     scorers = []
     prev_h = prev_a = 0
     for event in data.get("Event") or []:
-        if event.get("Type") != 0:
-            continue
         home = event.get("HomeGoals")
         away = event.get("AwayGoals")
         if home is None or away is None:
@@ -132,9 +134,9 @@ def fetch_scorers(id_stage, id_match):
             continue
         low = desc.lower()
         note = ""
-        if "contra" in low:
+        if "contra" in low or "own goal" in low:
             note = "gc"
-        elif "pênalti" in low or "penalti" in low or "penálti" in low:
+        elif any(k in low for k in ("pênalti", "penalti", "penálti", "penalty")):
             note = "p"
         scorer = {
             "name": prettify_name(name),
