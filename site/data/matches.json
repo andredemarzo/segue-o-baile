@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-14T21:48:20+00:00",
+  "updatedAt": "2026-06-14T22:58:29+00:00",
   "matches": [
     {
       "id": 1,
@@ -347,16 +347,33 @@
       "offset": -5,
       "home": "Países Baixos",
       "away": "Japão",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 2,
       "city": "Arlington",
       "venue": "AT&T Stadium",
-      "prob": {
-        "home": 43,
-        "draw": 26,
-        "away": 31
-      }
+      "scorers": [
+        {
+          "name": "Virgil Van Dijk",
+          "minute": "50'",
+          "side": "home"
+        },
+        {
+          "name": "Nakamura",
+          "minute": "57'",
+          "side": "away"
+        },
+        {
+          "name": "Crysencio Summerville",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "name": "Kamada",
+          "minute": "88'",
+          "side": "away"
+        }
+      ]
     },
     {
       "id": 12,
