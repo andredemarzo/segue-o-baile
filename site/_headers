@@ -1,0 +1,11 @@
+# Cloudflare Pages — controle de cache de borda.
+# Dados da Copa e service worker mudam a cada jogo / versão: precisam chegar
+# frescos ao usuário, então sempre revalidam (nunca servir versão velha presa).
+/data/*
+  Cache-Control: public, max-age=0, must-revalidate
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+/
+  Cache-Control: public, max-age=0, must-revalidate
