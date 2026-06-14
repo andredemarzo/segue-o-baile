@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-13T22:44:16+00:00",
+  "updatedAt": "2026-06-14T02:33:35+00:00",
   "matches": [
     {
       "id": 1,
@@ -146,16 +146,11 @@
       "offset": -4,
       "home": "Haiti",
       "away": "Escócia",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 3,
+      "homeScore": 0,
+      "awayScore": 1,
       "city": "Foxborough",
-      "venue": "Gillette Stadium",
-      "prob": {
-        "home": 14,
-        "draw": 12,
-        "away": 74
-      }
+      "venue": "Gillette Stadium"
     },
     {
       "id": 6,
@@ -190,11 +185,23 @@
       "offset": -4,
       "home": "Brasil",
       "away": "Marrocos",
-      "status": 3,
+      "status": 0,
       "homeScore": 1,
       "awayScore": 1,
       "city": "East Rutherford",
-      "venue": "MetLife Stadium"
+      "venue": "MetLife Stadium",
+      "scorers": [
+        {
+          "name": "Saibari",
+          "minute": "21'",
+          "side": "away"
+        },
+        {
+          "name": "Vini Jr.",
+          "minute": "32'",
+          "side": "home"
+        }
+      ]
     },
     {
       "id": 8,
@@ -677,8 +684,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
-        "home": 91,
-        "draw": 4,
+        "home": 90,
+        "draw": 5,
         "away": 5
       }
     },
@@ -699,9 +706,9 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "prob": {
-        "home": 30,
-        "draw": 26,
-        "away": 44
+        "home": 29,
+        "draw": 25,
+        "away": 46
       }
     },
     {
@@ -1117,9 +1124,9 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "prob": {
-        "home": 16,
-        "draw": 14,
-        "away": 70
+        "home": 17,
+        "draw": 15,
+        "away": 68
       }
     },
     {
@@ -1139,9 +1146,9 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "prob": {
-        "home": 78,
-        "draw": 10,
-        "away": 12
+        "home": 80,
+        "draw": 9,
+        "away": 11
       }
     },
     {
