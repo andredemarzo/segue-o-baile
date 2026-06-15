@@ -101,12 +101,12 @@ function compactCountdown(ms) {
   return `${m}:${two(s)}`;
 }
 
-// Hora compacta no fuso: "13h" ou "13h30".
+// Hora compacta no fuso, 2 dígitos (lê como relógio): "02h" / "13h" / "13h30".
 function compactHour(date, timeZone, locale) {
   const parts = new Intl.DateTimeFormat(locale, {
     hour: "2-digit", minute: "2-digit", hour12: false, timeZone,
   }).formatToParts(date);
-  const h = parseInt(parts.find((p) => p.type === "hour").value, 10);
+  const h = two(parseInt(parts.find((p) => p.type === "hour").value, 10));
   const m = parts.find((p) => p.type === "minute").value;
   return m === "00" ? `${h}h` : `${h}h${m}`;
 }
@@ -114,10 +114,13 @@ function compactHour(date, timeZone, locale) {
 // Linha única de data + horários: "seg, 15/06 · 13h BR · 17h PT" (marca (+1) se em PT já é o dia seguinte).
 function whenLine(date) {
   const wd = new Intl.DateTimeFormat("pt-BR", { weekday: "short", timeZone: BR_TZ }).format(date).replace(/\.$/, "");
-  const dm = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit", timeZone: BR_TZ }).format(date);
+  const dmBr = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit", timeZone: BR_TZ }).format(date);
+  const dmPt = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit", timeZone: PT_TZ }).format(date);
   const dayKey = (tz) => new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: tz }).format(date);
-  const ptNext = dayKey(PT_TZ) > dayKey(BR_TZ) ? " (+1)" : "";
-  return `${wd}, ${dm} · ${compactHour(date, BR_TZ, "pt-BR")} BR · ${compactHour(date, PT_TZ, "pt-PT")}${ptNext} PT`;
+  // Quando em Portugal já é o dia seguinte (jogos de madrugada na Europa), mostra a
+  // DATA do PT — assim "02h PT (16/06)" não parece um horário "menor" que o de BR.
+  const ptDate = dayKey(PT_TZ) !== dayKey(BR_TZ) ? ` (${dmPt})` : "";
+  return `${wd}, ${dmBr} · ${compactHour(date, BR_TZ, "pt-BR")} BR · ${compactHour(date, PT_TZ, "pt-PT")} PT${ptDate}`;
 }
 
 // Status real da FIFA para o jogo (0=encerrado, 1=futuro, 3=ao vivo), ou null se
@@ -212,14 +215,15 @@ function moveCard(dir) {
   }
 }
 
-// Fade sutil ao TROCAR de jogo no card (respeita prefers-reduced-motion).
-function flashPanel() {
+// Slide DIRECIONAL ao TROCAR de jogo (entra da direita no "próximo", da esquerda
+// no "anterior"). Respeita prefers-reduced-motion.
+function flashPanel(dir) {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const p = document.querySelector(".match-panel");
+  const p = document.querySelector(".card-inner");
   if (!p) return;
-  p.classList.remove("card-flip");
+  p.classList.remove("slide-next", "slide-prev");
   void p.offsetWidth; // força reflow p/ reiniciar a animação
-  p.classList.add("card-flip");
+  p.classList.add(dir < 0 ? "slide-prev" : "slide-next");
 }
 
 // Faixa "mapa da rodada": uma pílula por jogo do dia (hora / placar / ao vivo),
@@ -909,7 +913,12 @@ function renderNext() {
 
   // Cabeçalho/meta/transmissão/predict só mudam quando o JOGO ou a FASE muda.
   if (match.id !== renderedMatchId || phase !== renderedPhase) {
-    if (renderedMatchId !== null && match.id !== renderedMatchId) flashPanel();
+    if (renderedMatchId !== null && match.id !== renderedMatchId) {
+      const day = dayMatches(match);
+      const oi = day.findIndex((m) => m.id === renderedMatchId);
+      const ni = day.findIndex((m) => m.id === match.id);
+      flashPanel(oi >= 0 && ni >= 0 && ni < oi ? -1 : 1);
+    }
     renderDayStrip(match);
     el.nextTitle.textContent = `${stageLabel(match)} · Jogo ${match.id}`;
     el.cityVenue.textContent = `${match.city} · ${match.venue}`;

@@ -28,6 +28,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden; /* contém o slide do carrossel sem rolagem horizontal */
   min-height: 100vh;
   font-family: Inter, "SF Pro Display", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   font-weight: 400;
@@ -336,14 +337,23 @@ h2 {
   animation: livePulse 1.7s ease-in-out infinite;
 }
 
-/* Fade sutil ao TROCAR de jogo no carrossel */
-@keyframes cardFlip {
-  from { opacity: 0.35; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Slide DIRECIONAL ao TROCAR de jogo no carrossel (perceptível, não brusco) */
+@keyframes slideNext {
+  from { opacity: 0.15; transform: translateX(38px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-.card-flip {
-  animation: cardFlip 0.22s ease;
+@keyframes slidePrev {
+  from { opacity: 0.15; transform: translateX(-38px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.slide-next {
+  animation: slideNext 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-prev {
+  animation: slidePrev 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Jogo encerrado: o resultado fica registrado no card; "onde assistir" é rebaixado */
