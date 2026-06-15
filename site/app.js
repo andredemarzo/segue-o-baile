@@ -15,11 +15,9 @@ const el = {
   matchState: document.querySelector("#match-state"),
   scoreline: document.querySelector("#scoreline"),
   predict: document.querySelector("#predict"),
-  city: document.querySelector("#city"),
-  timeBr: document.querySelector("#time-br"),
-  timePt: document.querySelector("#time-pt"),
-  countLabel: document.querySelector("#count-label"),
-  countdown: document.querySelector("#countdown"),
+  cityVenue: document.querySelector("#city-venue"),
+  temp: document.querySelector("#temp"),
+  when: document.querySelector("#when"),
   liveStreams: document.querySelector("#live-streams"),
   liveStreamsLabel: document.querySelector("#live-streams-label"),
   streamLinks: document.querySelector("#stream-links"),
@@ -87,6 +85,38 @@ function formatDistance(ms) {
   const seconds = totalSeconds % 60;
   if (days > 0) return `${days}d ${two(hours)}:${two(minutes)}:${two(seconds)}`;
   return `${two(hours)}:${two(minutes)}:${two(seconds)}`;
+}
+
+// Contagem p/ o badge, COM segundos (dá dinamismo): "4:48:23" / "48:23".
+// A dias de distância vira "3d 4h" (segundos ali seriam ruído).
+function compactCountdown(ms) {
+  const total = Math.max(0, Math.floor(ms / 1000));
+  const d = Math.floor(total / 86400);
+  const h = Math.floor((total % 86400) / 3600);
+  const m = Math.floor((total % 3600) / 60);
+  const s = total % 60;
+  if (d > 0) return `${d}d ${h}h`;
+  if (h > 0) return `${h}:${two(m)}:${two(s)}`;
+  return `${m}:${two(s)}`;
+}
+
+// Hora compacta no fuso: "13h" ou "13h30".
+function compactHour(date, timeZone, locale) {
+  const parts = new Intl.DateTimeFormat(locale, {
+    hour: "2-digit", minute: "2-digit", hour12: false, timeZone,
+  }).formatToParts(date);
+  const h = parseInt(parts.find((p) => p.type === "hour").value, 10);
+  const m = parts.find((p) => p.type === "minute").value;
+  return m === "00" ? `${h}h` : `${h}h${m}`;
+}
+
+// Linha única de data + horários: "seg, 15/06 · 13h BR · 17h PT" (marca (+1) se em PT já é o dia seguinte).
+function whenLine(date) {
+  const wd = new Intl.DateTimeFormat("pt-BR", { weekday: "short", timeZone: BR_TZ }).format(date).replace(/\.$/, "");
+  const dm = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit", timeZone: BR_TZ }).format(date);
+  const dayKey = (tz) => new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: tz }).format(date);
+  const ptNext = dayKey(PT_TZ) > dayKey(BR_TZ) ? " (+1)" : "";
+  return `${wd}, ${dm} · ${compactHour(date, BR_TZ, "pt-BR")} BR · ${compactHour(date, PT_TZ, "pt-PT")}${ptNext} PT`;
 }
 
 // Status real da FIFA para o jogo (0=encerrado, 1=futuro, 3=ao vivo), ou null se
@@ -775,16 +805,19 @@ function renderNext() {
   const match = getNextMatch(now);
   const start = utcDate(match);
   const phase = matchPhase(match);
-  const bar = el.countdown.parentElement;
   const live = liveById[match.id];
 
-  // Cabeçalho/cidade/horários/transmissão/predict só mudam quando o JOGO ou a FASE
-  // muda (evita flicker a cada segundo).
+  // Cabeçalho/meta/transmissão/predict só mudam quando o JOGO ou a FASE muda.
   if (match.id !== renderedMatchId || phase !== renderedPhase) {
     el.nextTitle.textContent = `${stageLabel(match)} · Jogo ${match.id}`;
-    el.city.textContent = `${match.city} · ${match.venue}`;
-    el.timeBr.textContent = formatTime(start, BR_TZ, "pt-BR");
-    el.timePt.textContent = formatTime(start, PT_TZ, "pt-PT");
+    el.cityVenue.textContent = `${match.city} · ${match.venue}`;
+    if (match.weather && match.weather.tempC != null) {
+      el.temp.textContent = `${match.weather.tempC}°C`;
+      el.temp.hidden = false;
+    } else {
+      el.temp.hidden = true;
+    }
+    el.when.textContent = whenLine(start);
     if (!selectedMatchId) renderBroadcasts(match);
     renderLiveStreams(match, phase === "live");
     renderPredict(match, phase);
@@ -800,22 +833,16 @@ function renderNext() {
     renderedScoreSig = sig;
   }
 
+  // Badge = estado + tempo juntos (a contagem "Começa em" entrou aqui). Atualiza todo tick.
   if (phase === "live") {
-    bar.hidden = false;
     el.matchState.className = "badge badge-live";
-    el.matchState.textContent = "Ao vivo";
-    el.countLabel.textContent = "Tempo de jogo";
-    el.countdown.textContent = (live && live.time) || "—";
+    el.matchState.textContent = live && live.time ? `Ao vivo · ${live.time}` : "Ao vivo";
   } else if (phase === "finished") {
-    bar.hidden = true; // jogo acabou — o placar final já está no painel
     el.matchState.className = "badge badge-finished";
     el.matchState.textContent = "Encerrado";
   } else {
-    bar.hidden = false;
     el.matchState.className = "badge badge-upcoming";
-    el.matchState.textContent = "Próximo";
-    el.countLabel.textContent = "Começa em";
-    el.countdown.textContent = formatDistance(start - now);
+    el.matchState.textContent = `Próximo · ${compactCountdown(start - now)}`;
   }
 }
 

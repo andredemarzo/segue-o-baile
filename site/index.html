@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Segue o Baile">
-    <link rel="stylesheet" href="styles.css?v=57">
+    <link rel="stylesheet" href="styles.css?v=58">
   </head>
   <body>
     <div class="field-photo" aria-hidden="true"></div>
@@ -90,10 +90,7 @@
       <section class="hero">
         <article class="match-panel" aria-labelledby="next-title">
           <div class="panel-head">
-            <div>
-              <p class="eyebrow">Próxima partida</p>
-              <h2 id="next-title">Carregando...</h2>
-            </div>
+            <h2 id="next-title">Carregando...</h2>
             <span class="badge" id="match-state">Próximo</span>
           </div>
 
@@ -101,24 +98,12 @@
 
           <div class="predict" id="predict" hidden></div>
 
-          <dl class="match-meta">
-            <div>
-              <dt>Cidade</dt>
-              <dd id="city"></dd>
-            </div>
-            <div>
-              <dt>Brasil</dt>
-              <dd id="time-br"></dd>
-            </div>
-            <div>
-              <dt>Portugal</dt>
-              <dd id="time-pt"></dd>
-            </div>
-          </dl>
-
-          <div class="countdown" aria-live="off">
-            <span id="count-label">Começa em</span>
-            <strong id="countdown" aria-hidden="true">--:--:--</strong>
+          <div class="match-meta">
+            <p class="meta-line">
+              <span id="city-venue"></span>
+              <span class="temp" id="temp" hidden></span>
+            </p>
+            <p class="meta-line meta-when" id="when"></p>
           </div>
 
           <div class="live-streams" id="live-streams" hidden>
@@ -227,6 +212,6 @@
       </footer>
     </main>
 
-    <script src="app.js?v=57"></script>
+    <script src="app.js?v=58"></script>
   </body>
 </html>

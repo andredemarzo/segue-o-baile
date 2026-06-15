@@ -485,33 +485,33 @@ h2 {
 
 /* Meta (cidade / horários) */
 .match-meta {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
   margin: 0 0 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--hair);
 }
 
-.match-meta div {
-  min-width: 0;
-  padding: 12px 13px;
-  border: 1px solid var(--hair);
-  border-radius: var(--radius-xs);
-  background: var(--glass-3);
-}
-
-dt {
-  color: var(--ink-2);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-dd {
-  margin: 6px 0 0;
-  font-weight: 400;
+.meta-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0;
   font-size: 0.9rem;
   color: var(--ink);
+}
+
+.meta-when {
+  color: var(--ink-2);
+  font-size: 0.84rem;
+}
+
+.temp {
+  flex: none;
+  font-weight: 500;
+  color: #b5651d; /* laranja-queimado: marcador discreto e legível da temperatura */
 }
 
 /* Countdown — barra escura viva */
@@ -1356,39 +1356,13 @@ summary:focus-visible {
     font-size: 0.82rem;
   }
 
-  /* Cidade/horários: um único bloco compacto */
+  /* Cidade/horários: 2 linhas compactas */
   .match-meta {
-    grid-template-columns: 1fr;
-    gap: 0;
-    border: 1px solid var(--hair);
-    border-radius: var(--radius-xs);
-    background: var(--glass-3);
-    overflow: hidden;
-  }
-
-  .match-meta div {
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 11px 14px;
-  }
-
-  .match-meta div + div {
-    border-top: 1px solid var(--hair);
-  }
-
-  dd {
-    margin: 0;
-    text-align: right;
     font-size: 0.86rem;
   }
 
-  .countdown strong {
-    font-size: 1.7rem;
+  .meta-when {
+    font-size: 0.8rem;
   }
 
   .expand > summary,

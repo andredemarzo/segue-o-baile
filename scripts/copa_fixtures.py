@@ -369,6 +369,89 @@ def enrich_probabilities(matches, prev_by_id):
     return done
 
 
+# Temperatura na hora do jogo (previsão Open-Meteo, grátis, sem chave de API).
+# Coordenadas das 16 sedes (estádio), curadas uma vez — estáveis. Chave = m["city"].
+CITY_COORDS = {
+    "Arlington": (32.7473, -97.0945),       # AT&T Stadium (Dallas)
+    "Atlanta": (33.7554, -84.4009),         # Mercedes-Benz Stadium
+    "Cidade do México": (19.3029, -99.1505),# Estádio Azteca
+    "East Rutherford": (40.8135, -74.0745), # MetLife (Nova York/NJ)
+    "Filadélfia": (39.9008, -75.1675),      # Lincoln Financial Field
+    "Foxborough": (42.0909, -71.2643),      # Gillette Stadium (Boston)
+    "Guadalupe": (25.6692, -100.2444),      # Estádio BBVA (Monterrey)
+    "Houston": (29.6847, -95.4107),         # NRG Stadium
+    "Inglewood": (33.9535, -118.3392),      # SoFi Stadium (Los Angeles)
+    "Kansas City": (39.0489, -94.4839),     # Arrowhead Stadium
+    "Miami Gardens": (25.9580, -80.2389),   # Hard Rock Stadium
+    "Santa Clara": (37.4030, -121.9697),    # Levi's Stadium (São Francisco)
+    "Seattle": (47.5952, -122.3316),        # Lumen Field
+    "Toronto": (43.6332, -79.4185),         # BMO Field
+    "Vancouver": (49.2768, -123.1120),      # BC Place
+    "Zapopan": (20.6816, -103.4625),        # Estádio Akron (Guadalajara)
+}
+
+
+def fetch_weather(lat, lon, utc_kickoff):
+    """Temperatura (°C, inteiro) prevista para a HORA do apito, via Open-Meteo."""
+    date = utc_kickoff.strftime("%Y-%m-%d")
+    url = (
+        f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}"
+        f"&hourly=temperature_2m&timezone=UTC&start_date={date}&end_date={date}"
+    )
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=20) as response:
+        data = json.load(response)
+    hourly = data.get("hourly") or {}
+    times = hourly.get("time") or []
+    temps = hourly.get("temperature_2m") or []
+    if not times or not temps:
+        return None
+    target = utc_kickoff.strftime("%Y-%m-%dT%H:00")
+    temp = temps[times.index(target)] if target in times else temps[0]
+    return round(temp) if temp is not None else None
+
+
+def enrich_weather(matches, prev_by_id):
+    """match['weather'] = {tempC, at} para jogos FUTUROS com sede mapeada e dentro
+    do alcance da previsão (~15 dias). THROTTLE: só reconsulta se a previsão anterior
+    tem > 6h (a previsão não muda a cada rodada de 15min). Preserva em falha."""
+    now = datetime.datetime.now(datetime.timezone.utc)
+    horizon = now + datetime.timedelta(days=15)
+    done = 0
+    for m in matches:
+        if m.get("status") != 1 or m["city"] not in CITY_COORDS:
+            continue
+        try:
+            local_dt = datetime.datetime.strptime(f"{m['date']} {m['time']}", "%Y-%m-%d %H:%M")
+            kickoff = (local_dt - datetime.timedelta(hours=m["offset"])).replace(tzinfo=datetime.timezone.utc)
+        except Exception:
+            continue
+        if kickoff < now or kickoff > horizon:
+            continue  # já passou ou fora do alcance da previsão
+        prev = (prev_by_id.get(m["id"]) or {}).get("weather")
+        if prev and prev.get("at"):  # throttle: reaproveita previsão recente (< 6h)
+            try:
+                if (now - datetime.datetime.fromisoformat(prev["at"])).total_seconds() < 6 * 3600:
+                    m["weather"] = prev
+                    continue
+            except Exception:
+                pass
+        lat, lon = CITY_COORDS[m["city"]]
+        try:
+            temp = fetch_weather(lat, lon, kickoff)
+        except Exception as exc:
+            if prev:
+                m["weather"] = prev  # falhou: mantém o anterior, não apaga
+            continue
+        if temp is None:
+            if prev:
+                m["weather"] = prev
+            continue
+        m["weather"] = {"tempC": temp, "at": now.isoformat(timespec="seconds")}
+        done += 1
+    return done
+
+
 def main():
     # COPA_FORCE=1 ignora o gate de janela (útil para testar o deploy na nuvem).
     if os.environ.get("COPA_FORCE") != "1" and not should_run_now():
@@ -390,6 +473,7 @@ def main():
 
     fetched = enrich_scorers(matches, stage_by_id, prev_by_id)
     probs = enrich_probabilities(matches, prev_by_id)
+    enrich_weather(matches, prev_by_id)
 
     errors = validate(matches)
     if errors:
