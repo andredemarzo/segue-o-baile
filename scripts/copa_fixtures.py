@@ -332,25 +332,37 @@ def win_probabilities(elo_home, elo_away):
 
 def enrich_probabilities(matches, prev_by_id):
     """Adiciona match['prob'] aos jogos FUTUROS (status 1) com os dois times definidos.
-    Se o Elo não carregar agora, preserva a prob da versão anterior."""
+    Se o Elo não carregar AGORA — por erro OU por resposta VAZIA/bloqueada (o
+    eloratings às vezes serve conteúdo vazio para IPs de datacenter como o do
+    GitHub Actions) — PRESERVA a prob anterior, em vez de apagá-la em silêncio."""
     upcoming = [m for m in matches
                 if m.get("status") == 1 and m["home"] in ELO_CODE and m["away"] in ELO_CODE]
     if not upcoming:
         return 0
+
+    def keep_prev(m):
+        prev = prev_by_id.get(m["id"]) or {}
+        if prev.get("prob"):
+            m["prob"] = prev["prob"]
+            return True
+        return False
+
     try:
         elo = fetch_elo()
-    except Exception as exc:  # eloratings fora do ar — não perde a prob anterior
-        for m in upcoming:
-            prev = prev_by_id.get(m["id"]) or {}
-            if prev.get("prob"):
-                m["prob"] = prev["prob"]
-        print(f"  aviso: Elo indisponível ({exc}); prob preservada")
+    except Exception as exc:
+        elo = {}
+        print(f"  aviso: Elo falhou ({exc})")
+    # Resposta vazia/insuficiente também é falha (esperado ~240 seleções no TSV).
+    if len(elo) < 50:
+        kept = sum(1 for m in upcoming if keep_prev(m))
+        print(f"  aviso: Elo vazio/insuficiente ({len(elo)} times); prob preservada em {kept}/{len(upcoming)} jogo(s)")
         return 0
     done = 0
     for m in upcoming:
         home_elo = elo.get(ELO_CODE[m["home"]])
         away_elo = elo.get(ELO_CODE[m["away"]])
         if home_elo is None or away_elo is None:
+            keep_prev(m)  # time sem Elo nesta rodada: mantém o anterior, não apaga
             continue
         m["prob"] = win_probabilities(home_elo, away_elo)
         done += 1

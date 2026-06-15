@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-14T11:25:40+01:00",
+  "updatedAt": "2026-06-15T11:20:00+01:00",
   "matches": [
     {
       "id": 1,
@@ -265,16 +265,18 @@
       "offset": -4,
       "home": "Costa do Marfim",
       "away": "Equador",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 0,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
-      "prob": {
-        "home": 14,
-        "draw": 12,
-        "away": 74
-      }
+      "scorers": [
+        {
+          "name": "Amad Diallo",
+          "minute": "90'",
+          "side": "home"
+        }
+      ]
     },
     {
       "id": 10,
@@ -287,16 +289,54 @@
       "offset": -5,
       "home": "Alemanha",
       "away": "Curaçao",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 7,
+      "awayScore": 1,
       "city": "Houston",
       "venue": "NRG Stadium",
-      "prob": {
-        "home": 93,
-        "draw": 3,
-        "away": 4
-      }
+      "scorers": [
+        {
+          "name": "Nmecha",
+          "minute": "6'",
+          "side": "home"
+        },
+        {
+          "name": "Livano Comenencia",
+          "minute": "21'",
+          "side": "away"
+        },
+        {
+          "name": "Schlotterbeck",
+          "minute": "38'",
+          "side": "home"
+        },
+        {
+          "name": "Havertz",
+          "minute": "45'+5'",
+          "side": "home",
+          "note": "p"
+        },
+        {
+          "name": "Musiala",
+          "minute": "47'",
+          "side": "home"
+        },
+        {
+          "name": "Nathaniel Brown",
+          "minute": "68'",
+          "side": "home"
+        },
+        {
+          "name": "Deniz Undav",
+          "minute": "78'",
+          "side": "home"
+        },
+        {
+          "name": "Havertz",
+          "minute": "88'",
+          "side": "home"
+        }
+      ]
     },
     {
       "id": 11,
@@ -309,16 +349,33 @@
       "offset": -5,
       "home": "Países Baixos",
       "away": "Japão",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 2,
       "city": "Arlington",
       "venue": "AT&T Stadium",
-      "prob": {
-        "home": 43,
-        "draw": 26,
-        "away": 31
-      }
+      "scorers": [
+        {
+          "name": "Virgil Van Dijk",
+          "minute": "50'",
+          "side": "home"
+        },
+        {
+          "name": "Nakamura",
+          "minute": "57'",
+          "side": "away"
+        },
+        {
+          "name": "Crysencio Summerville",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "name": "Kamada",
+          "minute": "88'",
+          "side": "away"
+        }
+      ]
     },
     {
       "id": 12,
@@ -331,16 +388,43 @@
       "offset": -6,
       "home": "Suécia",
       "away": "Tunísia",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 5,
+      "awayScore": 1,
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
-      "prob": {
-        "home": 50,
-        "draw": 23,
-        "away": 27
-      }
+      "scorers": [
+        {
+          "name": "Yasin Ayari",
+          "minute": "7'",
+          "side": "home"
+        },
+        {
+          "name": "Alexander Isak",
+          "minute": "30'",
+          "side": "home"
+        },
+        {
+          "name": "Omar Rekik",
+          "minute": "43'",
+          "side": "away"
+        },
+        {
+          "name": "Viktor Gyokeres",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "name": "Mattias Svanberg",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "name": "Yasin Ayari",
+          "minute": "90'+6'",
+          "side": "home"
+        }
+      ]
     },
     {
       "id": 13,
@@ -799,9 +883,9 @@
       "city": "Toronto",
       "venue": "BMO Field",
       "prob": {
-        "home": 74,
-        "draw": 12,
-        "away": 14
+        "home": 68,
+        "draw": 15,
+        "away": 17
       }
     },
     {
@@ -821,8 +905,8 @@
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "prob": {
-        "home": 93,
-        "draw": 3,
+        "home": 92,
+        "draw": 4,
         "away": 4
       }
     },
@@ -843,9 +927,9 @@
       "city": "Houston",
       "venue": "NRG Stadium",
       "prob": {
-        "home": 73,
-        "draw": 12,
-        "away": 15
+        "home": 67,
+        "draw": 15,
+        "away": 18
       }
     },
     {
@@ -865,9 +949,9 @@
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "prob": {
-        "home": 12,
-        "draw": 10,
-        "away": 78
+        "home": 9,
+        "draw": 8,
+        "away": 83
       }
     },
     {
@@ -1283,9 +1367,9 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
-        "home": 13,
-        "draw": 11,
-        "away": 76
+        "home": 10,
+        "draw": 8,
+        "away": 82
       }
     },
     {
@@ -1305,9 +1389,9 @@
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "prob": {
-        "home": 36,
-        "draw": 29,
-        "away": 35
+        "home": 30,
+        "draw": 26,
+        "away": 44
       }
     },
     {
@@ -1327,9 +1411,9 @@
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "prob": {
-        "home": 68,
-        "draw": 15,
-        "away": 17
+        "home": 62,
+        "draw": 17,
+        "away": 21
       }
     },
     {
@@ -1349,9 +1433,9 @@
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "prob": {
-        "home": 10,
-        "draw": 8,
-        "away": 82
+        "home": 8,
+        "draw": 7,
+        "away": 85
       }
     },
     {

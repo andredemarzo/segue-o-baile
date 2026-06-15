@@ -44,8 +44,9 @@ const el = {
 };
 
 let selectedMatchId = null;
-let liveScore = null;
-let liveScorers = [];
+const liveById = {}; // matchId -> { status, home, away, homePen, awayPen, time } da FIFA — PERSISTE (o sinal de "encerrado" não se perde)
+let liveScorers = []; // artilheiros do jogo ao vivo atualmente consultado
+let liveScorersId = null; // de qual jogo são os liveScorers acima
 
 let MATCHES = [];
 
@@ -88,30 +89,46 @@ function formatDistance(ms) {
   return `${two(hours)}:${two(minutes)}:${two(seconds)}`;
 }
 
+// Status real da FIFA para o jogo (0=encerrado, 1=futuro, 3=ao vivo), ou null se
+// ainda não consultamos. Vem de liveById, que PERSISTE entre ciclos.
+function liveStatus(match) {
+  const l = liveById[match.id];
+  return l && l.status != null ? l.status : null;
+}
+// Encerrado = o coletor já marcou (json status 0) OU a FIFA já confirmou (status 0).
+// Uma vez encerrado, NUNCA volta a ser o card — isto mata a regressão.
+function isFinished(match) {
+  return match.status === 0 || liveStatus(match) === 0;
+}
+// Ao vivo só com status 3 REAL da FIFA — nunca inventado pelo relógio.
+function isLive(match) {
+  return liveStatus(match) === 3;
+}
+
 function getActiveMatch(now = new Date()) {
   return MATCHES.find((match) => {
-    if (match.status === 0) return false; // já encerrado pelo matches.json
-    // A FIFA já avisou que encerrou? O placar ao vivo é a fonte da verdade e chega
-    // ANTES do coletor virar o status no JSON. Sem isto, o card ficava PRESO no
-    // jogo recém-encerrado por até 3,5h, em vez de pular para o próximo.
-    if (liveScore && liveScore.id === match.id && liveScore.status === 0) return false;
+    if (isFinished(match)) return false; // encerrado (json OU FIFA) nunca é o card
     const start = utcDate(match);
     return start <= now && now < new Date(start.getTime() + FOCAL_WINDOW_MS);
   });
 }
 
 function getNextMatch(now = new Date()) {
-  return getActiveMatch(now) || MATCHES.find((match) => utcDate(match) > now) || MATCHES[MATCHES.length - 1];
+  return (
+    getActiveMatch(now) ||
+    MATCHES.find((match) => !isFinished(match) && utcDate(match) > now) ||
+    MATCHES.filter((m) => !isFinished(m)).pop() ||
+    MATCHES[MATCHES.length - 1]
+  );
 }
 
-// Fase do jogo pela FONTE DA VERDADE (MatchStatus real da FIFA, quando já temos),
-// com fallback por relógio enquanto a API não respondeu. 0=encerrado,1=próximo,3=ao vivo.
+// Fase pela FONTE DA VERDADE: ENCERRADO (json status 0 OU FIFA status 0) tem
+// prioridade > AO VIVO (só status 3 REAL da FIFA) > futuro/relógio. O relógio só
+// dá "ao vivo provisório" a um jogo que começou e AINDA não foi confirmado encerrado
+// — e o isFinished acima já barra os encerrados de verdade (fim do "ao vivo" falso).
 function matchPhase(match) {
-  if (liveScore && liveScore.id === match.id && liveScore.status != null) {
-    if (liveScore.status === 3) return "live";
-    if (liveScore.status === 0) return "finished";
-    return "upcoming";
-  }
+  if (isFinished(match)) return "finished";
+  if (isLive(match)) return "live";
   const start = utcDate(match);
   const now = new Date();
   if (now < start) return "upcoming";
@@ -174,9 +191,16 @@ async function fetchScorers(idStage, idMatch) {
   return scorers;
 }
 
-function teamScorersHtml(side) {
-  if (!Array.isArray(liveScorers) || !liveScorers.length) return "";
-  const text = liveScorers
+function teamScorersHtml(side, match) {
+  // ao vivo: liveScorers (só se forem deste jogo); encerrado: match.scorers do JSON.
+  const list =
+    liveScorersId === match.id && liveScorers.length
+      ? liveScorers
+      : Array.isArray(match.scorers)
+        ? match.scorers
+        : [];
+  if (!list.length) return "";
+  const text = list
     .filter((s) => s.side === side)
     .map((s) => `${s.name} ${s.minute}${s.note ? ` (${s.note})` : ""}`)
     .join(", ");
@@ -185,19 +209,29 @@ function teamScorersHtml(side) {
 
 function scorelineHtml(match) {
   const phase = matchPhase(match);
-  const hasScore = liveScore && liveScore.id === match.id && liveScore.home != null;
-  const showScore = hasScore && (phase === "live" || phase === "finished");
+  const live = liveById[match.id];
+  // placar ao vivo vem da FIFA (liveById); encerrado, do matches.json como fallback.
+  let h = null;
+  let a = null;
+  let penH = null;
+  let penA = null;
+  if (live && live.home != null) {
+    h = live.home; a = live.away; penH = live.homePen; penA = live.awayPen;
+  } else if (phase === "finished" && match.homeScore != null) {
+    h = match.homeScore; a = match.awayScore;
+  }
+  const showScore = (phase === "live" || phase === "finished") && h != null;
   let middle = "x";
   if (showScore) {
-    middle = `${liveScore.home} - ${liveScore.away}`;
-    if (liveScore.homePen != null && liveScore.awayPen != null) {
-      middle += `<small class="pens">${liveScore.homePen}-${liveScore.awayPen} nos pênaltis</small>`;
+    middle = `${h} - ${a}`;
+    if (penH != null && penA != null) {
+      middle += `<small class="pens">${penH}-${penA} nos pênaltis</small>`;
     }
   }
   return `
-    <div class="team">${match.home}${showScore ? teamScorersHtml("home") : ""}</div>
+    <div class="team">${match.home}${showScore ? teamScorersHtml("home", match) : ""}</div>
     <div class="versus${showScore ? " has-score" : ""}" id="versus">${middle}</div>
-    <div class="team">${match.away}${showScore ? teamScorersHtml("away") : ""}</div>
+    <div class="team">${match.away}${showScore ? teamScorersHtml("away", match) : ""}</div>
   `;
 }
 
@@ -210,22 +244,16 @@ async function updateLiveScore() {
   const windowOpen = match.idMatch && match.idStage &&
     now >= new Date(start.getTime() - 15 * 60 * 1000) &&
     now < new Date(start.getTime() + FOCAL_WINDOW_MS);
-  if (!windowOpen) {
-    if (liveScore) {
-      liveScore = null;
-      liveScorers = [];
-      el.scoreline.innerHTML = scorelineHtml(match);
-    }
-    return;
-  }
+  // Fora da janela NÃO mexemos no estado (preserva o que já sabemos — inclusive o
+  // "encerrado"). Quem desenha a tela é sempre o renderNext (a cada 1s).
+  if (!windowOpen) return;
   try {
     const url = `${FIFA_MATCH_API}/${match.idStage}/${match.idMatch}?language=pt-BR`;
     const m = await fetch(url, { cache: "no-store" }).then((response) => response.json());
     if (!m || m.IdMatch !== match.idMatch) return; // sanidade: tem que ser o jogo certo
     const home = m.HomeTeam ? m.HomeTeam.Score : null;
     const away = m.AwayTeam ? m.AwayTeam.Score : null;
-    liveScore = {
-      id: match.id,
+    liveById[match.id] = {
       status: m.MatchStatus,
       home,
       away,
@@ -237,14 +265,15 @@ async function updateLiveScore() {
     if ((m.MatchStatus === 3 || m.MatchStatus === 0) && ((home || 0) + (away || 0)) > 0) {
       try {
         liveScorers = await fetchScorers(match.idStage, match.idMatch);
+        liveScorersId = match.id;
       } catch (error) {
         // timeline indisponível — mantém placar sem marcadores
       }
     } else {
       liveScorers = [];
+      liveScorersId = match.id;
     }
-    el.scoreline.innerHTML = scorelineHtml(match);
-    renderNext(); // sincroniza badge/contador com o status real
+    renderNext(); // único ponto que escreve a tela — sincroniza com o status real
   } catch (error) {
     // sem rede ou API indisponível — mantém o estado atual
   }
@@ -713,6 +742,7 @@ function compactBroadcastSummary(match) {
 
 let renderedMatchId = null;
 let renderedPhase = null;
+let renderedScoreSig = null; // assinatura do placar/marcadores renderizados (re-render no gol)
 
 // "Quem leva?" — probabilidade pré-jogo (índice Elo), só na fase de pré-jogo.
 function renderPredict(match, phase) {
@@ -746,12 +776,12 @@ function renderNext() {
   const start = utcDate(match);
   const phase = matchPhase(match);
   const bar = el.countdown.parentElement;
+  const live = liveById[match.id];
 
-  // Cabeçalho/placar/transmissão só mudam quando o jogo OU a fase muda (evita
-  // flicker a cada segundo). Badge e contador são leves e atualizam todo tick.
+  // Cabeçalho/cidade/horários/transmissão/predict só mudam quando o JOGO ou a FASE
+  // muda (evita flicker a cada segundo).
   if (match.id !== renderedMatchId || phase !== renderedPhase) {
     el.nextTitle.textContent = `${stageLabel(match)} · Jogo ${match.id}`;
-    el.scoreline.innerHTML = scorelineHtml(match);
     el.city.textContent = `${match.city} · ${match.venue}`;
     el.timeBr.textContent = formatTime(start, BR_TZ, "pt-BR");
     el.timePt.textContent = formatTime(start, PT_TZ, "pt-PT");
@@ -762,12 +792,20 @@ function renderNext() {
     renderedPhase = phase;
   }
 
+  // Placar + marcadores: re-renderiza quando o jogo, a fase OU o placar ao vivo muda.
+  // (Único ponto que escreve o placar — sem dois renderizadores brigando.)
+  const sig = `${match.id}|${phase}|${live ? `${live.home}-${live.away}/${live.homePen}-${live.awayPen}/${live.time}` : ""}|${liveScorersId === match.id ? liveScorers.length : 0}`;
+  if (sig !== renderedScoreSig) {
+    el.scoreline.innerHTML = scorelineHtml(match);
+    renderedScoreSig = sig;
+  }
+
   if (phase === "live") {
     bar.hidden = false;
     el.matchState.className = "badge badge-live";
     el.matchState.textContent = "Ao vivo";
     el.countLabel.textContent = "Tempo de jogo";
-    el.countdown.textContent = (liveScore && liveScore.time) || "—";
+    el.countdown.textContent = (live && live.time) || "—";
   } else if (phase === "finished") {
     bar.hidden = true; // jogo acabou — o placar final já está no painel
     el.matchState.className = "badge badge-finished";
