@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-15T20:01:21+00:00",
+  "updatedAt": "2026-06-15T22:21:05+00:00",
   "matches": [
     {
       "id": 1,
@@ -446,10 +446,6 @@
         "home": 10,
         "draw": 8,
         "away": 82
-      },
-      "weather": {
-        "tempC": 28,
-        "at": "2026-06-15T19:59:53+00:00"
       }
     },
     {
@@ -507,16 +503,24 @@
       "offset": -7,
       "home": "Bélgica",
       "away": "Egito",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "city": "Seattle",
       "venue": "Lumen Field",
-      "prob": {
-        "home": 68,
-        "draw": 15,
-        "away": 17
-      }
+      "scorers": [
+        {
+          "name": "E.ashour",
+          "minute": "19'",
+          "side": "away"
+        },
+        {
+          "name": "M.hany",
+          "minute": "66'",
+          "side": "home",
+          "note": "gc"
+        }
+      ]
     },
     {
       "id": 17,
@@ -879,7 +883,7 @@
       },
       "weather": {
         "tempC": 26,
-        "at": "2026-06-15T10:57:41+00:00"
+        "at": "2026-06-15T22:21:03+00:00"
       }
     },
     {
@@ -1242,8 +1246,8 @@
         "away": 52
       },
       "weather": {
-        "tempC": 25,
-        "at": "2026-06-15T10:57:41+00:00"
+        "tempC": 20,
+        "at": "2026-06-15T22:21:03+00:00"
       }
     },
     {
@@ -1684,8 +1688,8 @@
         "away": 61
       },
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-15T10:57:41+00:00"
+        "tempC": 16,
+        "at": "2026-06-15T22:21:03+00:00"
       }
     },
     {
@@ -2073,7 +2077,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "East Rutherford",
-      "venue": "MetLife Stadium"
+      "venue": "MetLife Stadium",
+      "weather": {
+        "tempC": 31,
+        "at": "2026-06-15T22:21:03+00:00"
+      }
     },
     {
       "id": 78,
