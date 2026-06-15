@@ -13,7 +13,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Segue o Baile">
-    <link rel="stylesheet" href="styles.css?v=58">
+    <link rel="stylesheet" href="styles.css?v=60">
   </head>
   <body>
     <div class="field-photo" aria-hidden="true"></div>
@@ -88,7 +88,9 @@
       <p class="alert-status" id="alert-status"></p>
 
       <section class="hero">
-        <article class="match-panel" aria-labelledby="next-title">
+        <nav class="day-strip" id="day-strip" aria-label="Jogos do dia" hidden></nav>
+        <div class="carousel-wrap">
+          <article class="match-panel" aria-labelledby="next-title">
           <div class="panel-head">
             <h2 id="next-title">Carregando...</h2>
             <span class="badge" id="match-state">Próximo</span>
@@ -128,7 +130,8 @@
               </div>
             </div>
           </div>
-        </article>
+          </article>
+        </div>
       </section>
 
       <details class="expand section-broadcast">
@@ -212,6 +215,6 @@
       </footer>
     </main>
 
-    <script src="app.js?v=58"></script>
+    <script src="app.js?v=60"></script>
   </body>
 </html>

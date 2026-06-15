@@ -13,6 +13,7 @@ const FIFA_MATCH_API = "https://api.fifa.com/api/v3/live/football/17/285023";
 const el = {
   nextTitle: document.querySelector("#next-title"),
   matchState: document.querySelector("#match-state"),
+  dayStrip: document.querySelector("#day-strip"),
   scoreline: document.querySelector("#scoreline"),
   predict: document.querySelector("#predict"),
   cityVenue: document.querySelector("#city-venue"),
@@ -150,6 +151,105 @@ function getNextMatch(now = new Date()) {
     MATCHES.filter((m) => !isFinished(m)).pop() ||
     MATCHES[MATCHES.length - 1]
   );
+}
+
+// Sigla de 3 letras (código FIFA) por seleção — para a faixa do carrossel.
+const TEAM_ABBR = {
+  "Alemanha": "GER", "Argentina": "ARG", "Argélia": "ALG", "Arábia Saudita": "KSA",
+  "Austrália": "AUS", "Áustria": "AUT", "Bélgica": "BEL", "Bósnia e Herzegovina": "BIH",
+  "Brasil": "BRA", "Cabo Verde": "CPV", "Canadá": "CAN", "Catar": "QAT",
+  "Colômbia": "COL", "Coreia do Sul": "KOR", "Costa do Marfim": "CIV", "Croácia": "CRO",
+  "Curaçao": "CUW", "Egito": "EGY", "Equador": "ECU", "Escócia": "SCO",
+  "Espanha": "ESP", "Estados Unidos": "USA", "França": "FRA", "Gana": "GHA",
+  "Haiti": "HAI", "Inglaterra": "ENG", "Irã": "IRN", "Iraque": "IRQ",
+  "Japão": "JPN", "Jordânia": "JOR", "Marrocos": "MAR", "México": "MEX",
+  "Noruega": "NOR", "Nova Zelândia": "NZL", "Países Baixos": "NED", "Panamá": "PAN",
+  "Paraguai": "PAR", "Portugal": "POR", "RD Congo": "COD", "República Tcheca": "CZE",
+  "Senegal": "SEN", "Suécia": "SWE", "Suíça": "SUI", "Tunísia": "TUN",
+  "Turquia": "TUR", "Uruguai": "URU", "Uzbequistão": "UZB", "África do Sul": "RSA",
+};
+function abbr(team) {
+  return TEAM_ABBR[team] || (team && team !== "A definir" ? team.slice(0, 3).toUpperCase() : "?");
+}
+
+// --- Carrossel da rodada do dia ---
+// null = automático (mostra o "jogo da vez" e auto-avança); um id = o jogo que o
+// usuário escolheu no carrossel (swipe/faixa), respeitado até ele voltar ao vivo.
+let activeMatchId = null;
+
+function brDateKey(match) {
+  return new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: BR_TZ }).format(utcDate(match));
+}
+
+// Jogos do MESMO dia (data de Brasília) do jogo de referência, em ordem de horário.
+function dayMatches(ref) {
+  const key = brDateKey(ref);
+  return MATCHES.filter((m) => brDateKey(m) === key);
+}
+
+// O jogo mostrado no card: o escolhido pelo usuário, senão o "jogo da vez".
+// A escolha manual vale DENTRO do dia; quando o dia vira (o jogo da vez passa pra
+// outra data), a escolha expira e o card volta ao automático (item 5, situação 8).
+function getCardMatch(now = new Date()) {
+  if (activeMatchId != null) {
+    const m = MATCHES.find((x) => x.id === activeMatchId);
+    const focal = getNextMatch(now);
+    if (m && brDateKey(m) === brDateKey(focal)) return m;
+    activeMatchId = null; // dia virou (ou jogo sumiu) → automático
+  }
+  return getNextMatch(now);
+}
+
+// Anda no carrossel dentro do dia: -1 anterior, +1 próximo.
+function moveCard(dir) {
+  const cur = getCardMatch();
+  const day = dayMatches(cur);
+  const i = day.findIndex((m) => m.id === cur.id);
+  const next = day[i + dir];
+  if (next) {
+    activeMatchId = next.id;
+    renderNext();
+  }
+}
+
+// Fade sutil ao TROCAR de jogo no card (respeita prefers-reduced-motion).
+function flashPanel() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const p = document.querySelector(".match-panel");
+  if (!p) return;
+  p.classList.remove("card-flip");
+  void p.offsetWidth; // força reflow p/ reiniciar a animação
+  p.classList.add("card-flip");
+}
+
+// Faixa "mapa da rodada": uma pílula por jogo do dia (hora / placar / ao vivo),
+// a ativa destacada, tocável. Some quando há só 1 jogo no dia.
+function renderDayStrip(cur) {
+  if (!el.dayStrip) return;
+  const day = dayMatches(cur);
+  if (day.length < 2) {
+    el.dayStrip.hidden = true;
+    el.dayStrip.innerHTML = "";
+    return;
+  }
+  el.dayStrip.hidden = false;
+  el.dayStrip.innerHTML = day
+    .map((m) => {
+      const phase = matchPhase(m);
+      const active = m.id === cur.id;
+      let label;
+      if (phase === "finished") {
+        const lv = liveById[m.id];
+        const h = lv && lv.home != null ? lv.home : m.homeScore;
+        const a = lv && lv.away != null ? lv.away : m.awayScore;
+        label = h != null ? `${abbr(m.home)} ${h}-${a} ${abbr(m.away)}` : `${abbr(m.home)}×${abbr(m.away)}`;
+      } else {
+        label = `${abbr(m.home)}×${abbr(m.away)}`;
+      }
+      const dot = phase === "live" ? '<span class="pill-live-dot" aria-hidden="true"></span>' : "";
+      return `<button type="button" class="day-pill ph-${phase}${active ? " active" : ""}" data-match-id="${m.id}" aria-pressed="${active}">${dot}${label}</button>`;
+    })
+    .join("");
 }
 
 // Fase pela FONTE DA VERDADE: ENCERRADO (json status 0 OU FIFA status 0) tem
@@ -802,13 +902,15 @@ function renderPredict(match, phase) {
 
 function renderNext() {
   const now = new Date();
-  const match = getNextMatch(now);
+  const match = getCardMatch(now);
   const start = utcDate(match);
   const phase = matchPhase(match);
   const live = liveById[match.id];
 
   // Cabeçalho/meta/transmissão/predict só mudam quando o JOGO ou a FASE muda.
   if (match.id !== renderedMatchId || phase !== renderedPhase) {
+    if (renderedMatchId !== null && match.id !== renderedMatchId) flashPanel();
+    renderDayStrip(match);
     el.nextTitle.textContent = `${stageLabel(match)} · Jogo ${match.id}`;
     el.cityVenue.textContent = `${match.city} · ${match.venue}`;
     if (match.weather && match.weather.tempC != null) {
@@ -820,6 +922,8 @@ function renderNext() {
     el.when.textContent = whenLine(start);
     if (!selectedMatchId) renderBroadcasts(match);
     renderLiveStreams(match, phase === "live");
+    const ls = document.querySelector("#live-streams");
+    if (ls) ls.classList.toggle("demoted", phase === "finished");
     renderPredict(match, phase);
     renderedMatchId = match.id;
     renderedPhase = phase;
@@ -1211,6 +1315,37 @@ function bindEvents() {
       renderHistory();
       el.resultList.scrollIntoView({ behavior: "smooth", block: "start" });
     });
+  }
+
+  // --- Carrossel da rodada: tocar na faixa, swipe (mobile), setas (desktop) ---
+  if (el.dayStrip) {
+    el.dayStrip.addEventListener("click", (event) => {
+      const pill = event.target.closest("button[data-match-id]");
+      if (!pill) return;
+      activeMatchId = Number(pill.dataset.matchId);
+      renderNext();
+    });
+  }
+  const panel = document.querySelector(".match-panel");
+  if (panel) {
+    let sx = 0;
+    let sy = 0;
+    let tracking = false;
+    panel.addEventListener("touchstart", (e) => {
+      sx = e.touches[0].clientX;
+      sy = e.touches[0].clientY;
+      tracking = true;
+    }, { passive: true });
+    panel.addEventListener("touchend", (e) => {
+      if (!tracking) return;
+      tracking = false;
+      const dx = e.changedTouches[0].clientX - sx;
+      const dy = e.changedTouches[0].clientY - sy;
+      // swipe horizontal de verdade (ignora rolagem vertical e toques curtos)
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+        moveCard(dx < 0 ? 1 : -1); // arrasta p/ a esquerda = próximo jogo
+      }
+    }, { passive: true });
   }
 }
 

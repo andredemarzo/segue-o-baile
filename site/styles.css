@@ -281,6 +281,77 @@ h2 {
   pointer-events: none;
 }
 
+/* Carrossel da rodada do dia: faixa-mapa + setas (desktop) */
+.carousel-wrap {
+  position: relative;
+}
+
+.day-strip {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 0 10px;
+}
+
+.day-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.day-pill {
+  flex: none;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--hair);
+  background: var(--glass-3);
+  color: var(--ink-2);
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.day-pill.ph-live {
+  color: var(--green);
+  border-color: rgba(19, 138, 82, 0.4);
+}
+
+.day-pill.active {
+  background: var(--green-deep);
+  color: #fff;
+  border-color: var(--green-deep);
+}
+
+/* Ponto pulsante de "ao vivo" na pílula (avisa que há jogo rolando p/ você tocar) */
+.pill-live-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  margin-right: 5px;
+  vertical-align: middle;
+  animation: livePulse 1.7s ease-in-out infinite;
+}
+
+/* Fade sutil ao TROCAR de jogo no carrossel */
+@keyframes cardFlip {
+  from { opacity: 0.35; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card-flip {
+  animation: cardFlip 0.22s ease;
+}
+
+/* Jogo encerrado: o resultado fica registrado no card; "onde assistir" é rebaixado */
+.live-streams.demoted {
+  opacity: 0.5;
+  filter: saturate(0.7);
+}
+
 .panel-head {
   display: flex;
   gap: 12px;
