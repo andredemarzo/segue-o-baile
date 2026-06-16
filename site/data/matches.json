@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-15T22:21:05+00:00",
+  "updatedAt": "2026-06-16T00:07:01+00:00",
   "matches": [
     {
       "id": 1,
@@ -437,16 +437,23 @@
       "offset": -4,
       "home": "Arábia Saudita",
       "away": "Uruguai",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
-      "prob": {
-        "home": 10,
-        "draw": 8,
-        "away": 82
-      }
+      "scorers": [
+        {
+          "name": "Alamri",
+          "minute": "41'",
+          "side": "home"
+        },
+        {
+          "name": "Maxi Araujo",
+          "minute": "80'",
+          "side": "away"
+        }
+      ]
     },
     {
       "id": 14,
@@ -1059,9 +1066,9 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "prob": {
-        "home": 79,
-        "draw": 10,
-        "away": 11
+        "home": 77,
+        "draw": 11,
+        "away": 12
       },
       "weather": {
         "tempC": 33,
@@ -1085,8 +1092,8 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "prob": {
-        "home": 95,
-        "draw": 2,
+        "home": 94,
+        "draw": 3,
         "away": 3
       },
       "weather": {
@@ -1111,9 +1118,9 @@
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "prob": {
-        "home": 57,
-        "draw": 20,
-        "away": 23
+        "home": 54,
+        "draw": 21,
+        "away": 25
       },
       "weather": {
         "tempC": 20,
@@ -1137,9 +1144,9 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "prob": {
-        "home": 22,
-        "draw": 19,
-        "away": 59
+        "home": 21,
+        "draw": 18,
+        "away": 61
       },
       "weather": {
         "tempC": 21,
@@ -1735,9 +1742,9 @@
       "city": "Seattle",
       "venue": "Lumen Field",
       "prob": {
-        "home": 27,
-        "draw": 24,
-        "away": 49
+        "home": 29,
+        "draw": 25,
+        "away": 46
       },
       "weather": {
         "tempC": 15,
@@ -1761,9 +1768,9 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "prob": {
-        "home": 9,
+        "home": 10,
         "draw": 8,
-        "away": 83
+        "away": 82
       },
       "weather": {
         "tempC": 17,
@@ -1787,9 +1794,9 @@
       "city": "Houston",
       "venue": "NRG Stadium",
       "prob": {
-        "home": 41,
-        "draw": 27,
-        "away": 32
+        "home": 36,
+        "draw": 29,
+        "away": 35
       },
       "weather": {
         "tempC": 32,
@@ -1813,9 +1820,9 @@
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "prob": {
-        "home": 14,
-        "draw": 12,
-        "away": 74
+        "home": 13,
+        "draw": 11,
+        "away": 76
       },
       "weather": {
         "tempC": 20,
