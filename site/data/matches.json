@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-16T19:02:06+00:00",
+  "updatedAt": "2026-06-16T21:47:06+00:00",
   "matches": [
     {
       "id": 1,
@@ -601,16 +601,33 @@
       "offset": -4,
       "home": "França",
       "away": "Senegal",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 3,
+      "awayScore": 1,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
-      "prob": {
-        "home": 69,
-        "draw": 14,
-        "away": 17
-      },
+      "scorers": [
+        {
+          "name": "Mbappé",
+          "minute": "66'",
+          "side": "home"
+        },
+        {
+          "name": "Barcola",
+          "minute": "82'",
+          "side": "home"
+        },
+        {
+          "name": "Mbaye",
+          "minute": "90'+5'",
+          "side": "away"
+        },
+        {
+          "name": "Mbappé",
+          "minute": "90'+6'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 26,
         "at": "2026-06-16T12:49:25+00:00"
@@ -1002,8 +1019,8 @@
         "away": 46
       },
       "weather": {
-        "tempC": 25,
-        "at": "2026-06-16T12:49:25+00:00"
+        "tempC": 26,
+        "at": "2026-06-16T21:47:03+00:00"
       }
     },
     {
@@ -1231,9 +1248,9 @@
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "prob": {
-        "home": 45,
-        "draw": 25,
-        "away": 30
+        "home": 49,
+        "draw": 24,
+        "away": 27
       },
       "weather": {
         "tempC": 16,
@@ -1257,9 +1274,9 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
-        "home": 91,
+        "home": 92,
         "draw": 4,
-        "away": 5
+        "away": 4
       },
       "weather": {
         "tempC": 18,
@@ -1522,8 +1539,8 @@
         "away": 20
       },
       "weather": {
-        "tempC": 24,
-        "at": "2026-06-16T12:49:25+00:00"
+        "tempC": 23,
+        "at": "2026-06-16T21:47:03+00:00"
       }
     },
     {
@@ -1751,9 +1768,9 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "prob": {
-        "home": 21,
-        "draw": 18,
-        "away": 61
+        "home": 19,
+        "draw": 16,
+        "away": 65
       },
       "weather": {
         "tempC": 31,
@@ -1777,9 +1794,9 @@
       "city": "Toronto",
       "venue": "BMO Field",
       "prob": {
-        "home": 75,
-        "draw": 11,
-        "away": 14
+        "home": 73,
+        "draw": 12,
+        "away": 15
       },
       "weather": {
         "tempC": 27,
@@ -1965,7 +1982,7 @@
       },
       "weather": {
         "tempC": 27,
-        "at": "2026-06-16T12:49:25+00:00"
+        "at": "2026-06-16T21:47:03+00:00"
       }
     },
     {
@@ -2246,7 +2263,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Seattle",
-      "venue": "Lumen Field"
+      "venue": "Lumen Field",
+      "weather": {
+        "tempC": 20,
+        "at": "2026-06-16T21:47:03+00:00"
+      }
     },
     {
       "id": 83,
