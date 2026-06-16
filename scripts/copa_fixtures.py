@@ -251,6 +251,10 @@ def validate(matches):
 
 HOT_BEFORE = datetime.timedelta(minutes=30)  # começa a atualizar 30min antes do apito
 HOT_AFTER = datetime.timedelta(hours=3)       # segue até 3h depois (captura placar/gols finais)
+# Enquanto um jogo que JÁ começou ainda não foi finalizado nos nossos dados (status≠0),
+# o coletor segue "quente" por até este tempo — assim o ÚLTIMO jogo da rodada não fica
+# sem placar se a FIFA confirmar tarde ou o agendador (best-effort) pular a janela fixa.
+PENDING_FINALIZE = datetime.timedelta(hours=12)
 
 
 def should_run_now():
@@ -276,6 +280,11 @@ def should_run_now():
         except Exception:
             continue
         if kickoff - HOT_BEFORE <= now <= kickoff + HOT_AFTER:
+            return True
+        # Jogo já começou e ainda não finalizamos (status≠0): segue quente até capturar
+        # o resultado — cobre o último jogo da rodada confirmado tarde (bug do Irã).
+        if (m.get("status") != 0 and m.get("home") != TBD and m.get("away") != TBD
+                and kickoff <= now <= kickoff + PENDING_FINALIZE):
             return True
     return False
 
@@ -412,23 +421,31 @@ def fetch_weather(lat, lon, utc_kickoff):
 
 
 def enrich_weather(matches, prev_by_id):
-    """match['weather'] = {tempC, at} para jogos FUTUROS com sede mapeada e dentro
-    do alcance da previsão (~15 dias). THROTTLE: só reconsulta se a previsão anterior
-    tem > 6h (a previsão não muda a cada rodada de 15min). Preserva em falha."""
+    """match['weather'] = {tempC, at}: previsão para a hora do apito (Open-Meteo).
+    Jogo FUTURO dentro do alcance (~15d): (re)consulta com THROTTLE de 6h (a previsão
+    não muda a cada rodada de 15min). Jogo que JÁ COMEÇOU (ao vivo/encerrado): CONGELA
+    o snapshot do kickoff — a temperatura registrada não muda e NÃO deve sumir do card
+    quando o jogo entra ao vivo/encerra. Preserva o anterior em qualquer falha."""
     now = datetime.datetime.now(datetime.timezone.utc)
     horizon = now + datetime.timedelta(days=15)
     done = 0
     for m in matches:
-        if m.get("status") != 1 or m["city"] not in CITY_COORDS:
+        if m["city"] not in CITY_COORDS:
             continue
+        prev = (prev_by_id.get(m["id"]) or {}).get("weather")
         try:
             local_dt = datetime.datetime.strptime(f"{m['date']} {m['time']}", "%Y-%m-%d %H:%M")
             kickoff = (local_dt - datetime.timedelta(hours=m["offset"])).replace(tzinfo=datetime.timezone.utc)
         except Exception:
+            if prev:
+                m["weather"] = prev
             continue
+        # Já começou/encerrou OU fora do alcance: CONGELA o snapshot que já tínhamos
+        # (não some a temperatura no ao vivo/encerrado) e não reconsulta.
         if kickoff < now or kickoff > horizon:
-            continue  # já passou ou fora do alcance da previsão
-        prev = (prev_by_id.get(m["id"]) or {}).get("weather")
+            if prev:
+                m["weather"] = prev
+            continue
         if prev and prev.get("at"):  # throttle: reaproveita previsão recente (< 6h)
             try:
                 if (now - datetime.datetime.fromisoformat(prev["at"])).total_seconds() < 6 * 3600:
@@ -439,7 +456,7 @@ def enrich_weather(matches, prev_by_id):
         lat, lon = CITY_COORDS[m["city"]]
         try:
             temp = fetch_weather(lat, lon, kickoff)
-        except Exception as exc:
+        except Exception:
             if prev:
                 m["weather"] = prev  # falhou: mantém o anterior, não apaga
             continue

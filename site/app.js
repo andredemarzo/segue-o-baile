@@ -180,25 +180,30 @@ function abbr(team) {
 // usuário escolheu no carrossel (swipe/faixa), respeitado até ele voltar ao vivo.
 let activeMatchId = null;
 
-function brDateKey(match) {
-  return new Intl.DateTimeFormat("en-CA", { year: "numeric", month: "2-digit", day: "2-digit", timeZone: BR_TZ }).format(utcDate(match));
+// Chave da RODADA: a data OFICIAL do jogo (fuso do estádio/FIFA), igual para todo
+// mundo. A rodada é a unidade da competição — todos os jogos do mesmo "dia da Copa"
+// ficam juntos, mesmo o que cai na nossa madrugada (ex.: 01h BR). NÃO agrupamos por
+// fuso de Brasília/Portugal (fatiaria a rodada e poderia errar). O horário exibido
+// por jogo segue em BR/PT no whenLine, com a data real — então não há confusão.
+function roundKey(match) {
+  return match.date;
 }
 
-// Jogos do MESMO dia (data de Brasília) do jogo de referência, em ordem de horário.
+// Jogos da MESMA RODADA (mesma data oficial) do jogo de referência, em ordem de horário.
 function dayMatches(ref) {
-  const key = brDateKey(ref);
-  return MATCHES.filter((m) => brDateKey(m) === key);
+  const key = roundKey(ref);
+  return MATCHES.filter((m) => roundKey(m) === key);
 }
 
 // O jogo mostrado no card: o escolhido pelo usuário, senão o "jogo da vez".
-// A escolha manual vale DENTRO do dia; quando o dia vira (o jogo da vez passa pra
-// outra data), a escolha expira e o card volta ao automático (item 5, situação 8).
+// A escolha manual vale DENTRO da rodada; quando a rodada vira (o jogo da vez passa
+// pra outra rodada), a escolha expira e o card volta ao automático (item 5, situação 8).
 function getCardMatch(now = new Date()) {
   if (activeMatchId != null) {
     const m = MATCHES.find((x) => x.id === activeMatchId);
     const focal = getNextMatch(now);
-    if (m && brDateKey(m) === brDateKey(focal)) return m;
-    activeMatchId = null; // dia virou (ou jogo sumiu) → automático
+    if (m && roundKey(m) === roundKey(focal)) return m;
+    activeMatchId = null; // rodada virou (ou jogo sumiu) → automático
   }
   return getNextMatch(now);
 }
