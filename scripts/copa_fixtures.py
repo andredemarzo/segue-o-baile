@@ -420,14 +420,20 @@ def fetch_weather(lat, lon, utc_kickoff):
     return round(temp) if temp is not None else None
 
 
+WEATHER_BACKFILL = datetime.timedelta(days=3)  # ainda busca o clima de jogos recém-jogados
+
+
 def enrich_weather(matches, prev_by_id):
-    """match['weather'] = {tempC, at}: previsão para a hora do apito (Open-Meteo).
-    Jogo FUTURO dentro do alcance (~15d): (re)consulta com THROTTLE de 6h (a previsão
-    não muda a cada rodada de 15min). Jogo que JÁ COMEÇOU (ao vivo/encerrado): CONGELA
-    o snapshot do kickoff — a temperatura registrada não muda e NÃO deve sumir do card
-    quando o jogo entra ao vivo/encerra. Preserva o anterior em qualquer falha."""
+    """match['weather'] = {tempC, at}: temperatura prevista para a hora do apito
+    (Open-Meteo). Mantém UM snapshot por jogo com sede mapeada e o PRESERVA no ao
+    vivo/encerrado — a temperatura do apito não muda e NÃO deve sumir do card.
+    - FUTURO no alcance (~15d): (re)consulta com throttle de 6h (não muda a cada 15min).
+    - Recém-jogado (até 3d) SEM snapshot: backfill uma vez (cobre o que o coletor antigo
+      zerava ao começar o jogo). Com snapshot: congela.
+    - Falha em qualquer ponto: mantém o anterior, nunca apaga."""
     now = datetime.datetime.now(datetime.timezone.utc)
     horizon = now + datetime.timedelta(days=15)
+    floor = now - WEATHER_BACKFILL
     done = 0
     for m in matches:
         if m["city"] not in CITY_COORDS:
@@ -440,19 +446,21 @@ def enrich_weather(matches, prev_by_id):
             if prev:
                 m["weather"] = prev
             continue
-        # Já começou/encerrou OU fora do alcance: CONGELA o snapshot que já tínhamos
-        # (não some a temperatura no ao vivo/encerrado) e não reconsulta.
-        if kickoff < now or kickoff > horizon:
+        # Fora da janela útil (muito no futuro, ou jogo antigo): só preserva o que houver.
+        if kickoff > horizon or kickoff < floor:
             if prev:
                 m["weather"] = prev
             continue
-        if prev and prev.get("at"):  # throttle: reaproveita previsão recente (< 6h)
+        # Já temos snapshot: congela — exceto jogo FUTURO com previsão velha (>6h), que reconsulta.
+        if prev and prev.get("at"):
             try:
-                if (now - datetime.datetime.fromisoformat(prev["at"])).total_seconds() < 6 * 3600:
-                    m["weather"] = prev
-                    continue
+                stale = (now - datetime.datetime.fromisoformat(prev["at"])).total_seconds() >= 6 * 3600
             except Exception:
-                pass
+                stale = True
+            if not (kickoff >= now and stale):
+                m["weather"] = prev
+                continue
+        # Precisa buscar: jogo futuro (refresh) OU recém-jogado sem snapshot (backfill).
         lat, lon = CITY_COORDS[m["city"]]
         try:
             temp = fetch_weather(lat, lon, kickoff)
