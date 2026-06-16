@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-16T12:51:44+00:00",
+  "updatedAt": "2026-06-16T13:59:20+01:00",
   "matches": [
     {
       "id": 1,
@@ -163,7 +163,11 @@
           "minute": "28'",
           "side": "away"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 22,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 6,
@@ -192,7 +196,11 @@
           "minute": "75'",
           "side": "home"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 22,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 7,
@@ -221,7 +229,11 @@
           "minute": "32'",
           "side": "home"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 31,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 8,
@@ -252,7 +264,11 @@
           "side": "home",
           "note": "gc"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 22,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 9,
@@ -276,7 +292,11 @@
           "minute": "90'",
           "side": "home"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 29,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 10,
@@ -336,7 +356,11 @@
           "minute": "88'",
           "side": "home"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 30,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 11,
@@ -375,7 +399,11 @@
           "minute": "88'",
           "side": "away"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 29,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 12,
@@ -424,7 +452,11 @@
           "minute": "90'+6'",
           "side": "home"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 29,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 13,
@@ -453,7 +485,11 @@
           "minute": "80'",
           "side": "away"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 33,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 14,
@@ -471,7 +507,11 @@
       "awayScore": 0,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
-      "scorers": []
+      "scorers": [],
+      "weather": {
+        "tempC": 26,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 15,
@@ -544,7 +584,11 @@
           "side": "home",
           "note": "gc"
         }
-      ]
+      ],
+      "weather": {
+        "tempC": 29,
+        "at": "2026-06-16T12:59:16+00:00"
+      }
     },
     {
       "id": 17,
@@ -880,8 +924,8 @@
         "away": 5
       },
       "weather": {
-        "tempC": 23,
-        "at": "2026-06-15T19:59:53+00:00"
+        "tempC": 26,
+        "at": "2026-06-16T12:59:16+00:00"
       }
     },
     {
@@ -1193,7 +1237,7 @@
       },
       "weather": {
         "tempC": 16,
-        "at": "2026-06-15T19:59:53+00:00"
+        "at": "2026-06-16T12:59:16+00:00"
       }
     },
     {
@@ -1296,8 +1340,8 @@
         "away": 3
       },
       "weather": {
-        "tempC": 20,
-        "at": "2026-06-15T19:59:53+00:00"
+        "tempC": 26,
+        "at": "2026-06-16T12:59:16+00:00"
       }
     },
     {
@@ -1634,8 +1678,8 @@
         "away": 85
       },
       "weather": {
-        "tempC": 25,
-        "at": "2026-06-15T19:59:53+00:00"
+        "tempC": 27,
+        "at": "2026-06-16T12:59:16+00:00"
       }
     },
     {
@@ -2019,8 +2063,8 @@
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "weather": {
-        "tempC": 25,
-        "at": "2026-06-15T19:59:53+00:00"
+        "tempC": 22,
+        "at": "2026-06-16T12:59:16+00:00"
       }
     },
     {
