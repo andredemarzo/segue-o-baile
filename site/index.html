@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#e7efd7">
 
+    <script>
+      // Endereço final é https://sigaobaile.com. Manda os hosts antigos (pages.dev) e o
+      // www pro domínio canônico, preservando caminho/query. Nunca o próprio dominio nem
+      // o preview local (evita loop). O canonical no <head> cuida do SEO.
+      (function () {
+        var h = location.hostname;
+        if (h === "segueobaile.pages.dev" || h === "www.sigaobaile.com") {
+          location.replace("https://sigaobaile.com" + location.pathname + location.search + location.hash);
+        }
+      })();
+    </script>
+
     <title>Siga o Baile — Copa do Mundo 2026: jogos, horários e onde assistir (Brasil e Portugal)</title>
     <meta name="description" content="Guia gratuito da Copa do Mundo FIFA 2026 para a torcida de Brasil e Portugal: próximos jogos, horários em Brasília e Portugal, onde assistir ao vivo de graça (TV e streaming), classificação dos grupos e resultados ao vivo. Em breve, a coluna diária de opinião Meus Acréscimos.">
     <link rel="canonical" href="https://sigaobaile.com/">
@@ -62,7 +74,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="styles.css?v=65">
+    <link rel="stylesheet" href="styles.css?v=66">
   </head>
   <body>
     <div class="field-photo" aria-hidden="true"></div>
@@ -276,6 +288,6 @@
       </footer>
     </main>
 
-    <script src="app.js?v=65"></script>
+    <script src="app.js?v=66"></script>
   </body>
 </html>
