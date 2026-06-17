@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-17T21:56:52+00:00",
+  "updatedAt": "2026-06-17T23:18:50+00:00",
   "matches": [
     {
       "id": 1,
@@ -802,16 +802,44 @@
       "offset": -5,
       "home": "Inglaterra",
       "away": "Croácia",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 4,
+      "awayScore": 2,
       "city": "Arlington",
       "venue": "AT&T Stadium",
-      "prob": {
-        "home": 55,
-        "draw": 21,
-        "away": 24
-      },
+      "scorers": [
+        {
+          "name": "Kane",
+          "minute": "12'",
+          "side": "home",
+          "note": "p"
+        },
+        {
+          "name": "Martin Baturina",
+          "minute": "36'",
+          "side": "away"
+        },
+        {
+          "name": "Kane",
+          "minute": "42'",
+          "side": "home"
+        },
+        {
+          "name": "Petar Musa",
+          "minute": "45'+5'",
+          "side": "away"
+        },
+        {
+          "name": "Bellingham",
+          "minute": "47'",
+          "side": "home"
+        },
+        {
+          "name": "Rashford",
+          "minute": "85'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 32,
         "at": "2026-06-17T17:49:01+00:00"
@@ -1413,8 +1441,8 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "prob": {
-        "home": 94,
-        "draw": 3,
+        "home": 95,
+        "draw": 2,
         "away": 3
       },
       "weather": {
@@ -1439,9 +1467,9 @@
       "city": "Toronto",
       "venue": "BMO Field",
       "prob": {
-        "home": 18,
-        "draw": 16,
-        "away": 66
+        "home": 21,
+        "draw": 18,
+        "away": 61
       },
       "weather": {
         "tempC": 23,
@@ -1985,9 +2013,9 @@
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "prob": {
-        "home": 11,
-        "draw": 9,
-        "away": 80
+        "home": 9,
+        "draw": 8,
+        "away": 83
       },
       "weather": {
         "tempC": 28,
@@ -2011,9 +2039,9 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
-        "home": 88,
-        "draw": 5,
-        "away": 7
+        "home": 86,
+        "draw": 6,
+        "away": 8
       },
       "weather": {
         "tempC": 33,
@@ -2349,7 +2377,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Toronto",
-      "venue": "BMO Field"
+      "venue": "BMO Field",
+      "weather": {
+        "tempC": 23,
+        "at": "2026-06-17T23:18:49+00:00"
+      }
     },
     {
       "id": 84,
