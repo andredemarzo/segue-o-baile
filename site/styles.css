@@ -271,6 +271,79 @@ h2 {
   overflow: hidden;
 }
 
+/* "Dia de seleção": efeito festivo no card de jogo do Brasil/Portugal, 1x por rodada,
+   na 1ª visita do dia e ANTES do apito. Confete + glow suave na cor da seleção + faixa.
+   Camada própria sobre o .match-panel (já position:relative + overflow:hidden, que
+   recorta o confete; o glow é box-shadow externo, não recortado). */
+.celebrate-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.celebrate-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.celebrate-ribbon {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 13px 5px 8px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--hair);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(12, 59, 39, 0.12);
+  opacity: 0;
+  animation: celebRibbon 2.7s ease both;
+}
+.celebrate-ribbon .stripe {
+  width: 18px;
+  height: 12px;
+  border-radius: 3px;
+}
+.celebrate-ribbon strong {
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--green-deep);
+}
+/* Durante a comemoração, o badge "Próximo · contagem" cede o topo pra faixa (sem colisão). */
+#match-state {
+  transition: opacity 0.25s ease;
+}
+.match-panel.celebrating #match-state {
+  opacity: 0;
+}
+.match-panel.celebrate-glow {
+  animation: celebGlow 2.4s ease both;
+}
+@keyframes celebRibbon {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-7px) scale(0.95); }
+  14% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  82% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-4px) scale(0.99); }
+}
+@keyframes celebGlow {
+  0%, 100% { box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.45); }
+  42% { box-shadow: 0 0 0 2px var(--celeb-accent), 0 18px 52px var(--celeb-soft), inset 0 1px 0 rgba(255, 255, 255, 0.45); }
+}
+@keyframes celebRibbonRM {
+  0% { opacity: 0; transform: translateX(-50%); }
+  12% { opacity: 1; transform: translateX(-50%); }
+  82% { opacity: 1; transform: translateX(-50%); }
+  100% { opacity: 0; transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .match-panel.celebrate-glow { animation: none; }
+  .celebrate-ribbon { animation: celebRibbonRM 3s ease both; }
+}
+
 .match-panel::after {
   content: "";
   position: absolute;

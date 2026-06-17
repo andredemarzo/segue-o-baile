@@ -953,6 +953,148 @@ function renderPredict(match, phase) {
   `;
 }
 
+// --- "Dia de seleção": efeito festivo no card de Brasil/Portugal ---
+// Roda 1x por rodada por seleção, na 1a visita do dia e ANTES do apito (depois nao,
+// pra nao comemorar sem saber se ganhou/perdeu). Confete + glow suave na cor da
+// selecao + faixa. Respeita prefers-reduced-motion (so a faixa). Estado por rodada+time
+// em localStorage -> some sozinho quando a rodada vira (chave nova).
+const CELEB = {
+  Brasil: {
+    text: "Dia do Brasil",
+    colors: ["#00A859", "#FFD400", "#1C57B5", "#ffffff"],
+    accent: "#FFD400",
+    soft: "rgba(0, 168, 89, 0.32)",
+    stripe: "linear-gradient(90deg, #00A859 33%, #FFD400 33% 66%, #1C57B5 66%)",
+  },
+  Portugal: {
+    text: "Dia de Portugal",
+    colors: ["#C8102E", "#1B7A3D", "#F2C14E", "#ffffff"],
+    accent: "#C8102E",
+    soft: "rgba(200, 16, 46, 0.30)",
+    stripe: "linear-gradient(90deg, #C8102E 55%, #1B7A3D 55%)",
+  },
+};
+
+function bpTeam(match) {
+  if (match.home === "Brasil" || match.away === "Brasil") return "Brasil";
+  if (match.home === "Portugal" || match.away === "Portugal") return "Portugal";
+  return null;
+}
+function celebKey(match, team) {
+  return `sob_celeb_${match.date}_${team}`;
+}
+function alreadyCelebrated(match, team) {
+  try { return localStorage.getItem(celebKey(match, team)) === "1"; } catch (e) { return false; }
+}
+function markCelebrated(match, team) {
+  try { localStorage.setItem(celebKey(match, team), "1"); } catch (e) { /* storage off */ }
+}
+
+// O jogo de B/P da rodada FOCAL ainda nao iniciado e nao comemorado (o de apito mais
+// cedo, se os dois jogarem no mesmo dia). Usado no boot pra abrir o carrossel nesse card.
+function celebrationTarget(now = new Date()) {
+  const focal = getNextMatch(now);
+  if (!focal) return null;
+  const key = roundKey(focal);
+  return MATCHES
+    .filter((m) => roundKey(m) === key)
+    .filter((m) => bpTeam(m) && utcDate(m) > now && !alreadyCelebrated(m, bpTeam(m)))
+    .sort((a, b) => utcDate(a) - utcDate(b))[0] || null;
+}
+
+// Dispara o efeito se o card mostrado AGORA for um jogo de B/P elegivel (antes do
+// apito, nao comemorado). Idempotente: marca no localStorage e nao repete.
+function maybeCelebrate(match) {
+  const team = bpTeam(match);
+  if (!team) return;
+  if (utcDate(match) <= new Date()) return;   // ja comecou -> nao comemora (sem resultado)
+  if (alreadyCelebrated(match, team)) return; // ja rodou nesta rodada
+  markCelebrated(match, team);
+  playCelebration(team);
+}
+
+function celebConfetti(canvas, panel, colors) {
+  const ctx = canvas.getContext("2d");
+  const dpr = window.devicePixelRatio || 1;
+  const w = panel.clientWidth;
+  const h = panel.clientHeight;
+  canvas.width = w * dpr;
+  canvas.height = h * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const ps = [];
+  for (let i = 0; i < 26; i++) {
+    ps.push({
+      x: w * (0.12 + 0.76 * Math.random()), y: -12 - Math.random() * 40,
+      vx: (Math.random() - 0.5) * 1.1, vy: 1.3 + Math.random() * 1.7,
+      rot: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.22,
+      pw: 5 + Math.random() * 5, ph: 2 + Math.random() * 3, c: colors[i % colors.length],
+    });
+  }
+  let startT = null;
+  function frame(t) {
+    if (startT === null) startT = t;
+    const el = t - startT;
+    ctx.clearRect(0, 0, w, h);
+    let alive = false;
+    for (const p of ps) {
+      p.x += p.vx; p.y += p.vy; p.vy += 0.012; p.rot += p.vr;
+      const a = el < 1700 ? 1 : Math.max(0, 1 - (el - 1700) / 900);
+      if (p.y < h + 20 && a > 0) alive = true;
+      ctx.save();
+      ctx.globalAlpha = a;
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.c;
+      ctx.fillRect(-p.pw / 2, -p.ph / 2, p.pw, p.ph);
+      ctx.restore();
+    }
+    if (el < 2600 && alive) requestAnimationFrame(frame);
+    else ctx.clearRect(0, 0, w, h);
+  }
+  requestAnimationFrame(frame);
+}
+
+function playCelebration(team) {
+  const panel = document.querySelector(".match-panel");
+  if (!panel) return;
+  const conf = CELEB[team];
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  panel.style.setProperty("--celeb-accent", conf.accent);
+  panel.style.setProperty("--celeb-soft", conf.soft);
+  const prev = panel.querySelector(".celebrate-layer");
+  if (prev) prev.remove();
+  const layer = document.createElement("div");
+  layer.className = "celebrate-layer";
+  const ribbon = document.createElement("div");
+  ribbon.className = "celebrate-ribbon";
+  const stripe = document.createElement("span");
+  stripe.className = "stripe";
+  stripe.style.background = conf.stripe;
+  const label = document.createElement("strong");
+  label.textContent = conf.text;
+  ribbon.append(stripe, label);
+  layer.appendChild(ribbon);
+  let canvas = null;
+  if (!reduce) {
+    canvas = document.createElement("canvas");
+    canvas.className = "celebrate-canvas";
+    layer.appendChild(canvas);
+  }
+  panel.appendChild(layer);
+  panel.classList.add("celebrating"); // esconde o badge "Próximo" enquanto a faixa está no topo
+  if (!reduce) {
+    panel.classList.remove("celebrate-glow");
+    void panel.offsetWidth; // reinicia a animação do glow
+    panel.classList.add("celebrate-glow");
+    celebConfetti(canvas, panel, conf.colors);
+  }
+  window.setTimeout(() => {
+    if (layer.parentNode) layer.remove();
+    panel.classList.remove("celebrate-glow");
+    panel.classList.remove("celebrating");
+  }, 3000);
+}
+
 function renderNext() {
   const now = new Date();
   const match = getCardMatch(now);
@@ -985,6 +1127,7 @@ function renderNext() {
     renderPredict(match, phase);
     renderedMatchId = match.id;
     renderedPhase = phase;
+    maybeCelebrate(match); // efeito festivo se este card virou jogo de Brasil/Portugal (pré-apito)
   }
 
   // Placar + marcadores: re-renderiza quando o jogo, a fase OU o placar ao vivo muda.
@@ -1447,6 +1590,12 @@ async function boot() {
     el.alertStatus.textContent = "Falha ao carregar os dados. Verifique a conexão e recarregue a página.";
     return;
   }
+
+  // "Dia de seleção": na 1ª visita do dia, se a rodada tem Brasil/Portugal antes do
+  // apito e ainda não comemoramos, abre o carrossel já nesse card (o efeito dispara no
+  // renderNext quando o card aparece). Depois do apito, nada — não comemoramos sem placar.
+  const celebTarget = celebrationTarget(new Date());
+  if (celebTarget) activeMatchId = celebTarget.id;
 
   renderNext();
   renderSchedule();
