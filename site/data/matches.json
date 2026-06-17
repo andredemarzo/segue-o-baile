@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-17T02:00:27+00:00",
+  "updatedAt": "2026-06-17T07:08:22+00:00",
   "matches": [
     {
       "id": 1,
@@ -693,16 +693,28 @@
       "offset": -5,
       "home": "Argentina",
       "away": "Argélia",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 3,
+      "awayScore": 0,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
-      "prob": {
-        "home": 84,
-        "draw": 7,
-        "away": 9
-      },
+      "scorers": [
+        {
+          "name": "Messi",
+          "minute": "17'",
+          "side": "home"
+        },
+        {
+          "name": "Messi",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "name": "Messi",
+          "minute": "76'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 28,
         "at": "2026-06-16T19:00:39+00:00"
@@ -719,16 +731,35 @@
       "offset": -7,
       "home": "Áustria",
       "away": "Jordânia",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 3,
+      "awayScore": 1,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
-      "prob": {
-        "home": 61,
-        "draw": 18,
-        "away": 21
-      },
+      "scorers": [
+        {
+          "name": "Romano Schmid",
+          "minute": "20'",
+          "side": "home"
+        },
+        {
+          "name": "Ali Olwan",
+          "minute": "50'",
+          "side": "away"
+        },
+        {
+          "name": "Yazan Alarab",
+          "minute": "76'",
+          "side": "home",
+          "note": "gc"
+        },
+        {
+          "name": "Arnautovic",
+          "minute": "90'+12'",
+          "side": "home",
+          "note": "p"
+        }
+      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-17T01:58:37+00:00"
@@ -1042,8 +1073,8 @@
         "away": 46
       },
       "weather": {
-        "tempC": 26,
-        "at": "2026-06-16T21:47:03+00:00"
+        "tempC": 25,
+        "at": "2026-06-17T07:08:18+00:00"
       }
     },
     {
@@ -1069,7 +1100,7 @@
       },
       "weather": {
         "tempC": 22,
-        "at": "2026-06-16T19:00:39+00:00"
+        "at": "2026-06-17T07:08:18+00:00"
       }
     },
     {
@@ -1271,8 +1302,8 @@
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "prob": {
-        "home": 49,
-        "draw": 24,
+        "home": 51,
+        "draw": 22,
         "away": 27
       },
       "weather": {
@@ -1297,8 +1328,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
-        "home": 92,
-        "draw": 4,
+        "home": 93,
+        "draw": 3,
         "away": 4
       },
       "weather": {
@@ -1458,8 +1489,8 @@
         "away": 9
       },
       "weather": {
-        "tempC": 19,
-        "at": "2026-06-16T19:00:39+00:00"
+        "tempC": 18,
+        "at": "2026-06-17T07:08:18+00:00"
       }
     },
     {
@@ -1562,8 +1593,8 @@
         "away": 20
       },
       "weather": {
-        "tempC": 23,
-        "at": "2026-06-16T21:47:03+00:00"
+        "tempC": 18,
+        "at": "2026-06-17T07:08:18+00:00"
       }
     },
     {
@@ -1791,9 +1822,9 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "prob": {
-        "home": 19,
-        "draw": 16,
-        "away": 65
+        "home": 20,
+        "draw": 17,
+        "away": 63
       },
       "weather": {
         "tempC": 30,
@@ -1817,9 +1848,9 @@
       "city": "Toronto",
       "venue": "BMO Field",
       "prob": {
-        "home": 73,
+        "home": 75,
         "draw": 12,
-        "away": 15
+        "away": 13
       },
       "weather": {
         "tempC": 26,
@@ -1900,8 +1931,8 @@
         "away": 35
       },
       "weather": {
-        "tempC": 30,
-        "at": "2026-06-16T19:00:39+00:00"
+        "tempC": 31,
+        "at": "2026-06-17T07:08:18+00:00"
       }
     },
     {
@@ -2004,8 +2035,8 @@
         "away": 46
       },
       "weather": {
-        "tempC": 27,
-        "at": "2026-06-16T21:47:03+00:00"
+        "tempC": 22,
+        "at": "2026-06-17T07:08:18+00:00"
       }
     },
     {
@@ -2166,8 +2197,8 @@
       "city": "Houston",
       "venue": "NRG Stadium",
       "weather": {
-        "tempC": 33,
-        "at": "2026-06-16T19:00:39+00:00"
+        "tempC": 31,
+        "at": "2026-06-17T07:08:18+00:00"
       }
     },
     {
@@ -2292,8 +2323,8 @@
       "city": "Seattle",
       "venue": "Lumen Field",
       "weather": {
-        "tempC": 20,
-        "at": "2026-06-16T21:47:03+00:00"
+        "tempC": 25,
+        "at": "2026-06-17T07:08:18+00:00"
       }
     },
     {
