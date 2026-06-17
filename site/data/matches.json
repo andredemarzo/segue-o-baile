@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-17T19:57:33+00:00",
+  "updatedAt": "2026-06-17T21:56:52+00:00",
   "matches": [
     {
       "id": 1,
@@ -1465,9 +1465,9 @@
       "city": "Houston",
       "venue": "NRG Stadium",
       "prob": {
-        "home": 78,
-        "draw": 10,
-        "away": 12
+        "home": 75,
+        "draw": 11,
+        "away": 14
       },
       "weather": {
         "tempC": 33,
@@ -1491,9 +1491,9 @@
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "prob": {
-        "home": 83,
-        "draw": 8,
-        "away": 9
+        "home": 81,
+        "draw": 9,
+        "away": 10
       },
       "weather": {
         "tempC": 17,
@@ -2089,9 +2089,9 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "prob": {
-        "home": 34,
+        "home": 38,
         "draw": 29,
-        "away": 37
+        "away": 33
       },
       "weather": {
         "tempC": 32,
@@ -2115,9 +2115,9 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "prob": {
-        "home": 29,
-        "draw": 25,
-        "away": 46
+        "home": 31,
+        "draw": 27,
+        "away": 42
       },
       "weather": {
         "tempC": 25,
