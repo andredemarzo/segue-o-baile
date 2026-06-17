@@ -1,7 +1,7 @@
 {
-  "name": "Segue o Baile — Copa 2026",
-  "short_name": "Segue o Baile",
-  "description": "Próximo jogo da Copa do Mundo 2026 com horários Brasil/Portugal, canais e alerta 1 hora antes.",
+  "name": "Siga o Baile — Copa 2026",
+  "short_name": "Siga o Baile",
+  "description": "Jogos da Copa do Mundo 2026 com horários Brasil/Portugal, onde assistir, classificação e resultados ao vivo. Alerta 1 hora antes.",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#e7efd7",

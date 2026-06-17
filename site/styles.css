@@ -300,7 +300,7 @@ h2 {
   border-radius: 999px;
   box-shadow: 0 6px 18px rgba(12, 59, 39, 0.12);
   opacity: 0;
-  animation: celebRibbon 2.7s ease both;
+  animation: celebRibbon 3.7s ease both;
 }
 .celebrate-ribbon .stripe {
   width: 18px;
@@ -325,8 +325,8 @@ h2 {
 }
 @keyframes celebRibbon {
   0% { opacity: 0; transform: translateX(-50%) translateY(-7px) scale(0.95); }
-  14% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
-  82% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  11% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+  86% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
   100% { opacity: 0; transform: translateX(-50%) translateY(-4px) scale(0.99); }
 }
 @keyframes celebGlow {
@@ -341,7 +341,7 @@ h2 {
 }
 @media (prefers-reduced-motion: reduce) {
   .match-panel.celebrate-glow { animation: none; }
-  .celebrate-ribbon { animation: celebRibbonRM 3s ease both; }
+  .celebrate-ribbon { animation: celebRibbonRM 4s ease both; }
 }
 
 .match-panel::after {

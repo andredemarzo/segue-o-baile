@@ -954,10 +954,9 @@ function renderPredict(match, phase) {
 }
 
 // --- "Dia de seleção": efeito festivo no card de Brasil/Portugal ---
-// Roda 1x por rodada por seleção, na 1a visita do dia e ANTES do apito (depois nao,
-// pra nao comemorar sem saber se ganhou/perdeu). Confete + glow suave na cor da
-// selecao + faixa. Respeita prefers-reduced-motion (so a faixa). Estado por rodada+time
-// em localStorage -> some sozinho quando a rodada vira (chave nova).
+// Roda a CADA visita/reload (a pedido), enquanto a seleção tem jogo na rodada e ANTES
+// do apito — depois nao, pra nao comemorar sem saber se ganhou/perdeu. Confete + glow
+// suave na cor da selecao + faixa. Respeita prefers-reduced-motion (so a faixa).
 const CELEB = {
   Brasil: {
     text: "Dia do Brasil",
@@ -980,36 +979,26 @@ function bpTeam(match) {
   if (match.home === "Portugal" || match.away === "Portugal") return "Portugal";
   return null;
 }
-function celebKey(match, team) {
-  return `sob_celeb_${match.date}_${team}`;
-}
-function alreadyCelebrated(match, team) {
-  try { return localStorage.getItem(celebKey(match, team)) === "1"; } catch (e) { return false; }
-}
-function markCelebrated(match, team) {
-  try { localStorage.setItem(celebKey(match, team), "1"); } catch (e) { /* storage off */ }
-}
 
-// O jogo de B/P da rodada FOCAL ainda nao iniciado e nao comemorado (o de apito mais
-// cedo, se os dois jogarem no mesmo dia). Usado no boot pra abrir o carrossel nesse card.
+// O jogo de B/P da rodada FOCAL ainda nao iniciado (o de apito mais cedo, se os dois
+// jogarem no mesmo dia). Usado no boot pra abrir o carrossel direto nesse card.
 function celebrationTarget(now = new Date()) {
   const focal = getNextMatch(now);
   if (!focal) return null;
   const key = roundKey(focal);
   return MATCHES
     .filter((m) => roundKey(m) === key)
-    .filter((m) => bpTeam(m) && utcDate(m) > now && !alreadyCelebrated(m, bpTeam(m)))
+    .filter((m) => bpTeam(m) && utcDate(m) > now)
     .sort((a, b) => utcDate(a) - utcDate(b))[0] || null;
 }
 
-// Dispara o efeito se o card mostrado AGORA for um jogo de B/P elegivel (antes do
-// apito, nao comemorado). Idempotente: marca no localStorage e nao repete.
+// Dispara o efeito se o card mostrado AGORA for um jogo de B/P antes do apito.
+// Sem trava de "1x": roda toda vez que o card de B/P aparece (boot/reload/swipe) —
+// só não roda depois do apito (aí não dá pra comemorar sem saber o resultado).
 function maybeCelebrate(match) {
   const team = bpTeam(match);
   if (!team) return;
-  if (utcDate(match) <= new Date()) return;   // ja comecou -> nao comemora (sem resultado)
-  if (alreadyCelebrated(match, team)) return; // ja rodou nesta rodada
-  markCelebrated(match, team);
+  if (utcDate(match) <= new Date()) return; // ja comecou -> nao comemora (sem resultado)
   playCelebration(team);
 }
 
@@ -1092,7 +1081,7 @@ function playCelebration(team) {
     if (layer.parentNode) layer.remove();
     panel.classList.remove("celebrate-glow");
     panel.classList.remove("celebrating");
-  }, 3000);
+  }, 4000); // segura a faixa ~1s a mais (a pedido)
 }
 
 function renderNext() {

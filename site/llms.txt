@@ -1,0 +1,24 @@
+# Siga o Baile
+
+> PWA gratuito para a torcida de Brasil e Portugal acompanhar a Copa do Mundo FIFA 2026: próximos jogos, horários em Brasília e Portugal, onde assistir ao vivo de graça, classificação dos grupos e resultados ao vivo.
+
+Site: https://sigaobaile.com
+
+## O que é
+Siga o Baile é um aplicativo web (PWA) gratuito, em português, focado na torcida de Brasil e Portugal na Copa do Mundo FIFA 2026 (sediada nos Estados Unidos, Canadá e México). Não exige cadastro, não é casa de apostas e não vende nada.
+
+## Seções
+- Próximo jogo: confronto, horário em Brasília (BR) e em Portugal (PT), cidade, estádio e clima.
+- Onde assistir ao vivo grátis: TV aberta e streaming, separados por região (BR e PT).
+- Agenda: próximos jogos da fase de grupos.
+- Classificação: tabela dos grupos.
+- Resultados: jogos encerrados com placar.
+- Alertas: notificação 1 hora antes dos jogos e calendário (.ics) para baixar.
+
+## Em breve
+- Meus Acréscimos: coluna diária de opinião sobre a Copa, com curadoria editorial — análise dos jogos, contexto e os bastidores da rodada.
+
+## Observações
+- Idioma: português (pt-BR / pt-PT).
+- Dados de jogos e placares atualizados ao longo do dia.
+- Projeto independente e gratuito.
