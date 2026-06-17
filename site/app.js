@@ -374,6 +374,50 @@ function scorelineHtml(match) {
   `;
 }
 
+// --- Auto-cura: backfill direto da FIFA, sem depender do coletor ---
+// O coletor (cron do GitHub, best-effort) pode ter buraco — sobretudo de madrugada,
+// quando o jogo tardio da rodada termina e ninguém escreve o matches.json por horas.
+// Resultado de manhã: aquele jogo aparece SEM placar (chip vazio) ou "ao vivo"
+// provisório pelo relógio, e não entra na lista de encerrados. Aqui o próprio front
+// pergunta à FIFA o status REAL de QUALQUER jogo que já começou e ainda não foi
+// confirmado encerrado — curando carrossel, card e "encerrados" sem o coletor.
+const HEAL_WINDOW_MS = 18 * 60 * 60 * 1000; // só jogos recentes — conjunto minúsculo (0-2 normalmente)
+async function healRecentMatches(now = new Date()) {
+  const t = now.getTime();
+  const targets = MATCHES.filter((m) => {
+    if (!m.idMatch || !m.idStage) return false; // sem ids da FIFA não há o que consultar
+    if (m.status === 0) return false;            // coletor já confirmou encerrado
+    const l = liveById[m.id];
+    if (l && l.status === 0) return false;       // FIFA já confirmou → não reconsulta
+    const start = utcDate(m).getTime();
+    return start <= t && t - start <= HEAL_WINDOW_MS; // já começou e é recente
+  });
+  if (!targets.length) return;
+  let changed = false;
+  for (const match of targets) {
+    try {
+      const url = `${FIFA_MATCH_API}/${match.idStage}/${match.idMatch}?language=pt-BR`;
+      const m = await fetch(url, { cache: "no-store" }).then((response) => response.json());
+      if (!m || m.IdMatch !== match.idMatch) continue; // sanidade: tem que ser o jogo certo
+      liveById[match.id] = {
+        status: m.MatchStatus,
+        home: m.HomeTeam ? m.HomeTeam.Score : null,
+        away: m.AwayTeam ? m.AwayTeam.Score : null,
+        homePen: m.HomeTeamPenaltyScore,
+        awayPen: m.AwayTeamPenaltyScore,
+        time: m.MatchTime,
+      };
+      changed = true;
+    } catch (error) {
+      // sem rede / FIFA fora do ar — tenta de novo no próximo ciclo, sem quebrar a tela
+    }
+  }
+  if (changed) {
+    renderNext();    // card + faixa do carrossel já leem liveById
+    renderHistory(); // a lista de encerrados passa a incluir o que a FIFA confirmou
+  }
+}
+
 async function updateLiveScore() {
   const now = new Date();
   const match = getNextMatch(now);
@@ -1066,10 +1110,23 @@ function renderStandings() {
     .join("");
 }
 
+// Placar final de um jogo, com auto-cura: usa o JSON do coletor (registro oficial
+// congelado) e, se ele ainda não escreveu, o que a FIFA confirmou em liveById.
+// Retorna null se o jogo não está encerrado ou ainda não tem placar.
+function finalScore(match) {
+  const l = liveById[match.id];
+  const finished = match.status === 0 || (l && l.status === 0);
+  if (!finished) return null;
+  const home = match.homeScore != null ? match.homeScore : (l ? l.home : null);
+  const away = match.awayScore != null ? match.awayScore : (l ? l.away : null);
+  if (home == null || away == null) return null;
+  return { home, away };
+}
+
 function renderHistory() {
   const section = document.querySelector(".section-results");
   const finished = MATCHES
-    .filter((match) => match.status === 0 && match.homeScore != null && match.awayScore != null)
+    .filter((match) => finalScore(match)) // encerrado pelo coletor OU confirmado pela FIFA
     .sort((a, b) => utcDate(b) - utcDate(a));
 
   if (!finished.length) {
@@ -1086,14 +1143,15 @@ function renderHistory() {
   el.resultList.innerHTML = pageItems
     .map((match) => {
       const kickoff = utcDate(match);
-      const homeWin = match.homeScore > match.awayScore;
-      const awayWin = match.awayScore > match.homeScore;
+      const fs = finalScore(match);
+      const homeWin = fs.home > fs.away;
+      const awayWin = fs.away > fs.home;
       return `
         <article class="result-row">
           <time datetime="${kickoff.toISOString()}">${shortDate(kickoff, BR_TZ, "pt-BR")}</time>
           <div class="result-match">
             <span class="result-team home${homeWin ? " win" : ""}">${match.home}</span>
-            <span class="result-score">${match.homeScore} - ${match.awayScore}</span>
+            <span class="result-score">${fs.home} - ${fs.away}</span>
             <span class="result-team away${awayWin ? " win" : ""}">${match.away}</span>
             ${scorersHtml(match)}
             <span class="small-muted result-stage">${stageLabel(match)}</span>
@@ -1402,6 +1460,8 @@ async function boot() {
   window.setInterval(renderNext, 1000);
   updateLiveScore();
   window.setInterval(updateLiveScore, 45000);
+  healRecentMatches(); // backfill imediato de jogos que o coletor não confirmou (ex.: madrugada)
+  window.setInterval(healRecentMatches, 45000);
 }
 
 boot();
