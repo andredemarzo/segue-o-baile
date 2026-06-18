@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-18T19:54:14+00:00",
+  "updatedAt": "2026-06-18T21:56:11+00:00",
   "matches": [
     {
       "id": 1,
@@ -968,16 +968,39 @@
       "offset": -7,
       "home": "Suíça",
       "away": "Bósnia e Herzegovina",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 4,
+      "awayScore": 1,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
-      "prob": {
-        "home": 75,
-        "draw": 12,
-        "away": 13
-      },
+      "scorers": [
+        {
+          "name": "Johan Manzambi",
+          "minute": "74'",
+          "side": "home"
+        },
+        {
+          "name": "Vargas",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "name": "Johan Manzambi",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "name": "Ermin Mahmic",
+          "minute": "90'+3'",
+          "side": "away"
+        },
+        {
+          "name": "Xhaka",
+          "minute": "90'+7'",
+          "side": "home",
+          "note": "p"
+        }
+      ],
       "weather": {
         "tempC": 21,
         "at": "2026-06-18T17:39:14+00:00"
@@ -1624,9 +1647,9 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "prob": {
-        "home": 53,
-        "draw": 22,
-        "away": 25
+        "home": 56,
+        "draw": 20,
+        "away": 24
       },
       "weather": {
         "tempC": 21,
@@ -1650,9 +1673,9 @@
       "city": "Seattle",
       "venue": "Lumen Field",
       "prob": {
-        "home": 64,
-        "draw": 16,
-        "away": 20
+        "home": 61,
+        "draw": 18,
+        "away": 21
       },
       "weather": {
         "tempC": 23,
