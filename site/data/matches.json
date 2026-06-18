@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-18T21:56:11+00:00",
+  "updatedAt": "2026-06-18T23:29:18+00:00",
   "matches": [
     {
       "id": 1,
@@ -2490,7 +2490,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Miami Gardens",
-      "venue": "Hard Rock Stadium"
+      "venue": "Hard Rock Stadium",
+      "weather": {
+        "tempC": 32,
+        "at": "2026-06-18T23:29:18+00:00"
+      }
     },
     {
       "id": 87,
