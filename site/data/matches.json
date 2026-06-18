@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-18T17:41:32+00:00",
+  "updatedAt": "2026-06-18T19:54:14+00:00",
   "matches": [
     {
       "id": 1,
@@ -934,16 +934,24 @@
       "offset": -4,
       "home": "República Tcheca",
       "away": "África do Sul",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
-      "prob": {
-        "home": 69,
-        "draw": 14,
-        "away": 17
-      },
+      "scorers": [
+        {
+          "name": "Michal Sadilek",
+          "minute": "6'",
+          "side": "home"
+        },
+        {
+          "name": "Mokoena",
+          "minute": "83'",
+          "side": "away",
+          "note": "p"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-18T01:59:33+00:00"
@@ -1257,8 +1265,8 @@
         "away": 12
       },
       "weather": {
-        "tempC": 32,
-        "at": "2026-06-18T01:59:33+00:00"
+        "tempC": 33,
+        "at": "2026-06-18T19:54:11+00:00"
       }
     },
     {
@@ -1543,8 +1551,8 @@
         "away": 9
       },
       "weather": {
-        "tempC": 18,
-        "at": "2026-06-18T01:59:33+00:00"
+        "tempC": 17,
+        "at": "2026-06-18T19:54:11+00:00"
       }
     },
     {
@@ -1668,9 +1676,9 @@
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "prob": {
-        "home": 19,
-        "draw": 16,
-        "away": 65
+        "home": 18,
+        "draw": 15,
+        "away": 67
       },
       "weather": {
         "tempC": 16,
@@ -1694,9 +1702,9 @@
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "prob": {
-        "home": 12,
-        "draw": 10,
-        "away": 78
+        "home": 13,
+        "draw": 11,
+        "away": 76
       },
       "weather": {
         "tempC": 31,
@@ -1830,7 +1838,7 @@
       },
       "weather": {
         "tempC": 22,
-        "at": "2026-06-18T01:59:33+00:00"
+        "at": "2026-06-18T19:54:11+00:00"
       }
     },
     {
@@ -2115,8 +2123,8 @@
         "away": 92
       },
       "weather": {
-        "tempC": 32,
-        "at": "2026-06-18T01:59:33+00:00"
+        "tempC": 33,
+        "at": "2026-06-18T19:54:11+00:00"
       }
     },
     {
@@ -2356,8 +2364,8 @@
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "weather": {
-        "tempC": 31,
-        "at": "2026-06-18T01:59:33+00:00"
+        "tempC": 23,
+        "at": "2026-06-18T19:54:11+00:00"
       }
     },
     {
@@ -2493,7 +2501,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Arlington",
-      "venue": "AT&T Stadium"
+      "venue": "AT&T Stadium",
+      "weather": {
+        "tempC": 36,
+        "at": "2026-06-18T19:54:11+00:00"
+      }
     },
     {
       "id": 89,
