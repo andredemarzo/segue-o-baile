@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-18T02:01:30+00:00",
+  "updatedAt": "2026-06-18T06:54:15+00:00",
   "matches": [
     {
       "id": 1,
@@ -891,16 +891,33 @@
       "offset": -6,
       "home": "Uzbequistão",
       "away": "Colômbia",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 3,
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
-      "prob": {
-        "home": 12,
-        "draw": 11,
-        "away": 77
-      },
+      "scorers": [
+        {
+          "name": "Daniel Munoz",
+          "minute": "40'",
+          "side": "away"
+        },
+        {
+          "name": "Abbosbek Fayzullaev",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "name": "Luis Diaz",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "name": "Jaminton Campaz",
+          "minute": "90'+9'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 18,
         "at": "2026-06-18T01:59:33+00:00"
@@ -1214,8 +1231,8 @@
         "away": 83
       },
       "weather": {
-        "tempC": 25,
-        "at": "2026-06-17T17:49:01+00:00"
+        "tempC": 23,
+        "at": "2026-06-18T06:54:11+00:00"
       }
     },
     {
@@ -1370,8 +1387,8 @@
         "away": 4
       },
       "weather": {
-        "tempC": 26,
-        "at": "2026-06-17T17:49:01+00:00"
+        "tempC": 18,
+        "at": "2026-06-18T06:54:11+00:00"
       }
     },
     {
@@ -1734,8 +1751,8 @@
         "away": 44
       },
       "weather": {
-        "tempC": 25,
-        "at": "2026-06-17T17:49:01+00:00"
+        "tempC": 21,
+        "at": "2026-06-18T06:54:11+00:00"
       }
     },
     {
@@ -2125,7 +2142,7 @@
       },
       "weather": {
         "tempC": 32,
-        "at": "2026-06-17T19:57:30+00:00"
+        "at": "2026-06-18T06:54:11+00:00"
       }
     },
     {
@@ -2381,8 +2398,8 @@
       "city": "Toronto",
       "venue": "BMO Field",
       "weather": {
-        "tempC": 23,
-        "at": "2026-06-17T23:18:49+00:00"
+        "tempC": 22,
+        "at": "2026-06-18T06:54:11+00:00"
       }
     },
     {
@@ -2421,7 +2438,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Vancouver",
-      "venue": "BC Place"
+      "venue": "BC Place",
+      "weather": {
+        "tempC": 18,
+        "at": "2026-06-18T06:54:11+00:00"
+      }
     },
     {
       "id": 86,
