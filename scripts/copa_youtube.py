@@ -71,10 +71,12 @@ def recent_videos(channel_id, key, n=25):
     return out
 
 
-def search_event(channel_id, key, event="live", n=10):
-    """Vídeos ao vivo/agendados (search.list eventType= = 100 unidades). [{id, title, state}]."""
+def search_event(channel_id, key, event="live", n=10, region="PT"):
+    """Vídeos ao vivo/agendados (search.list eventType= = 100 unidades). [{id, title, state}].
+    regionCode=PT é ESSENCIAL: os streams do LiveModeTV são geo-disponíveis só em Portugal; sem
+    isso, requisições de outros IPs (GitHub Actions/EUA) voltam VAZIO. Testado: US/BR→0, PT→9."""
     url = (f"https://www.googleapis.com/youtube/v3/search?part=snippet&channelId={channel_id}"
-           f"&eventType={event}&type=video&maxResults={n}&key={key}")
+           f"&eventType={event}&type=video&maxResults={n}&regionCode={region}&key={key}")
     d = _get(url)
     out = []
     for it in d.get("items", []):
