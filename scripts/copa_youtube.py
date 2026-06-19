@@ -149,7 +149,13 @@ def fetch_live_streams(matches, channel_id=LIVEMODE_PT):
     except Exception as e:
         print(f"  YouTube API erro: {e!r}")
         return {}
-    return {gid: info["video_id"] for gid, info in match_games(vids, matches).items()}
+    matched = match_games(vids, matches)
+    if not matched:  # diag (sem expor a chave: só o tamanho)
+        ex_v = repr(vids[0]["title"][:45]) if vids else "(0 vídeos da API)"
+        ex_m = "%s x %s" % (matches[0].get("home"), matches[0].get("away")) if matches else "?"
+        print(f"  YouTube diag: key_len={len(key)} | {len(vids)} upcoming | 0 casado | "
+              f"ex-vídeo {ex_v} | ex-jogo {ex_m!r} | n_jogos={len(matches)}")
+    return {gid: info["video_id"] for gid, info in matched.items()}
 
 
 def detect(matches, channel_id=LIVEMODE_PT, include_live=False):
