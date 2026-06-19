@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-19T18:19:30+00:00",
+  "updatedAt": "2026-06-19T21:50:04+00:00",
   "matches": [
     {
       "id": 1,
@@ -1177,16 +1177,24 @@
       "offset": -7,
       "home": "Estados Unidos",
       "away": "Austrália",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 0,
       "city": "Seattle",
       "venue": "Lumen Field",
-      "prob": {
-        "home": 29,
-        "draw": 25,
-        "away": 46
-      },
+      "scorers": [
+        {
+          "name": "Cameron Burgess",
+          "minute": "11'",
+          "side": "home",
+          "note": "gc"
+        },
+        {
+          "name": "Alex Freeman",
+          "minute": "43'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-19T18:14:19+00:00"
@@ -2583,7 +2591,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Filadélfia",
-      "venue": "Lincoln Financial Field"
+      "venue": "Lincoln Financial Field",
+      "weather": {
+        "tempC": 37,
+        "at": "2026-06-19T21:50:03+00:00"
+      }
     },
     {
       "id": 90,
