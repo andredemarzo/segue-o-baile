@@ -17,6 +17,7 @@ Falha de rede/quota é GRACIOSA: devolve vazio, o coletor segue com regra+seed.
 import json
 import os
 import re
+import urllib.error
 import urllib.request
 
 LIVEMODE_PT = "UCrYhacSar0c5Oq_Qdl3SH-g"   # @LiveModeTV_PT (canal ATIVO da Copa; o antigo @LiveModeTV=UCJ77 era vazio)
@@ -137,7 +138,16 @@ def fetch_live_streams(matches, channel_id=LIVEMODE_PT):
         return {}
     try:
         vids = search_event(channel_id, key, "upcoming")
-    except Exception:
+    except urllib.error.HTTPError as e:  # observabilidade: 400=chave inválida, 403=restrição, 429=quota
+        body = ""
+        try:
+            body = e.read().decode("utf-8", "replace")[:300]
+        except Exception:
+            pass
+        print(f"  YouTube API HTTP {e.code}: {body}")
+        return {}
+    except Exception as e:
+        print(f"  YouTube API erro: {e!r}")
         return {}
     return {gid: info["video_id"] for gid, info in match_games(vids, matches).items()}
 
