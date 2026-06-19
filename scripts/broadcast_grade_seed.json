@@ -280,6 +280,12 @@
         "RTP1"
       ],
       "fonte": "RTP/Observador/A Televisão"
+    },
+    "104": {
+      "canais": [
+        "RTP1"
+      ],
+      "fonte": "RTP/SIC oficial: grande final na RTP (19/07)"
     }
   },
   "pt_livemode": {

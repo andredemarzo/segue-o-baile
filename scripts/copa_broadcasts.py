@@ -151,12 +151,13 @@ def game_broadcasts(m, seed):
             if canal in CH:
                 pt.append(_entry(canal, "confirmado", seed_open.get("fonte") or F_PT_ABERTO))
     elif _is_portugal(m) or _is_pt_open_fixture(m):
-        # Todos os jogos de Portugal (+ abertura/meias/final) em sinal aberto (DN); canal exato pode variar.
+        # Portugal (knockouts ainda sem canal) + meias/final TBD: o trio RTP/SIC/TVI ("um destes",
+        # honesto), pois o acordo cobre todos os de Portugal + abertura/meias/final (DN/SIC oficial).
         for canal in ("RTP1", "SIC", "TVI"):
             pt.append(_entry(canal, "provavel", F_PT_ABERTO))
-    else:
-        # Pode ser um dos 20 em aberto, mas não confirmado para este jogo.
-        pt.append(_entry("RTP1", "a-confirmar", F_PT_AC))
+    # Demais jogos: NÃO vão em aberto PT (são só Sport TV, pago). A aberta PT é só ~20 jogos (DN/SIC
+    # oficial) — todos cobertos pelo seed (canal exato) ou pelo elif (Portugal/abertura/meias/final).
+    # (Antes cravávamos "RTP1 a-confirmar" em ~84 jogos errados — origem das reclamações.)
 
     if seed_lm is not None:
         pt.append(_entry("LiveModeTV", "confirmado", seed_lm.get("fonte") or F_LIVEMODE))
