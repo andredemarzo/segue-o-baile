@@ -1514,7 +1514,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+          "embed": "https://www.youtube.com/embed/V3wVoI3itnE"
         },
         {
           "canal": "Globo",
@@ -2759,7 +2759,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+          "embed": "https://www.youtube.com/embed/qCcrzzz3bVk"
         },
         {
           "canal": "Globo",
@@ -5158,5 +5158,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-19T23:21:42+01:00"
+  "updatedAt": "2026-06-19T22:22:07+00:00"
 }
