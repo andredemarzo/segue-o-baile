@@ -95,9 +95,23 @@ def _team_in(team_norm, title_norm):
     return any(a in title_norm for a in _ALIASES.get(team_norm, []))
 
 
+def _video_score(title):
+    """Prefere o stream OFICIAL do jogo (DIRETO/TRANSMISSÃO) a pré-jogo/replay/cortes."""
+    t = (title or "").lower()
+    s = 0
+    if "oficial" in t or "em direto" in t or "transmiss" in t:
+        s += 3
+    if "ao vivo" in t:
+        s += 1
+    if any(w in t for w in ("aquece", "a seguir", "repeti", "highlight", "melhores", "compacto", "resumo", "lances")):
+        s -= 3
+    return s
+
+
 def match_games(videos, matches):
     """Casa vídeo→jogo quando AMBOS os times aparecem no título. {game_id: {video_id, title}}.
-    Conservador: só casa com confiança (dois times claros); evita falso-positivo."""
+    Conservador (dois times claros, evita falso-positivo) e, havendo vários candidatos do mesmo
+    jogo, fica com o melhor: stream oficial AO VIVO > pré-jogo/replay/cortes."""
     out = {}
     for v in videos:
         t = _norm(v.get("title"))
@@ -106,9 +120,26 @@ def match_games(videos, matches):
         for m in matches:
             h, a = _norm(m.get("home", "")), _norm(m.get("away", ""))
             if h and a and _team_in(h, t) and _team_in(a, t):
-                out.setdefault(m["id"], {"video_id": v["id"], "title": v.get("title", "")})
+                sc = _video_score(v.get("title"))
+                cur = out.get(m["id"])
+                if not cur or sc > cur.get("score", -99):
+                    out[m["id"]] = {"video_id": v["id"], "title": v.get("title", ""), "score": sc}
                 break
     return out
+
+
+def fetch_live_streams(matches, channel_id=LIVEMODE_PT):
+    """Streams AGENDADOS (upcoming) do canal casados por jogo → {game_id: video_id} (o vídeo EXATO do
+    jogo, p/ embed preciso). search upcoming = 100 unidades. Durante o jogo o vídeo vira 'live' e sai
+    do upcoming — o coletor faz carry-over do que já conhece. Graciosa a falha/sem-chave."""
+    key = _key()
+    if not key:
+        return {}
+    try:
+        vids = search_event(channel_id, key, "upcoming")
+    except Exception:
+        return {}
+    return {gid: info["video_id"] for gid, info in match_games(vids, matches).items()}
 
 
 def detect(matches, channel_id=LIVEMODE_PT, include_live=False):

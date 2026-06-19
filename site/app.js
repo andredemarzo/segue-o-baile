@@ -513,15 +513,15 @@ let preferredRegion = detectRegion();
 let liveMatch = null;
 let liveActive = false;
 
-// Streams "assistir ao vivo grátis": entradas grátis que NÃO estão "a-confirmar"
-// (CazéTV sempre; Globo/SBT/RTP/SIC/TVI/LiveModeTV quando o jogo as confirma). Não
-// mostra um caminho grátis de que não temos certeza — honesto, sem "Cazé em todos".
+// Streams "assistir ao vivo grátis": TODAS as entradas grátis (CazéTV, Globo, SBT, RTP, SIC,
+// TVI, LiveModeTV) — incluímos os detentores de direito mesmo ainda não confirmados no jogo, p/
+// não deixar o "Ao Vivo" pobre. O sistema confirma/atualiza sozinho; preferimos estar mais completo.
 function openStreamsFor(match) {
   const g = gameBroadcast(match);
   const seen = new Set();
   const out = [];
   [...(g.br || []), ...(g.pt || [])].forEach((e) => {
-    if (e.acesso !== "grátis" || e.confianca === "a-confirmar") return;
+    if (e.acesso !== "grátis") return;
     if (seen.has(e.canal)) return;
     seen.add(e.canal);
     const meta = channelMeta(e.canal);
@@ -642,8 +642,9 @@ function broadcastRow(entries, label, gradePublicada) {
     : "partial";
   const names = entries.map((e) => channelMeta(e.canal).label);
   const numbers = entries.map((e) => channelMeta(e.canal).numbers).filter(Boolean).join(" · ");
-  const channels =
-    status === "rights" || status === "partial" ? `${names.join("; ")} (a confirmar)` : names.join("; ");
+  // Mostra o canal referido sem hedge "(a confirmar)" — preferimos completo; o sistema confirma
+  // /atualiza sozinho. A incerteza fica no texto auxiliar ("Consultar grade oficial"), não no nome.
+  const channels = names.join("; ");
   return { type: label, channels, numbers, status };
 }
 
@@ -699,7 +700,6 @@ function renderBroadcasts(match) {
 function compactBroadcastSummary(match) {
   const g = gameBroadcast(match);
   const sure = (arr) => [...new Set((arr || [])
-    .filter((e) => e.confianca === "confirmado" || e.confianca === "provavel")
     .map((e) => channelMeta(e.canal).label))];
   const br = sure(g.br);
   const pt = sure(g.pt);

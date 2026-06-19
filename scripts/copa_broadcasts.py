@@ -204,27 +204,31 @@ def document(matches, seed=None):
     }
 
 
-def apply_youtube(doc, livemode_hits=None, caze_hits=None):
-    """Camada YouTube (ADITIVA — regra do operador: nunca sobrepor). Onde o YouTube detectou
-    cobertura real do canal, marca o canal CONFIRMADO no jogo: ACRESCENTA se falta, faz UPGRADE de
-    confiança se já existe, NUNCA remove nem rebaixa. O embed segue o channel-live do CH (seguro);
-    o vídeo exato ao vivo é refinamento posterior. Devolve quantos jogos foram tocados (observabilidade)."""
+def apply_youtube(doc, livemode_streams=None):
+    """Camada YouTube (ADITIVA — regra do operador: nunca sobrepor). Para cada {game_id: video_id}
+    do stream OFICIAL do @LiveModeTV_PT detectado, marca LiveModeTV CONFIRMADO no jogo COM o embed do
+    VÍDEO EXATO (abre o jogo, não o channel-live genérico): ACRESCENTA se falta, faz UPGRADE+embed se
+    já existe, NUNCA remove nem rebaixa. Devolve quantos jogos foram tocados (observabilidade)."""
     n = 0
-    for gid in (livemode_hits or {}):
-        n += _merge_channel(doc["games"].get(str(gid)), "pt", "LiveModeTV")
-    for gid in (caze_hits or {}):
-        n += _merge_channel(doc["games"].get(str(gid)), "br", "CazéTV")
+    for gid, vid in (livemode_streams or {}).items():
+        n += _merge_channel(doc["games"].get(str(gid)), "pt", "LiveModeTV", vid)
     return n
 
 
-def _merge_channel(g, region, canal):
+def _merge_channel(g, region, canal, video_id=None):
     if not g or canal not in CH:
         return 0
+    embed = "https://www.youtube.com/embed/%s" % video_id if video_id else None
     for e in g.get(region, []):
         if e.get("canal") == canal:
             e["confianca"] = "confirmado"   # upgrade — nunca rebaixa nem remove
+            if embed:
+                e["embed"] = embed          # vídeo exato do jogo
             return 1
-    g.setdefault(region, []).append(_slim_entry(_entry(canal, "confirmado", "youtube")))  # acrescenta
+    ent = _slim_entry(_entry(canal, "confirmado", "youtube"))  # acrescenta
+    if embed:
+        ent["embed"] = embed
+    g.setdefault(region, []).append(ent)
     return 1
 
 

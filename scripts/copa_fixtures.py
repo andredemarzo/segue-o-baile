@@ -14,6 +14,7 @@ Agendar no Hermes:
 import datetime
 import json
 import os
+import re
 import shutil
 import sys
 import urllib.request
@@ -480,6 +481,28 @@ def enrich_weather(matches, prev_by_id):
     return done
 
 
+_LM_VID_RE = re.compile(r"/embed/([A-Za-z0-9_-]{6,})")
+
+
+def _existing_lm_streams(existing):
+    """Carry-over: {game_id: video_id} dos embeds EXATOS de LiveModeTV já no broadcasts.json (o
+    channel-live genérico — '.../embed/live_stream?channel=' — é ignorado). Preserva o vídeo certo
+    quando a API não traz (jogo ao vivo saiu do 'upcoming', ou falha/quota)."""
+    out = {}
+    if not existing:
+        return out
+    for gid, g in (existing.get("games") or {}).items():
+        for e in g.get("pt", []):
+            if e.get("canal") == "LiveModeTV":
+                emb = e.get("embed", "")
+                if "live_stream" in emb:
+                    continue
+                m = _LM_VID_RE.search(emb)
+                if m:
+                    out[gid] = m.group(1)
+    return out
+
+
 def write_broadcasts(matches):
     """Gera/atualiza data/broadcasts.json — grade de transmissão TIPADA por jogo
     (Motor 1, determinística, ancorada em direito oficial; ver copa_broadcasts.py).
@@ -492,25 +515,28 @@ def write_broadcasts(matches):
         print(f"  aviso: copa_broadcasts indisponível ({exc}); broadcasts.json não tocado")
         return
     doc = copa_broadcasts.document(matches)
-    # CAMADA YOUTUBE (aditiva): detecta cobertura REAL do @LiveModeTV_PT (PT) e CazéTV (BR) e marca
-    # os jogos (acrescenta/upgrade, NUNCA remove). Grátis (uploads=1 unidade/canal); graciosa a
-    # falha/sem-chave (segue só com regra+seed). v1: cobertura por uploads recentes (vídeo exato ao
-    # vivo = refinamento posterior); jogos antigos podem sair da janela de uploads (inócuo).
-    try:
-        import copa_youtube
-        lm = copa_youtube.detect(matches, copa_youtube.LIVEMODE_PT)
-        cz = copa_youtube.detect(matches, copa_youtube.CAZETV)
-        if lm or cz:
-            n = copa_broadcasts.apply_youtube(doc, lm, cz)
-            print(f"  YouTube: LiveModeTV {len(lm)} jogo(s) + CazéTV {len(cz)} jogo(s) → {n} marcação(ões) aditiva(s)")
-    except Exception as exc:  # API/rede/sem-chave não derruba a grade
-        print(f"  aviso: camada YouTube pulada ({exc})")
     existing = None
     if os.path.exists(BCAST_OUT):
         try:
             existing = json.load(open(BCAST_OUT, encoding="utf-8"))
         except Exception:
             existing = None
+    # CAMADA YOUTUBE (aditiva): embed do VÍDEO EXATO do jogo no @LiveModeTV_PT (abre o jogo certo, não
+    # o channel-live genérico). Carry-over: preserva o vídeo já conhecido do broadcasts.json (durante
+    # o jogo o stream sai do 'upcoming'); a API (upcoming=100 unid) só ACRESCENTA/atualiza, nunca
+    # remove. Graciosa: sem chave/rede/quota mantém o carry-over (não regride pro channel-live).
+    try:
+        import copa_youtube
+        streams = _existing_lm_streams(existing)          # carry-over {gid: video_id}
+        fresh = copa_youtube.fetch_live_streams(matches)  # upcoming -> {gid: video_id}
+        if fresh:
+            streams.update(fresh)                          # aditivo: novos/atualizados sobre conhecidos
+        if streams:
+            n = copa_broadcasts.apply_youtube(doc, streams)
+            print(f"  YouTube: {len(streams)} stream(s) LiveModeTV (embed exato) em {n} jogo(s) "
+                  f"[{len(fresh)} da API]")
+    except Exception as exc:  # API/rede/sem-chave não derruba a grade
+        print(f"  aviso: camada YouTube pulada ({exc})")
     if (existing and existing.get("version") == doc["version"]
             and existing.get("games") == doc["games"]):
         return  # nada mudou na grade — não reescreve
