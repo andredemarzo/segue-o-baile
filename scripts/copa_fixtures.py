@@ -33,6 +33,9 @@ PROJECT_DIR = os.environ.get(
 OUT = os.path.join(PROJECT_DIR, "data", "matches.json")
 # Backup fica FORA da pasta publicada — senão o .bak é enviado junto no deploy.
 BACKUP = os.path.abspath(os.path.join(PROJECT_DIR, os.pardir, "matches.json.bak"))
+# Grade de transmissão (gerada por copa_broadcasts.py a partir dos jogos).
+BCAST_OUT = os.path.join(PROJECT_DIR, "data", "broadcasts.json")
+BCAST_BACKUP = os.path.abspath(os.path.join(PROJECT_DIR, os.pardir, "broadcasts.json.bak"))
 TBD = "A definir"
 
 # Mapa cidade(API FIFA) -> cidade-sede e estádio reais (curado uma vez, estável).
@@ -477,6 +480,36 @@ def enrich_weather(matches, prev_by_id):
     return done
 
 
+def write_broadcasts(matches):
+    """Gera/atualiza data/broadcasts.json — grade de transmissão TIPADA por jogo
+    (Motor 1, determinística, ancorada em direito oficial; ver copa_broadcasts.py).
+    Roda sempre que o coletor roda; independe do change-gate dos jogos e só escreve
+    quando a grade muda (mesma disciplina de backup do matches.json)."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    try:
+        import copa_broadcasts
+    except Exception as exc:  # módulo ausente não derruba o coletor de jogos
+        print(f"  aviso: copa_broadcasts indisponível ({exc}); broadcasts.json não tocado")
+        return
+    doc = copa_broadcasts.document(matches)
+    existing = None
+    if os.path.exists(BCAST_OUT):
+        try:
+            existing = json.load(open(BCAST_OUT, encoding="utf-8"))
+        except Exception:
+            existing = None
+    if (existing and existing.get("version") == doc["version"]
+            and existing.get("games") == doc["games"]):
+        return  # nada mudou na grade — não reescreve
+    doc["updatedAt"] = datetime.datetime.now().astimezone().isoformat(timespec="seconds")
+    if os.path.exists(BCAST_OUT):
+        shutil.copy2(BCAST_OUT, BCAST_BACKUP)
+    with open(BCAST_OUT, "w", encoding="utf-8") as f:
+        json.dump(doc, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    print(f"  broadcasts.json atualizado ({len(doc['games'])} jogos).")
+
+
 def main():
     # COPA_FORCE=1 ignora o gate de janela (útil para testar o deploy na nuvem).
     if os.environ.get("COPA_FORCE") != "1" and not should_run_now():
@@ -506,6 +539,9 @@ def main():
         for e in errors[:12]:
             print("  -", e)
         sys.exit(1)
+
+    # Grade de transmissão: regenera junto, mas com seu próprio change-gate.
+    write_broadcasts(matches)
 
     changed = sum(1 for m in matches if prev_by_id.get(m["id"]) != m)
     if previous and changed == 0:

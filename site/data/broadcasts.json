@@ -1,396 +1,5126 @@
 {
-  "updatedAt": "2026-06-11",
-  "brazilGlobo": {
-    "1": [
-      "CazéTV",
-      "Globo",
-      "SporTV",
-      "Ge TV",
-      "SBT"
-    ],
-    "2": [
-      "CazéTV"
-    ],
-    "3": [
-      "CazéTV"
-    ],
-    "4": [
-      "CazéTV",
-      "Globo",
-      "SporTV",
-      "Ge TV",
-      "SBT"
-    ],
-    "5": [
-      "CazéTV"
-    ],
-    "6": [
-      "CazéTV",
-      "Globo",
-      "SporTV"
-    ],
-    "7": [
-      "CazéTV",
-      "Globo",
-      "SporTV",
-      "Ge TV",
-      "SBT"
-    ],
-    "8": [
-      "CazéTV"
-    ],
-    "9": [
-      "CazéTV",
-      "Globo",
-      "SporTV"
-    ],
-    "10": [
-      "CazéTV"
-    ],
-    "11": [
-      "CazéTV",
-      "Globo",
-      "SporTV",
-      "Ge TV",
-      "SBT"
-    ],
-    "12": [
-      "CazéTV",
-      "Globo",
-      "SporTV"
-    ],
-    "13": [
-      "CazéTV",
-      "Globo",
-      "SporTV",
-      "SBT"
-    ],
-    "14": [
-      "CazéTV"
-    ],
-    "15": [
-      "CazéTV"
-    ],
-    "16": [
-      "CazéTV",
-      "Globo",
-      "SporTV",
-      "Ge TV"
-    ],
-    "17": [
-      "CazéTV",
-      "Globo",
-      "SporTV",
-      "Ge TV",
-      "SBT"
-    ],
-    "18": [
-      "CazéTV"
-    ],
-    "19": [
-      "CazéTV"
-    ],
-    "20": [
-      "CazéTV",
-      "Globo",
-      "SporTV"
-    ],
-    "21": [
-      "CazéTV"
-    ],
-    "22": [
-      "CazéTV",
-      "Globo",
-      "SporTV",
-      "Ge TV",
-      "SBT"
-    ],
-    "23": [
-      "CazéTV"
-    ],
-    "24": [
-      "CazéTV",
-      "Globo",
-      "SporTV"
-    ]
-  },
-  "brazilCommunity": {
-    "1": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "2": [
-      "CazéTV"
-    ],
-    "3": [
-      "CazéTV"
-    ],
-    "4": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "5": [
-      "CazéTV"
-    ],
-    "6": [
-      "CazéTV",
-      "Globo"
-    ],
-    "7": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "8": [
-      "CazéTV"
-    ],
-    "9": [
-      "CazéTV",
-      "Globo"
-    ],
-    "10": [
-      "CazéTV"
-    ],
-    "11": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "12": [
-      "CazéTV",
-      "Globo"
-    ],
-    "13": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "14": [
-      "CazéTV"
-    ],
-    "15": [
-      "CazéTV"
-    ],
-    "16": [
-      "CazéTV",
-      "Globo"
-    ],
-    "17": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "18": [
-      "CazéTV"
-    ],
-    "19": [
-      "CazéTV"
-    ],
-    "20": [
-      "CazéTV",
-      "Globo"
-    ],
-    "21": [
-      "CazéTV"
-    ],
-    "22": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "23": [
-      "CazéTV"
-    ],
-    "24": [
-      "CazéTV",
-      "Globo"
-    ],
-    "25": [
-      "CazéTV"
-    ],
-    "26": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "27": [
-      "CazéTV"
-    ],
-    "28": [
-      "CazéTV",
-      "Globo"
-    ],
-    "29": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "30": [
-      "CazéTV"
-    ],
-    "31": [
-      "CazéTV",
-      "Globo"
-    ],
-    "32": [
-      "CazéTV"
-    ],
-    "33": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "34": [
-      "CazéTV"
-    ],
-    "35": [
-      "CazéTV"
-    ],
-    "36": [
-      "CazéTV",
-      "Globo"
-    ],
-    "37": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "38": [
-      "CazéTV"
-    ],
-    "39": [
-      "CazéTV"
-    ],
-    "40": [
-      "CazéTV",
-      "Globo"
-    ],
-    "41": [
-      "CazéTV",
-      "Globo"
-    ],
-    "42": [
-      "CazéTV"
-    ],
-    "43": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "44": [
-      "CazéTV",
-      "Globo"
-    ],
-    "45": [
-      "CazéTV",
-      "Globo",
-      "SBT"
-    ],
-    "46": [
-      "CazéTV"
-    ],
-    "47": [
-      "CazéTV"
-    ],
-    "48": [
-      "CazéTV",
-      "Globo"
-    ]
-  },
-  "portugalOpen": {
+  "version": 2,
+  "generator": "copa_broadcasts.py",
+  "rightsSource": "FIFA Media Rights Licensees Overview (11/06/2026)",
+  "note": "Gerado deterministicamente dos direitos oficiais (FIFA) cruzados com imprensa citada. CazéTV cobre os 104 jogos grátis no Brasil; Sport TV cobre os 104 (pago) em Portugal. Canal aberto específico vem da grade publicada (confirmado) ou fica 'a-confirmar'. Confiança por entrada; proveniência detalhada no gerador (copa_broadcasts.py) e no seed.",
+  "games": {
     "1": {
-      "channels": [
-        "TVI"
+      "grade_br": "publicada",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
       ],
-      "exact": true,
-      "source": "TVI/A Televisão"
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "TVI",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://tviplayer.iol.pt/direto",
+          "confianca": "confirmado"
+        }
+      ]
+    },
+    "2": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
     },
     "3": {
-      "channels": [
-        "SIC"
+      "grade_br": "publicada",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
       ],
-      "exact": true,
-      "source": "SIC/A Televisão"
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SIC",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://opto.sic.pt/",
+          "confianca": "confirmado"
+        }
+      ]
+    },
+    "4": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "5": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "6": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "7": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCJ77nj1oS6reQD2BRbp5Mrg"
+        }
+      ]
+    },
+    "8": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "9": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "10": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "11": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "12": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "13": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "14": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "15": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "16": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
     },
     "17": {
-      "channels": [
-        "RTP1"
+      "grade_br": "publicada",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
       ],
-      "exact": true,
-      "source": "RTP/A Televisão"
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "confirmado"
+        }
+      ]
+    },
+    "18": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "19": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "20": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "21": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "22": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
     },
     "23": {
-      "channels": [
-        "SIC"
+      "grade_br": "publicada",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        }
       ],
-      "exact": true,
-      "source": "SIC/Observador/A Televisão"
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SIC",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://opto.sic.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCJ77nj1oS6reQD2BRbp5Mrg"
+        }
+      ]
+    },
+    "24": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "25": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
     },
     "26": {
-      "channels": [
-        "RTP1"
+      "grade_br": "regra",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
       ],
-      "exact": true,
-      "source": "RTP/A Televisão"
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "confirmado"
+        }
+      ]
+    },
+    "27": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "28": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "29": {
+      "grade_br": "publicada",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "N Sports",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@NSports",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "ge TV",
+          "tipo": "streaming",
+          "acesso": "conta",
+          "regiao": "BR",
+          "url": "https://ge.globo.com/",
+          "confianca": "confirmado"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "30": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "31": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "32": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
     },
     "33": {
-      "channels": [
-        "TVI"
+      "grade_br": "regra",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
       ],
-      "exact": true,
-      "source": "TVI/A Televisão"
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "TVI",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://tviplayer.iol.pt/direto",
+          "confianca": "confirmado"
+        }
+      ]
+    },
+    "34": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "35": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "36": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "37": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "38": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "39": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "40": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "41": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "42": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "43": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "44": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "45": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "46": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
     },
     "47": {
-      "channels": [
-        "TVI"
+      "grade_br": "regra",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
       ],
-      "exact": true,
-      "source": "TVI/Observador/A Televisão"
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "TVI",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://tviplayer.iol.pt/direto",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCJ77nj1oS6reQD2BRbp5Mrg"
+        }
+      ]
     },
-    "56": {
-      "channels": [
-        "SIC"
+    "48": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
       ],
-      "exact": true,
-      "source": "SIC/A Televisão"
-    },
-    "61": {
-      "channels": [
-        "TVI"
-      ],
-      "exact": true,
-      "source": "TVI/A Televisão"
-    },
-    "71": {
-      "channels": [
-        "RTP1"
-      ],
-      "exact": true,
-      "source": "RTP/Observador/A Televisão"
-    }
-  },
-  "portugalLivemode": {
-    "7": {
-      "source": "DN Brasil",
-      "reason": "jogo do Brasil escolhido pela LiveModeTV"
-    },
-    "23": {
-      "source": "Observador",
-      "reason": "jogo de Portugal na LiveModeTV"
-    },
-    "47": {
-      "source": "Observador",
-      "reason": "jogo de Portugal na LiveModeTV"
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
     },
     "49": {
-      "source": "DN Brasil",
-      "reason": "jogo do Brasil escolhido pela LiveModeTV"
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "N Sports",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@NSports",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "Globoplay",
+          "tipo": "streaming",
+          "acesso": "conta",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "provavel"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCJ77nj1oS6reQD2BRbp5Mrg"
+        }
+      ]
+    },
+    "50": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "51": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "52": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "53": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "54": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "55": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "56": {
+      "grade_br": "regra",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "SIC",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://opto.sic.pt/",
+          "confianca": "confirmado"
+        }
+      ]
+    },
+    "57": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "58": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "59": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "60": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "61": {
+      "grade_br": "regra",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "TVI",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://tviplayer.iol.pt/direto",
+          "confianca": "confirmado"
+        }
+      ]
+    },
+    "62": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "63": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "64": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "65": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "66": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "67": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "68": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "69": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "70": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
     },
     "71": {
-      "source": "Observador",
-      "reason": "jogo de Portugal na LiveModeTV"
+      "grade_br": "regra",
+      "grade_pt": "publicada",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCJ77nj1oS6reQD2BRbp5Mrg"
+        }
+      ]
+    },
+    "72": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "73": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "74": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "75": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "76": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "77": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "78": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "79": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "80": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "81": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "82": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "83": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "84": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "85": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "86": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "87": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "88": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "89": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "90": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "91": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "92": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "93": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "94": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "95": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "96": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "97": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "98": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "99": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "100": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "101": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "SIC",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://opto.sic.pt/",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "TVI",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://tviplayer.iol.pt/direto",
+          "confianca": "provavel"
+        }
+      ]
+    },
+    "102": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "SIC",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://opto.sic.pt/",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "TVI",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://tviplayer.iol.pt/direto",
+          "confianca": "provavel"
+        }
+      ]
+    },
+    "103": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "a-confirmar"
+        }
+      ]
+    },
+    "104": {
+      "grade_br": "regra",
+      "grade_pt": "regra",
+      "br": [
+        {
+          "canal": "CazéTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@CazeTV/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+        },
+        {
+          "canal": "Globo",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        },
+        {
+          "canal": "SporTV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "a-confirmar"
+        }
+      ],
+      "pt": [
+        {
+          "canal": "Sport TV",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "PT",
+          "url": "https://www.sporttv.pt/",
+          "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "SIC",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://opto.sic.pt/",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "TVI",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://tviplayer.iol.pt/direto",
+          "confianca": "provavel"
+        }
+      ]
     }
-  }
+  },
+  "updatedAt": "2026-06-19T13:38:02+01:00"
 }

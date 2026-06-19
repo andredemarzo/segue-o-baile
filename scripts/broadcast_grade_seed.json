@@ -1,0 +1,302 @@
+{
+  "_doc": "Camada SOURCED (grade oficial publicada). Override de alta confianca sobre a regra de direitos. Extensivel: novas rodadas entram aqui a partir da grade oficial citada, nunca inventadas.",
+  "fontes": {
+    "br_globo": {
+      "texto": "O Globo publicou a grade da 1a rodada no Brasil (TV Globo, SBT, SporTV, ge TV e CazeTV por partida).",
+      "url": "https://oglobo.globo.com/play/noticia/2026/06/11/onde-assistir-aos-jogos-da-copa-do-mundo-saiba-onde-sera-transmitida-cada-partida-da-primeira-fase-da-competicao.ghtml",
+      "rodada": 1
+    },
+    "br_rodada2_brasil": {
+      "texto": "Grade de transmissao de Brasil x Haiti confirmada por multiplas fontes de imprensa (CNN Brasil, Lance, Olympics, bolavip).",
+      "url": "https://www.cnnbrasil.com.br/esportes/futebol/copa-do-mundo/brasil-x-haiti-horario-e-onde-assistir-a-copa-do-mundo/"
+    }
+  },
+  "br": {
+    "1": {
+      "aberta": [
+        "Globo",
+        "SBT"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": [
+        "Ge TV"
+      ]
+    },
+    "2": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "3": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "4": {
+      "aberta": [
+        "Globo",
+        "SBT"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": [
+        "Ge TV"
+      ]
+    },
+    "5": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "6": {
+      "aberta": [
+        "Globo"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": []
+    },
+    "7": {
+      "aberta": [
+        "Globo",
+        "SBT"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": [
+        "Ge TV"
+      ]
+    },
+    "8": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "9": {
+      "aberta": [
+        "Globo"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": []
+    },
+    "10": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "11": {
+      "aberta": [
+        "Globo",
+        "SBT"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": [
+        "Ge TV"
+      ]
+    },
+    "12": {
+      "aberta": [
+        "Globo"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": []
+    },
+    "13": {
+      "aberta": [
+        "Globo",
+        "SBT"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": []
+    },
+    "14": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "15": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "16": {
+      "aberta": [
+        "Globo"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": [
+        "Ge TV"
+      ]
+    },
+    "17": {
+      "aberta": [
+        "Globo",
+        "SBT"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": [
+        "Ge TV"
+      ]
+    },
+    "18": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "19": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "20": {
+      "aberta": [
+        "Globo"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": []
+    },
+    "21": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "22": {
+      "aberta": [
+        "Globo",
+        "SBT"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": [
+        "Ge TV"
+      ]
+    },
+    "23": {
+      "aberta": [],
+      "paga": [],
+      "streaming": []
+    },
+    "24": {
+      "aberta": [
+        "Globo"
+      ],
+      "paga": [
+        "SporTV"
+      ],
+      "streaming": []
+    },
+    "29": {
+      "aberta": [
+        "Globo",
+        "SBT"
+      ],
+      "paga": [
+        "SporTV",
+        "N Sports"
+      ],
+      "streaming": [
+        "ge TV"
+      ],
+      "fonte": "Imprensa (CNN Brasil, Lance, Olympics, bolavip): Brasil x Haiti (19/06/2026) — Globo/SBT (aberta), SporTV/N Sports (paga), CazeTV/Globoplay/ge TV (streaming)"
+    }
+  },
+  "pt_aberto": {
+    "1": {
+      "canais": [
+        "TVI"
+      ],
+      "fonte": "TVI/A Televisão"
+    },
+    "3": {
+      "canais": [
+        "SIC"
+      ],
+      "fonte": "SIC/A Televisão"
+    },
+    "17": {
+      "canais": [
+        "RTP1"
+      ],
+      "fonte": "RTP/A Televisão"
+    },
+    "23": {
+      "canais": [
+        "SIC"
+      ],
+      "fonte": "SIC/Observador/A Televisão"
+    },
+    "26": {
+      "canais": [
+        "RTP1"
+      ],
+      "fonte": "RTP/A Televisão"
+    },
+    "33": {
+      "canais": [
+        "TVI"
+      ],
+      "fonte": "TVI/A Televisão"
+    },
+    "47": {
+      "canais": [
+        "TVI"
+      ],
+      "fonte": "TVI/Observador/A Televisão"
+    },
+    "56": {
+      "canais": [
+        "SIC"
+      ],
+      "fonte": "SIC/A Televisão"
+    },
+    "61": {
+      "canais": [
+        "TVI"
+      ],
+      "fonte": "TVI/A Televisão"
+    },
+    "71": {
+      "canais": [
+        "RTP1"
+      ],
+      "fonte": "RTP/Observador/A Televisão"
+    }
+  },
+  "pt_livemode": {
+    "7": {
+      "fonte": "DN Brasil"
+    },
+    "23": {
+      "fonte": "Observador"
+    },
+    "47": {
+      "fonte": "Observador"
+    },
+    "49": {
+      "fonte": "DN Brasil"
+    },
+    "71": {
+      "fonte": "Observador"
+    }
+  }
+}

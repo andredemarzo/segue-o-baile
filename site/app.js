@@ -462,18 +462,38 @@ async function updateLiveScore() {
   }
 }
 
-// Streams ao vivo abertos/grátis (URLs de "direto" verificados). CazéTV cobre todos
-// os jogos no Brasil; os de Portugal dependem do que está em sinal aberto / LiveModeTV.
-const OPEN_STREAMS = {
-  "CazéTV": { label: "CazéTV", via: "YouTube", region: "BR", url: "https://www.youtube.com/@CazeTV/live", embed: "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ" },
-  "Globo": { label: "Globo", via: "Globoplay", region: "BR", note: "requer conta", url: "https://globoplay.globo.com/" },
-  "Ge TV": { label: "ge TV", via: "ge.globo", region: "BR", note: "requer conta", url: "https://ge.globo.com/" },
-  "SBT": { label: "SBT", via: "N Sports", region: "BR", url: "https://www.youtube.com/@NSports/live", embed: "https://www.youtube.com/embed/live_stream?channel=UCf9WJPpsh5BHDY-OeISgIqA" },
-  "LiveModeTV": { label: "LiveModeTV", via: "YouTube", region: "PT", url: "https://www.youtube.com/@LiveModeTV/live", embed: "https://www.youtube.com/embed/live_stream?channel=UCJ77nj1oS6reQD2BRbp5Mrg" },
-  "RTP1": { label: "RTP1", via: "RTP Play", region: "PT", url: "https://www.rtp.pt/play/direto/rtp1" },
-  "TVI": { label: "TVI", via: "TVI Player", region: "PT", url: "https://tviplayer.iol.pt/direto" },
-  "SIC": { label: "SIC", via: "Opto", region: "PT", note: "requer conta", url: "https://opto.sic.pt/" }
+// ===== Transmissão por jogo — grade TIPADA gerada por scripts/copa_broadcasts.py =====
+// Fonte: data/broadcasts.json (v2) -> games[id] = {grade_br, grade_pt, br:[...], pt:[...]}.
+// Cada entrada: {canal, tipo:aberta|paga|streaming, acesso:grátis|assinatura|conta,
+//   regiao:BR|PT, url, embed?, confianca:confirmado|provavel|a-confirmar, fonte}.
+// CazéTV cobre os 104 grátis no Brasil; Sport TV cobre os 104 (pago) em Portugal; o
+// canal aberto específico vem da grade publicada (confirmado) ou fica "a-confirmar".
+let BROADCASTS = {};
+
+function gameBroadcast(match) {
+  return BROADCASTS[match.id] || { grade_br: "regra", grade_pt: "regra", br: [], pt: [] };
+}
+
+// Apresentação por canal (rótulo, "via", nota e números de operadora). url/embed/
+// confiança vêm do DADO gerado; aqui fica só o que é estável de exibição.
+const CHANNEL_META = {
+  "CazéTV":     { label: "CazéTV", via: "YouTube", numbers: "YouTube: @CazeTV. Em Smart TV/FAST, procure CazéTV no guia." },
+  "Globo":      { label: "Globo", via: "TV aberta", note: "ou Globoplay (conta grátis)", numbers: "Ref. SP: Globo 5.1; muda pela afiliada local." },
+  "SporTV":     { label: "SporTV", via: "TV paga", numbers: "SKY 39/439 HD; Claro 39/539 HD; Vivo 539; Oi 39 HD." },
+  "ge TV":      { label: "ge TV", via: "ge.globo", note: "requer conta", numbers: "ge.globo: app/site, sem número." },
+  "Globoplay":  { label: "Globoplay", via: "Globoplay", note: "requer conta", numbers: "Globoplay: app/site, sem número." },
+  "SBT":        { label: "SBT", via: "TV aberta", note: "ou sbt.com.br/aovivo", numbers: "Ref. SP: SBT 4.1; muda pela afiliada local. Online: sbt.com.br/aovivo." },
+  "N Sports":   { label: "N Sports", via: "TV paga", numbers: "N Sports: número varia por operadora." },
+  "Sport TV":   { label: "Sport TV", via: "TV paga", numbers: "SPORT.TV1: NOS 20; MEO 21. O subcanal muda na grelha do dia." },
+  "RTP1":       { label: "RTP1", via: "RTP Play", numbers: "RTP1: 1 na TDT/grelha. Online: RTP Play (grátis)." },
+  "SIC":        { label: "SIC", via: "Opto", numbers: "SIC: 3 na TDT/grelha. Online: SIC Direto/Opto." },
+  "TVI":        { label: "TVI", via: "TVI Player", numbers: "TVI: 4 na TDT/grelha. Online: TVI Player." },
+  "LiveModeTV": { label: "LiveModeTV", via: "YouTube", numbers: "YouTube: @LiveModeTV." }
 };
+
+function channelMeta(canal) {
+  return CHANNEL_META[canal] || { label: canal, via: "" };
+}
 
 function detectRegion() {
   const saved = localStorage.getItem("preferredRegion");
@@ -493,22 +513,21 @@ let preferredRegion = detectRegion();
 let liveMatch = null;
 let liveActive = false;
 
+// Streams "assistir ao vivo grátis": entradas grátis que NÃO estão "a-confirmar"
+// (CazéTV sempre; Globo/SBT/RTP/SIC/TVI/LiveModeTV quando o jogo as confirma). Não
+// mostra um caminho grátis de que não temos certeza — honesto, sem "Cazé em todos".
 function openStreamsFor(match) {
-  const streams = [OPEN_STREAMS["CazéTV"]]; // Brasil: CazéTV no YouTube cobre todos os jogos
-  // Brasil: demais canais da grade (Globo, ge TV, SBT) quando indicados para o jogo
-  (BRAZIL_GLOBO_BROADCASTS[match.id] || []).forEach((channel) => {
-    if (OPEN_STREAMS[channel] && channel !== "CazéTV") streams.push(OPEN_STREAMS[channel]);
-  });
-  // Portugal: sinal aberto (RTP1/TVI/SIC)
-  const open = PORTUGAL_OPEN_BROADCASTS[match.id];
-  if (open && Array.isArray(open.channels)) {
-    open.channels.forEach((channel) => {
-      if (OPEN_STREAMS[channel]) streams.push(OPEN_STREAMS[channel]);
-    });
-  }
-  if (PORTUGAL_LIVEMODE_BROADCASTS[match.id]) streams.push(OPEN_STREAMS["LiveModeTV"]);
+  const g = gameBroadcast(match);
   const seen = new Set();
-  return streams.filter((stream) => stream && !seen.has(stream.label) && seen.add(stream.label));
+  const out = [];
+  [...(g.br || []), ...(g.pt || [])].forEach((e) => {
+    if (e.acesso !== "grátis" || e.confianca === "a-confirmar") return;
+    if (seen.has(e.canal)) return;
+    seen.add(e.canal);
+    const meta = channelMeta(e.canal);
+    out.push({ label: meta.label, via: meta.via, region: e.regiao, url: e.url, embed: e.embed, note: meta.note });
+  });
+  return out;
 }
 
 // Ordena os streams: região preferida primeiro; dentro dela, grátis-sem-login antes.
@@ -595,271 +614,56 @@ function statusLabel(status) {
   return labels[status] || status;
 }
 
-const BRAZIL_COMMUNITY_SOURCE =
-  "Tabela 365Scores compartilhada no r/Canarinho: o ícone Globo representa Globo, SporTV e Globoplay; SBT vem junto de N Sports.";
-const BRAZIL_COMMUNITY_URL =
-  "https://www.reddit.com/r/Canarinho/comments/1twyelb/onde_assistir_copa_do_mundo/";
+// As fontes (FIFA Media Rights + O Globo/Observador/DN/A Televisão) agora vivem no
+// GERADOR: scripts/copa_broadcasts.py (constantes F_*) e scripts/broadcast_grade_seed.json
+// (campo "fonte" por jogo). Cada entrada de broadcasts.json carrega sua própria fonte.
 
-const BRAZIL_GLOBO_SOURCE =
-  "O Globo publicou a grade da primeira rodada no Brasil, com TV Globo, SBT, SporTV, ge TV e CazéTV por partida.";
-const BRAZIL_GLOBO_URL =
-  "https://oglobo.globo.com/play/noticia/2026/06/11/onde-assistir-aos-jogos-da-copa-do-mundo-saiba-onde-sera-transmitida-cada-partida-da-primeira-fase-da-competicao.ghtml";
+// ===== Grade tipada -> linhas do quadro (TV aberta / TV fechada / Streaming) =====
+const _CONF_RANK = { confirmado: 3, provavel: 2, "a-confirmar": 1 };
 
-const PORTUGAL_OBSERVADOR_SOURCE =
-  "Observador publicou a divisão em Portugal: Sport TV em todos os jogos, LiveModeTV nos jogos de Portugal e RTP/SIC/TVI em sinal aberto nos jogos indicados.";
-const PORTUGAL_OBSERVADOR_URL = "https://observador.pt/prognosticos/onde-assistir-mundial/";
-const PORTUGAL_ATV_SOURCE =
-  "A Televisão publicou o guia dos 20 jogos em sinal aberto na RTP, SIC e TVI.";
-const PORTUGAL_ATV_URL =
-  "https://www.atelevisao.com/tvi/guia-completo-dos-jogos-do-mundial-2026-na-rtp-sic-e-tvi/";
-const PORTUGAL_TVI_SOURCE =
-  "A TVI confirmou em fonte própria os seus jogos do Mundial e mantém o TVI Player como canal digital da emissora.";
-const PORTUGAL_TVI_URL =
-  "https://tvi.iol.pt/mundial-de-futebol/selecao-portuguesa/tvi-transmite-jogos-do-mundial-de-futebol";
-const PORTUGAL_RTP_SOURCE =
-  "A RTP confirmou em fonte própria França x Senegal, Suíça x Bósnia, Colômbia x Portugal e a final do Mundial.";
-const PORTUGAL_RTP_URL =
-  "https://www.rtp.pt/noticias/selecao-nacional/rtp-vai-transmitir-jogo-decisivo-de-portugal-na-fase-de-grupos-frente-a-colombia-e-a-final-do-mundial-2026_d1745622";
-const PORTUGAL_SIC_SOURCE =
-  "A SIC publicou o calendário da fase de grupos com os jogos que passam na SIC e os acessos SIC Direto/Opto SIC.";
-const PORTUGAL_SIC_URL =
-  "https://sic.pt/mundial-fifa-2026/2026-06-09-quando-e-e-a-que-horas--o-calendario-completo-das-72-partidas-da-fase-de-grupos-do-mundial-2026-ecd949ae";
-const PORTUGAL_DN_SOURCE =
-  "DN Brasil confirmou, para Portugal, quais jogos do Brasil passam na LiveModeTV/YouTube e quais ficam só na Sport TV.";
-const PORTUGAL_DN_URL =
-  "https://dnbrasil.dn.pt/a-copa-do-mundo-vem-a-confira-onde-ver-os-jogos-do-brasil-na-televiso-em-portugal";
-
-let BRAZIL_GLOBO_BROADCASTS = {};
-
-let BRAZIL_COMMUNITY_BROADCASTS = {};
-
-let PORTUGAL_OPEN_BROADCASTS = {};
-
-let PORTUGAL_LIVEMODE_BROADCASTS = {};
-
-function brazilCommunityFor(match) {
-  const channels = BRAZIL_COMMUNITY_BROADCASTS[match.id];
-  if (!channels) return undefined;
-
-  return {
-    hasCaze: channels.includes("CazéTV"),
-    hasGlobo: channels.includes("Globo"),
-    hasSbt: channels.includes("SBT")
-  };
+// Uma linha do quadro a partir das entradas de um meio. gradePublicada = a grade
+// oficial deste jogo é conhecida; sem ela, ausência vira "a confirmar" (não "não tem").
+function broadcastRow(entries, label, gradePublicada) {
+  if (!entries.length) {
+    return {
+      type: label,
+      channels: gradePublicada ? "Não indicado para este jogo" : "A confirmar na grade",
+      numbers: "",
+      status: gradePublicada ? "notFound" : "partial"
+    };
+  }
+  const best = entries.reduce(
+    (a, e) => ((_CONF_RANK[e.confianca] || 0) > (_CONF_RANK[a.confianca] || 0) ? e : a),
+    entries[0]
+  );
+  const status =
+    best.confianca === "confirmado" ? (gradePublicada ? "published" : "confirmed")
+    : best.confianca === "provavel" ? "rights"
+    : "partial";
+  const names = entries.map((e) => channelMeta(e.canal).label);
+  const numbers = entries.map((e) => channelMeta(e.canal).numbers).filter(Boolean).join(" · ");
+  const channels =
+    status === "rights" || status === "partial" ? `${names.join("; ")} (a confirmar)` : names.join("; ");
+  return { type: label, channels, numbers, status };
 }
 
-function brazilGloboFor(match) {
-  const channels = BRAZIL_GLOBO_BROADCASTS[match.id];
-  if (!channels) return undefined;
-
-  return {
-    channels,
-    hasCaze: channels.includes("CazéTV"),
-    hasGlobo: channels.includes("Globo"),
-    hasSporTv: channels.includes("SporTV"),
-    hasGeTv: channels.includes("Ge TV"),
-    hasSbt: channels.includes("SBT")
-  };
-}
-
-function portugalFor(match) {
-  return {
-    open: PORTUGAL_OPEN_BROADCASTS[match.id],
-    liveMode: PORTUGAL_LIVEMODE_BROADCASTS[match.id],
-    hasSportTv: true,
-    isPortugalGame: isTeam(match, "Portugal"),
-    isBrazilGame: isTeam(match, "Brasil")
-  };
-}
-
-function portugalOpenStreaming(channels) {
-  return channels.map((channel) => {
-    if (channel === "RTP1") return "RTP Play";
-    if (channel === "SIC") return "SIC Direto/Opto SIC";
-    if (channel === "TVI") return "TVI Player";
-    return `${channel} online`;
-  });
-}
-
-function portugalStreamingAccess(hasLiveMode, openStreaming) {
-  const access = [];
-  if (hasLiveMode) access.push("LiveModeTV: YouTube");
-  openStreaming.forEach((channel) => {
-    if (channel === "RTP Play") access.push("RTP Play: app/site");
-    if (channel === "SIC Direto/Opto SIC") access.push("SIC Direto/Opto SIC: app/site");
-    if (channel === "TVI Player") access.push("TVI Player: app/site");
-  });
-  return access.join(". ");
-}
-
-function joinOrNone(items, fallback) {
-  return items.length ? items.join("; ") : fallback;
+// Quatro linhas de uma região (BR/PT) a partir das entradas tipadas do jogo.
+function regionRows(entries, gradePublicada, paidStreamLabel) {
+  const pick = (tipo, freeOnly) =>
+    entries.filter((e) => e.tipo === tipo && (freeOnly === undefined || (freeOnly ? e.acesso === "grátis" : e.acesso !== "grátis")));
+  return [
+    broadcastRow(pick("aberta"), "TV aberta", gradePublicada),
+    broadcastRow(pick("paga"), "TV fechada", gradePublicada),
+    broadcastRow(pick("streaming", true), "Streaming grátis", gradePublicada),
+    broadcastRow(pick("streaming", false), paidStreamLabel, gradePublicada)
+  ];
 }
 
 function broadcastData(match) {
-  const brazilGame = isTeam(match, "Brasil");
-  const brazilGlobo = brazilGloboFor(match);
-  const brazilCommunity = brazilCommunityFor(match);
-  const openTv = brazilGlobo
-    ? [
-        ...(brazilGlobo.hasGlobo ? ["Globo"] : []),
-        ...(brazilGlobo.hasSbt ? ["SBT"] : [])
-      ]
-    : brazilCommunity
-      ? [
-          ...(brazilCommunity.hasGlobo ? ["Globo"] : []),
-          ...(brazilCommunity.hasSbt ? ["SBT"] : [])
-        ]
-      : [];
-  const payTv = brazilGlobo
-    ? [
-        ...(brazilGlobo.hasSporTv ? ["SporTV"] : [])
-      ]
-    : brazilCommunity
-      ? [
-          ...(brazilCommunity.hasGlobo ? ["SporTV"] : []),
-          ...(brazilCommunity.hasSbt ? ["N Sports"] : [])
-        ]
-      : [];
-  const streaming = brazilGlobo
-    ? [
-        ...(brazilGlobo.hasCaze ? ["CazéTV no YouTube"] : []),
-        ...(brazilGlobo.hasGeTv ? ["ge TV"] : [])
-      ]
-    : brazilCommunity
-      ? [
-          ...(brazilCommunity.hasCaze ? ["CazéTV no YouTube"] : []),
-          ...(brazilCommunity.hasGlobo ? ["Globoplay"] : [])
-        ]
-      : ["CazéTV no YouTube"];
-  const portugal = portugalFor(match);
-  const ptOpenChannels = portugal.open?.channels || [];
-  const ptOpenNumbers = ptOpenChannels
-    .map((channel) => {
-      if (channel === "RTP1") return "RTP1 1";
-      if (channel === "SIC") return "SIC 3";
-      if (channel === "TVI") return "TVI 4";
-      return "RTP1 1; SIC 3; TVI 4";
-    })
-    .join("; ");
-  const ptOpenStreaming = portugalOpenStreaming(ptOpenChannels);
-  const ptFreeStreaming = [
-    ...(portugal.liveMode ? ["LiveModeTV no YouTube"] : []),
-    ...ptOpenStreaming
-  ];
-  const ptFreeStreamingAccess = portugalStreamingAccess(Boolean(portugal.liveMode), ptOpenStreaming);
-  const portugalNoteParts = [PORTUGAL_OBSERVADOR_SOURCE, PORTUGAL_ATV_SOURCE];
-  if (ptOpenChannels.includes("TVI")) portugalNoteParts.push(PORTUGAL_TVI_SOURCE);
-  if (ptOpenChannels.includes("RTP1")) portugalNoteParts.push(PORTUGAL_RTP_SOURCE);
-  if (ptOpenChannels.includes("SIC")) portugalNoteParts.push(PORTUGAL_SIC_SOURCE);
-  if (portugal.isBrazilGame) portugalNoteParts.push(PORTUGAL_DN_SOURCE);
-
+  const g = gameBroadcast(match);
   return {
-    br: {
-      note: brazilGlobo
-        ? `${BRAZIL_GLOBO_SOURCE} ${brazilCommunity ? "Usei a tabela 365Scores/Reddit como complemento para N Sports." : ""}`
-        : brazilCommunity
-          ? `${BRAZIL_COMMUNITY_SOURCE} CazéTV segue confirmada por cobertura integral.`
-        : `Ficha específica para ${teamText(match)}. Pacotes parciais só entram como confirmados quando a grade do jogo é conhecida.`,
-      items: [
-        {
-          type: "TV aberta",
-          channels: brazilGlobo || brazilCommunity ? joinOrNone(openTv, "Sem TV aberta indicada para este jogo") : "TV Globo; SBT",
-          numbers: "Referência SP: Globo 5.1; SBT 4.1. Em outra cidade, muda pela afiliada local.",
-          status: brazilGlobo ? (openTv.length ? "published" : "notFound") : brazilCommunity ? (openTv.length ? "community" : "notFound") : "partial",
-          text: brazilGlobo
-            ? openTv.length
-              ? `Grade publicada pelo O Globo para ${teamText(match)}.`
-              : "O Globo não indica TV aberta brasileira para este jogo."
-            : brazilCommunity
-              ? openTv.length
-                ? `Indicado pela tabela 365Scores/Reddit para ${teamText(match)}. Conferir no guia da TV antes do jogo.`
-                : "A tabela 365Scores/Reddit não indica TV aberta brasileira para este jogo."
-            : brazilGame
-              ? "Jogos do Brasil tendem a entrar nos pacotes nacionais, mas o canal exato deve vir da grade da partida."
-              : "Globo/SBT têm pacotes parciais; este jogo só deve aparecer aqui se houver grade específica."
-        },
-        {
-          type: "TV fechada",
-          channels: brazilGlobo || brazilCommunity ? joinOrNone(payTv, "Sem TV fechada indicada para este jogo") : "SporTV; N Sports",
-          numbers: payTv.includes("N Sports")
-            ? "SporTV: SKY 39/439 HD; Claro 39/539 HD; Vivo 539; Oi 39 HD. N Sports: número varia por operadora."
-            : "SporTV: SKY 39/439 HD; Claro 39/539 HD; Vivo 539; Oi 39 HD.",
-          status: brazilGlobo ? (payTv.length ? (payTv.includes("N Sports") ? "mixed" : "published") : "notFound") : brazilCommunity ? (payTv.length ? "community" : "notFound") : "partial",
-          text: brazilGlobo
-            ? payTv.length
-              ? "SporTV vem da grade publicada pelo O Globo; N Sports entra quando a tabela 365Scores/Reddit indica SBT/N Sports para o mesmo jogo."
-              : "O Globo e a tabela complementar não indicam TV fechada brasileira para este jogo."
-            : brazilCommunity
-              ? payTv.length
-                ? "Derivado da mesma tabela: Globo implica SporTV; SBT implica N Sports."
-                : "A tabela 365Scores/Reddit não indica TV fechada brasileira para este jogo."
-            : "Use o número acima só quando a partida aparecer na grade do canal."
-        },
-        {
-          type: "Streaming grátis",
-          channels: joinOrNone(streaming.filter((name) => name.includes("CazéTV")), "Sem streaming grátis indicado"),
-          numbers: "YouTube: @CazeTV. Em Smart TV/FAST, procure por CazéTV no guia da plataforma.",
-          status: brazilCommunity?.hasCaze ? "confirmed" : "notFound",
-          text: "Confirmado para todos os 104 jogos no Brasil; é o caminho mais seguro para este jogo."
-        },
-        {
-          type: "Streaming pago/FAST",
-          channels: joinOrNone(streaming, "Sem streaming indicado"),
-          numbers: "ge TV e Globoplay: app/site, sem número. Prime Video, Disney+, Samsung TV Plus, Sky+ e Mercado Play: buscar CazéTV.",
-          status: brazilGlobo ? "published" : brazilCommunity ? "community" : "partial",
-          text: brazilGlobo
-            ? "ge TV aparece quando a grade do O Globo marca o streaming do grupo; CazéTV segue por cobertura integral."
-            : brazilCommunity
-              ? "CazéTV aparece por cobertura integral; Globoplay aparece quando a tabela marca Globo para o jogo."
-            : "CazéTV é a cobertura integral; os demais dependem da seleção de jogos dos pacotes."
-        }
-      ]
-    },
-    pt: {
-      note: `${portugalNoteParts.join(" ")} Ficha específica para ${teamText(match)}.`,
-      items: [
-        {
-          type: "TV aberta",
-          channels: portugal.open ? joinOrNone(ptOpenChannels, "Sinal aberto indicado, canal a confirmar") : "Sem TV aberta confirmada para este jogo",
-          numbers: portugal.open ? `${ptOpenNumbers} na grelha comum/TDT. Na operadora, use o mesmo nome do canal.` : "RTP1 1; SIC 3; TVI 4, se a partida for escalada em aberto.",
-          status: portugal.open ? (portugal.open.exact ? "published" : "rights") : "notFound",
-          text: portugal.open
-            ? portugal.open.exact
-              ? `${portugal.open.source} indica ${joinOrNone(ptOpenChannels, "TV aberta")} para ${teamText(match)}.`
-              : "As fontes colocam este jogo no pacote de 20 jogos em sinal aberto, mas não nomeiam ainda qual canal RTP/SIC/TVI."
-            : "Não encontrei RTP/SIC/TVI confirmando TV aberta portuguesa para este jogo."
-        },
-        {
-          type: "TV fechada",
-          channels: "Sport TV",
-          numbers: "SPORT.TV1: NOS 20; MEO 21. SPORT.TV2-7: NOS 21-26; MEO 22-27. Vodafone: procurar SPORT.TV na grelha.",
-          status: "confirmed",
-          text: "Confirmado para todos os 104 jogos em Portugal. O subcanal exato pode mudar na grelha Sport TV do dia."
-        },
-        {
-          type: "Streaming grátis",
-          channels: ptFreeStreaming.length ? joinOrNone(ptFreeStreaming, "") : "Sem streaming grátis confirmado para este jogo",
-          numbers: ptFreeStreaming.length
-            ? ptFreeStreamingAccess
-            : "LiveModeTV terá 34 jogos, mas este jogo não apareceu nas listas consultadas.",
-          status: ptFreeStreaming.length ? "published" : "notFound",
-          text: ptFreeStreaming.length
-            ? [
-                ...(portugal.liveMode ? [`${portugal.liveMode.source} lista este jogo na LiveModeTV: ${portugal.liveMode.reason}.`] : []),
-                ...(ptOpenStreaming.length ? ["Observador indica apps/sites da RTP, SIC e TVI nos jogos em sinal aberto."] : [])
-              ].join(" ")
-            : "Não marquei LiveModeTV nem app de emissora aberta porque as fontes encontradas não confirmam esta partida específica."
-        },
-        {
-          type: "Streaming pago",
-          channels: "Sport TV app/operadora",
-          numbers: "Mesmo pacote Sport TV da operadora; sem número separado no app.",
-          status: "confirmed",
-          text: "Para assinantes, acompanha a cobertura integral da Sport TV."
-        }
-      ]
-    }
+    br: { items: regionRows(g.br || [], g.grade_br === "publicada", "Streaming pago/FAST") },
+    pt: { items: regionRows(g.pt || [], g.grade_pt === "publicada", "Streaming pago") }
   };
 }
 
@@ -893,33 +697,15 @@ function renderBroadcasts(match) {
 }
 
 function compactBroadcastSummary(match) {
-  const data = broadcastData(match);
-  const brazilGlobo = brazilGloboFor(match);
-  const brazilCommunity = brazilCommunityFor(match);
-  const brConfirmed = brazilGlobo
-    ? [
-        ...(brazilGlobo.hasCaze ? ["CazéTV"] : []),
-        ...(brazilGlobo.hasGlobo || brazilGlobo.hasSporTv || brazilGlobo.hasGeTv
-          ? [[
-              ...(brazilGlobo.hasGlobo ? ["Globo"] : []),
-              ...(brazilGlobo.hasSporTv ? ["SporTV"] : []),
-              ...(brazilGlobo.hasGeTv ? ["ge TV"] : [])
-            ].join("/")]
-          : []),
-        ...(brazilGlobo.hasSbt ? ["SBT"] : []),
-      ]
-    : brazilCommunity
-      ? [
-          ...(brazilCommunity.hasCaze ? ["CazéTV"] : [])
-      ]
-    : data.br.items.filter((item) => item.status === "confirmed").map((item) => item.channels.split(";")[0]);
-  const ptAvailable = data.pt.items
-    .filter((item) => item.type !== "Streaming pago")
-    .filter((item) => item.status === "confirmed" || item.status === "published")
-    .map((item) => item.channels);
+  const g = gameBroadcast(match);
+  const sure = (arr) => [...new Set((arr || [])
+    .filter((e) => e.confianca === "confirmado" || e.confianca === "provavel")
+    .map((e) => channelMeta(e.canal).label))];
+  const br = sure(g.br);
+  const pt = sure(g.pt);
   return {
-    br: brConfirmed.length ? brConfirmed.join("; ") : "BR: sem transmissão confirmada",
-    pt: ptAvailable.length ? ptAvailable.join("; ") : "PT: sem transmissão confirmada"
+    br: br.length ? br.join("; ") : "a confirmar na grade",
+    pt: pt.length ? pt.join("; ") : "a confirmar na grade"
   };
 }
 
@@ -1559,10 +1345,7 @@ async function loadData() {
     fetch("data/broadcasts.json", { cache: "no-store" }).then((response) => response.json())
   ]);
   MATCHES = matchesDoc.matches.slice().sort((a, b) => utcDate(a) - utcDate(b));
-  BRAZIL_GLOBO_BROADCASTS = broadcastsDoc.brazilGlobo || {};
-  BRAZIL_COMMUNITY_BROADCASTS = broadcastsDoc.brazilCommunity || {};
-  PORTUGAL_OPEN_BROADCASTS = broadcastsDoc.portugalOpen || {};
-  PORTUGAL_LIVEMODE_BROADCASTS = broadcastsDoc.portugalLivemode || {};
+  BROADCASTS = (broadcastsDoc && broadcastsDoc.games) || {};
 }
 
 async function boot() {
