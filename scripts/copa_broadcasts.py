@@ -59,8 +59,8 @@ CH = {
     "SIC":       {"regiao": "PT", "tipo": "aberta", "acesso": "grátis", "url": "https://opto.sic.pt/"},
     "TVI":       {"regiao": "PT", "tipo": "aberta", "acesso": "grátis", "url": "https://tviplayer.iol.pt/direto"},
     "LiveModeTV":{"regiao": "PT", "tipo": "streaming", "acesso": "grátis",
-                  "url": "https://www.youtube.com/@LiveModeTV/live",
-                  "embed": "https://www.youtube.com/embed/live_stream?channel=UCJ77nj1oS6reQD2BRbp5Mrg"},
+                  "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+                  "embed": "https://www.youtube.com/embed/live_stream?channel=UCrYhacSar0c5Oq_Qdl3SH-g"},
 }
 
 # Fontes (citadas em cada entrada — data lineage)

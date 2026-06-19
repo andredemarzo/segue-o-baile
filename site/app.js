@@ -488,7 +488,7 @@ const CHANNEL_META = {
   "RTP1":       { label: "RTP1", via: "RTP Play", numbers: "RTP1: 1 na TDT/grelha. Online: RTP Play (grátis)." },
   "SIC":        { label: "SIC", via: "Opto", numbers: "SIC: 3 na TDT/grelha. Online: SIC Direto/Opto." },
   "TVI":        { label: "TVI", via: "TVI Player", numbers: "TVI: 4 na TDT/grelha. Online: TVI Player." },
-  "LiveModeTV": { label: "LiveModeTV", via: "YouTube", numbers: "YouTube: @LiveModeTV." }
+  "LiveModeTV": { label: "LiveModeTV", via: "YouTube", numbers: "YouTube: @LiveModeTV_PT." }
 };
 
 function channelMeta(canal) {
