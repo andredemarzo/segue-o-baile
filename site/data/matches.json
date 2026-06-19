@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-19T21:50:04+00:00",
+  "updatedAt": "2026-06-19T22:36:22+00:00",
   "matches": [
     {
       "id": 1,
@@ -1893,9 +1893,9 @@
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "prob": {
-        "home": 48,
-        "draw": 24,
-        "away": 28
+        "home": 40,
+        "draw": 28,
+        "away": 32
       },
       "weather": {
         "tempC": 21,
@@ -1919,9 +1919,9 @@
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "prob": {
-        "home": 29,
-        "draw": 25,
-        "away": 46
+        "home": 33,
+        "draw": 28,
+        "away": 39
       },
       "weather": {
         "tempC": 25,
