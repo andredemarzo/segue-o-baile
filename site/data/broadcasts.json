@@ -1222,6 +1222,15 @@
           "regiao": "PT",
           "url": "https://www.rtp.pt/play/direto/rtp1",
           "confianca": "a-confirmar"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCrYhacSar0c5Oq_Qdl3SH-g"
         }
       ]
     },
@@ -1271,6 +1280,15 @@
           "regiao": "PT",
           "url": "https://www.rtp.pt/play/direto/rtp1",
           "confianca": "a-confirmar"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCrYhacSar0c5Oq_Qdl3SH-g"
         }
       ]
     },
@@ -1344,6 +1362,15 @@
           "regiao": "PT",
           "url": "https://www.rtp.pt/play/direto/rtp1",
           "confianca": "a-confirmar"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCrYhacSar0c5Oq_Qdl3SH-g"
         }
       ]
     },
@@ -5122,5 +5149,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-19T17:44:38+01:00"
+  "updatedAt": "2026-06-19T18:00:56+01:00"
 }

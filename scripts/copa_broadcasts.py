@@ -204,6 +204,30 @@ def document(matches, seed=None):
     }
 
 
+def apply_youtube(doc, livemode_hits=None, caze_hits=None):
+    """Camada YouTube (ADITIVA — regra do operador: nunca sobrepor). Onde o YouTube detectou
+    cobertura real do canal, marca o canal CONFIRMADO no jogo: ACRESCENTA se falta, faz UPGRADE de
+    confiança se já existe, NUNCA remove nem rebaixa. O embed segue o channel-live do CH (seguro);
+    o vídeo exato ao vivo é refinamento posterior. Devolve quantos jogos foram tocados (observabilidade)."""
+    n = 0
+    for gid in (livemode_hits or {}):
+        n += _merge_channel(doc["games"].get(str(gid)), "pt", "LiveModeTV")
+    for gid in (caze_hits or {}):
+        n += _merge_channel(doc["games"].get(str(gid)), "br", "CazéTV")
+    return n
+
+
+def _merge_channel(g, region, canal):
+    if not g or canal not in CH:
+        return 0
+    for e in g.get(region, []):
+        if e.get("canal") == canal:
+            e["confianca"] = "confirmado"   # upgrade — nunca rebaixa nem remove
+            return 1
+    g.setdefault(region, []).append(_slim_entry(_entry(canal, "confirmado", "youtube")))  # acrescenta
+    return 1
+
+
 if __name__ == "__main__":
     import sys
     mpath = sys.argv[1] if len(sys.argv) > 1 else os.path.join(DIR, os.pardir, "site", "data", "matches.json")

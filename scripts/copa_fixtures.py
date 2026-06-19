@@ -492,6 +492,19 @@ def write_broadcasts(matches):
         print(f"  aviso: copa_broadcasts indisponível ({exc}); broadcasts.json não tocado")
         return
     doc = copa_broadcasts.document(matches)
+    # CAMADA YOUTUBE (aditiva): detecta cobertura REAL do @LiveModeTV_PT (PT) e CazéTV (BR) e marca
+    # os jogos (acrescenta/upgrade, NUNCA remove). Grátis (uploads=1 unidade/canal); graciosa a
+    # falha/sem-chave (segue só com regra+seed). v1: cobertura por uploads recentes (vídeo exato ao
+    # vivo = refinamento posterior); jogos antigos podem sair da janela de uploads (inócuo).
+    try:
+        import copa_youtube
+        lm = copa_youtube.detect(matches, copa_youtube.LIVEMODE_PT)
+        cz = copa_youtube.detect(matches, copa_youtube.CAZETV)
+        if lm or cz:
+            n = copa_broadcasts.apply_youtube(doc, lm, cz)
+            print(f"  YouTube: LiveModeTV {len(lm)} jogo(s) + CazéTV {len(cz)} jogo(s) → {n} marcação(ões) aditiva(s)")
+    except Exception as exc:  # API/rede/sem-chave não derruba a grade
+        print(f"  aviso: camada YouTube pulada ({exc})")
     existing = None
     if os.path.exists(BCAST_OUT):
         try:

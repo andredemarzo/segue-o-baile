@@ -37,6 +37,7 @@ jobs:
       - name: Coleta fixtures (API da FIFA)
         env:
           COPA_PROJECT_DIR: ${{ github.workspace }}/site
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           COPA_FORCE: ${{ (github.event_name == 'workflow_dispatch' && inputs.force) && '1' || '0' }}
         run: python scripts/copa_fixtures.py
 
