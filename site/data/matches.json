@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-19T18:15:46+00:00",
+  "updatedAt": "2026-06-19T18:19:30+00:00",
   "matches": [
     {
       "id": 1,
@@ -1552,8 +1552,8 @@
         "away": 68
       },
       "weather": {
-        "tempC": 21,
-        "at": "2026-06-19T02:17:38+00:00"
+        "tempC": 22,
+        "at": "2026-06-19T18:19:28+00:00"
       }
     },
     {
@@ -1942,8 +1942,8 @@
         "away": 63
       },
       "weather": {
-        "tempC": 27,
-        "at": "2026-06-19T02:17:38+00:00"
+        "tempC": 26,
+        "at": "2026-06-19T18:19:28+00:00"
       }
     },
     {
@@ -2355,7 +2355,7 @@
       "venue": "AT&T Stadium",
       "weather": {
         "tempC": 33,
-        "at": "2026-06-19T07:35:02+00:00"
+        "at": "2026-06-19T18:19:28+00:00"
       }
     },
     {
