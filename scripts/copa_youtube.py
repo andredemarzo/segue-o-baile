@@ -24,6 +24,14 @@ LIVEMODE_PT = "UCrYhacSar0c5Oq_Qdl3SH-g"   # @LiveModeTV_PT (canal ATIVO da Copa
 CAZETV = "UCZiYbVptd3PVPf4f6eR6UaQ"        # @CazeTV
 _KEY_FILE = os.path.expanduser("~/.youtube_key")
 
+# Canais que recebem embed EXATO via YouTube: (canal_na_grade, channel_id, regiao_busca, regiao_grade).
+# regiao_busca é CRÍTICA (geo): o search.list geo-filtra pelo IP; LiveModeTV só aparece p/ PT, CazéTV
+# só p/ BR (testado: LiveModeTV US/BR→0,PT→9; CazéTV BR→10,PT/US→0). Ver [[youtube-search-geo-regioncode]].
+YT_STREAM_CHANNELS = [
+    ("LiveModeTV", LIVEMODE_PT, "PT", "pt"),
+    ("CazéTV", CAZETV, "BR", "br"),
+]
+
 # Aliases PT↔outras formas que aparecem em títulos (o resto casa pelo nome PT direto).
 _ALIASES = {
     "paisesbaixos": ["holanda", "netherlands"], "coreiadosul": ["coreia", "korea"],
@@ -131,15 +139,16 @@ def match_games(videos, matches):
     return out
 
 
-def fetch_live_streams(matches, channel_id=LIVEMODE_PT):
+def fetch_live_streams(matches, channel_id=LIVEMODE_PT, region="PT"):
     """Streams AGENDADOS (upcoming) do canal casados por jogo → {game_id: video_id} (o vídeo EXATO do
-    jogo, p/ embed preciso). search upcoming = 100 unidades. Durante o jogo o vídeo vira 'live' e sai
-    do upcoming — o coletor faz carry-over do que já conhece. Graciosa a falha/sem-chave."""
+    jogo, p/ embed preciso). search upcoming = 100 unidades. region (geo) é obrigatória: cada canal só
+    aparece da sua região. Durante o jogo o vídeo vira 'live' e sai do upcoming — o coletor faz
+    carry-over do que já conhece. Graciosa a falha/sem-chave."""
     key = _key()
     if not key:
         return {}
     try:
-        vids = search_event(channel_id, key, "upcoming")
+        vids = search_event(channel_id, key, "upcoming", region=region)
     except urllib.error.HTTPError as e:  # observabilidade: 400=chave inválida, 403=restrição, 429=quota
         body = ""
         try:

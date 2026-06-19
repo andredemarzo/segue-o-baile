@@ -204,14 +204,16 @@ def document(matches, seed=None):
     }
 
 
-def apply_youtube(doc, livemode_streams=None):
-    """Camada YouTube (ADITIVA — regra do operador: nunca sobrepor). Para cada {game_id: video_id}
-    do stream OFICIAL do @LiveModeTV_PT detectado, marca LiveModeTV CONFIRMADO no jogo COM o embed do
-    VÍDEO EXATO (abre o jogo, não o channel-live genérico): ACRESCENTA se falta, faz UPGRADE+embed se
-    já existe, NUNCA remove nem rebaixa. Devolve quantos jogos foram tocados (observabilidade)."""
+def apply_youtube(doc, streams_by_channel=None):
+    """Camada YouTube (ADITIVA — regra do operador: nunca sobrepor). streams_by_channel = lista de
+    (canal, regiao, {game_id: video_id}) dos streams OFICIAIS detectados (LiveModeTV/PT, CazéTV/BR…).
+    Marca o canal CONFIRMADO no jogo COM o embed do VÍDEO EXATO (abre o jogo, não o channel-live
+    genérico): ACRESCENTA se falta, UPGRADE+embed se já existe, NUNCA remove nem rebaixa. Devolve
+    quantos jogos foram tocados (observabilidade)."""
     n = 0
-    for gid, vid in (livemode_streams or {}).items():
-        n += _merge_channel(doc["games"].get(str(gid)), "pt", "LiveModeTV", vid)
+    for canal, region, streams in (streams_by_channel or []):
+        for gid, vid in (streams or {}).items():
+            n += _merge_channel(doc["games"].get(str(gid)), region, canal, vid)
     return n
 
 

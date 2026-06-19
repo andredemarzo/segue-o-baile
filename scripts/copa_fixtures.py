@@ -481,23 +481,23 @@ def enrich_weather(matches, prev_by_id):
     return done
 
 
-_LM_VID_RE = re.compile(r"/embed/([A-Za-z0-9_-]{6,})")
+_YT_VID_RE = re.compile(r"/embed/([A-Za-z0-9_-]{6,})")
 
 
-def _existing_lm_streams(existing):
-    """Carry-over: {game_id: video_id} dos embeds EXATOS de LiveModeTV já no broadcasts.json (o
-    channel-live genérico — '.../embed/live_stream?channel=' — é ignorado). Preserva o vídeo certo
-    quando a API não traz (jogo ao vivo saiu do 'upcoming', ou falha/quota)."""
+def _existing_streams(existing, canal, region):
+    """Carry-over: {game_id: video_id} dos embeds EXATOS de `canal` na `region` já no broadcasts.json
+    (o channel-live genérico — '.../embed/live_stream?channel=' — é ignorado). Preserva o vídeo certo
+    quando a API não traz (jogo ao vivo saiu do 'upcoming', ou falha/quota/sem-chave)."""
     out = {}
     if not existing:
         return out
     for gid, g in (existing.get("games") or {}).items():
-        for e in g.get("pt", []):
-            if e.get("canal") == "LiveModeTV":
+        for e in g.get(region, []):
+            if e.get("canal") == canal:
                 emb = e.get("embed", "")
                 if "live_stream" in emb:
                     continue
-                m = _LM_VID_RE.search(emb)
+                m = _YT_VID_RE.search(emb)
                 if m:
                     out[gid] = m.group(1)
     return out
@@ -527,14 +527,19 @@ def write_broadcasts(matches):
     # remove. Graciosa: sem chave/rede/quota mantém o carry-over (não regride pro channel-live).
     try:
         import copa_youtube
-        streams = _existing_lm_streams(existing)          # carry-over {gid: video_id}
-        fresh = copa_youtube.fetch_live_streams(matches)  # upcoming -> {gid: video_id}
-        if fresh:
-            streams.update(fresh)                          # aditivo: novos/atualizados sobre conhecidos
-        if streams:
-            n = copa_broadcasts.apply_youtube(doc, streams)
-            print(f"  YouTube: {len(streams)} stream(s) LiveModeTV (embed exato) em {n} jogo(s) "
-                  f"[{len(fresh)} da API]")
+        streams_by_channel, n_fresh = [], 0
+        for canal, ch_id, regiao_busca, regiao_grade in copa_youtube.YT_STREAM_CHANNELS:
+            s = _existing_streams(existing, canal, regiao_grade)           # carry-over por canal
+            fresh = copa_youtube.fetch_live_streams(matches, ch_id, regiao_busca)
+            if fresh:
+                s.update(fresh)                                            # aditivo: novos sobre conhecidos
+                n_fresh += len(fresh)
+            if s:
+                streams_by_channel.append((canal, regiao_grade, s))
+        if streams_by_channel:
+            n = copa_broadcasts.apply_youtube(doc, streams_by_channel)
+            tot = sum(len(s) for _, _, s in streams_by_channel)
+            print(f"  YouTube: {tot} stream(s) embed exato em {n} jogo(s) [{n_fresh} da API]")
     except Exception as exc:  # API/rede/sem-chave não derruba a grade
         print(f"  aviso: camada YouTube pulada ({exc})")
     if (existing and existing.get("version") == doc["version"]
