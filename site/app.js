@@ -623,8 +623,12 @@ const _CONF_RANK = { confirmado: 3, provavel: 2, "a-confirmar": 1 };
 
 // Uma linha do quadro a partir das entradas de um meio. gradePublicada = a grade
 // oficial deste jogo é conhecida; sem ela, ausência vira "a confirmar" (não "não tem").
-function broadcastRow(entries, label, gradePublicada) {
+function broadcastRow(entries, label, gradePublicada, emptyOverride) {
   if (!entries.length) {
+    if (emptyOverride) {
+      // ex.: aberta PT vazia = o jogo NÃO vai em sinal aberto (lista fechada do acordo), não "a confirmar".
+      return { type: label, channels: emptyOverride, numbers: "", status: "closed" };
+    }
     return {
       type: label,
       channels: gradePublicada ? "Não indicado para este jogo" : "A confirmar na grade",
@@ -649,11 +653,14 @@ function broadcastRow(entries, label, gradePublicada) {
 }
 
 // Quatro linhas de uma região (BR/PT) a partir das entradas tipadas do jogo.
-function regionRows(entries, gradePublicada, paidStreamLabel) {
+function regionRows(entries, gradePublicada, paidStreamLabel, region) {
   const pick = (tipo, freeOnly) =>
     entries.filter((e) => e.tipo === tipo && (freeOnly === undefined || (freeOnly ? e.acesso === "grátis" : e.acesso !== "grátis")));
+  // PT: o sinal aberto é uma lista FECHADA (acordo RTP/SIC/TVI = ~20 jogos). Aberta vazia em PT
+  // significa "não vai em aberto" (definitivo), não "a confirmar".
+  const abertaVazia = region === "PT" ? "Não vai em sinal aberto" : undefined;
   return [
-    broadcastRow(pick("aberta"), "TV aberta", gradePublicada),
+    broadcastRow(pick("aberta"), "TV aberta", gradePublicada, abertaVazia),
     broadcastRow(pick("paga"), "TV fechada", gradePublicada),
     broadcastRow(pick("streaming", true), "Streaming grátis", gradePublicada),
     broadcastRow(pick("streaming", false), paidStreamLabel, gradePublicada)
@@ -663,8 +670,8 @@ function regionRows(entries, gradePublicada, paidStreamLabel) {
 function broadcastData(match) {
   const g = gameBroadcast(match);
   return {
-    br: { items: regionRows(g.br || [], g.grade_br === "publicada", "Streaming pago/FAST") },
-    pt: { items: regionRows(g.pt || [], g.grade_pt === "publicada", "Streaming pago") }
+    br: { items: regionRows(g.br || [], g.grade_br === "publicada", "Streaming pago/FAST", "BR") },
+    pt: { items: regionRows(g.pt || [], g.grade_pt === "publicada", "Streaming pago", "PT") }
   };
 }
 
