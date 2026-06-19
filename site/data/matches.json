@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-19T02:19:34+00:00",
+  "updatedAt": "2026-06-19T07:35:05+00:00",
   "matches": [
     {
       "id": 1,
@@ -1071,16 +1071,18 @@
       "offset": -6,
       "home": "México",
       "away": "Coreia do Sul",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 0,
       "city": "Zapopan",
       "venue": "Estadio Akron",
-      "prob": {
-        "home": 52,
-        "draw": 22,
-        "away": 26
-      },
+      "scorers": [
+        {
+          "name": "Luis Romo",
+          "minute": "50'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 20,
         "at": "2026-06-18T17:39:14+00:00"
@@ -1394,8 +1396,8 @@
         "away": 59
       },
       "weather": {
-        "tempC": 24,
-        "at": "2026-06-18T17:39:14+00:00"
+        "tempC": 21,
+        "at": "2026-06-19T07:35:02+00:00"
       }
     },
     {
@@ -1706,8 +1708,8 @@
         "away": 20
       },
       "weather": {
-        "tempC": 23,
-        "at": "2026-06-18T17:39:14+00:00"
+        "tempC": 21,
+        "at": "2026-06-19T07:35:02+00:00"
       }
     },
     {
@@ -2044,8 +2046,8 @@
         "away": 35
       },
       "weather": {
-        "tempC": 31,
-        "at": "2026-06-18T17:39:14+00:00"
+        "tempC": 32,
+        "at": "2026-06-19T07:35:02+00:00"
       }
     },
     {
@@ -2353,7 +2355,7 @@
       "venue": "AT&T Stadium",
       "weather": {
         "tempC": 33,
-        "at": "2026-06-18T17:39:14+00:00"
+        "at": "2026-06-19T07:35:02+00:00"
       }
     },
     {
@@ -2365,7 +2367,7 @@
       "date": "2026-06-30",
       "time": "19:00",
       "offset": -6,
-      "home": "A definir",
+      "home": "México",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -2520,8 +2522,8 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "weather": {
-        "tempC": 32,
-        "at": "2026-06-18T23:29:18+00:00"
+        "tempC": 27,
+        "at": "2026-06-19T07:35:02+00:00"
       }
     },
     {
