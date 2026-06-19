@@ -574,10 +574,10 @@ function renderLiveStreams(match, active) {
   el.streamLinks.innerHTML = streams
     .map((stream) => {
       const embedAttrs = stream.embed ? ` data-embed="${stream.embed}" data-title="${stream.label}"` : "";
-      const hint = stream.embed ? "assistir aqui" : (stream.note ? `${stream.via} · ${stream.note}` : stream.via);
+      const hint = stream.embed ? "assistir aqui" : ""; // não-embed (Globo/SBT/RTP…): só o nome da emissora
       const tag = stream.region === "PT" ? "PT" : "BR";
       const other = stream.region !== preferredRegion ? " is-other-region" : "";
-      return `<a class="stream-link${active ? " is-live" : ""}${other}" href="${stream.url}" target="_blank" rel="noopener noreferrer"${embedAttrs}><span class="region-tag">${tag}</span> ${stream.label} <small>${hint}</small></a>`;
+      return `<a class="stream-link${active ? " is-live" : ""}${other}" href="${stream.url}" target="_blank" rel="noopener noreferrer"${embedAttrs}><span class="region-tag">${tag}</span> ${stream.label}${hint ? ` <small>${hint}</small>` : ""}</a>`;
     })
     .join("");
   el.liveStreams.hidden = false;
