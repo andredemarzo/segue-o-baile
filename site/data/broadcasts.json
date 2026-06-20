@@ -1160,7 +1160,7 @@
           "regiao": "PT",
           "url": "https://www.youtube.com/@LiveModeTV_PT/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/PeWd_yvPdfw"
+          "embed": "https://www.youtube.com/embed/CsXzsJA_S7o"
         }
       ]
     },
@@ -2539,7 +2539,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+          "embed": "https://www.youtube.com/embed/mAcTmVkI0Kw"
         },
         {
           "canal": "Globo",
@@ -4414,5 +4414,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-20T06:40:26+00:00"
+  "updatedAt": "2026-06-20T17:01:07+00:00"
 }
