@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-20T02:14:39+00:00",
+  "updatedAt": "2026-06-20T06:40:26+00:00",
   "matches": [
     {
       "id": 1,
@@ -1099,16 +1099,28 @@
       "offset": -4,
       "home": "Brasil",
       "away": "Haiti",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 3,
+      "awayScore": 0,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
-      "prob": {
-        "home": 91,
-        "draw": 4,
-        "away": 5
-      },
+      "scorers": [
+        {
+          "name": "Matheus Cunha",
+          "minute": "23'",
+          "side": "home"
+        },
+        {
+          "name": "Matheus Cunha",
+          "minute": "36'",
+          "side": "home"
+        },
+        {
+          "name": "Vinicius Junior",
+          "minute": "45'+3'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 26,
         "at": "2026-06-19T18:14:19+00:00"
@@ -1153,16 +1165,18 @@
       "offset": -7,
       "home": "Turquia",
       "away": "Paraguai",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 1,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
-      "prob": {
-        "home": 48,
-        "draw": 24,
-        "away": 28
-      },
+      "scorers": [
+        {
+          "name": "Matias Galarza",
+          "minute": "2'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 19,
         "at": "2026-06-20T02:12:20+00:00"
@@ -1458,8 +1472,8 @@
         "away": 4
       },
       "weather": {
-        "tempC": 21,
-        "at": "2026-06-19T18:14:19+00:00"
+        "tempC": 22,
+        "at": "2026-06-20T06:40:22+00:00"
       }
     },
     {
@@ -1745,7 +1759,7 @@
       },
       "weather": {
         "tempC": 17,
-        "at": "2026-06-19T18:14:19+00:00"
+        "at": "2026-06-20T06:40:22+00:00"
       }
     },
     {
@@ -2004,8 +2018,8 @@
         "away": 44
       },
       "weather": {
-        "tempC": 19,
-        "at": "2026-06-19T18:14:19+00:00"
+        "tempC": 13,
+        "at": "2026-06-20T06:40:22+00:00"
       }
     },
     {
@@ -2301,8 +2315,8 @@
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "weather": {
-        "tempC": 33,
-        "at": "2026-06-19T18:14:19+00:00"
+        "tempC": 34,
+        "at": "2026-06-20T06:40:22+00:00"
       }
     },
     {
@@ -2419,7 +2433,7 @@
       "date": "2026-07-01",
       "time": "17:00",
       "offset": -7,
-      "home": "A definir",
+      "home": "Estados Unidos",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -2532,8 +2546,8 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "weather": {
-        "tempC": 32,
-        "at": "2026-06-19T18:14:19+00:00"
+        "tempC": 28,
+        "at": "2026-06-20T06:40:22+00:00"
       }
     },
     {
@@ -2595,8 +2609,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "weather": {
-        "tempC": 37,
-        "at": "2026-06-19T21:50:03+00:00"
+        "tempC": 24,
+        "at": "2026-06-20T06:40:22+00:00"
       }
     },
     {
