@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-20T19:54:13+00:00",
+  "updatedAt": "2026-06-20T21:03:02+00:00",
   "matches": [
     {
       "id": 1,
@@ -2676,7 +2676,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "East Rutherford",
-      "venue": "MetLife Stadium"
+      "venue": "MetLife Stadium",
+      "weather": {
+        "tempC": 31,
+        "at": "2026-06-20T21:03:01+00:00"
+      }
     },
     {
       "id": 92,
