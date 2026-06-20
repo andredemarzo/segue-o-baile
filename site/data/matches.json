@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-20T18:10:51+00:00",
+  "updatedAt": "2026-06-20T19:54:13+00:00",
   "matches": [
     {
       "id": 1,
@@ -1279,16 +1279,43 @@
       "offset": -5,
       "home": "Países Baixos",
       "away": "Suécia",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 5,
+      "awayScore": 1,
       "city": "Houston",
       "venue": "NRG Stadium",
-      "prob": {
-        "home": 67,
-        "draw": 15,
-        "away": 18
-      },
+      "scorers": [
+        {
+          "name": "Brian Brobbey",
+          "minute": "5'",
+          "side": "home"
+        },
+        {
+          "name": "Brian Brobbey",
+          "minute": "17'",
+          "side": "home"
+        },
+        {
+          "name": "Cody Gakpo",
+          "minute": "47'",
+          "side": "home"
+        },
+        {
+          "name": "Cody Gakpo",
+          "minute": "54'",
+          "side": "home"
+        },
+        {
+          "name": "Anthony Elanga",
+          "minute": "59'",
+          "side": "away"
+        },
+        {
+          "name": "Crysencio Summerville",
+          "minute": "89'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-20T16:58:46+00:00"
