@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-21T16:21:59+00:00",
+  "updatedAt": "2026-06-21T18:00:32+00:00",
   "matches": [
     {
       "id": 1,
@@ -1888,8 +1888,8 @@
         "away": 52
       },
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-21T07:04:53+00:00"
+        "tempC": 29,
+        "at": "2026-06-21T18:00:30+00:00"
       }
     },
     {
@@ -2346,8 +2346,8 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "weather": {
-        "tempC": 29,
-        "at": "2026-06-21T07:04:53+00:00"
+        "tempC": 30,
+        "at": "2026-06-21T18:00:30+00:00"
       }
     },
     {
@@ -2661,8 +2661,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-21T07:04:53+00:00"
+        "tempC": 39,
+        "at": "2026-06-21T18:00:30+00:00"
       }
     },
     {
