@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-21T19:59:42+00:00",
+  "updatedAt": "2026-06-21T21:15:49+00:00",
   "matches": [
     {
       "id": 1,
@@ -1453,16 +1453,12 @@
       "offset": -7,
       "home": "Bélgica",
       "away": "Irã",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 0,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
-      "prob": {
-        "home": 57,
-        "draw": 20,
-        "away": 23
-      },
+      "scorers": [],
       "weather": {
         "tempC": 24,
         "at": "2026-06-21T16:20:32+00:00"
