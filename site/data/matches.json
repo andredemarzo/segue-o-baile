@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-20T23:42:16+00:00",
+  "updatedAt": "2026-06-21T02:04:20+00:00",
   "matches": [
     {
       "id": 1,
@@ -1265,16 +1265,12 @@
       "offset": -5,
       "home": "Equador",
       "away": "Curaçao",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 0,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
-      "prob": {
-        "home": 92,
-        "draw": 4,
-        "away": 4
-      },
+      "scorers": [],
       "weather": {
         "tempC": 29,
         "at": "2026-06-20T23:40:52+00:00"
@@ -1511,8 +1507,8 @@
         "away": 4
       },
       "weather": {
-        "tempC": 27,
-        "at": "2026-06-20T18:10:47+00:00"
+        "tempC": 22,
+        "at": "2026-06-21T02:04:15+00:00"
       }
     },
     {
@@ -1746,7 +1742,7 @@
       },
       "weather": {
         "tempC": 21,
-        "at": "2026-06-20T16:58:46+00:00"
+        "at": "2026-06-21T02:04:15+00:00"
       }
     },
     {
@@ -1798,7 +1794,7 @@
       },
       "weather": {
         "tempC": 17,
-        "at": "2026-06-20T18:10:47+00:00"
+        "at": "2026-06-21T02:04:15+00:00"
       }
     },
     {
@@ -1844,9 +1840,9 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
-        "home": 10,
-        "draw": 8,
-        "away": 82
+        "home": 11,
+        "draw": 9,
+        "away": 80
       },
       "weather": {
         "tempC": 31,
@@ -1870,9 +1866,9 @@
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "prob": {
-        "home": 30,
-        "draw": 26,
-        "away": 44
+        "home": 29,
+        "draw": 25,
+        "away": 46
       },
       "weather": {
         "tempC": 28,
@@ -1896,9 +1892,9 @@
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "prob": {
-        "home": 62,
-        "draw": 17,
-        "away": 21
+        "home": 66,
+        "draw": 16,
+        "away": 18
       },
       "weather": {
         "tempC": 36,
@@ -1922,9 +1918,9 @@
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "prob": {
-        "home": 8,
-        "draw": 7,
-        "away": 85
+        "home": 7,
+        "draw": 6,
+        "away": 87
       },
       "weather": {
         "tempC": 25,
@@ -2161,8 +2157,8 @@
         "away": 87
       },
       "weather": {
-        "tempC": 32,
-        "at": "2026-06-20T18:10:47+00:00"
+        "tempC": 27,
+        "at": "2026-06-21T02:04:15+00:00"
       }
     },
     {
@@ -2213,8 +2209,8 @@
         "away": 53
       },
       "weather": {
-        "tempC": 27,
-        "at": "2026-06-20T16:58:46+00:00"
+        "tempC": 23,
+        "at": "2026-06-21T02:04:15+00:00"
       }
     },
     {
@@ -2325,7 +2321,7 @@
       "date": "2026-06-29",
       "time": "16:30",
       "offset": -4,
-      "home": "A definir",
+      "home": "Alemanha",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -2376,7 +2372,7 @@
       "venue": "NRG Stadium",
       "weather": {
         "tempC": 33,
-        "at": "2026-06-20T18:10:47+00:00"
+        "at": "2026-06-21T02:04:15+00:00"
       }
     },
     {
@@ -2543,8 +2539,8 @@
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "weather": {
-        "tempC": 26,
-        "at": "2026-06-20T16:58:46+00:00"
+        "tempC": 24,
+        "at": "2026-06-21T02:04:15+00:00"
       }
     },
     {
@@ -2585,8 +2581,8 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "weather": {
-        "tempC": 33,
-        "at": "2026-06-20T18:10:47+00:00"
+        "tempC": 32,
+        "at": "2026-06-21T02:04:15+00:00"
       }
     },
     {
@@ -2709,7 +2705,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Cidade do México",
-      "venue": "Estadio Azteca"
+      "venue": "Estadio Azteca",
+      "weather": {
+        "tempC": 21,
+        "at": "2026-06-21T02:04:15+00:00"
+      }
     },
     {
       "id": 93,
