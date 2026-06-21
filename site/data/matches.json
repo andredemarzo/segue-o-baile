@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-21T18:00:32+00:00",
+  "updatedAt": "2026-06-21T19:59:42+00:00",
   "matches": [
     {
       "id": 1,
@@ -1409,16 +1409,34 @@
       "offset": -4,
       "home": "Espanha",
       "away": "Arábia Saudita",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 4,
+      "awayScore": 0,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
-      "prob": {
-        "home": 94,
-        "draw": 3,
-        "away": 3
-      },
+      "scorers": [
+        {
+          "name": "Lamine Yamal",
+          "minute": "10'",
+          "side": "home"
+        },
+        {
+          "name": "Mikel Oyarzabal",
+          "minute": "21'",
+          "side": "home"
+        },
+        {
+          "name": "Mikel Oyarzabal",
+          "minute": "24'",
+          "side": "home"
+        },
+        {
+          "name": "Hassan Altambakti",
+          "minute": "49'",
+          "side": "home",
+          "note": "gc"
+        }
+      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-21T07:04:53+00:00"
@@ -2743,7 +2761,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Arlington",
-      "venue": "AT&T Stadium"
+      "venue": "AT&T Stadium",
+      "weather": {
+        "tempC": 37,
+        "at": "2026-06-21T19:59:40+00:00"
+      }
     },
     {
       "id": 94,
