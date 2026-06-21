@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-21T22:41:32+00:00",
+  "updatedAt": "2026-06-21T23:55:19+00:00",
   "matches": [
     {
       "id": 1,
@@ -1772,8 +1772,8 @@
         "away": 24
       },
       "weather": {
-        "tempC": 19,
-        "at": "2026-06-21T16:20:32+00:00"
+        "tempC": 22,
+        "at": "2026-06-21T23:55:17+00:00"
       }
     },
     {
@@ -2137,7 +2137,7 @@
       },
       "weather": {
         "tempC": 31,
-        "at": "2026-06-21T16:20:32+00:00"
+        "at": "2026-06-21T23:55:17+00:00"
       }
     },
     {
@@ -2465,8 +2465,8 @@
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "weather": {
-        "tempC": 19,
-        "at": "2026-06-21T16:20:32+00:00"
+        "tempC": 17,
+        "at": "2026-06-21T23:55:17+00:00"
       }
     },
     {
@@ -2738,8 +2738,8 @@
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "weather": {
-        "tempC": 20,
-        "at": "2026-06-21T16:20:32+00:00"
+        "tempC": 18,
+        "at": "2026-06-21T23:55:17+00:00"
       }
     },
     {
