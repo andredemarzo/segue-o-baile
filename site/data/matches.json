@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-22T18:32:37+00:00",
+  "updatedAt": "2026-06-22T21:22:56+00:00",
   "matches": [
     {
       "id": 1,
@@ -1587,16 +1587,23 @@
       "offset": -5,
       "home": "Argentina",
       "away": "Áustria",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 0,
       "city": "Arlington",
       "venue": "AT&T Stadium",
-      "prob": {
-        "home": 77,
-        "draw": 10,
-        "away": 13
-      },
+      "scorers": [
+        {
+          "name": "Lionel Messi",
+          "minute": "38'",
+          "side": "home"
+        },
+        {
+          "name": "Lionel Messi",
+          "minute": "90'+5'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 25,
         "at": "2026-06-22T08:43:19+00:00"
@@ -1832,8 +1839,8 @@
         "away": 20
       },
       "weather": {
-        "tempC": 24,
-        "at": "2026-06-22T08:43:19+00:00"
+        "tempC": 23,
+        "at": "2026-06-22T21:22:54+00:00"
       }
     },
     {
@@ -2144,8 +2151,8 @@
         "away": 82
       },
       "weather": {
-        "tempC": 15,
-        "at": "2026-06-22T08:43:19+00:00"
+        "tempC": 13,
+        "at": "2026-06-22T21:22:54+00:00"
       }
     },
     {
@@ -2269,9 +2276,9 @@
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "prob": {
-        "home": 25,
-        "draw": 22,
-        "away": 53
+        "home": 27,
+        "draw": 23,
+        "away": 50
       },
       "weather": {
         "tempC": 27,
@@ -2296,8 +2303,8 @@
       "venue": "AT&T Stadium",
       "prob": {
         "home": 4,
-        "draw": 4,
-        "away": 92
+        "draw": 3,
+        "away": 93
       },
       "weather": {
         "tempC": 33,
@@ -2436,8 +2443,8 @@
       "city": "Houston",
       "venue": "NRG Stadium",
       "weather": {
-        "tempC": 34,
-        "at": "2026-06-22T08:43:19+00:00"
+        "tempC": 33,
+        "at": "2026-06-22T21:22:54+00:00"
       }
     },
     {
@@ -2688,8 +2695,8 @@
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "weather": {
-        "tempC": 35,
-        "at": "2026-06-22T08:43:19+00:00"
+        "tempC": 36,
+        "at": "2026-06-22T21:22:54+00:00"
       }
     },
     {
@@ -2854,7 +2861,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Vancouver",
-      "venue": "BC Place"
+      "venue": "BC Place",
+      "weather": {
+        "tempC": 22,
+        "at": "2026-06-22T21:22:54+00:00"
+      }
     },
     {
       "id": 97,
