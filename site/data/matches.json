@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-21T23:55:19+00:00",
+  "updatedAt": "2026-06-22T02:42:58+00:00",
   "matches": [
     {
       "id": 1,
@@ -1383,16 +1383,33 @@
       "offset": -4,
       "home": "Uruguai",
       "away": "Cabo Verde",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 2,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
-      "prob": {
-        "home": 77,
-        "draw": 11,
-        "away": 12
-      },
+      "scorers": [
+        {
+          "name": "Kevin Pina",
+          "minute": "21'",
+          "side": "away"
+        },
+        {
+          "name": "Maxi Araujo",
+          "minute": "44'",
+          "side": "home"
+        },
+        {
+          "name": "Agustin Canobbio",
+          "minute": "45'+6'",
+          "side": "home"
+        },
+        {
+          "name": "Helio Varela",
+          "minute": "61'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-21T16:20:32+00:00"
@@ -1902,8 +1919,8 @@
         "away": 52
       },
       "weather": {
-        "tempC": 29,
-        "at": "2026-06-21T18:00:30+00:00"
+        "tempC": 28,
+        "at": "2026-06-22T02:42:53+00:00"
       }
     },
     {
@@ -2131,9 +2148,9 @@
       "city": "Houston",
       "venue": "NRG Stadium",
       "prob": {
-        "home": 37,
-        "draw": 29,
-        "away": 34
+        "home": 41,
+        "draw": 27,
+        "away": 32
       },
       "weather": {
         "tempC": 31,
@@ -2157,9 +2174,9 @@
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "prob": {
-        "home": 13,
-        "draw": 11,
-        "away": 76
+        "home": 11,
+        "draw": 10,
+        "away": 79
       },
       "weather": {
         "tempC": 20,
@@ -2360,8 +2377,8 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "weather": {
-        "tempC": 30,
-        "at": "2026-06-21T18:00:30+00:00"
+        "tempC": 28,
+        "at": "2026-06-22T02:42:53+00:00"
       }
     },
     {
@@ -2675,8 +2692,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "weather": {
-        "tempC": 39,
-        "at": "2026-06-21T18:00:30+00:00"
+        "tempC": 30,
+        "at": "2026-06-22T02:42:53+00:00"
       }
     },
     {
@@ -2760,7 +2777,7 @@
       "venue": "AT&T Stadium",
       "weather": {
         "tempC": 37,
-        "at": "2026-06-21T19:59:40+00:00"
+        "at": "2026-06-22T02:42:53+00:00"
       }
     },
     {
@@ -2778,7 +2795,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Seattle",
-      "venue": "Lumen Field"
+      "venue": "Lumen Field",
+      "weather": {
+        "tempC": 31,
+        "at": "2026-06-22T02:42:53+00:00"
+      }
     },
     {
       "id": 95,
