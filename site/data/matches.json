@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-23T20:29:04+00:00",
+  "updatedAt": "2026-06-23T23:02:57+00:00",
   "matches": [
     {
       "id": 1,
@@ -1692,16 +1692,12 @@
       "offset": -4,
       "home": "Inglaterra",
       "away": "Gana",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 0,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
-      "prob": {
-        "home": 93,
-        "draw": 3,
-        "away": 4
-      },
+      "scorers": [],
       "weather": {
         "tempC": 19,
         "at": "2026-06-23T18:18:58+00:00"
@@ -2293,9 +2289,9 @@
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "prob": {
-        "home": 7,
-        "draw": 6,
-        "away": 87
+        "home": 8,
+        "draw": 7,
+        "away": 85
       },
       "weather": {
         "tempC": 24,
@@ -2319,9 +2315,9 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
-        "home": 83,
-        "draw": 8,
-        "away": 9
+        "home": 80,
+        "draw": 9,
+        "away": 11
       },
       "weather": {
         "tempC": 23,
