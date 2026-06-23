@@ -2065,7 +2065,7 @@
           "regiao": "PT",
           "url": "https://www.youtube.com/@LiveModeTV_PT/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/live_stream?channel=UCrYhacSar0c5Oq_Qdl3SH-g"
+          "embed": "https://www.youtube.com/embed/Ml35bTKistE"
         }
       ]
     },
@@ -2361,6 +2361,15 @@
           "regiao": "PT",
           "url": "https://opto.sic.pt/",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/OhZp4k-3Rc8"
         }
       ]
     },
@@ -4414,5 +4423,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-22T21:22:56+00:00"
+  "updatedAt": "2026-06-23T18:20:37+00:00"
 }
