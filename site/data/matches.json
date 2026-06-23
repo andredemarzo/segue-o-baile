@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-23T18:20:37+00:00",
+  "updatedAt": "2026-06-23T20:29:04+00:00",
   "matches": [
     {
       "id": 1,
@@ -1744,16 +1744,39 @@
       "offset": -5,
       "home": "Portugal",
       "away": "Uzbequistão",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 5,
+      "awayScore": 0,
       "city": "Houston",
       "venue": "NRG Stadium",
-      "prob": {
-        "home": 77,
-        "draw": 11,
-        "away": 12
-      },
+      "scorers": [
+        {
+          "name": "Cristiano Ronaldo",
+          "minute": "6'",
+          "side": "home"
+        },
+        {
+          "name": "Nuno Mendes",
+          "minute": "17'",
+          "side": "home"
+        },
+        {
+          "name": "Cristiano Ronaldo",
+          "minute": "39'",
+          "side": "home"
+        },
+        {
+          "name": "Abduvohid Nematov",
+          "minute": "60'",
+          "side": "home",
+          "note": "gc"
+        },
+        {
+          "name": "Rafael Leao",
+          "minute": "87'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 33,
         "at": "2026-06-23T04:18:19+00:00"
@@ -2093,8 +2116,8 @@
         "away": 33
       },
       "weather": {
-        "tempC": 23,
-        "at": "2026-06-23T04:18:19+00:00"
+        "tempC": 24,
+        "at": "2026-06-23T20:29:02+00:00"
       }
     },
     {
@@ -2374,9 +2397,9 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "prob": {
-        "home": 41,
-        "draw": 27,
-        "away": 32
+        "home": 37,
+        "draw": 29,
+        "away": 34
       },
       "weather": {
         "tempC": 32,
@@ -2400,9 +2423,9 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "prob": {
-        "home": 33,
-        "draw": 28,
-        "away": 39
+        "home": 35,
+        "draw": 30,
+        "away": 35
       },
       "weather": {
         "tempC": 35,
@@ -2468,8 +2491,8 @@
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "weather": {
-        "tempC": 33,
-        "at": "2026-06-23T04:18:19+00:00"
+        "tempC": 31,
+        "at": "2026-06-23T20:29:02+00:00"
       }
     },
     {
@@ -2678,8 +2701,8 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
-        "tempC": 17,
-        "at": "2026-06-23T04:18:19+00:00"
+        "tempC": 13,
+        "at": "2026-06-23T20:29:02+00:00"
       }
     },
     {
