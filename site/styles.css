@@ -937,6 +937,87 @@ summary:focus-visible {
   padding: 0 24px 24px;
 }
 
+/* ---------- Meus Acréscimos (coluna diária de opinião) ---------- */
+/* Cabeçalho em verde SUAVE (diferencia das abas brancas); corpo CLARO (legibilidade). */
+.section-acrescimos > summary {
+  background: linear-gradient(100deg, #cbe89c, #abd57e);
+  padding: 14px 20px;
+}
+.section-acrescimos .ac-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green-deep);
+  font-size: 0.66rem;
+}
+.section-acrescimos .ac-star { font-size: 0.86rem; line-height: 1; }
+.section-acrescimos .ac-sub {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: rgba(12, 59, 39, 0.62);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.section-acrescimos .chev {
+  border-color: rgba(12, 59, 39, 0.22);
+  background: rgba(255, 255, 255, 0.42);
+}
+.ac-body { padding-top: 16px; }
+.ac-greeting {
+  margin: 0 0 12px;
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--green-deep);
+}
+.ac-para {
+  margin: 0 0 11px;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  color: var(--ink);
+}
+.ac-bordao {
+  margin: 2px 0 0;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--green);
+}
+/* Coluna de leitura: limita o comprimento da linha no desktop (no mobile já é estreito). */
+.ac-greeting,
+.ac-para,
+.ac-bordao {
+  max-width: 64ch;
+}
+.ac-likes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top: 1px solid var(--hair);
+}
+.ac-like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 15px;
+  border: 1px solid var(--hair-2);
+  border-radius: 999px;
+  background: var(--glass-2);
+  color: var(--green-deep);
+  font-weight: 500;
+  font-size: 0.86rem;
+  font-variant-numeric: tabular-nums;
+  transition: transform 0.12s ease, background 0.2s;
+}
+.ac-like-btn:hover { transform: translateY(-1px); }
+.ac-like-btn .ac-heart { color: #556b2f; font-size: 1rem; line-height: 1; }
+.ac-like-btn.liked {
+  background: rgba(85, 107, 47, 0.14);
+  border-color: rgba(85, 107, 47, 0.4);
+}
+.ac-like-label { font-size: 0.78rem; color: var(--ink-2); }
+
 /* ---------- Transmissão por partida ---------- */
 .broadcast-grid {
   display: grid;
