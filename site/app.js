@@ -1366,11 +1366,6 @@ function acEscape(s) {
 }
 
 async function renderAcrescimos() {
-  // TEMP 2026-06-24: "Meus Acrescimos" fora do ar enquanto resolvemos o provedor de LLM.
-  // A secao #acrescimos ja nasce `hidden` no index.html; este return cedo a mantem oculta.
-  // Nada mais e tocado (card/likes/render/today.json intactos). REATIVAR: apague este bloco
-  // (os 4 comentarios + o return) e re-bump do cache (?v + CACHE_NAME). Volta tudo igual.
-  return;
   let doc;
   try {
     doc = await fetch("data/today.json", { cache: "no-store" }).then((r) => r.json());
@@ -1383,23 +1378,30 @@ async function renderAcrescimos() {
   const dateEl = document.getElementById("ac-date");
   if (dateEl) dateEl.textContent = doc.dateLabel ? `opinião do dia · ${doc.dateLabel}` : "opinião do dia";
 
+  // Likes só entram quando há base semeada (likesBase no today.json). Sem ela — produção dos
+  // likes ainda não concluída — o card sai limpo, sem a UI de curtidas. REATIVAR: basta o
+  // today.json voltar a trazer "likesBase".
+  const hasLikes = doc.likesBase != null;
   const base = Number(doc.likesBase) || 0;
   const likeKey = `sob_ac_like_${doc.date}`;
   let liked = false;
   try { liked = localStorage.getItem(likeKey) === "1"; } catch (e) { /* storage off */ }
 
   const paras = doc.paragraphs.map((p) => `<p class="ac-para">${acEscape(p)}</p>`).join("");
+  const likesHtml = hasLikes
+    ? `<div class="ac-likes">` +
+        `<button type="button" class="ac-like-btn${liked ? " liked" : ""}" id="ac-like" aria-pressed="${liked}">` +
+          `<span class="ac-heart" aria-hidden="true">♥</span> ` +
+          `<span id="ac-like-count">${(base + (liked ? 1 : 0)).toLocaleString("pt-BR")}</span>` +
+        `</button>` +
+        `<span class="ac-like-label">curtidas</span>` +
+      `</div>`
+    : "";
   document.getElementById("ac-body").innerHTML =
     `<p class="ac-greeting">${acEscape(doc.greeting)}</p>` +
     paras +
     `<p class="ac-bordao">${acEscape(doc.bordao)}</p>` +
-    `<div class="ac-likes">` +
-      `<button type="button" class="ac-like-btn${liked ? " liked" : ""}" id="ac-like" aria-pressed="${liked}">` +
-        `<span class="ac-heart" aria-hidden="true">♥</span> ` +
-        `<span id="ac-like-count">${(base + (liked ? 1 : 0)).toLocaleString("pt-BR")}</span>` +
-      `</button>` +
-      `<span class="ac-like-label">curtidas</span>` +
-    `</div>`;
+    likesHtml;
   sec.hidden = false;
 
   // Abre na 1ª visita do dia; marca "visto" quando o usuário FECHA (fica fechada depois).
