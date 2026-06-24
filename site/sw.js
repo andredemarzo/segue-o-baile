@@ -1,4 +1,4 @@
-const CACHE_NAME = "copa-2026-alertas-v73";
+const CACHE_NAME = "copa-2026-alertas-v74";
 const STATIC_ASSETS = [
   "./",
   "./index.html",

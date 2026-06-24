@@ -1366,6 +1366,11 @@ function acEscape(s) {
 }
 
 async function renderAcrescimos() {
+  // TEMP 2026-06-24: "Meus Acrescimos" fora do ar enquanto resolvemos o provedor de LLM.
+  // A secao #acrescimos ja nasce `hidden` no index.html; este return cedo a mantem oculta.
+  // Nada mais e tocado (card/likes/render/today.json intactos). REATIVAR: apague este bloco
+  // (os 4 comentarios + o return) e re-bump do cache (?v + CACHE_NAME). Volta tudo igual.
+  return;
   let doc;
   try {
     doc = await fetch("data/today.json", { cache: "no-store" }).then((r) => r.json());
