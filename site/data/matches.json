@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-24T19:17:48+00:00",
+  "updatedAt": "2026-06-24T21:07:14+00:00",
   "matches": [
     {
       "id": 1,
@@ -1871,16 +1871,28 @@
       "offset": -7,
       "home": "Suíça",
       "away": "Canadá",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 1,
       "city": "Vancouver",
       "venue": "BC Place",
-      "prob": {
-        "home": 55,
-        "draw": 21,
-        "away": 24
-      },
+      "scorers": [
+        {
+          "name": "Ruben Vargas",
+          "minute": "46'",
+          "side": "home"
+        },
+        {
+          "name": "Johan Manzambi",
+          "minute": "57'",
+          "side": "home"
+        },
+        {
+          "name": "Promise David",
+          "minute": "76'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 25,
         "at": "2026-06-24T04:22:34+00:00"
@@ -1897,16 +1909,34 @@
       "offset": -7,
       "home": "Bósnia e Herzegovina",
       "away": "Catar",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 3,
+      "awayScore": 1,
       "city": "Seattle",
       "venue": "Lumen Field",
-      "prob": {
-        "home": 63,
-        "draw": 17,
-        "away": 20
-      },
+      "scorers": [
+        {
+          "name": "Kerim Alajbegovic",
+          "minute": "29'",
+          "side": "home"
+        },
+        {
+          "name": "Mahmoud Abunada",
+          "minute": "34'",
+          "side": "home",
+          "note": "gc"
+        },
+        {
+          "name": "Hassan Alhaydos",
+          "minute": "42'",
+          "side": "away"
+        },
+        {
+          "name": "Ermin Mahmic",
+          "minute": "80'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-24T04:22:34+00:00"
@@ -2142,8 +2172,8 @@
         "away": 59
       },
       "weather": {
-        "tempC": 26,
-        "at": "2026-06-23T18:18:58+00:00"
+        "tempC": 27,
+        "at": "2026-06-24T21:07:12+00:00"
       }
     },
     {
@@ -2442,7 +2472,7 @@
       "time": "12:00",
       "offset": -7,
       "home": "A definir",
-      "away": "A definir",
+      "away": "Canadá",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -2513,7 +2543,7 @@
       "venue": "NRG Stadium",
       "weather": {
         "tempC": 34,
-        "at": "2026-06-24T04:22:34+00:00"
+        "at": "2026-06-24T21:07:12+00:00"
       }
     },
     {
@@ -2693,7 +2723,7 @@
       "date": "2026-07-02",
       "time": "20:00",
       "offset": -7,
-      "home": "A definir",
+      "home": "Suíça",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -2785,8 +2815,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "weather": {
-        "tempC": 37,
-        "at": "2026-06-24T04:22:34+00:00"
+        "tempC": 28,
+        "at": "2026-06-24T21:07:12+00:00"
       }
     },
     {
@@ -2951,7 +2981,11 @@
       "homeScore": null,
       "awayScore": null,
       "city": "Foxborough",
-      "venue": "Gillette Stadium"
+      "venue": "Gillette Stadium",
+      "weather": {
+        "tempC": 31,
+        "at": "2026-06-24T21:07:12+00:00"
+      }
     },
     {
       "id": 98,
