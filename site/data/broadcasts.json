@@ -3196,7 +3196,15 @@
           "acesso": "grátis",
           "regiao": "BR",
           "url": "https://globoplay.globo.com/",
-          "confianca": "a-confirmar"
+          "confianca": "provavel"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "provavel"
         },
         {
           "canal": "SporTV",
@@ -3204,7 +3212,23 @@
           "acesso": "assinatura",
           "regiao": "BR",
           "url": "https://globoplay.globo.com/",
-          "confianca": "a-confirmar"
+          "confianca": "provavel"
+        },
+        {
+          "canal": "N Sports",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@NSports",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "Globoplay",
+          "tipo": "streaming",
+          "acesso": "conta",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "provavel"
         }
       ],
       "pt": [
@@ -4423,5 +4447,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-23T21:56:44+00:00"
+  "updatedAt": "2026-06-25T02:09:36+00:00"
 }

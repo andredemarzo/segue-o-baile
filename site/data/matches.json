@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-24T21:07:14+00:00",
+  "updatedAt": "2026-06-25T02:09:36+00:00",
   "matches": [
     {
       "id": 1,
@@ -1819,16 +1819,28 @@
       "offset": -4,
       "home": "Escócia",
       "away": "Brasil",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 3,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
-      "prob": {
-        "home": 16,
-        "draw": 13,
-        "away": 71
-      },
+      "scorers": [
+        {
+          "name": "Vinicius Junior",
+          "minute": "7'",
+          "side": "away"
+        },
+        {
+          "name": "Vinicius Junior",
+          "minute": "45'+3'",
+          "side": "away"
+        },
+        {
+          "name": "Matheus Cunha",
+          "minute": "60'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-24T19:16:22+00:00"
@@ -1845,16 +1857,49 @@
       "offset": -4,
       "home": "Marrocos",
       "away": "Haiti",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 4,
+      "awayScore": 2,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
-      "prob": {
-        "home": 84,
-        "draw": 8,
-        "away": 8
-      },
+      "scorers": [
+        {
+          "name": "Yassine Bounou",
+          "minute": "10'",
+          "side": "away",
+          "note": "gc"
+        },
+        {
+          "name": "Ayoub El Kaabi",
+          "minute": "12'",
+          "side": "away"
+        },
+        {
+          "name": "Achraf Hakimi",
+          "minute": "39'",
+          "side": "home"
+        },
+        {
+          "name": "Wilson Isidor",
+          "minute": "43'",
+          "side": "away"
+        },
+        {
+          "name": "Ismael Saibari",
+          "minute": "45'+1'",
+          "side": "home"
+        },
+        {
+          "name": "Soufiane Rahimi",
+          "minute": "78'",
+          "side": "home"
+        },
+        {
+          "name": "Gessime Yassine",
+          "minute": "89'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-24T19:16:22+00:00"
@@ -2017,7 +2062,7 @@
       },
       "weather": {
         "tempC": 30,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2042,8 +2087,8 @@
         "away": 52
       },
       "weather": {
-        "tempC": 29,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 30,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2068,8 +2113,8 @@
         "away": 17
       },
       "weather": {
-        "tempC": 33,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 34,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2094,8 +2139,8 @@
         "away": 89
       },
       "weather": {
-        "tempC": 27,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 23,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2121,7 +2166,7 @@
       },
       "weather": {
         "tempC": 18,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2147,7 +2192,7 @@
       },
       "weather": {
         "tempC": 19,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2198,8 +2243,8 @@
         "away": 14
       },
       "weather": {
-        "tempC": 22,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 25,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2224,8 +2269,8 @@
         "away": 40
       },
       "weather": {
-        "tempC": 17,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 16,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2251,7 +2296,7 @@
       },
       "weather": {
         "tempC": 15,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2277,7 +2322,7 @@
       },
       "weather": {
         "tempC": 31,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2328,8 +2373,8 @@
         "away": 85
       },
       "weather": {
-        "tempC": 26,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 22,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2355,7 +2400,7 @@
       },
       "weather": {
         "tempC": 22,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2381,7 +2426,7 @@
       },
       "weather": {
         "tempC": 27,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2407,7 +2452,7 @@
       },
       "weather": {
         "tempC": 32,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2432,8 +2477,8 @@
         "away": 34
       },
       "weather": {
-        "tempC": 31,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 32,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2459,7 +2504,7 @@
       },
       "weather": {
         "tempC": 34,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2479,8 +2524,8 @@
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "weather": {
-        "tempC": 21,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 20,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2500,8 +2545,8 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "weather": {
-        "tempC": 23,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 30,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2514,15 +2559,15 @@
       "time": "19:00",
       "offset": -6,
       "home": "A definir",
-      "away": "A definir",
+      "away": "Marrocos",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "weather": {
-        "tempC": 33,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 32,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2534,7 +2579,7 @@
       "date": "2026-06-29",
       "time": "12:00",
       "offset": -5,
-      "home": "A definir",
+      "home": "Brasil",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -2563,8 +2608,8 @@
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "weather": {
-        "tempC": 26,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 30,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2606,7 +2651,7 @@
       "venue": "Estadio Azteca",
       "weather": {
         "tempC": 17,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2626,8 +2671,8 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "weather": {
-        "tempC": 35,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 34,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2647,8 +2692,8 @@
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 21,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2668,8 +2713,8 @@
       "city": "Seattle",
       "venue": "Lumen Field",
       "weather": {
-        "tempC": 18,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 24,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2689,8 +2734,8 @@
       "city": "Toronto",
       "venue": "BMO Field",
       "weather": {
-        "tempC": 26,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 29,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2711,7 +2756,7 @@
       "venue": "SoFi Stadium",
       "weather": {
         "tempC": 21,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2731,8 +2776,8 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
-        "tempC": 12,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 20,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2752,8 +2797,8 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "weather": {
-        "tempC": 29,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 30,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2774,7 +2819,7 @@
       "venue": "Arrowhead Stadium",
       "weather": {
         "tempC": 29,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2794,8 +2839,8 @@
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "weather": {
-        "tempC": 35,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 34,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2857,8 +2902,8 @@
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 34,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2879,7 +2924,7 @@
       "venue": "Estadio Azteca",
       "weather": {
         "tempC": 18,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2900,7 +2945,7 @@
       "venue": "AT&T Stadium",
       "weather": {
         "tempC": 38,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2920,8 +2965,8 @@
       "city": "Seattle",
       "venue": "Lumen Field",
       "weather": {
-        "tempC": 23,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 29,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2941,8 +2986,8 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 34,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
@@ -2962,8 +3007,8 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
-        "tempC": 22,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 20,
+        "at": "2026-06-25T02:08:11+00:00"
       }
     },
     {
