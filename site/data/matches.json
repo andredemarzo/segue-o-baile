@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-25T21:10:30+00:00",
+  "updatedAt": "2026-06-25T22:43:46+00:00",
   "matches": [
     {
       "id": 1,
@@ -2064,16 +2064,23 @@
       "offset": -4,
       "home": "Curaçao",
       "away": "Costa do Marfim",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 2,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
-      "prob": {
-        "home": 12,
-        "draw": 10,
-        "away": 78
-      },
+      "scorers": [
+        {
+          "name": "Nicolas Pepe",
+          "minute": "7'",
+          "side": "away"
+        },
+        {
+          "name": "Nicolas Pepe",
+          "minute": "64'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-25T12:11:13+00:00"
@@ -2090,16 +2097,33 @@
       "offset": -4,
       "home": "Equador",
       "away": "Alemanha",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 1,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
-      "prob": {
-        "home": 26,
-        "draw": 22,
-        "away": 52
-      },
+      "scorers": [
+        {
+          "name": "Leroy Sane",
+          "minute": "2'",
+          "side": "away"
+        },
+        {
+          "name": "Nilson Angulo",
+          "minute": "9'",
+          "side": "home"
+        },
+        {
+          "name": "Gonzalo Plata",
+          "minute": "77'",
+          "side": "home"
+        },
+        {
+          "name": "Maximilian Beier",
+          "minute": "84'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-25T12:11:13+00:00"
@@ -2607,7 +2631,7 @@
       "venue": "NRG Stadium",
       "weather": {
         "tempC": 34,
-        "at": "2026-06-25T06:18:02+00:00"
+        "at": "2026-06-25T22:43:45+00:00"
       }
     },
     {
@@ -2640,7 +2664,7 @@
       "date": "2026-06-30",
       "time": "12:00",
       "offset": -5,
-      "home": "A definir",
+      "home": "Costa do Marfim",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -2838,7 +2862,7 @@
       "venue": "Arrowhead Stadium",
       "weather": {
         "tempC": 29,
-        "at": "2026-06-25T12:11:13+00:00"
+        "at": "2026-06-25T22:43:45+00:00"
       }
     },
     {
