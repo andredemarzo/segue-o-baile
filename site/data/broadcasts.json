@@ -2065,7 +2065,7 @@
           "regiao": "PT",
           "url": "https://www.youtube.com/@LiveModeTV_PT/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/Ml35bTKistE"
+          "embed": "https://www.youtube.com/embed/ztunLkW-acQ"
         }
       ]
     },
@@ -2583,6 +2583,15 @@
           "regiao": "PT",
           "url": "https://tviplayer.iol.pt/direto",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/7ABWI6VL_FE"
         }
       ]
     },
@@ -4447,5 +4456,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-25T02:09:36+00:00"
+  "updatedAt": "2026-06-25T06:18:06+00:00"
 }

@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-25T02:09:36+00:00",
+  "updatedAt": "2026-06-25T06:18:06+00:00",
   "matches": [
     {
       "id": 1,
@@ -1998,16 +1998,28 @@
       "offset": -6,
       "home": "República Tcheca",
       "away": "México",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 3,
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
-      "prob": {
-        "home": 17,
-        "draw": 14,
-        "away": 69
-      },
+      "scorers": [
+        {
+          "name": "Mateo Chavez",
+          "minute": "55'",
+          "side": "away"
+        },
+        {
+          "name": "Julian Quinones",
+          "minute": "61'",
+          "side": "away"
+        },
+        {
+          "name": "Alvaro Fidalgo",
+          "minute": "90'+4'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-24T19:16:22+00:00"
@@ -2024,16 +2036,18 @@
       "offset": -6,
       "home": "África do Sul",
       "away": "Coreia do Sul",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 0,
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
-      "prob": {
-        "home": 14,
-        "draw": 12,
-        "away": 74
-      },
+      "scorers": [
+        {
+          "name": "Thapelo Maseko",
+          "minute": "63'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-24T19:16:22+00:00"
@@ -2217,8 +2231,8 @@
         "away": 59
       },
       "weather": {
-        "tempC": 27,
-        "at": "2026-06-24T21:07:12+00:00"
+        "tempC": 25,
+        "at": "2026-06-25T06:18:02+00:00"
       }
     },
     {
@@ -2347,8 +2361,8 @@
         "away": 79
       },
       "weather": {
-        "tempC": 20,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 21,
+        "at": "2026-06-25T06:18:02+00:00"
       }
     },
     {
@@ -2516,13 +2530,18 @@
       "date": "2026-06-28",
       "time": "12:00",
       "offset": -7,
-      "home": "A definir",
+      "home": "África do Sul",
       "away": "Canadá",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
+      "prob": {
+        "home": 15,
+        "draw": 13,
+        "away": 72
+      },
       "weather": {
         "tempC": 20,
         "at": "2026-06-25T02:08:11+00:00"
@@ -2588,7 +2607,7 @@
       "venue": "NRG Stadium",
       "weather": {
         "tempC": 34,
-        "at": "2026-06-24T21:07:12+00:00"
+        "at": "2026-06-25T06:18:02+00:00"
       }
     },
     {
@@ -2630,7 +2649,7 @@
       "venue": "AT&T Stadium",
       "weather": {
         "tempC": 34,
-        "at": "2026-06-24T19:16:22+00:00"
+        "at": "2026-06-25T06:18:02+00:00"
       }
     },
     {
@@ -2860,8 +2879,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-24T21:07:12+00:00"
+        "tempC": 39,
+        "at": "2026-06-25T06:18:02+00:00"
       }
     },
     {
@@ -2881,8 +2900,8 @@
       "city": "Houston",
       "venue": "NRG Stadium",
       "weather": {
-        "tempC": 35,
-        "at": "2026-06-24T19:16:22+00:00"
+        "tempC": 33,
+        "at": "2026-06-25T06:18:02+00:00"
       }
     },
     {
@@ -3028,8 +3047,8 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "weather": {
-        "tempC": 31,
-        "at": "2026-06-24T21:07:12+00:00"
+        "tempC": 30,
+        "at": "2026-06-25T06:18:02+00:00"
       }
     },
     {
