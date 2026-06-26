@@ -1,12 +1,12 @@
-const CACHE_NAME = "copa-2026-alertas-v75";
+const CACHE_NAME = "copa-2026-alertas-v76";
+// DADOS (data/*.json) NÃO entram no precache nem no cache do SW — são servidos SEMPRE da rede
+// (ver o fetch handler). Cachear placar/grade serve dado velho como se fosse atual e fere a credibilidade.
 const STATIC_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=75",
-  "./app.js?v=75",
+  "./styles.css?v=76",
+  "./app.js?v=76",
   "./manifest.webmanifest",
-  "./data/matches.json",
-  "./data/broadcasts.json",
   "./assets/worldcup-mark.svg",
   "./assets/icon-192.png",
   "./assets/icon-512.png",
@@ -34,7 +34,12 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  if (new URL(event.request.url).origin !== self.location.origin) return; // ex.: API da FIFA passa direto, sem cache
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return; // ex.: API da FIFA passa direto, sem cache
+  // DADOS (data/*.json: matches/broadcasts/today) SEMPRE da rede, NUNCA do cache do SW: placar/grade
+  // velho disfarçado de atual fere a credibilidade — pior que "sem dado". Offline → a página mostra
+  // "verifique a conexão" (honesto). Frescor > offline puro para um app de placar ao vivo.
+  if (url.pathname.includes("/data/")) return;
   event.respondWith(
     fetch(event.request)
       .then((response) => {

@@ -129,10 +129,18 @@ function liveStatus(match) {
   const l = liveById[match.id];
   return l && l.status != null ? l.status : null;
 }
-// Encerrado = o coletor já marcou (json status 0) OU a FIFA já confirmou (status 0).
+// Encerrado = o coletor já marcou (json status 0) OU a FIFA já confirmou (status 0) OU — backstop —
+// o jogo já estourou o fim provável e NEM o json NEM a FIFA confirmaram ao vivo (cold-start).
 // Uma vez encerrado, NUNCA volta a ser o card — isto mata a regressão.
-function isFinished(match) {
-  return match.status === 0 || liveStatus(match) === 0;
+function isFinished(match, now = new Date()) {
+  if (match.status === 0 || liveStatus(match) === 0) return true; // json OU FIFA confirmaram encerrado
+  if (liveStatus(match) === 3) return false;                      // FIFA confirma AO VIVO → sobrepõe sempre
+  // ÂNCORA TEMPORAL (camada 3): sem json-status-0 e sem FIFA, se o jogo já passou do fim provável
+  // (grupos ~2,25h: 90'+acréscimos com folga; mata-mata ~3,25h: +prorrogação+pênaltis) → ENCERRADO.
+  // Mata o "Ao vivo provisório" de um jogo obviamente terminado antes do 1º poll da FIFA. Como a FIFA
+  // status 3 acima sempre sobrepõe, um jogo REALMENTE ao vivo (acréscimos/prorrogação) nunca é cortado cedo.
+  const likelyEnd = match.group ? 2.25 * 60 * 60 * 1000 : 3.25 * 60 * 60 * 1000;
+  return now >= new Date(utcDate(match).getTime() + likelyEnd);
 }
 // Ao vivo só com status 3 REAL da FIFA — nunca inventado pelo relógio.
 function isLive(match) {
@@ -141,7 +149,7 @@ function isLive(match) {
 
 function getActiveMatch(now = new Date()) {
   return MATCHES.find((match) => {
-    if (isFinished(match)) return false; // encerrado (json OU FIFA) nunca é o card
+    if (isFinished(match, now)) return false; // encerrado (json OU FIFA) nunca é o card
     const start = utcDate(match);
     return start <= now && now < new Date(start.getTime() + FOCAL_WINDOW_MS);
   });
@@ -150,8 +158,8 @@ function getActiveMatch(now = new Date()) {
 function getNextMatch(now = new Date()) {
   return (
     getActiveMatch(now) ||
-    MATCHES.find((match) => !isFinished(match) && utcDate(match) > now) ||
-    MATCHES.filter((m) => !isFinished(m)).pop() ||
+    MATCHES.find((match) => !isFinished(match, now) && utcDate(match) > now) ||
+    MATCHES.filter((m) => !isFinished(m, now)).pop() ||
     MATCHES[MATCHES.length - 1]
   );
 }
@@ -266,10 +274,10 @@ function renderDayStrip(cur) {
 // dá "ao vivo provisório" a um jogo que começou e AINDA não foi confirmado encerrado
 // — e o isFinished acima já barra os encerrados de verdade (fim do "ao vivo" falso).
 function matchPhase(match) {
-  if (isFinished(match)) return "finished";
+  const now = new Date();
+  if (isFinished(match, now)) return "finished";
   if (isLive(match)) return "live";
   const start = utcDate(match);
-  const now = new Date();
   if (now < start) return "upcoming";
   if (now < new Date(start.getTime() + FOCAL_WINDOW_MS)) return "live";
   return "finished";
