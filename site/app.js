@@ -934,7 +934,9 @@ function renderNext() {
     el.matchState.textContent = live && live.time ? `Ao vivo · ${live.time}` : "Ao vivo";
   } else if (phase === "finished") {
     el.matchState.className = "badge badge-finished";
-    el.matchState.textContent = "Encerrado";
+    // Encerrado pela âncora temporal mas placar ainda não confirmado (json/FIFA) → diz que está apurando,
+    // em vez de mostrar "Encerrado" com o "x" da scoreline parecendo bug. finalScore() é puro/barato.
+    el.matchState.textContent = finalScore(match) ? "Encerrado" : "Encerrado · apurando placar";
   } else {
     el.matchState.className = "badge badge-upcoming";
     el.matchState.textContent = `Próximo · ${compactCountdown(start - now)}`;
@@ -972,7 +974,7 @@ function renderSchedule(filter = "all") {
     .join("");
 
   if (!upcoming.length) {
-    el.matchList.innerHTML = `<p class="plain-copy">Não há jogos futuros para este filtro na fase de grupos carregada.</p>`;
+    el.matchList.innerHTML = `<p class="plain-copy">Não há jogos futuros para este filtro.</p>`;
   }
 }
 
