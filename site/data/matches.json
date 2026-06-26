@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-26T19:04:29+00:00",
+  "updatedAt": "2026-06-26T20:53:16+00:00",
   "matches": [
     {
       "id": 1,
@@ -2872,8 +2872,8 @@
         "away": 37
       },
       "weather": {
-        "tempC": 31,
-        "at": "2026-06-26T03:30:14+00:00"
+        "tempC": 28,
+        "at": "2026-06-26T20:53:13+00:00"
       }
     },
     {
@@ -3167,8 +3167,8 @@
       "city": "Toronto",
       "venue": "BMO Field",
       "weather": {
-        "tempC": 33,
-        "at": "2026-06-26T07:36:42+00:00"
+        "tempC": 34,
+        "at": "2026-06-26T20:53:13+00:00"
       }
     },
     {
@@ -3443,7 +3443,7 @@
       "venue": "Lumen Field",
       "weather": {
         "tempC": 29,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T20:53:13+00:00"
       }
     },
     {
