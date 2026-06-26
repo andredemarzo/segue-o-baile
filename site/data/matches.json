@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-26T20:53:16+00:00",
+  "updatedAt": "2026-06-26T22:01:28+00:00",
   "matches": [
     {
       "id": 1,
@@ -2527,20 +2527,42 @@
       "offset": -4,
       "home": "Noruega",
       "away": "França",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 4,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
-      "prob": {
-        "home": 22,
-        "draw": 19,
-        "away": 59
-      },
+      "scorers": [
+        {
+          "name": "Ousmane Dembele",
+          "minute": "7'",
+          "side": "away"
+        },
+        {
+          "name": "Ousmane Dembele",
+          "minute": "20'",
+          "side": "away"
+        },
+        {
+          "name": "Thelo Aasgaard",
+          "minute": "21'",
+          "side": "home"
+        },
+        {
+          "name": "Ousmane Dembele",
+          "minute": "32'",
+          "side": "away"
+        },
+        {
+          "name": "Desire Doue",
+          "minute": "90'+4'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 25,
         "at": "2026-06-26T12:13:00+00:00"
@@ -2557,20 +2579,42 @@
       "offset": -4,
       "home": "Senegal",
       "away": "Iraque",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 5,
+      "awayScore": 0,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
-      "prob": {
-        "home": 73,
-        "draw": 13,
-        "away": 14
-      },
+      "scorers": [
+        {
+          "name": "Habib Diarra",
+          "minute": "4'",
+          "side": "home"
+        },
+        {
+          "name": "Ismaila Sarr",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "name": "Pape Gueye",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "name": "Pape Gueye",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "name": "Iliman Ndiaye",
+          "minute": "82'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 20,
         "at": "2026-06-26T12:13:00+00:00"
@@ -3000,7 +3044,7 @@
       "date": "2026-06-30",
       "time": "17:00",
       "offset": -4,
-      "home": "A definir",
+      "home": "França",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -3026,7 +3070,7 @@
       "time": "12:00",
       "offset": -5,
       "home": "Costa do Marfim",
-      "away": "A definir",
+      "away": "Noruega",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -3565,7 +3609,11 @@
       "placeholderA": "W91",
       "placeholderB": "W92",
       "city": "Miami Gardens",
-      "venue": "Hard Rock Stadium"
+      "venue": "Hard Rock Stadium",
+      "weather": {
+        "tempC": 35,
+        "at": "2026-06-26T22:01:27+00:00"
+      }
     },
     {
       "id": 100,
