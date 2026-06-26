@@ -34,6 +34,8 @@ const el = {
   matchList: document.querySelector("#match-list"),
   resultList: document.querySelector("#result-list"),
   standings: document.querySelector("#standings"),
+  standingsPhase: document.querySelector("#standings-phase"),
+  knockout: document.querySelector("#knockout"),
   resultPager: document.querySelector("#result-pager"),
   enableAlerts: document.querySelector("#enable-alerts"),
   testAlert: document.querySelector("#test-alert"),
@@ -1045,6 +1047,73 @@ function renderStandings() {
     .join("");
 }
 
+// ===== Mata-mata: chaveamento round-a-round (aparece quando a fase de grupos encerra) =====
+const KO_STAGE_ORDER = [
+  "16-avos de final", "Oitavas de final", "Quartas de final",
+  "Semifinal", "Disputa de 3º lugar", "Final"
+];
+
+// Fase de grupos encerrada = TODOS os jogos de grupo já têm placar final.
+function groupsPhaseOver() {
+  const groupGames = MATCHES.filter((m) => m.group);
+  return groupGames.length > 0 && groupGames.every((m) => finalScore(m) != null);
+}
+
+// Resultado/estado de um jogo do chaveamento: encerrado (placar + pênaltis se houver da FIFA),
+// ao vivo, ou a data. Reusa finalScore/matchPhase — a mesma verdade do resto do app.
+function knockoutResultHtml(match) {
+  const fs = finalScore(match);
+  const live = liveById[match.id];
+  if (fs) {
+    const pens = live && live.homePen != null && live.awayPen != null
+      ? ` <small class="ko-pen">(${live.homePen}–${live.awayPen} pên)</small>` : "";
+    return `<span class="ko-score">${fs.home}–${fs.away}${pens}</span>`;
+  }
+  if (matchPhase(match) === "live") {
+    const s = live && live.home != null ? `${live.home}–${live.away} · ` : "";
+    return `<span class="ko-score ko-score-live">${s}ao vivo</span>`;
+  }
+  return `<span class="ko-when">${shortDate(utcDate(match), PT_TZ, "pt-PT")}</span>`;
+}
+
+// Chaveamento completo, agrupado por fase em ordem; + relabel da Classificação como "final".
+function renderKnockout() {
+  if (el.standingsPhase) {
+    el.standingsPhase.textContent = groupsPhaseOver() ? "Fase de grupos · final" : "Fase de grupos";
+  }
+  if (!el.knockout) return;
+  const ko = MATCHES.filter((m) => !m.group);
+  // Mostra quando a fase de grupos encerra OU — robustez anti-buraco — quando algum jogo de
+  // mata-mata já começou (placar/ao vivo), mesmo que um jogo de grupo tenha ficado pendente no dado.
+  const show = ko.length > 0 &&
+    (groupsPhaseOver() || ko.some((m) => finalScore(m) != null || matchPhase(m) === "live"));
+  el.knockout.hidden = !show;
+  if (!show) { el.knockout.innerHTML = ""; return; }
+  // Ordem conhecida primeiro + qualquer fase nova do dado no fim — nunca derruba um jogo em silêncio.
+  const stages = [...new Set(MATCHES.filter((m) => !m.group).map((m) => m.stage).filter(Boolean))];
+  const ordered = [
+    ...KO_STAGE_ORDER.filter((s) => stages.includes(s)),
+    ...stages.filter((s) => !KO_STAGE_ORDER.includes(s))
+  ];
+  const rounds = ordered
+    .map((stage) => ({ stage, games: ko.filter((m) => m.stage === stage).sort((a, b) => utcDate(a) - utcDate(b)) }))
+    .filter((r) => r.games.length);
+  el.knockout.innerHTML = `
+    <h3 class="ko-title">Mata-mata</h3>
+    ${rounds.map((r) => `
+      <section class="ko-round">
+        <h4>${r.stage}</h4>
+        <ul class="ko-list">
+          ${r.games.map((m) => `
+            <li class="ko-match ph-${matchPhase(m)}">
+              <span class="ko-teams">${m.home} <span class="ko-x">×</span> ${m.away}</span>
+              ${knockoutResultHtml(m)}
+            </li>`).join("")}
+        </ul>
+      </section>`).join("")}
+  `;
+}
+
 // Placar final de um jogo, com auto-cura: usa o JSON do coletor (registro oficial
 // congelado) e, se ele ainda não escreveu, o que a FIFA confirmou em liveById.
 // Retorna null se o jogo não está encerrado ou ainda não tem placar.
@@ -1462,6 +1531,7 @@ async function boot() {
   renderSchedule();
   renderHistory();
   renderStandings();
+  renderKnockout();
   renderAcrescimos(); // "Meus Acréscimos": 1ª aba abaixo do card, aberta na 1ª visita do dia
 
   if (localStorage.getItem("alertsEnabled") === "true" && "Notification" in window && Notification.permission === "granted") {
@@ -1473,6 +1543,7 @@ async function boot() {
   window.setInterval(updateLiveScore, 45000);
   healRecentMatches(); // backfill imediato de jogos que o coletor não confirmou (ex.: madrugada)
   window.setInterval(healRecentMatches, 45000);
+  window.setInterval(renderKnockout, 45000); // chaveamento + relabel da Classificação, frescos
 }
 
 boot();
