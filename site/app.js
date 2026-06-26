@@ -362,19 +362,21 @@ function scorelineHtml(match) {
   // placar ao vivo vem da FIFA (liveById); encerrado, do matches.json como fallback.
   let h = null;
   let a = null;
-  let penH = null;
-  let penA = null;
   if (live && live.home != null) {
-    h = live.home; a = live.away; penH = live.homePen; penA = live.awayPen;
+    h = live.home; a = live.away;
   } else if (phase === "finished" && match.homeScore != null) {
     h = match.homeScore; a = match.awayScore;
   }
+  const pens = matchPens(match);
   const showScore = (phase === "live" || phase === "finished") && h != null;
   let middle = "x";
   if (showScore) {
     middle = `${h} - ${a}`;
-    if (penH != null && penA != null) {
-      middle += `<small class="pens">${penH}-${penA} nos pênaltis</small>`;
+    if (pens) {
+      middle += `<small class="pens">${pens.home}-${pens.away} nos pênaltis</small>`;
+    } else if (phase === "finished" && !match.group && h === a) {
+      // mata-mata encerrado e empatado, mas sem pênaltis ainda → nunca mostra o empate cru (impossível)
+      middle += `<small class="pens">aguardando pênaltis</small>`;
     }
   }
   return `
@@ -1065,9 +1067,15 @@ function knockoutResultHtml(match) {
   const fs = finalScore(match);
   const live = liveById[match.id];
   if (fs) {
-    const pens = live && live.homePen != null && live.awayPen != null
-      ? ` <small class="ko-pen">(${live.homePen}–${live.awayPen} pên)</small>` : "";
-    return `<span class="ko-score">${fs.home}–${fs.away}${pens}</span>`;
+    const pens = matchPens(match);
+    if (pens) {
+      return `<span class="ko-score">${fs.home}–${fs.away} <small class="ko-pen">(${pens.home}–${pens.away} pên)</small></span>`;
+    }
+    if (fs.home === fs.away) {
+      // mata-mata encerrado e empatado, sem pênaltis ainda → nunca mostra o empate cru (impossível)
+      return `<span class="ko-score">${fs.home}–${fs.away} <small class="ko-pen">· aguardando pênaltis</small></span>`;
+    }
+    return `<span class="ko-score">${fs.home}–${fs.away}</span>`;
   }
   if (matchPhase(match) === "live") {
     const s = live && live.home != null ? `${live.home}–${live.away} · ` : "";
@@ -1125,6 +1133,15 @@ function finalScore(match) {
   const away = match.awayScore != null ? match.awayScore : (l ? l.away : null);
   if (home == null || away == null) return null;
   return { home, away };
+}
+
+// Pênaltis de um jogo: do JSON do coletor (registro congelado) ou, se ele ainda não escreveu,
+// do que a FIFA confirmou ao vivo em liveById. Retorna {home, away} ou null.
+function matchPens(match) {
+  const l = liveById[match.id];
+  const home = match.homePen != null ? match.homePen : (l ? l.homePen : null);
+  const away = match.awayPen != null ? match.awayPen : (l ? l.awayPen : null);
+  return (home != null && away != null) ? { home, away } : null;
 }
 
 function renderHistory() {

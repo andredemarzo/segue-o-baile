@@ -227,6 +227,11 @@ def build():
             "status": 0 if m.get("MatchStatus") == 0 else 1,
             "homeScore": m.get("HomeTeamScore") if m.get("MatchStatus") == 0 else None,
             "awayScore": m.get("AwayTeamScore") if m.get("MatchStatus") == 0 else None,
+            # Pênaltis (mata-mata): registro oficial CONGELADO no JSON, p/ não depender do liveById
+            # efêmero — um KO decidido nos pênaltis visto numa sessão nova mostrava empate cru sem o
+            # vencedor. None em jogo de grupo / sem disputa. Campo confirmado no endpoint calendar.
+            "homePen": m.get("HomeTeamPenaltyScore") if m.get("MatchStatus") == 0 else None,
+            "awayPen": m.get("AwayTeamPenaltyScore") if m.get("MatchStatus") == 0 else None,
             "city": venue_info["city"] if venue_info else city_api,
             "venue": venue_info["venue"] if venue_info else text((m.get("Stadium") or {}).get("Name")),
         })
