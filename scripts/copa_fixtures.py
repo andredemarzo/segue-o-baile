@@ -232,6 +232,11 @@ def build():
             # vencedor. None em jogo de grupo / sem disputa. Campo confirmado no endpoint calendar.
             "homePen": m.get("HomeTeamPenaltyScore") if m.get("MatchStatus") == 0 else None,
             "awayPen": m.get("AwayTeamPenaltyScore") if m.get("MatchStatus") == 0 else None,
+            # Estrutura do chaveamento (só mata-mata): PlaceHolderA/B da FIFA (ex.: "2A" = 2º do grupo A,
+            # "W73" = vencedor do jogo 73, "3ABCDF" = melhor 3º). O front desenha o cruzamento
+            # ("Venc. J73") enquanto o time não está definido, e preenche o nome real quando a FIFA define.
+            "placeholderA": m.get("PlaceHolderA") if not group_raw else None,
+            "placeholderB": m.get("PlaceHolderB") if not group_raw else None,
             "city": venue_info["city"] if venue_info else city_api,
             "venue": venue_info["venue"] if venue_info else text((m.get("Stadium") or {}).get("Name")),
         })
@@ -255,6 +260,14 @@ def validate(matches):
             errors.append(f"data implausível no jogo {m['id']}: {m['date']}")
         if not (-8 <= m["offset"] <= -3):
             errors.append(f"offset implausível no jogo {m['id']}: {m['offset']}")
+    # Mata-mata: cada jogo precisa do cruzamento (placeholderA/B da FIFA), senão a árvore do
+    # chaveamento mostra "A definir × A definir" sem contexto (fere "nunca info incompleta").
+    ko_games = [m for m in matches if not m["group"]]
+    if len(ko_games) != 32:
+        errors.append(f"esperado 32 jogos de mata-mata, veio {len(ko_games)}")
+    for m in ko_games:
+        if not m.get("placeholderA") or not m.get("placeholderB"):
+            errors.append(f"jogo de mata-mata {m['id']} sem placeholder de cruzamento")
     return errors
 
 

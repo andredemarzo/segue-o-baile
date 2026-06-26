@@ -1507,78 +1507,99 @@ summary:focus-visible {
   }
 }
 
-/* Mata-mata: chaveamento round-a-round, no padrão glass/verde da Classificação */
-.knockout {
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid var(--hair-2);
+/* Mata-mata: chaveamento em ÁRVORE HORIZONTAL (rola; mostra os cruzamentos), padrão glass/verde */
+.knockout { margin: 2px 0; }
+.ko-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  padding-bottom: 10px;
+  cursor: grab;
 }
-.ko-title {
-  margin: 0 0 12px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--green-deep);
+.ko-scroll.dragging { cursor: grabbing; }
+.ko-tree {
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+  width: max-content;
+  padding: 0 2px;
 }
-.ko-round {
-  margin: 0 0 14px;
+.ko-col {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 162px;
+  scroll-snap-align: start;
 }
-.ko-round h4 {
-  margin: 0 0 7px;
-  font-size: 0.66rem;
+.ko-col-h {
+  font-size: 0.64rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--green);
+  text-align: center;
+  margin-bottom: 8px;
 }
-.ko-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 6px;
+.ko-col.is-current .ko-col-h { color: var(--green-deep); }
+.ko-col-games {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 8px;
 }
-.ko-match {
+.ko-gm {
+  background: var(--glass-3);
+  border: 1px solid var(--hair);
+  border-radius: var(--radius-xs);
+  padding: 8px 10px;
+  font-size: 0.8rem;
+}
+.ko-gm.ph-live {
+  border-color: rgba(19, 138, 82, 0.5);
+  background: rgba(19, 138, 82, 0.10);
+}
+.ko-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 1px 0;
+  color: var(--ink-1);
+}
+.ko-row.win { color: var(--green-deep); font-weight: 600; }
+.ko-tm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ko-sc { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--green-deep); }
+.ko-meta {
+  font-size: 0.66rem;
+  color: var(--ink-2);
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ko-live { color: var(--green); font-weight: 600; display: inline-flex; align-items: center; gap: 5px; }
+.ko-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); display: inline-block; }
+.ko-hint { font-size: 0.66rem; color: var(--ink-3); margin: 8px 2px 0; }
+@media (hover: none) { .ko-hint-d { display: none; } }
+/* Classificação dos grupos: recolhida sob o mata-mata (a dobra só aparece quando há mata-mata) */
+.groups-fold { margin-top: 14px; }
+.groups-fold:not(.folded) > .groups-fold-sum { display: none; }
+.groups-fold.folded { border-top: 1px solid var(--hair-2); padding-top: 12px; }
+.groups-fold.folded > .groups-fold-sum {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  padding: 9px 12px;
-  border-radius: var(--radius-xs);
-  background: var(--glass-3);
-  border: 1px solid var(--hair);
-  font-size: 0.82rem;
-}
-.ko-match.ph-live {
-  border-color: rgba(19, 138, 82, 0.45);
-  background: rgba(19, 138, 82, 0.10);
-}
-.ko-teams {
+  gap: 8px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--green-deep);
-  font-weight: 500;
-  overflow-wrap: anywhere;
 }
-.ko-x {
-  color: var(--ink-3);
-  margin: 0 2px;
-}
-.ko-score {
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-  color: var(--green-deep);
-  white-space: nowrap;
-}
-.ko-score-live {
-  color: var(--green);
-}
-.ko-pen {
-  font-weight: 500;
-  color: var(--ink-2);
-}
-.ko-when {
-  color: var(--ink-2);
-  white-space: nowrap;
-  font-size: 0.78rem;
-}
+.groups-fold-sum::-webkit-details-marker { display: none; }
+.groups-fold.folded[open] > .groups-fold-sum .chev { transform: rotate(180deg); }
+.groups-fold-body { margin-top: 10px; }
 
 @media (prefers-reduced-motion: reduce) {
   .badge::before,

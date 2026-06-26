@@ -74,7 +74,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="styles.css?v=79">
+    <link rel="stylesheet" href="styles.css?v=80">
   </head>
   <body>
     <div class="field-photo" aria-hidden="true"></div>
@@ -269,15 +269,20 @@
       <details class="expand section-standings">
         <summary>
           <span class="summary-title">
-            <span class="eyebrow">Classificação</span>
+            <span class="eyebrow" id="standings-eyebrow">Classificação</span>
             <strong id="standings-phase">Fase de grupos</strong>
           </span>
           <span class="chev" aria-hidden="true">⌄</span>
         </summary>
         <div class="expand-body">
-          <p class="small-muted standings-note">Classificam-se os 2 primeiros de cada grupo (destacados) e os 8 melhores terceiros. Desempate: pontos, saldo de gols, gols pró.</p>
-          <div class="standings" id="standings"></div>
           <div class="knockout" id="knockout" hidden></div>
+          <details class="groups-fold" id="groups-fold" open>
+            <summary class="groups-fold-sum"><span id="groups-fold-label">Fase de grupos · final</span><span class="chev" aria-hidden="true">⌄</span></summary>
+            <div class="groups-fold-body">
+              <p class="small-muted standings-note">Classificam-se os 2 primeiros de cada grupo (destacados) e os 8 melhores terceiros. Desempate: pontos, saldo de gols, gols pró.</p>
+              <div class="standings" id="standings"></div>
+            </div>
+          </details>
         </div>
       </details>
 
@@ -300,6 +305,6 @@
       </footer>
     </main>
 
-    <script src="app.js?v=79"></script>
+    <script src="app.js?v=80"></script>
   </body>
 </html>

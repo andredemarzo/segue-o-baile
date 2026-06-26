@@ -36,6 +36,10 @@ const el = {
   standings: document.querySelector("#standings"),
   standingsPhase: document.querySelector("#standings-phase"),
   knockout: document.querySelector("#knockout"),
+  standingsEyebrow: document.querySelector("#standings-eyebrow"),
+  groupsFold: document.querySelector("#groups-fold"),
+  groupsFoldLabel: document.querySelector("#groups-fold-label"),
+  standingsSection: document.querySelector(".section-standings"),
   resultPager: document.querySelector("#result-pager"),
   enableAlerts: document.querySelector("#enable-alerts"),
   testAlert: document.querySelector("#test-alert"),
@@ -1063,63 +1067,166 @@ function groupsPhaseOver() {
 
 // Resultado/estado de um jogo do chaveamento: encerrado (placar + pênaltis se houver da FIFA),
 // ao vivo, ou a data. Reusa finalScore/matchPhase — a mesma verdade do resto do app.
-function knockoutResultHtml(match) {
-  const fs = finalScore(match);
-  const live = liveById[match.id];
-  if (fs) {
-    const pens = matchPens(match);
-    if (pens) {
-      return `<span class="ko-score">${fs.home}–${fs.away} <small class="ko-pen">(${pens.home}–${pens.away} pên)</small></span>`;
-    }
-    if (fs.home === fs.away) {
-      // mata-mata encerrado e empatado, sem pênaltis ainda → nunca mostra o empate cru (impossível)
-      return `<span class="ko-score">${fs.home}–${fs.away} <small class="ko-pen">· aguardando pênaltis</small></span>`;
-    }
-    return `<span class="ko-score">${fs.home}–${fs.away}</span>`;
-  }
-  if (matchPhase(match) === "live") {
-    const s = live && live.home != null ? `${live.home}–${live.away} · ` : "";
-    return `<span class="ko-score ko-score-live">${s}ao vivo</span>`;
-  }
-  return `<span class="ko-when">${shortDate(utcDate(match), PT_TZ, "pt-PT")}</span>`;
+// Rótulo curto da fase, p/ o topo de cada coluna da árvore.
+const KO_STAGE_SHORT = {
+  "16-avos de final": "16-avos",
+  "Oitavas de final": "Oitavas",
+  "Quartas de final": "Quartas",
+  "Semifinal": "Semis",
+  "Disputa de 3º lugar": "3º lugar",
+  "Final": "Final",
+};
+
+// Placeholder da FIFA → rótulo legível do cruzamento. "2A"=2º do A; "3ABCDF"=melhor 3º;
+// "W73"=vencedor do jogo 73; "RU101"=perdedor do jogo 101 (vai p/ a disputa de 3º).
+function parsePlaceholder(ph) {
+  if (!ph) return "A definir";
+  let m;
+  if ((m = ph.match(/^([1-3])([A-L])$/))) return `${m[1]}º ${m[2]}`;
+  if (/^3[A-L]{2,}$/.test(ph)) return "Melhor 3º";
+  if ((m = ph.match(/^W(\d+)$/))) return `Venc. J${m[1]}`;
+  if ((m = ph.match(/^RU(\d+)$/))) return `Perd. J${m[1]}`;
+  return ph;
 }
 
-// Chaveamento completo, agrupado por fase em ordem; + relabel da Classificação como "final".
-function renderKnockout() {
-  if (el.standingsPhase) {
-    el.standingsPhase.textContent = groupsPhaseOver() ? "Fase de grupos · final" : "Fase de grupos";
+// Lado de um jogo de mata-mata: o time real (quando definido) OU o cruzamento (placeholder).
+function koSide(match, which) {
+  const team = which === "home" ? match.home : match.away;
+  if (team && team !== "A definir") return team;
+  return parsePlaceholder(which === "home" ? match.placeholderA : match.placeholderB);
+}
+
+// Uma "carta" do chaveamento: 2 lados (time ou cruzamento) + placar/pênaltis OU horário BR/PT.
+function koGameHtml(match) {
+  const phase = matchPhase(match);
+  const live = liveById[match.id];
+  const fs = finalScore(match);
+  const pens = matchPens(match);
+  let hw = false, aw = false;
+  if (fs) {
+    if (fs.home > fs.away) hw = true;
+    else if (fs.away > fs.home) aw = true;
+    else if (pens) { if (pens.home > pens.away) hw = true; else if (pens.away > pens.home) aw = true; }
   }
-  if (!el.knockout) return;
+  const hScore = fs ? fs.home : (phase === "live" && live ? live.home : null);
+  const aScore = fs ? fs.away : (phase === "live" && live ? live.away : null);
+  const sc = (v) => (v != null ? `<span class="ko-sc">${v}</span>` : "");
+  let meta;
+  if (phase === "live") {
+    meta = `<span class="ko-live"><span class="ko-dot" aria-hidden="true"></span>ao vivo${live && live.time ? ` · ${live.time}` : ""}</span>`;
+  } else if (fs) {
+    meta = pens ? `${pens.home}–${pens.away} nos pênaltis` : (fs.home === fs.away ? "aguardando pênaltis" : "encerrado");
+  } else {
+    meta = whenLine(utcDate(match));
+  }
+  return `
+    <div class="ko-gm ph-${phase}">
+      <div class="ko-row${hw ? " win" : ""}"><span class="ko-tm">${koSide(match, "home")}</span>${sc(hScore)}</div>
+      <div class="ko-row${aw ? " win" : ""}"><span class="ko-tm">${koSide(match, "away")}</span>${sc(aScore)}</div>
+      <div class="ko-meta">${meta}</div>
+    </div>`;
+}
+
+// Reordena os jogos de cada fase pra a ÁRVORE alinhar: cada jogo fica entre seus 2 alimentadores.
+// Deriva da estrutura "W" (oitavas+ apontam p/ "W73" etc.); 16-avos são as folhas. Sem placeholders
+// (coletor ainda não escreveu) cai no fallback por id. A disputa de 3º lugar fica fora da árvore.
+function reorderBracketTree(rounds) {
+  const main = rounds.filter((r) => r.stage !== "Disputa de 3º lugar");
+  if (main.length < 2) return rounds;
+  const byId = {};
+  rounds.forEach((r) => r.games.forEach((g) => { byId[g.id] = g; }));
+  const wFeeders = (g) => [g.placeholderA, g.placeholderB].map((p) => {
+    const m = (p || "").match(/^W(\d+)$/); return m ? Number(m[1]) : null;
+  });
+  const order = {};
+  order[main[main.length - 1].stage] = main[main.length - 1].games;
+  for (let i = main.length - 2; i >= 0; i--) {
+    const next = order[main[i + 1].stage];
+    const seq = [];
+    next.forEach((g) => wFeeders(g).forEach((fid) => { if (fid != null && byId[fid]) seq.push(byId[fid]); }));
+    order[main[i].stage] = seq.length === main[i].games.length ? seq : main[i].games;
+  }
+  return rounds.map((r) => (order[r.stage] ? { ...r, games: order[r.stage] } : r));
+}
+
+let koSig = null;
+let koAutoScrolled = false;
+let koSectionOpened = false;
+
+// Chaveamento do mata-mata em ÁRVORE HORIZONTAL (mostra os cruzamentos) + hierarquia:
+// com o mata-mata no ar, a seção vira "Mata-mata" e a Classificação desce, recolhida.
+function renderKnockout() {
+  const over = groupsPhaseOver();
   const ko = MATCHES.filter((m) => !m.group);
-  // Mostra quando a fase de grupos encerra OU — robustez anti-buraco — quando algum jogo de
-  // mata-mata já começou (placar/ao vivo), mesmo que um jogo de grupo tenha ficado pendente no dado.
-  const show = ko.length > 0 &&
-    (groupsPhaseOver() || ko.some((m) => finalScore(m) != null || matchPhase(m) === "live"));
+  const show = ko.length > 0 && (over || ko.some((m) => finalScore(m) != null || matchPhase(m) === "live"));
+
+  if (el.standingsEyebrow) el.standingsEyebrow.textContent = show ? "Mata-mata" : "Classificação";
+  if (el.standingsPhase) el.standingsPhase.textContent = show ? "Chaveamento" : (over ? "Fase de grupos · final" : "Fase de grupos");
+  if (el.groupsFold) {
+    el.groupsFold.classList.toggle("folded", show);
+    el.groupsFold.open = !show; // grupos abertos na fase de grupos; recolhidos no mata-mata
+  }
+  if (el.groupsFoldLabel) el.groupsFoldLabel.textContent = "Fase de grupos · final";
+  if (show && el.standingsSection && !koSectionOpened) { el.standingsSection.open = true; koSectionOpened = true; }
+
+  if (!el.knockout) return;
   el.knockout.hidden = !show;
-  if (!show) { el.knockout.innerHTML = ""; return; }
-  // Ordem conhecida primeiro + qualquer fase nova do dado no fim — nunca derruba um jogo em silêncio.
-  const stages = [...new Set(MATCHES.filter((m) => !m.group).map((m) => m.stage).filter(Boolean))];
-  const ordered = [
-    ...KO_STAGE_ORDER.filter((s) => stages.includes(s)),
-    ...stages.filter((s) => !KO_STAGE_ORDER.includes(s))
-  ];
-  const rounds = ordered
-    .map((stage) => ({ stage, games: ko.filter((m) => m.stage === stage).sort((a, b) => utcDate(a) - utcDate(b)) }))
+  if (!show) { el.knockout.innerHTML = ""; koSig = null; return; }
+
+  const stages = [...new Set(ko.map((m) => m.stage).filter(Boolean))];
+  const ordered = [...KO_STAGE_ORDER.filter((s) => stages.includes(s)), ...stages.filter((s) => !KO_STAGE_ORDER.includes(s))];
+  const roundsRaw = ordered
+    .map((stage) => ({ stage, games: ko.filter((m) => m.stage === stage).sort((a, b) => a.id - b.id) }))
     .filter((r) => r.games.length);
+  const rounds = reorderBracketTree(roundsRaw);
+
+  // Re-renderiza só quando algo muda (preserva o scroll e não pisca a cada 45s).
+  const sig = rounds.map((r) => r.games.map((m) => {
+    const f = finalScore(m); return `${m.id}:${m.home}/${m.away}:${matchPhase(m)}:${f ? f.home + "-" + f.away : ""}:${matchPens(m) ? "p" : ""}`;
+  }).join(",")).join("|");
+  if (sig === koSig) return;
+  const prev = document.querySelector("#ko-scroll");
+  const prevScroll = prev ? prev.scrollLeft : null;
+  koSig = sig;
+
+  let curIdx = rounds.findIndex((r) => r.games.some((m) => finalScore(m) == null));
+  if (curIdx < 0) curIdx = rounds.length - 1;
+
   el.knockout.innerHTML = `
-    <h3 class="ko-title">Mata-mata</h3>
-    ${rounds.map((r) => `
-      <section class="ko-round">
-        <h4>${r.stage}</h4>
-        <ul class="ko-list">
-          ${r.games.map((m) => `
-            <li class="ko-match ph-${matchPhase(m)}">
-              <span class="ko-teams">${m.home} <span class="ko-x">×</span> ${m.away}</span>
-              ${knockoutResultHtml(m)}
-            </li>`).join("")}
-        </ul>
-      </section>`).join("")}
+    <div class="ko-scroll" id="ko-scroll">
+      <div class="ko-tree">
+        ${rounds.map((r, ri) => `
+          <div class="ko-col${ri === curIdx ? " is-current" : ""}">
+            <div class="ko-col-h">${KO_STAGE_SHORT[r.stage] || r.stage}</div>
+            <div class="ko-col-games">${r.games.map(koGameHtml).join("")}</div>
+          </div>`).join("")}
+      </div>
+    </div>
+    <p class="ko-hint"><span class="ko-hint-d">Arraste para ver as fases. </span>Os cruzamentos preenchem conforme os jogos terminam.</p>
   `;
+  setupKoScroll(prevScroll);
+}
+
+// Rolagem da árvore: arrastar (desktop) + swipe/snap nativo (mobile) + auto-scroll p/ a fase atual.
+function setupKoScroll(prevScroll) {
+  const sc = document.querySelector("#ko-scroll");
+  if (!sc) return;
+  if (prevScroll != null) {
+    sc.scrollLeft = prevScroll; // preserva onde o usuário estava
+  } else if (!koAutoScrolled) {
+    const cur = sc.querySelector(".ko-col.is-current");
+    if (cur) sc.scrollLeft = Math.max(0, cur.offsetLeft - 12);
+    koAutoScrolled = true;
+  }
+  let down = false, sx = 0, sl = 0;
+  sc.addEventListener("pointerdown", (e) => {
+    if (e.pointerType === "touch") return; // no celular o swipe nativo já rola
+    down = true; sx = e.clientX; sl = sc.scrollLeft; sc.classList.add("dragging");
+  });
+  sc.addEventListener("pointermove", (e) => { if (down) sc.scrollLeft = sl - (e.clientX - sx); });
+  const end = () => { down = false; sc.classList.remove("dragging"); };
+  sc.addEventListener("pointerup", end);
+  sc.addEventListener("pointerleave", end);
 }
 
 // Placar final de um jogo, com auto-cura: usa o JSON do coletor (registro oficial
