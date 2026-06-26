@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-26T03:31:40+00:00",
+  "updatedAt": "2026-06-26T07:36:44+00:00",
   "matches": [
     {
       "id": 1,
@@ -2217,16 +2217,38 @@
       "offset": -7,
       "home": "Turquia",
       "away": "Estados Unidos",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 3,
+      "awayScore": 2,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
-      "prob": {
-        "home": 34,
-        "draw": 29,
-        "away": 37
-      },
+      "scorers": [
+        {
+          "name": "Auston Trusty",
+          "minute": "3'",
+          "side": "away"
+        },
+        {
+          "name": "Arda Guler",
+          "minute": "10'",
+          "side": "home"
+        },
+        {
+          "name": "Baris Alper Yilmaz",
+          "minute": "31'",
+          "side": "home"
+        },
+        {
+          "name": "Sebastian Berhalter",
+          "minute": "49'",
+          "side": "away"
+        },
+        {
+          "name": "Kaan Ayhan",
+          "minute": "90'+8'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 18,
         "at": "2026-06-25T21:09:28+00:00"
@@ -2243,16 +2265,12 @@
       "offset": -7,
       "home": "Paraguai",
       "away": "Austrália",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 0,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
-      "prob": {
-        "home": 38,
-        "draw": 29,
-        "away": 33
-      },
+      "scorers": [],
       "weather": {
         "tempC": 17,
         "at": "2026-06-25T21:09:28+00:00"
@@ -2540,8 +2558,8 @@
         "away": 34
       },
       "weather": {
-        "tempC": 32,
-        "at": "2026-06-25T21:09:28+00:00"
+        "tempC": 28,
+        "at": "2026-06-26T07:36:42+00:00"
       }
     },
     {
@@ -2666,7 +2684,7 @@
       },
       "weather": {
         "tempC": 34,
-        "at": "2026-06-25T22:43:45+00:00"
+        "at": "2026-06-26T07:36:42+00:00"
       }
     },
     {
@@ -2817,8 +2835,8 @@
       "city": "Toronto",
       "venue": "BMO Field",
       "weather": {
-        "tempC": 34,
-        "at": "2026-06-25T21:09:28+00:00"
+        "tempC": 33,
+        "at": "2026-06-26T07:36:42+00:00"
       }
     },
     {
@@ -2901,8 +2919,8 @@
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "weather": {
-        "tempC": 29,
-        "at": "2026-06-25T22:43:45+00:00"
+        "tempC": 30,
+        "at": "2026-06-26T07:36:42+00:00"
       }
     },
     {
@@ -2914,7 +2932,7 @@
       "date": "2026-07-03",
       "time": "13:00",
       "offset": -5,
-      "home": "A definir",
+      "home": "Austrália",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -3090,8 +3108,8 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
-        "tempC": 20,
-        "at": "2026-06-25T21:09:28+00:00"
+        "tempC": 15,
+        "at": "2026-06-26T07:36:42+00:00"
       }
     },
     {
