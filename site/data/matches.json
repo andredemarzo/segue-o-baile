@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-26T12:14:00+00:00",
+  "updatedAt": "2026-06-26T19:04:29+00:00",
   "matches": [
     {
       "id": 1,
@@ -18,6 +18,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "scorers": [
@@ -47,6 +51,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "scorers": [
@@ -81,6 +89,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "scorers": [
@@ -110,6 +122,10 @@
       "status": 0,
       "homeScore": 4,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [
@@ -155,6 +171,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [
@@ -183,6 +203,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "scorers": [
@@ -216,6 +240,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "scorers": [
@@ -249,6 +277,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [
@@ -284,6 +316,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "scorers": [
@@ -312,6 +348,10 @@
       "status": 0,
       "homeScore": 7,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [
@@ -376,6 +416,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 2,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "scorers": [
@@ -419,6 +463,10 @@
       "status": 0,
       "homeScore": 5,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "scorers": [
@@ -472,6 +520,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "scorers": [
@@ -505,6 +557,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "scorers": [],
@@ -527,6 +583,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 2,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [
@@ -570,6 +630,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Seattle",
       "venue": "Lumen Field",
       "scorers": [
@@ -604,6 +668,10 @@
       "status": 0,
       "homeScore": 3,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "scorers": [
@@ -647,6 +715,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 4,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [
@@ -696,6 +768,10 @@
       "status": 0,
       "homeScore": 3,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "scorers": [
@@ -734,6 +810,10 @@
       "status": 0,
       "homeScore": 3,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [
@@ -779,6 +859,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "scorers": [
@@ -807,6 +891,10 @@
       "status": 0,
       "homeScore": 4,
       "awayScore": 2,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "scorers": [
@@ -861,6 +949,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [
@@ -894,6 +986,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 3,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "scorers": [
@@ -937,6 +1033,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "scorers": [
@@ -971,6 +1071,10 @@
       "status": 0,
       "homeScore": 4,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [
@@ -1020,6 +1124,10 @@
       "status": 0,
       "homeScore": 6,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "scorers": [
@@ -1074,6 +1182,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "scorers": [
@@ -1102,6 +1214,10 @@
       "status": 0,
       "homeScore": 3,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "scorers": [
@@ -1140,6 +1256,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [
@@ -1168,6 +1288,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [
@@ -1196,6 +1320,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Seattle",
       "venue": "Lumen Field",
       "scorers": [
@@ -1230,6 +1358,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "scorers": [
@@ -1268,6 +1400,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "scorers": [],
@@ -1290,6 +1426,10 @@
       "status": 0,
       "homeScore": 5,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [
@@ -1343,6 +1483,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 4,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "scorers": [
@@ -1386,6 +1530,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 2,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "scorers": [
@@ -1429,6 +1577,10 @@
       "status": 0,
       "homeScore": 4,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "scorers": [
@@ -1473,6 +1625,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [],
@@ -1495,6 +1651,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 3,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "scorers": [
@@ -1538,6 +1698,10 @@
       "status": 0,
       "homeScore": 3,
       "awayScore": 2,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "scorers": [
@@ -1586,6 +1750,10 @@
       "status": 0,
       "homeScore": 3,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "scorers": [
@@ -1624,6 +1792,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "scorers": [
@@ -1657,6 +1829,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 2,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [
@@ -1695,6 +1871,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [],
@@ -1717,6 +1897,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "scorers": [
@@ -1745,6 +1929,10 @@
       "status": 0,
       "homeScore": 5,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [
@@ -1794,6 +1982,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "scorers": [
@@ -1822,6 +2014,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 3,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "scorers": [
@@ -1860,6 +2056,10 @@
       "status": 0,
       "homeScore": 4,
       "awayScore": 2,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "scorers": [
@@ -1919,6 +2119,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "scorers": [
@@ -1957,6 +2161,10 @@
       "status": 0,
       "homeScore": 3,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Seattle",
       "venue": "Lumen Field",
       "scorers": [
@@ -2001,6 +2209,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 3,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "scorers": [
@@ -2039,6 +2251,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "scorers": [
@@ -2067,6 +2283,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 2,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "scorers": [
@@ -2100,6 +2320,10 @@
       "status": 0,
       "homeScore": 2,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "scorers": [
@@ -2143,6 +2367,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 1,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "scorers": [
@@ -2176,6 +2404,10 @@
       "status": 0,
       "homeScore": 1,
       "awayScore": 3,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "scorers": [
@@ -2220,6 +2452,10 @@
       "status": 0,
       "homeScore": 3,
       "awayScore": 2,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [
@@ -2268,6 +2504,10 @@
       "status": 0,
       "homeScore": 0,
       "awayScore": 0,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [],
@@ -2290,6 +2530,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "prob": {
@@ -2316,6 +2560,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "prob": {
@@ -2342,6 +2590,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Seattle",
       "venue": "Lumen Field",
       "prob": {
@@ -2350,8 +2602,8 @@
         "away": 40
       },
       "weather": {
-        "tempC": 16,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 15,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2368,6 +2620,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "prob": {
@@ -2376,8 +2632,8 @@
         "away": 82
       },
       "weather": {
-        "tempC": 16,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 15,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2394,6 +2650,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "prob": {
@@ -2403,7 +2663,7 @@
       },
       "weather": {
         "tempC": 31,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2420,6 +2680,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "prob": {
@@ -2428,8 +2692,8 @@
         "away": 79
       },
       "weather": {
-        "tempC": 19,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 20,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2446,6 +2710,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "prob": {
@@ -2454,8 +2722,8 @@
         "away": 85
       },
       "weather": {
-        "tempC": 24,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 23,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2472,6 +2740,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "prob": {
@@ -2480,8 +2752,8 @@
         "away": 10
       },
       "weather": {
-        "tempC": 25,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 27,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2498,6 +2770,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "prob": {
@@ -2506,8 +2782,8 @@
         "away": 46
       },
       "weather": {
-        "tempC": 27,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 25,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2524,6 +2800,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "prob": {
@@ -2533,7 +2813,7 @@
       },
       "weather": {
         "tempC": 30,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2550,6 +2830,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "prob": {
@@ -2558,8 +2842,8 @@
         "away": 34
       },
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-26T07:36:42+00:00"
+        "tempC": 30,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2576,6 +2860,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "prob": {
@@ -2602,6 +2890,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "2A",
+      "placeholderB": "2B",
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "prob": {
@@ -2610,8 +2902,8 @@
         "away": 65
       },
       "weather": {
-        "tempC": 21,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 22,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2628,11 +2920,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1E",
+      "placeholderB": "3ABCDF",
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 30,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2649,6 +2945,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1F",
+      "placeholderB": "2C",
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "prob": {
@@ -2658,7 +2958,7 @@
       },
       "weather": {
         "tempC": 33,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2675,6 +2975,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1C",
+      "placeholderB": "2F",
       "city": "Houston",
       "venue": "NRG Stadium",
       "prob": {
@@ -2684,7 +2988,7 @@
       },
       "weather": {
         "tempC": 34,
-        "at": "2026-06-26T07:36:42+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2701,11 +3005,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1I",
+      "placeholderB": "3CDFGH",
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "weather": {
-        "tempC": 26,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 33,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2722,11 +3030,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "2E",
+      "placeholderB": "2I",
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "weather": {
         "tempC": 33,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2743,11 +3055,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1A",
+      "placeholderB": "3CEFHI",
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "weather": {
         "tempC": 17,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2764,11 +3080,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1L",
+      "placeholderB": "3EHIJK",
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "weather": {
-        "tempC": 34,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 33,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2785,6 +3105,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1D",
+      "placeholderB": "3BEFIJ",
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "prob": {
@@ -2793,8 +3117,8 @@
         "away": 20
       },
       "weather": {
-        "tempC": 23,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 24,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2811,11 +3135,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1G",
+      "placeholderB": "3AEHIJ",
       "city": "Seattle",
       "venue": "Lumen Field",
       "weather": {
         "tempC": 16,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2832,6 +3160,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "2K",
+      "placeholderB": "2L",
       "city": "Toronto",
       "venue": "BMO Field",
       "weather": {
@@ -2853,11 +3185,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1H",
+      "placeholderB": "2J",
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "weather": {
         "tempC": 22,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2874,11 +3210,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1B",
+      "placeholderB": "3EFGIJ",
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
         "tempC": 13,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2895,11 +3235,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1J",
+      "placeholderB": "2H",
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "weather": {
         "tempC": 32,
-        "at": "2026-06-26T03:30:14+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2916,11 +3260,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "1K",
+      "placeholderB": "3DEIJL",
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "weather": {
-        "tempC": 30,
-        "at": "2026-06-26T07:36:42+00:00"
+        "tempC": 27,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2937,11 +3285,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "2D",
+      "placeholderB": "2G",
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "weather": {
-        "tempC": 35,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 34,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2958,11 +3310,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W74",
+      "placeholderB": "W77",
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "weather": {
-        "tempC": 32,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 30,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -2979,11 +3335,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W73",
+      "placeholderB": "W75",
       "city": "Houston",
       "venue": "NRG Stadium",
       "weather": {
         "tempC": 34,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -3000,11 +3360,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W76",
+      "placeholderB": "W78",
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 25,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -3021,11 +3385,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W79",
+      "placeholderB": "W80",
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "weather": {
         "tempC": 18,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -3042,11 +3410,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W83",
+      "placeholderB": "W84",
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "weather": {
-        "tempC": 38,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 39,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -3063,6 +3435,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W81",
+      "placeholderB": "W82",
       "city": "Seattle",
       "venue": "Lumen Field",
       "weather": {
@@ -3084,11 +3460,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W86",
+      "placeholderB": "W88",
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "weather": {
-        "tempC": 34,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 32,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -3105,11 +3485,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W85",
+      "placeholderB": "W87",
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
-        "tempC": 15,
-        "at": "2026-06-26T07:36:42+00:00"
+        "tempC": 20,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -3126,11 +3510,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W89",
+      "placeholderB": "W90",
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "weather": {
-        "tempC": 23,
-        "at": "2026-06-26T12:13:00+00:00"
+        "tempC": 26,
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -3147,11 +3535,15 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W93",
+      "placeholderB": "W94",
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "weather": {
         "tempC": 26,
-        "at": "2026-06-26T12:13:00+00:00"
+        "at": "2026-06-26T19:02:59+00:00"
       }
     },
     {
@@ -3168,6 +3560,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W91",
+      "placeholderB": "W92",
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium"
     },
@@ -3185,6 +3581,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W95",
+      "placeholderB": "W96",
       "city": "Kansas City",
       "venue": "Arrowhead Stadium"
     },
@@ -3202,6 +3602,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W97",
+      "placeholderB": "W98",
       "city": "Arlington",
       "venue": "AT&T Stadium"
     },
@@ -3219,6 +3623,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W99",
+      "placeholderB": "W100",
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium"
     },
@@ -3236,6 +3644,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "RU101",
+      "placeholderB": "RU102",
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium"
     },
@@ -3253,6 +3665,10 @@
       "status": 1,
       "homeScore": null,
       "awayScore": null,
+      "homePen": null,
+      "awayPen": null,
+      "placeholderA": "W101",
+      "placeholderB": "W102",
       "city": "East Rutherford",
       "venue": "MetLife Stadium"
     }
