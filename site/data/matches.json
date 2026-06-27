@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-27T20:48:34+00:00",
+  "updatedAt": "2026-06-27T23:53:01+00:00",
   "matches": [
     {
       "id": 1,
@@ -2783,20 +2783,27 @@
       "offset": -4,
       "home": "Panamá",
       "away": "Inglaterra",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 2,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
-      "prob": {
-        "home": 8,
-        "draw": 7,
-        "away": 85
-      },
+      "scorers": [
+        {
+          "name": "Jude Bellingham",
+          "minute": "62'",
+          "side": "away"
+        },
+        {
+          "name": "Harry Kane",
+          "minute": "67'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 23,
         "at": "2026-06-27T18:17:01+00:00"
@@ -2813,20 +2820,32 @@
       "offset": -4,
       "home": "Croácia",
       "away": "Gana",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 1,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
-      "prob": {
-        "home": 81,
-        "draw": 9,
-        "away": 10
-      },
+      "scorers": [
+        {
+          "name": "Petar Sucic",
+          "minute": "31'",
+          "side": "home"
+        },
+        {
+          "name": "Derrick Luckassen",
+          "minute": "73'",
+          "side": "away"
+        },
+        {
+          "name": "Nikola Vlasic",
+          "minute": "83'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-27T18:17:01+00:00"
@@ -3142,7 +3161,7 @@
       "time": "19:00",
       "offset": -6,
       "home": "México",
-      "away": "A definir",
+      "away": "Equador",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -3166,7 +3185,7 @@
       "date": "2026-07-01",
       "time": "12:00",
       "offset": -4,
-      "home": "A definir",
+      "home": "Inglaterra",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -3247,7 +3266,7 @@
       "time": "19:00",
       "offset": -4,
       "home": "A definir",
-      "away": "A definir",
+      "away": "Croácia",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -3352,7 +3371,7 @@
       "time": "20:30",
       "offset": -5,
       "home": "A definir",
-      "away": "A definir",
+      "away": "Gana",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
