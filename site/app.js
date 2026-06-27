@@ -50,8 +50,10 @@ const el = {
 
 let selectedMatchId = null;
 const liveById = {}; // matchId -> { status, home, away, homePen, awayPen, time } da FIFA — PERSISTE (o sinal de "encerrado" não se perde)
-let liveScorers = []; // artilheiros do jogo ao vivo atualmente consultado
-let liveScorersId = null; // de qual jogo são os liveScorers acima
+// Artilheiros por jogo (overlay all-games, espelha liveById): match.id -> [{name,minute,side,note}].
+// Antes era um par GLOBAL (liveScorers/liveScorersId) só do jogo focal — perdia o artilheiro pós-jogo e
+// nos simultâneos atribuía ao jogo errado. Agora indexado por id: persiste e cobre TODOS os jogos.
+const liveScorersById = {};
 
 let MATCHES = [];
 
@@ -345,13 +347,13 @@ async function fetchScorers(idStage, idMatch) {
 }
 
 function teamScorersHtml(side, match) {
-  // ao vivo: liveScorers (só se forem deste jogo); encerrado: match.scorers do JSON.
-  const list =
-    liveScorersId === match.id && liveScorers.length
-      ? liveScorers
-      : Array.isArray(match.scorers)
-        ? match.scorers
-        : [];
+  // ao vivo/recém-encerrado: liveScorersById[id] (overlay por jogo); fallback: match.scorers do JSON.
+  const live = liveScorersById[match.id];
+  const list = live && live.length
+    ? live
+    : Array.isArray(match.scorers)
+      ? match.scorers
+      : [];
   if (!list.length) return "";
   const text = list
     .filter((s) => s.side === side)
@@ -423,14 +425,22 @@ async function healRecentMatches(now = new Date()) {
         awayPen: m.AwayTeamPenaltyScore,
         time: m.MatchTime,
       };
+      // C3: artilheiros por jogo (all-games). Busca a timeline de jogo ENCERRADO COM gols que ainda não
+      // temos — SELETIVO (1× por jogo) p/ não estourar a FIFA. Cobre simultâneos e Resultados sem o cron.
+      const goals = (m.HomeTeam ? m.HomeTeam.Score || 0 : 0) + (m.AwayTeam ? m.AwayTeam.Score || 0 : 0);
+      const have = liveScorersById[match.id];
+      if (m.MatchStatus === 0 && goals > 0 && !(have && have.length)) {
+        try { liveScorersById[match.id] = await fetchScorers(match.idStage, match.idMatch); } catch (e) { /* timeline fora — tenta no próximo ciclo */ }
+      }
       changed = true;
     } catch (error) {
       // sem rede / FIFA fora do ar — tenta de novo no próximo ciclo, sem quebrar a tela
     }
   }
   if (changed) {
-    renderNext();    // card + faixa do carrossel já leem liveById
-    renderHistory(); // a lista de encerrados passa a incluir o que a FIFA confirmou
+    renderNext();      // card + faixa do carrossel já leem liveById
+    renderHistory();   // a lista de encerrados passa a incluir o que a FIFA confirmou
+    renderStandings(); // C2: a Classificação herda o encerramento na hora (não espera reload/cron)
   }
 }
 
@@ -463,14 +473,12 @@ async function updateLiveScore() {
     // Artilheiros: só com jogo ao vivo/encerrado e com gols (timeline oficial).
     if ((m.MatchStatus === 3 || m.MatchStatus === 0) && ((home || 0) + (away || 0)) > 0) {
       try {
-        liveScorers = await fetchScorers(match.idStage, match.idMatch);
-        liveScorersId = match.id;
+        liveScorersById[match.id] = await fetchScorers(match.idStage, match.idMatch);
       } catch (error) {
         // timeline indisponível — mantém placar sem marcadores
       }
     } else {
-      liveScorers = [];
-      liveScorersId = match.id;
+      liveScorersById[match.id] = [];
     }
     renderNext(); // único ponto que escreve a tela — sincroniza com o status real
   } catch (error) {
@@ -930,7 +938,7 @@ function renderNext() {
 
   // Placar + marcadores: re-renderiza quando o jogo, a fase OU o placar ao vivo muda.
   // (Único ponto que escreve o placar — sem dois renderizadores brigando.)
-  const sig = `${match.id}|${phase}|${live ? `${live.home}-${live.away}/${live.homePen}-${live.awayPen}/${live.time}` : ""}|${liveScorersId === match.id ? liveScorers.length : 0}`;
+  const sig = `${match.id}|${phase}|${live ? `${live.home}-${live.away}/${live.homePen}-${live.awayPen}/${live.time}` : ""}|${liveScorersById[match.id] ? liveScorersById[match.id].length : 0}`;
   if (sig !== renderedScoreSig) {
     el.scoreline.innerHTML = scorelineHtml(match);
     renderedScoreSig = sig;
@@ -1000,15 +1008,19 @@ function computeStandings() {
         g[team] = { team, j: 0, v: 0, e: 0, d: 0, gf: 0, ga: 0, pts: 0 };
       }
     }
-    if (m.status === 0 && m.homeScore != null && m.awayScore != null) {
+    // C1: overlay live↔json (finalScore) — a MESMA verdade do card/Resultados/bracket. finalScore só
+    // retorna com jogo ENCERRADO (FIFA OU coletor) E placar não-nulo → nunca conta jogo em andamento
+    // nem "encerrado-por-relógio sem placar" (sem pontos-fantasma, sem NaN). Live-aware ~45s após o apito.
+    const fs = finalScore(m);
+    if (fs && fs.home != null && fs.away != null) {
       const h = g[m.home];
       const a = g[m.away];
       if (!h || !a) continue;
       h.j++; a.j++;
-      h.gf += m.homeScore; h.ga += m.awayScore;
-      a.gf += m.awayScore; a.ga += m.homeScore;
-      if (m.homeScore > m.awayScore) { h.v++; h.pts += 3; a.d++; }
-      else if (m.homeScore < m.awayScore) { a.v++; a.pts += 3; h.d++; }
+      h.gf += fs.home; h.ga += fs.away;
+      a.gf += fs.away; a.ga += fs.home;
+      if (fs.home > fs.away) { h.v++; h.pts += 3; a.d++; }
+      else if (fs.home < fs.away) { a.v++; a.pts += 3; h.d++; }
       else { h.e++; a.e++; h.pts++; a.pts++; }
     }
   }
@@ -1021,9 +1033,14 @@ function computeStandings() {
   return out;
 }
 
+let stSig = null;
 function renderStandings() {
   if (!el.standings) return;
   const table = computeStandings();
+  // C2: dirty-check — só re-renderiza quando a tabela muda (preserva scroll, não pisca a cada 45s).
+  const sig = JSON.stringify(table);
+  if (sig === stSig) return;
+  stSig = sig;
   const groups = Object.keys(table).sort();
   const sg = (n) => (n > 0 ? "+" : "") + n;
   el.standings.innerHTML = groups
@@ -1310,7 +1327,8 @@ function renderHistoryPager(total, pageCount) {
 }
 
 function scorersHtml(match) {
-  const list = match.scorers;
+  const live = liveScorersById[match.id];
+  const list = (live && live.length) ? live : match.scorers;
   if (!Array.isArray(list) || !list.length) return "";
   const fmt = (s) => `${s.name} ${s.minute}${s.note ? ` (${s.note})` : ""}`;
   const home = list.filter((s) => s.side === "home").map(fmt).join(", ");
@@ -1667,7 +1685,8 @@ async function boot() {
   window.setInterval(updateLiveScore, 45000);
   healRecentMatches(); // backfill imediato de jogos que o coletor não confirmou (ex.: madrugada)
   window.setInterval(healRecentMatches, 45000);
-  window.setInterval(renderKnockout, 45000); // chaveamento + relabel da Classificação, frescos
+  window.setInterval(renderKnockout, 45000);   // chaveamento + relabel da Classificação, frescos
+  window.setInterval(renderStandings, 45000);  // C2: a tabela entra no ciclo (dirty-check evita re-render à toa)
 }
 
 boot();
