@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-27T18:17:56+00:00",
+  "updatedAt": "2026-06-27T20:48:34+00:00",
   "matches": [
     {
       "id": 1,
@@ -3208,8 +3208,8 @@
         "away": 20
       },
       "weather": {
-        "tempC": 24,
-        "at": "2026-06-27T01:26:47+00:00"
+        "tempC": 27,
+        "at": "2026-06-27T20:48:32+00:00"
       }
     },
     {
@@ -3593,8 +3593,8 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
-        "tempC": 24,
-        "at": "2026-06-27T01:26:47+00:00"
+        "tempC": 21,
+        "at": "2026-06-27T20:48:32+00:00"
       }
     },
     {

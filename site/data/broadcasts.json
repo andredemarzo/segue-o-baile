@@ -3257,6 +3257,15 @@
           "regiao": "PT",
           "url": "https://www.sporttv.pt/",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/hv354tSBqZY"
         }
       ]
     },
@@ -4465,5 +4474,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-27T18:17:56+00:00"
+  "updatedAt": "2026-06-27T20:48:34+00:00"
 }
