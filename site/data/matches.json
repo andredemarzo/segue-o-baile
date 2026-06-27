@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-27T01:28:09+00:00",
+  "updatedAt": "2026-06-27T05:09:30+00:00",
   "matches": [
     {
       "id": 1,
@@ -2631,20 +2631,27 @@
       "offset": -7,
       "home": "Egito",
       "away": "Irã",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "Seattle",
       "venue": "Lumen Field",
-      "prob": {
-        "home": 32,
-        "draw": 28,
-        "away": 40
-      },
+      "scorers": [
+        {
+          "name": "Mahmoud Saber",
+          "minute": "5'",
+          "side": "home"
+        },
+        {
+          "name": "Ramin Rezaeian",
+          "minute": "14'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-27T01:26:47+00:00"
@@ -2661,20 +2668,47 @@
       "offset": -7,
       "home": "Nova Zelândia",
       "away": "Bélgica",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 5,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
-      "prob": {
-        "home": 10,
-        "draw": 8,
-        "away": 82
-      },
+      "scorers": [
+        {
+          "name": "Leandro Trossard",
+          "minute": "28'",
+          "side": "away"
+        },
+        {
+          "name": "Leandro Trossard",
+          "minute": "50'",
+          "side": "away"
+        },
+        {
+          "name": "Kevin De Bruyne",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "name": "Elijah Just",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "name": "Romelu Lukaku",
+          "minute": "86'",
+          "side": "away"
+        },
+        {
+          "name": "Alexis Saelemaekers",
+          "minute": "90'+4'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-27T01:26:47+00:00"
@@ -2691,20 +2725,16 @@
       "offset": -5,
       "home": "Cabo Verde",
       "away": "Arábia Saudita",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 0,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
-      "prob": {
-        "home": 41,
-        "draw": 27,
-        "away": 32
-      },
+      "scorers": [],
       "weather": {
         "tempC": 31,
         "at": "2026-06-26T19:02:59+00:00"
@@ -2721,20 +2751,22 @@
       "offset": -6,
       "home": "Uruguai",
       "away": "Espanha",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 1,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "Zapopan",
       "venue": "Estadio Akron",
-      "prob": {
-        "home": 11,
-        "draw": 10,
-        "away": 79
-      },
+      "scorers": [
+        {
+          "name": "Alex Baena",
+          "minute": "42'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 20,
         "at": "2026-06-26T19:02:59+00:00"
@@ -2916,8 +2948,8 @@
         "away": 37
       },
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-26T20:53:13+00:00"
+        "tempC": 31,
+        "at": "2026-06-27T05:09:26+00:00"
       }
     },
     {
@@ -2960,7 +2992,7 @@
       "time": "16:30",
       "offset": -4,
       "home": "Alemanha",
-      "away": "A definir",
+      "away": "Paraguai",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -2970,6 +3002,11 @@
       "placeholderB": "3ABCDF",
       "city": "Foxborough",
       "venue": "Gillette Stadium",
+      "prob": {
+        "home": 53,
+        "draw": 22,
+        "away": 25
+      },
       "weather": {
         "tempC": 29,
         "at": "2026-06-27T01:26:47+00:00"
@@ -3045,7 +3082,7 @@
       "time": "17:00",
       "offset": -4,
       "home": "França",
-      "away": "A definir",
+      "away": "Suécia",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -3055,6 +3092,11 @@
       "placeholderB": "3CDFGH",
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
+      "prob": {
+        "home": 87,
+        "draw": 6,
+        "away": 7
+      },
       "weather": {
         "tempC": 29,
         "at": "2026-06-27T01:26:47+00:00"
@@ -3112,7 +3154,7 @@
       "venue": "Estadio Azteca",
       "weather": {
         "tempC": 17,
-        "at": "2026-06-26T19:02:59+00:00"
+        "at": "2026-06-27T05:09:26+00:00"
       }
     },
     {
@@ -3179,7 +3221,7 @@
       "date": "2026-07-01",
       "time": "13:00",
       "offset": -7,
-      "home": "A definir",
+      "home": "Bélgica",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -3216,8 +3258,8 @@
       "city": "Toronto",
       "venue": "BMO Field",
       "weather": {
-        "tempC": 34,
-        "at": "2026-06-26T20:53:13+00:00"
+        "tempC": 33,
+        "at": "2026-06-27T05:09:26+00:00"
       }
     },
     {
@@ -3229,7 +3271,7 @@
       "date": "2026-07-02",
       "time": "12:00",
       "offset": -7,
-      "home": "A definir",
+      "home": "Espanha",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -3280,7 +3322,7 @@
       "time": "18:00",
       "offset": -4,
       "home": "Argentina",
-      "away": "A definir",
+      "away": "Cabo Verde",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -3290,6 +3332,11 @@
       "placeholderB": "2H",
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
+      "prob": {
+        "home": 94,
+        "draw": 3,
+        "away": 3
+      },
       "weather": {
         "tempC": 32,
         "at": "2026-06-27T01:26:47+00:00"
@@ -3330,7 +3377,7 @@
       "time": "13:00",
       "offset": -5,
       "home": "Austrália",
-      "away": "A definir",
+      "away": "Egito",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -3340,6 +3387,11 @@
       "placeholderB": "2G",
       "city": "Arlington",
       "venue": "AT&T Stadium",
+      "prob": {
+        "home": 46,
+        "draw": 25,
+        "away": 29
+      },
       "weather": {
         "tempC": 35,
         "at": "2026-06-27T01:26:47+00:00"
@@ -3392,7 +3444,7 @@
       "venue": "NRG Stadium",
       "weather": {
         "tempC": 34,
-        "at": "2026-06-26T19:02:59+00:00"
+        "at": "2026-06-27T05:09:26+00:00"
       }
     },
     {
@@ -3492,7 +3544,7 @@
       "venue": "Lumen Field",
       "weather": {
         "tempC": 29,
-        "at": "2026-06-26T20:53:13+00:00"
+        "at": "2026-06-27T05:09:26+00:00"
       }
     },
     {
@@ -3616,8 +3668,8 @@
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "weather": {
-        "tempC": 35,
-        "at": "2026-06-26T22:01:27+00:00"
+        "tempC": 33,
+        "at": "2026-06-27T05:09:26+00:00"
       }
     },
     {
