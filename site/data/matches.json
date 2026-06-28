@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-28T18:48:38+00:00",
+  "updatedAt": "2026-06-28T20:04:41+00:00",
   "matches": [
     {
       "id": 1,
@@ -3531,8 +3531,8 @@
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "weather": {
-        "tempC": 37,
-        "at": "2026-06-28T02:15:30+00:00"
+        "tempC": 39,
+        "at": "2026-06-28T20:04:40+00:00"
       }
     },
     {
