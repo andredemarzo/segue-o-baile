@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-28T20:04:41+00:00",
+  "updatedAt": "2026-06-28T21:17:28+00:00",
   "matches": [
     {
       "id": 1,
@@ -3041,20 +3041,22 @@
       "offset": -7,
       "home": "África do Sul",
       "away": "Canadá",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 0,
+      "awayScore": 1,
       "homePen": null,
       "awayPen": null,
       "placeholderA": "2A",
       "placeholderB": "2B",
       "city": "Inglewood",
       "venue": "SoFi Stadium",
-      "prob": {
-        "home": 19,
-        "draw": 16,
-        "away": 65
-      },
+      "scorers": [
+        {
+          "name": "Stephen Eustaquio",
+          "minute": "90'+2'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-28T18:48:06+00:00"
@@ -3544,7 +3546,7 @@
       "date": "2026-07-04",
       "time": "12:00",
       "offset": -5,
-      "home": "A definir",
+      "home": "Canadá",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
