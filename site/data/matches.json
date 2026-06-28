@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-28T02:16:01+00:00",
+  "updatedAt": "2026-06-28T06:41:02+00:00",
   "matches": [
     {
       "id": 1,
@@ -2862,20 +2862,47 @@
       "offset": -5,
       "home": "Argélia",
       "away": "Áustria",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 3,
+      "awayScore": 3,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
-      "prob": {
-        "home": 29,
-        "draw": 25,
-        "away": 46
-      },
+      "scorers": [
+        {
+          "name": "Marko Arnautovic",
+          "minute": "28'",
+          "side": "away"
+        },
+        {
+          "name": "Rafik Belghali",
+          "minute": "45'",
+          "side": "home"
+        },
+        {
+          "name": "Marcel Sabitzer",
+          "minute": "55'",
+          "side": "away"
+        },
+        {
+          "name": "Riyad Mahrez",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "name": "Riyad Mahrez",
+          "minute": "90'+3'",
+          "side": "home"
+        },
+        {
+          "name": "Sasa Kalajdzic",
+          "minute": "90'+6'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-27T18:17:01+00:00"
@@ -2892,20 +2919,38 @@
       "offset": -5,
       "home": "Jordânia",
       "away": "Argentina",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 3,
       "homePen": null,
       "awayPen": null,
       "placeholderA": null,
       "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
-      "prob": {
-        "home": 3,
-        "draw": 3,
-        "away": 94
-      },
+      "scorers": [
+        {
+          "name": "Giovani Lo Celso",
+          "minute": "19'",
+          "side": "away"
+        },
+        {
+          "name": "Lautaro Martinez",
+          "minute": "31'",
+          "side": "away",
+          "note": "p"
+        },
+        {
+          "name": "Mousa Altamari",
+          "minute": "55'",
+          "side": "home"
+        },
+        {
+          "name": "Lionel Messi",
+          "minute": "80'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-27T18:17:01+00:00"
@@ -3251,8 +3296,8 @@
         "away": 20
       },
       "weather": {
-        "tempC": 27,
-        "at": "2026-06-27T20:48:32+00:00"
+        "tempC": 26,
+        "at": "2026-06-28T06:41:00+00:00"
       }
     },
     {
@@ -3325,7 +3370,7 @@
       "time": "12:00",
       "offset": -7,
       "home": "Espanha",
-      "away": "A definir",
+      "away": "Áustria",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -3350,7 +3395,7 @@
       "time": "20:00",
       "offset": -7,
       "home": "Suíça",
-      "away": "A definir",
+      "away": "Argélia",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -3421,8 +3466,8 @@
         "away": 5
       },
       "weather": {
-        "tempC": 28,
-        "at": "2026-06-27T18:17:01+00:00"
+        "tempC": 29,
+        "at": "2026-06-28T06:41:00+00:00"
       }
     },
     {
@@ -3651,8 +3696,8 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
-        "tempC": 21,
-        "at": "2026-06-27T20:48:32+00:00"
+        "tempC": 18,
+        "at": "2026-06-28T06:41:00+00:00"
       }
     },
     {
