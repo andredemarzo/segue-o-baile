@@ -3618,7 +3618,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+          "embed": "https://www.youtube.com/embed/__xDLB2Pi0w"
         },
         {
           "canal": "Globo",
@@ -3913,7 +3913,15 @@
           "acesso": "grátis",
           "regiao": "BR",
           "url": "https://globoplay.globo.com/",
-          "confianca": "a-confirmar"
+          "confianca": "provavel"
+        },
+        {
+          "canal": "SBT",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "BR",
+          "url": "https://www.sbt.com.br/aovivo",
+          "confianca": "provavel"
         },
         {
           "canal": "SporTV",
@@ -3921,7 +3929,23 @@
           "acesso": "assinatura",
           "regiao": "BR",
           "url": "https://globoplay.globo.com/",
-          "confianca": "a-confirmar"
+          "confianca": "provavel"
+        },
+        {
+          "canal": "N Sports",
+          "tipo": "paga",
+          "acesso": "assinatura",
+          "regiao": "BR",
+          "url": "https://www.youtube.com/@NSports",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "Globoplay",
+          "tipo": "streaming",
+          "acesso": "conta",
+          "regiao": "BR",
+          "url": "https://globoplay.globo.com/",
+          "confianca": "provavel"
         }
       ],
       "pt": [
@@ -4525,5 +4549,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T18:21:21+00:00"
+  "updatedAt": "2026-06-29T20:19:13+00:00"
 }

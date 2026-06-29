@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-29T18:21:21+00:00",
+  "updatedAt": "2026-06-29T20:19:13+00:00",
   "matches": [
     {
       "id": 1,
@@ -3133,20 +3133,32 @@
       "offset": -5,
       "home": "Brasil",
       "away": "Japão",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 1,
       "homePen": null,
       "awayPen": null,
       "placeholderA": "1C",
       "placeholderB": "2F",
       "city": "Houston",
       "venue": "NRG Stadium",
-      "prob": {
-        "home": 53,
-        "draw": 22,
-        "away": 25
-      },
+      "scorers": [
+        {
+          "name": "Kaishu Sano",
+          "minute": "29'",
+          "side": "away"
+        },
+        {
+          "name": "Casemiro",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "name": "Gabriel Martinelli",
+          "minute": "90'+5'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 35,
         "at": "2026-06-29T12:07:18+00:00"
@@ -3571,7 +3583,7 @@
       "date": "2026-07-05",
       "time": "16:00",
       "offset": -4,
-      "home": "A definir",
+      "home": "Brasil",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -3609,7 +3621,7 @@
       "venue": "Estadio Azteca",
       "weather": {
         "tempC": 20,
-        "at": "2026-06-29T12:07:18+00:00"
+        "at": "2026-06-29T20:19:12+00:00"
       }
     },
     {
@@ -3831,7 +3843,11 @@
       "placeholderA": "W97",
       "placeholderB": "W98",
       "city": "Arlington",
-      "venue": "AT&T Stadium"
+      "venue": "AT&T Stadium",
+      "weather": {
+        "tempC": 43,
+        "at": "2026-06-29T20:19:12+00:00"
+      }
     },
     {
       "id": 102,
