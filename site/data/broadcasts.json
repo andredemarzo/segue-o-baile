@@ -3206,7 +3206,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/DY58wQlCSFQ"
+          "embed": "https://www.youtube.com/embed/XL2jTQdj134"
         },
         {
           "canal": "Globo",
@@ -3307,6 +3307,15 @@
           "regiao": "PT",
           "url": "https://www.sporttv.pt/",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/85pX4dJQ6us"
         }
       ]
     },
@@ -3362,7 +3371,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+          "embed": "https://www.youtube.com/embed/9dmuI66We8A"
         },
         {
           "canal": "Globo",
@@ -3403,7 +3412,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/live_stream?channel=UCZiYbVptd3PVPf4f6eR6UaQ"
+          "embed": "https://www.youtube.com/embed/aSXLerQStXA"
         },
         {
           "canal": "Globo",
@@ -3512,6 +3521,15 @@
           "regiao": "PT",
           "url": "https://www.sporttv.pt/",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/UIbg_RuYQX0"
         }
       ]
     },
@@ -4507,5 +4525,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-28T20:04:41+00:00"
+  "updatedAt": "2026-06-29T16:56:25+00:00"
 }

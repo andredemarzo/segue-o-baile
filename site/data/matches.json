@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-29T12:07:52+00:00",
+  "updatedAt": "2026-06-29T16:56:25+00:00",
   "matches": [
     {
       "id": 1,
@@ -3479,7 +3479,7 @@
       },
       "weather": {
         "tempC": 28,
-        "at": "2026-06-28T18:48:06+00:00"
+        "at": "2026-06-29T16:56:24+00:00"
       }
     },
     {
