@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-29T20:19:13+00:00",
+  "updatedAt": "2026-06-29T23:52:22+00:00",
   "matches": [
     {
       "id": 1,
@@ -3073,20 +3073,27 @@
       "offset": -4,
       "home": "Alemanha",
       "away": "Paraguai",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
-      "homePen": null,
-      "awayPen": null,
+      "status": 0,
+      "homeScore": 1,
+      "awayScore": 1,
+      "homePen": 3,
+      "awayPen": 4,
       "placeholderA": "1E",
       "placeholderB": "3ABCDF",
       "city": "Foxborough",
       "venue": "Gillette Stadium",
-      "prob": {
-        "home": 53,
-        "draw": 22,
-        "away": 25
-      },
+      "scorers": [
+        {
+          "name": "Julio Enciso",
+          "minute": "42'",
+          "side": "away"
+        },
+        {
+          "name": "Kai Havertz",
+          "minute": "54'",
+          "side": "home"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-29T18:20:50+00:00"
@@ -3491,7 +3498,7 @@
       },
       "weather": {
         "tempC": 28,
-        "at": "2026-06-29T16:56:24+00:00"
+        "at": "2026-06-29T23:52:21+00:00"
       }
     },
     {
@@ -3533,7 +3540,7 @@
       "date": "2026-07-04",
       "time": "17:00",
       "offset": -4,
-      "home": "A definir",
+      "home": "Paraguai",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
