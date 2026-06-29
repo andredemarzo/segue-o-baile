@@ -1586,6 +1586,29 @@ function acEscape(s) {
   ));
 }
 
+// EXPIRAÇÃO (regra do operador 29/06): a coluna SAI DO AR quando os jogos que ela antevê COMEÇAM.
+// Âncora = calendário real (validUntil carimbado no publish, ou fallback pelo dia da coluna), NÃO
+// relógio fixo — então lida com o espaçamento do mata-mata sozinho. Fail-safe: na dúvida NÃO expira
+// (melhor mostrar que esconder por engano). Quando expira, o card fica oculto até a próxima coluna.
+let acColumnDoc = null;
+function acExpired(doc, now = new Date()) {
+  if (!doc) return false;
+  if (doc.validUntil) {                                  // explícito (carimbado no publish)
+    const t = new Date(doc.validUntil);
+    if (!isNaN(t.getTime())) return now.getTime() >= t.getTime();
+  }
+  if (!doc.date || !Array.isArray(MATCHES) || MATCHES.length === 0) return false; // fallback p/ today.json sem validUntil
+  let day = MATCHES.filter((m) => m.date === doc.date && m.time);
+  if (day.length === 0) {                                // dia de descanso → o próximo dia com jogos
+    const fut = MATCHES.filter((m) => m.date > doc.date && m.time).map((m) => m.date).sort();
+    if (fut.length) day = MATCHES.filter((m) => m.date === fut[0] && m.time);
+  }
+  if (day.length === 0) return false;
+  let last = 0;
+  for (const m of day) { const t = utcDate(m).getTime(); if (t > last) last = t; }
+  return last > 0 && now.getTime() >= last;
+}
+
 async function renderAcrescimos() {
   let doc;
   try {
@@ -1595,6 +1618,8 @@ async function renderAcrescimos() {
   }
   const sec = document.getElementById("acrescimos");
   if (!sec || !doc || !doc.paragraphs) return;
+  acColumnDoc = doc;                                      // guarda p/ o re-check periódico
+  if (acExpired(doc)) { sec.hidden = true; return; }      // saiu do ar: os jogos previstos já começaram
 
   const dateEl = document.getElementById("ac-date");
   if (dateEl) dateEl.textContent = doc.dateLabel ? `opinião do dia · ${doc.dateLabel}` : "opinião do dia";
@@ -1687,6 +1712,12 @@ async function boot() {
   window.setInterval(healRecentMatches, 45000);
   window.setInterval(renderKnockout, 45000);   // chaveamento + relabel da Classificação, frescos
   window.setInterval(renderStandings, 45000);  // C2: a tabela entra no ciclo (dirty-check evita re-render à toa)
+  window.setInterval(() => {                   // a coluna sai do ar quando os jogos previstos começam (aba aberta)
+    if (acColumnDoc && acExpired(acColumnDoc)) {
+      const s = document.getElementById("acrescimos");
+      if (s) s.hidden = true;
+    }
+  }, 60000);
 }
 
 boot();
