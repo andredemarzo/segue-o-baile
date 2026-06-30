@@ -59,6 +59,8 @@ jobs:
         # Roda em TODO deploy (auto OU push manual), sobre o site/ que VAI ao ar — fecha a brecha
         # do 30/06 (push manual de matches.json sem estrutura). Falhou aqui = NÃO deploya.
         if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
+        env:
+          COPA_PROJECT_DIR: ${{ github.workspace }}/site   # mesmo do passo de coleta — senão o --validate-only lê o default (Mac)
         run: |
           set -e
           echo "→ estrutura do matches.json (104 jogos, 32 mata-mata COM cruzamento):"
