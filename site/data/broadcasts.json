@@ -3602,8 +3602,8 @@
           "acesso": "grátis",
           "regiao": "PT",
           "url": "https://www.youtube.com/@LiveModeTV_PT/live",
-          "confianca": "provavel",
-          "embed": "https://www.youtube.com/embed/live_stream?channel=UCrYhacSar0c5Oq_Qdl3SH-g"
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/0Ztivk1yLpY"
         }
       ]
     },
@@ -3727,6 +3727,15 @@
           "regiao": "PT",
           "url": "https://www.sporttv.pt/",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/FvhqohP9_TA"
         }
       ]
     },
@@ -4549,5 +4558,5 @@
       ]
     }
   },
-  "updatedAt": "2026-06-29T23:52:22+00:00"
+  "updatedAt": "2026-06-30T17:14:03+00:00"
 }
