@@ -574,6 +574,25 @@ def write_broadcasts(matches):
 
 
 def main():
+    # --validate-only: GATE DE DEPLOY (independe de coleta). Lê o matches.json EM DISCO e falha se
+    # a estrutura estiver inválida (≠104 jogos, mata-mata sem placeholder de cruzamento, etc.). Roda
+    # em TODO push, ANTES do wrangler, p/ barrar dado ruim empurrado por QUALQUER caminho — inclusive
+    # o push manual por worktree, a brecha que zerou o chaveamento em 30/06.
+    if "--validate-only" in sys.argv:
+        try:
+            disk = json.load(open(OUT, encoding="utf-8")).get("matches", [])
+        except Exception as exc:
+            print(f"GATE: nao consegui ler {OUT}: {exc}")
+            sys.exit(1)
+        errs = validate(disk)
+        if errs:
+            print(f"GATE REPROVOU — {OUT} invalido ({len(errs)} erro(s)):")
+            for e in errs[:12]:
+                print("  -", e)
+            sys.exit(1)
+        print(f"GATE OK — {OUT}: {len(disk)} jogos, estrutura de mata-mata integra.")
+        return
+
     # COPA_FORCE=1 ignora o gate de janela (útil para testar o deploy na nuvem).
     if os.environ.get("COPA_FORCE") != "1" and not should_run_now():
         return  # fora de janela de jogo e de horário-base — não faz nada (silencioso)

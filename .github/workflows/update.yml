@@ -55,6 +55,23 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: GATE pré-deploy — barra regressão antes do wrangler (dado + front + cache-bust)
+        # Roda em TODO deploy (auto OU push manual), sobre o site/ que VAI ao ar — fecha a brecha
+        # do 30/06 (push manual de matches.json sem estrutura). Falhou aqui = NÃO deploya.
+        if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
+        run: |
+          set -e
+          echo "→ estrutura do matches.json (104 jogos, 32 mata-mata COM cruzamento):"
+          python scripts/copa_fixtures.py --validate-only
+          echo "→ sintaxe do front (app.js / sw.js):"
+          node --check site/app.js
+          node --check site/sw.js
+          echo "→ cache-bust consistente (CACHE_NAME do sw.js == ?v= do index.html):"
+          SWV=$(grep -oE 'alertas-v[0-9]+' site/sw.js | head -1 | grep -oE '[0-9]+$')
+          IXV=$(grep -oE 'app\.js\?v=[0-9]+' site/index.html | head -1 | grep -oE '[0-9]+$')
+          if [ "$SWV" != "$IXV" ]; then echo "GATE: cache-bust inconsistente (sw=$SWV index=$IXV)"; exit 1; fi
+          echo "✓ GATE passou — dado íntegro, front compila, cache-bust ok (sw=$SWV)"
+
       - name: Publica no Cloudflare Pages (se mudou, ou em push/disparo manual)
         if: steps.commit.outputs.changed == 'true' || github.event_name != 'schedule'
         env:
