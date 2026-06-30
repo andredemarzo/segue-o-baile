@@ -17,6 +17,7 @@ import os
 import re
 import shutil
 import sys
+import time
 import urllib.request
 
 API_URL = (
@@ -577,12 +578,7 @@ def main():
     if os.environ.get("COPA_FORCE") != "1" and not should_run_now():
         return  # fora de janela de jogo e de horário-base — não faz nada (silencioso)
 
-    try:
-        matches, stage_by_id = build()
-    except Exception as exc:  # rede/parse — não toca produção
-        print(f"ERRO ao buscar/parsear a API da FIFA: {exc}")
-        sys.exit(1)
-
+    # previous é lido UMA vez (independe do fetch) — usado no enrich e no change-gate.
     previous = []
     if os.path.exists(OUT):
         try:
@@ -591,16 +587,42 @@ def main():
             previous = []
     prev_by_id = {m["id"]: m for m in previous}
 
-    fetched = enrich_scorers(matches, stage_by_id, prev_by_id)
-    probs = enrich_probabilities(matches, prev_by_id)
-    enrich_weather(matches, prev_by_id)
+    # RESILIÊNCIA (causa-raiz do bracket stale 30/06): a FIFA às vezes dá um blip
+    # (5xx/timeout/JSON truncado) OU uma resposta PARCIAL no instante exato da virada
+    # de um mata-mata, que reprova a validação. Em vez de matar o run inteiro — sem
+    # coleta, sem deploy —, tenta de novo com backoff (2s,4s,8s ≈ 14s, dentro da
+    # cadência */15 sob concurrency). Só desiste, SEM tocar produção, após TODAS as
+    # tentativas. (fetch/Elo/clima já falham-soft; o fetch da agenda era o ÚNICO ponto
+    # duro cujo erro abortava tudo.)
+    FETCH_ATTEMPTS = 4
+    fetched = 0
+    matches = None
+    for attempt in range(1, FETCH_ATTEMPTS + 1):
+        try:
+            matches, stage_by_id = build()
+        except Exception as exc:  # rede/parse
+            print(f"[tentativa {attempt}/{FETCH_ATTEMPTS}] erro ao buscar/parsear a FIFA: {exc}")
+            if attempt == FETCH_ATTEMPTS:
+                print("ERRO: FIFA inacessível após todas as tentativas — data/matches.json NÃO tocado")
+                sys.exit(1)
+            time.sleep(2 ** attempt)
+            continue
 
-    errors = validate(matches)
-    if errors:
-        print("VALIDAÇÃO FALHOU — data/matches.json NÃO foi alterado:")
-        for e in errors[:12]:
-            print("  -", e)
-        sys.exit(1)
+        fetched = enrich_scorers(matches, stage_by_id, prev_by_id)
+        enrich_probabilities(matches, prev_by_id)
+        enrich_weather(matches, prev_by_id)
+
+        errors = validate(matches)
+        if not errors:
+            break  # coleta íntegra — segue para o write
+        print(f"[tentativa {attempt}/{FETCH_ATTEMPTS}] validação reprovou (resposta parcial?): "
+              + "; ".join(errors[:3]))
+        if attempt == FETCH_ATTEMPTS:
+            print("VALIDAÇÃO FALHOU após todas as tentativas — data/matches.json NÃO foi alterado:")
+            for e in errors[:12]:
+                print("  -", e)
+            sys.exit(1)
+        time.sleep(2 ** attempt)
 
     # Grade de transmissão: regenera junto, mas com seu próprio change-gate.
     write_broadcasts(matches)
