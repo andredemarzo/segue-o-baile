@@ -1199,7 +1199,7 @@ function renderKnockout() {
 
   // Re-renderiza só quando algo muda (preserva o scroll e não pisca a cada 45s).
   const sig = rounds.map((r) => r.games.map((m) => {
-    const f = finalScore(m); return `${m.id}:${m.home}/${m.away}:${matchPhase(m)}:${f ? f.home + "-" + f.away : ""}:${matchPens(m) ? "p" : ""}`;
+    const f = finalScore(m); return `${m.id}:${m.home}/${m.away}:${m.placeholderA || ""}/${m.placeholderB || ""}:${matchPhase(m)}:${f ? f.home + "-" + f.away : ""}:${matchPens(m) ? "p" : ""}`;
   }).join(",")).join("|");
   if (sig === koSig) return;
   const prev = document.querySelector("#ko-scroll");
@@ -1576,6 +1576,29 @@ async function loadData() {
   BROADCASTS = (broadcastsDoc && broadcastsDoc.games) || {};
 }
 
+// RAIZ do "Chaveamento/Oitavas não atualiza numa aba aberta, mesmo esperando" (30/06):
+// loadData() rodava SÓ no boot → MATCHES congelava no snapshot do carregamento; o cron
+// resolvia o cruzamento (ex.: J90 "Canadá x A definir" → "Canadá x Marrocos") no
+// matches.json, mas a aba aberta NUNCA re-buscava o arquivo. refreshData re-hidrata os
+// dados (no-store) e re-renderiza as seções que deles dependem, SEM reload. Os render*
+// têm dirty-check próprio (renderedScoreSig/stSig/koSig) → não pisca quando nada mudou.
+async function refreshData() {
+  if (refreshData._busy) return;            // não sobrepõe ciclos de fetch
+  refreshData._busy = true;
+  try {
+    await loadData();                        // re-busca matches+broadcasts e reatribui MATCHES/BROADCASTS
+    renderNext();
+    renderSchedule();
+    renderHistory();
+    renderStandings();
+    renderKnockout();
+  } catch (e) {
+    // rede instável no meio do ciclo: mantém o último snapshot bom (fail-soft, não quebra a aba)
+  } finally {
+    refreshData._busy = false;
+  }
+}
+
 // --- "Meus Acréscimos": coluna diária de opinião (1ª aba abaixo do card) ---
 // Lê o today.json (texto do dia + base de likes semeada), preenche a seção, ABRE na 1ª
 // visita do dia (depois que o usuário fecha, fica fechada o resto do dia), e cuida do like
@@ -1712,6 +1735,11 @@ async function boot() {
   window.setInterval(healRecentMatches, 45000);
   window.setInterval(renderKnockout, 45000);   // chaveamento + relabel da Classificação, frescos
   window.setInterval(renderStandings, 45000);  // C2: a tabela entra no ciclo (dirty-check evita re-render à toa)
+  window.setInterval(refreshData, 120000);     // RE-HIDRATA matches.json a cada 2min: aba aberta vê a resolução
+                                               // de cruzamento (Oitavas) e novos jogos SEM reload (raiz 30/06)
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) refreshData();       // volta ao foco → atualiza na hora
+  });
   window.setInterval(() => {                   // a coluna sai do ar quando os jogos previstos começam (aba aberta)
     if (acColumnDoc && acExpired(acColumnDoc)) {
       const s = document.getElementById("acrescimos");

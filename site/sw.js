@@ -1,11 +1,11 @@
-const CACHE_NAME = "copa-2026-alertas-v82";
+const CACHE_NAME = "copa-2026-alertas-v83";
 // DADOS (data/*.json) NÃO entram no precache nem no cache do SW — são servidos SEMPRE da rede
 // (ver o fetch handler). Cachear placar/grade serve dado velho como se fosse atual e fere a credibilidade.
 const STATIC_ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=82",
-  "./app.js?v=82",
+  "./styles.css?v=83",
+  "./app.js?v=83",
   "./manifest.webmanifest",
   "./assets/worldcup-mark.svg",
   "./assets/icon-192.png",
