@@ -1,0 +1,44 @@
+name: Verifica Cloudflare Pages (fecha furo #2 — Direct Upload vs Git-integration)
+
+# Roda scripts/cf_check.py com os secrets CLOUDFLARE_* e responde: o projeto so deploya
+# pela Action (Direct Upload → o gate cobre tudo) ou tem git-integration (push pula o gate)?
+# Commita o veredito em cf_check.json (raiz, fora do paths do update.yml → nao dispara deploy)
+# e reflete no status do run (success = furo fechado; failure = furo aberto).
+
+on:
+  workflow_dispatch:
+  push:
+    paths: [".github/workflows/verify-cf.yml"]   # auto-roda ao criar
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Consulta a API do Cloudflare
+        id: cf
+        continue-on-error: true
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: python3 scripts/cf_check.py
+
+      - name: Commita o veredito (canal legível, raiz → não dispara o deploy)
+        run: |
+          git config user.name "copa-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cf_check.json 2>/dev/null || true
+          git commit -m "verify(cf): Direct Upload vs Git-integration [furo #2]" || echo "sem mudança"
+          git push || echo "push falhou"
+
+      - name: Reflete o veredito no status do run
+        run: |
+          if [ "${{ steps.cf.outcome }}" != "success" ]; then
+            echo "⚠️ cf_check saiu != 0 — git-integration ou erro de API (ver cf_check.json)"
+            exit 1
+          fi
+          echo "✓ Direct Upload confirmado — furo #2 fechado"
