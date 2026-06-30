@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-30T19:05:21+00:00",
+  "updatedAt": "2026-06-30T21:03:02+00:00",
   "matches": [
     {
       "id": 1,
@@ -5003,7 +5003,7 @@
       "time": "16:00",
       "offset": -4,
       "home": "Brasil",
-      "away": "A definir",
+      "away": "Noruega",
       "status": 1,
       "homeScore": null,
       "awayScore": null,
@@ -5013,6 +5013,11 @@
       "placeholderB": "W78",
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
+      "prob": {
+        "home": 53,
+        "draw": 22,
+        "away": 25
+      },
       "weather": {
         "tempC": 32,
         "at": "2026-06-30T17:13:28+00:00"
