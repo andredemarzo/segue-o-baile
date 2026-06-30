@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-30T09:46:58+01:00",
+  "updatedAt": "2026-06-30T13:42:58+01:00",
   "matches": [
     {
       "id": 1,
@@ -20,6 +20,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "scorers": [
@@ -32,44 +34,6 @@
           "name": "Raul Jimenez",
           "minute": "67'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Teboho Mokoena",
-          "minute": "17'",
-          "type": "amarelo",
-          "team": "África do Sul"
-        },
-        {
-          "name": "Brian Gutierrez",
-          "minute": "23'",
-          "type": "amarelo",
-          "team": "México"
-        },
-        {
-          "name": "Sphephelo Sithole",
-          "minute": "49'",
-          "type": "vermelho",
-          "team": "África do Sul"
-        },
-        {
-          "name": "Nkosinathi Sibisi",
-          "minute": "74'",
-          "type": "amarelo",
-          "team": "África do Sul"
-        },
-        {
-          "name": "Themba Zwane",
-          "minute": "84'",
-          "type": "vermelho",
-          "team": "África do Sul"
-        },
-        {
-          "name": "Cesar Montes",
-          "minute": "90'+2'",
-          "type": "vermelho",
-          "team": "México"
         }
       ]
     },
@@ -89,6 +53,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "scorers": [
@@ -106,14 +72,6 @@
           "name": "Oh Hyeongyu",
           "minute": "80'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Lee Gihyuk",
-          "minute": "90'+6'",
-          "type": "amarelo",
-          "team": "República da Coreia"
         }
       ]
     },
@@ -133,6 +91,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "scorers": [
@@ -145,38 +105,6 @@
           "name": "Cyle Larin",
           "minute": "78'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Alistair Johnston",
-          "minute": "11'",
-          "type": "amarelo",
-          "team": "Canadá"
-        },
-        {
-          "name": "Ermedin Demirovic",
-          "minute": "44'",
-          "type": "amarelo",
-          "team": "Bósnia e Herzegovina"
-        },
-        {
-          "name": "Jovo Lukic",
-          "minute": "45'+1'",
-          "type": "amarelo",
-          "team": "Bósnia e Herzegovina"
-        },
-        {
-          "name": "Luc De Fougerolles",
-          "minute": "53'",
-          "type": "amarelo",
-          "team": "Canadá"
-        },
-        {
-          "name": "Nikola Katic",
-          "minute": "90'+3'",
-          "type": "amarelo",
-          "team": "Bósnia e Herzegovina"
         }
       ]
     },
@@ -196,6 +124,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [
@@ -225,44 +155,6 @@
           "minute": "90'+8'",
           "side": "home"
         }
-      ],
-      "cards": [
-        {
-          "name": "Juan Jose Caceres",
-          "minute": "9'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Miguel Almiron",
-          "minute": "53'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Tyler Adams",
-          "minute": "59'",
-          "type": "amarelo",
-          "team": "EUA"
-        },
-        {
-          "name": "Diego Gomez",
-          "minute": "79'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Alex Arce",
-          "minute": "88'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Junior Alonso",
-          "minute": "90'+3'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        }
       ]
     },
     {
@@ -281,6 +173,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [
@@ -288,32 +182,6 @@
           "name": "John Mcginn",
           "minute": "28'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Jean-Ricner Bellegarde",
-          "minute": "39'",
-          "type": "amarelo",
-          "team": "Haiti"
-        },
-        {
-          "name": "Aaron Hickey",
-          "minute": "46'",
-          "type": "amarelo",
-          "team": "Escócia"
-        },
-        {
-          "name": "Findlay Curtis",
-          "minute": "90'+1'",
-          "type": "amarelo",
-          "team": "Escócia"
-        },
-        {
-          "name": "Kenny Mclean",
-          "minute": "90'+5'",
-          "type": "amarelo",
-          "team": "Escócia"
         }
       ],
       "weather": {
@@ -337,6 +205,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "scorers": [
@@ -349,14 +219,6 @@
           "name": "Connor Metcalfe",
           "minute": "75'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Yunus Akgun",
-          "minute": "86'",
-          "type": "amarelo",
-          "team": "Turquia"
         }
       ],
       "weather": {
@@ -380,6 +242,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "scorers": [
@@ -392,20 +256,6 @@
           "name": "Vinicius Junior",
           "minute": "32'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Casemiro",
-          "minute": "37'",
-          "type": "amarelo",
-          "team": "Brasil"
-        },
-        {
-          "name": "Roger Ibanez",
-          "minute": "43'",
-          "type": "amarelo",
-          "team": "Brasil"
         }
       ],
       "weather": {
@@ -429,6 +279,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [
@@ -443,26 +295,6 @@
           "minute": "90'+4'",
           "side": "home",
           "note": "gc"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Mahmoud Abunada",
-          "minute": "13'",
-          "type": "amarelo",
-          "team": "Catar"
-        },
-        {
-          "name": "Jassem Gaber",
-          "minute": "23'",
-          "type": "amarelo",
-          "team": "Catar"
-        },
-        {
-          "name": "Denis Zakaria",
-          "minute": "42'",
-          "type": "amarelo",
-          "team": "Suíça"
         }
       ],
       "weather": {
@@ -486,6 +318,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "scorers": [
@@ -493,32 +327,6 @@
           "name": "Amad Diallo",
           "minute": "90'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Seko Fofana",
-          "minute": "28'",
-          "type": "amarelo",
-          "team": "Costa do Marfim"
-        },
-        {
-          "name": "Franck Kessie",
-          "minute": "38'",
-          "type": "amarelo",
-          "team": "Costa do Marfim"
-        },
-        {
-          "name": "Guela Doue",
-          "minute": "40'",
-          "type": "amarelo",
-          "team": "Costa do Marfim"
-        },
-        {
-          "name": "Jackson Porozo",
-          "minute": "73'",
-          "type": "amarelo",
-          "team": "Equador"
         }
       ],
       "weather": {
@@ -542,6 +350,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [
@@ -587,7 +397,6 @@
           "side": "home"
         }
       ],
-      "cards": [],
       "weather": {
         "tempC": 30,
         "at": "2026-06-16T12:59:16+00:00"
@@ -609,6 +418,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "scorers": [
@@ -633,26 +444,6 @@
           "side": "away"
         }
       ],
-      "cards": [
-        {
-          "name": "Crysencio Summerville",
-          "minute": "61'",
-          "type": "amarelo",
-          "team": "Holanda"
-        },
-        {
-          "name": "Memphis Depay",
-          "minute": "83'",
-          "type": "amarelo",
-          "team": "Holanda"
-        },
-        {
-          "name": "Micky Van De Ven",
-          "minute": "90'+1'",
-          "type": "amarelo",
-          "team": "Holanda"
-        }
-      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-16T12:59:16+00:00"
@@ -674,6 +465,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "scorers": [
@@ -708,14 +501,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Rani Khedira",
-          "minute": "54'",
-          "type": "amarelo",
-          "team": "Tunísia"
-        }
-      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-16T12:59:16+00:00"
@@ -737,6 +522,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "scorers": [
@@ -749,14 +536,6 @@
           "name": "Maxi Araujo",
           "minute": "80'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Abdulelah Alamri",
-          "minute": "44'",
-          "type": "amarelo",
-          "team": "Arábia Saudita"
         }
       ],
       "weather": {
@@ -780,23 +559,11 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "scorers": [],
-      "cards": [
-        {
-          "name": "Sidny Lopes Cabral",
-          "minute": "16'",
-          "type": "amarelo",
-          "team": "Cabo Verde"
-        },
-        {
-          "name": "Pedri",
-          "minute": "90'+3'",
-          "type": "amarelo",
-          "team": "Espanha"
-        }
-      ],
       "weather": {
         "tempC": 26,
         "at": "2026-06-16T12:59:16+00:00"
@@ -818,6 +585,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [
@@ -842,14 +611,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Ehsan Hajisafi",
-          "minute": "89'",
-          "type": "amarelo",
-          "team": "RI do Irã"
-        }
-      ],
       "weather": {
         "tempC": 20,
         "at": "2026-06-15T19:59:53+00:00"
@@ -871,6 +632,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Seattle",
       "venue": "Lumen Field",
       "scorers": [
@@ -884,32 +647,6 @@
           "minute": "66'",
           "side": "home",
           "note": "gc"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Marawan Attia",
-          "minute": "13'",
-          "type": "amarelo",
-          "team": "Egito"
-        },
-        {
-          "name": "Timothy Castagne",
-          "minute": "14'",
-          "type": "amarelo",
-          "team": "Bélgica"
-        },
-        {
-          "name": "Ahmed Fatouh",
-          "minute": "34'",
-          "type": "amarelo",
-          "team": "Egito"
-        },
-        {
-          "name": "Maxim De Cuyper",
-          "minute": "75'",
-          "type": "amarelo",
-          "team": "Bélgica"
         }
       ],
       "weather": {
@@ -933,6 +670,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "scorers": [
@@ -957,7 +696,6 @@
           "side": "home"
         }
       ],
-      "cards": [],
       "weather": {
         "tempC": 26,
         "at": "2026-06-16T12:49:25+00:00"
@@ -979,6 +717,8 @@
       "awayScore": 4,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [
@@ -1009,14 +749,6 @@
           "note": "gc"
         }
       ],
-      "cards": [
-        {
-          "name": "Zaid Tahseen",
-          "minute": "86'",
-          "type": "amarelo",
-          "team": "Iraque"
-        }
-      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-16T19:00:39+00:00"
@@ -1038,6 +770,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "scorers": [
@@ -1057,7 +791,6 @@
           "side": "home"
         }
       ],
-      "cards": [],
       "weather": {
         "tempC": 28,
         "at": "2026-06-16T19:00:39+00:00"
@@ -1079,6 +812,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [
@@ -1105,14 +840,6 @@
           "note": "p"
         }
       ],
-      "cards": [
-        {
-          "name": "Marcel Sabitzer",
-          "minute": "77'",
-          "type": "amarelo",
-          "team": "Áustria"
-        }
-      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-17T01:58:37+00:00"
@@ -1134,6 +861,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "scorers": [
@@ -1141,26 +870,6 @@
           "name": "Caleb Yirenkyi",
           "minute": "90'+5'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Caleb Yirenkyi",
-          "minute": "16'",
-          "type": "amarelo",
-          "team": "Gana"
-        },
-        {
-          "name": "Cesar Blackman",
-          "minute": "72'",
-          "type": "amarelo",
-          "team": "Panamá"
-        },
-        {
-          "name": "Carlos Harvey",
-          "minute": "90'+9'",
-          "type": "amarelo",
-          "team": "Panamá"
         }
       ],
       "weather": {
@@ -1184,6 +893,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "scorers": [
@@ -1219,7 +930,6 @@
           "side": "home"
         }
       ],
-      "cards": [],
       "weather": {
         "tempC": 32,
         "at": "2026-06-17T17:49:01+00:00"
@@ -1241,6 +951,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [
@@ -1253,32 +965,6 @@
           "name": "Yoane Wissa",
           "minute": "45'+5'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Bernardo Silva",
-          "minute": "13'",
-          "type": "amarelo",
-          "team": "Portugal"
-        },
-        {
-          "name": "Chancel Mbemba",
-          "minute": "32'",
-          "type": "amarelo",
-          "team": "RD do Congo"
-        },
-        {
-          "name": "Nelson Semedo",
-          "minute": "88'",
-          "type": "amarelo",
-          "team": "Portugal"
-        },
-        {
-          "name": "Tomas Araujo",
-          "minute": "90'+2'",
-          "type": "amarelo",
-          "team": "Portugal"
         }
       ],
       "weather": {
@@ -1302,6 +988,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "scorers": [
@@ -1326,20 +1014,6 @@
           "side": "away"
         }
       ],
-      "cards": [
-        {
-          "name": "Johan Mojica",
-          "minute": "7'",
-          "type": "amarelo",
-          "team": "Colômbia"
-        },
-        {
-          "name": "Abdukodir Khusanov",
-          "minute": "34'",
-          "type": "amarelo",
-          "team": "Uzbequistão"
-        }
-      ],
       "weather": {
         "tempC": 18,
         "at": "2026-06-18T01:59:33+00:00"
@@ -1361,6 +1035,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "scorers": [
@@ -1374,26 +1050,6 @@
           "minute": "83'",
           "side": "away",
           "note": "p"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Teboho Mokoena",
-          "minute": "33'",
-          "type": "amarelo",
-          "team": "África do Sul"
-        },
-        {
-          "name": "Thalente Mbatha",
-          "minute": "40'",
-          "type": "amarelo",
-          "team": "África do Sul"
-        },
-        {
-          "name": "Ladislav Krejci",
-          "minute": "75'",
-          "type": "amarelo",
-          "team": "Tchéquia"
         }
       ],
       "weather": {
@@ -1417,6 +1073,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [
@@ -1447,32 +1105,6 @@
           "note": "p"
         }
       ],
-      "cards": [
-        {
-          "name": "Amar Dedic",
-          "minute": "59'",
-          "type": "amarelo",
-          "team": "Bósnia e Herzegovina"
-        },
-        {
-          "name": "Edin Dzeko",
-          "minute": "61'",
-          "type": "amarelo",
-          "team": "Bósnia e Herzegovina"
-        },
-        {
-          "name": "Nico Elvedi",
-          "minute": "65'",
-          "type": "amarelo",
-          "team": "Suíça"
-        },
-        {
-          "name": "Tarik Muharemovic",
-          "minute": "80'",
-          "type": "vermelho",
-          "team": "Bósnia e Herzegovina"
-        }
-      ],
       "weather": {
         "tempC": 21,
         "at": "2026-06-18T17:39:14+00:00"
@@ -1494,6 +1126,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "scorers": [
@@ -1529,32 +1163,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Derek Cornelius",
-          "minute": "9'",
-          "type": "amarelo",
-          "team": "Canadá"
-        },
-        {
-          "name": "Homam Ahmed",
-          "minute": "33'",
-          "type": "vermelho",
-          "team": "Catar"
-        },
-        {
-          "name": "Assim Madibo",
-          "minute": "51'",
-          "type": "vermelho",
-          "team": "Catar"
-        },
-        {
-          "name": "Ahmed Fathy",
-          "minute": "62'",
-          "type": "amarelo",
-          "team": "Catar"
-        }
-      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-18T17:39:14+00:00"
@@ -1576,6 +1184,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "scorers": [
@@ -1583,20 +1193,6 @@
           "name": "Luis Romo",
           "minute": "50'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Lee Kangin",
-          "minute": "4'",
-          "type": "amarelo",
-          "team": "República da Coreia"
-        },
-        {
-          "name": "Paik Seungho",
-          "minute": "58'",
-          "type": "amarelo",
-          "team": "República da Coreia"
         }
       ],
       "weather": {
@@ -1620,6 +1216,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "scorers": [
@@ -1637,32 +1235,6 @@
           "name": "Vinicius Junior",
           "minute": "45'+3'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Carlens Arcus",
-          "minute": "4'",
-          "type": "amarelo",
-          "team": "Haiti"
-        },
-        {
-          "name": "Frantzdy Pierrot",
-          "minute": "45'+4'",
-          "type": "amarelo",
-          "team": "Haiti"
-        },
-        {
-          "name": "Douglas Santos",
-          "minute": "65'",
-          "type": "amarelo",
-          "team": "Brasil"
-        },
-        {
-          "name": "Danley Jean Jacques",
-          "minute": "72'",
-          "type": "amarelo",
-          "team": "Haiti"
         }
       ],
       "weather": {
@@ -1686,6 +1258,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [
@@ -1693,20 +1267,6 @@
           "name": "Ismael Saibari",
           "minute": "2'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Issa Diop",
-          "minute": "22'",
-          "type": "amarelo",
-          "team": "Marrocos"
-        },
-        {
-          "name": "Andy Robertson",
-          "minute": "65'",
-          "type": "amarelo",
-          "team": "Escócia"
         }
       ],
       "weather": {
@@ -1730,6 +1290,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [
@@ -1737,38 +1299,6 @@
           "name": "Matias Galarza",
           "minute": "2'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Matias Galarza",
-          "minute": "4'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Carlos Gonzalez",
-          "minute": "37'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Miguel Almiron",
-          "minute": "45'+3'",
-          "type": "vermelho",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Vincenzo Montella",
-          "minute": "63'",
-          "type": "amarelo",
-          "team": "Turquia"
-        },
-        {
-          "name": "Eren Elmali",
-          "minute": "71'",
-          "type": "amarelo",
-          "team": "Turquia"
         }
       ],
       "weather": {
@@ -1792,6 +1322,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Seattle",
       "venue": "Lumen Field",
       "scorers": [
@@ -1805,50 +1337,6 @@
           "name": "Alex Freeman",
           "minute": "43'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Jordan Bos",
-          "minute": "16'",
-          "type": "amarelo",
-          "team": "Austrália"
-        },
-        {
-          "name": "Alessandro Circati",
-          "minute": "32'",
-          "type": "amarelo",
-          "team": "Austrália"
-        },
-        {
-          "name": "Antonee Robinson",
-          "minute": "56'",
-          "type": "amarelo",
-          "team": "EUA"
-        },
-        {
-          "name": "Folarin Balogun",
-          "minute": "89'",
-          "type": "amarelo",
-          "team": "EUA"
-        },
-        {
-          "name": "Jacob Italiano",
-          "minute": "89'",
-          "type": "amarelo",
-          "team": "Austrália"
-        },
-        {
-          "name": "Harry Souttar",
-          "minute": "89'",
-          "type": "amarelo",
-          "team": "Austrália"
-        },
-        {
-          "name": "Chris Richards",
-          "minute": "90'+3'",
-          "type": "amarelo",
-          "team": "EUA"
         }
       ],
       "weather": {
@@ -1872,6 +1360,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "scorers": [
@@ -1891,7 +1381,6 @@
           "side": "home"
         }
       ],
-      "cards": [],
       "weather": {
         "tempC": 23,
         "at": "2026-06-20T16:58:46+00:00"
@@ -1913,47 +1402,11 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "scorers": [],
-      "cards": [
-        {
-          "name": "Jordy Alcivar",
-          "minute": "38'",
-          "type": "amarelo",
-          "team": "Equador"
-        },
-        {
-          "name": "Leandro Bacuna",
-          "minute": "39'",
-          "type": "amarelo",
-          "team": "Curaçau"
-        },
-        {
-          "name": "Juninho Bacuna",
-          "minute": "53'",
-          "type": "amarelo",
-          "team": "Curaçau"
-        },
-        {
-          "name": "Livano Comenencia",
-          "minute": "56'",
-          "type": "amarelo",
-          "team": "Curaçau"
-        },
-        {
-          "name": "Jurien Gaari",
-          "minute": "75'",
-          "type": "amarelo",
-          "team": "Curaçau"
-        },
-        {
-          "name": "Gervane Kastaneer",
-          "minute": "90'+1'",
-          "type": "amarelo",
-          "team": "Curaçau"
-        }
-      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-20T23:40:52+00:00"
@@ -1975,6 +1428,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [
@@ -2009,26 +1464,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Gabriel Gudmundsson",
-          "minute": "53'",
-          "type": "amarelo",
-          "team": "Suécia"
-        },
-        {
-          "name": "Yasin Ayari",
-          "minute": "75'",
-          "type": "amarelo",
-          "team": "Suécia"
-        },
-        {
-          "name": "Lucas Bergvall",
-          "minute": "80'",
-          "type": "amarelo",
-          "team": "Suécia"
-        }
-      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-20T16:58:46+00:00"
@@ -2050,6 +1485,8 @@
       "awayScore": 4,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "scorers": [
@@ -2074,7 +1511,6 @@
           "side": "away"
         }
       ],
-      "cards": [],
       "weather": {
         "tempC": 25,
         "at": "2026-06-20T23:40:52+00:00"
@@ -2096,6 +1532,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "scorers": [
@@ -2120,32 +1558,6 @@
           "side": "away"
         }
       ],
-      "cards": [
-        {
-          "name": "Sidny Lopes Cabral",
-          "minute": "5'",
-          "type": "amarelo",
-          "team": "Cabo Verde"
-        },
-        {
-          "name": "Rodrigo Bentancur",
-          "minute": "20'",
-          "type": "amarelo",
-          "team": "Uruguai"
-        },
-        {
-          "name": "Mathias Olivera",
-          "minute": "58'",
-          "type": "amarelo",
-          "team": "Uruguai"
-        },
-        {
-          "name": "Diney Borges",
-          "minute": "90'+3'",
-          "type": "amarelo",
-          "team": "Cabo Verde"
-        }
-      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-21T16:20:32+00:00"
@@ -2167,6 +1579,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "scorers": [
@@ -2192,20 +1606,6 @@
           "note": "gc"
         }
       ],
-      "cards": [
-        {
-          "name": "Salem Aldawsari",
-          "minute": "30'",
-          "type": "amarelo",
-          "team": "Arábia Saudita"
-        },
-        {
-          "name": "Mohamed Kanno",
-          "minute": "60'",
-          "type": "amarelo",
-          "team": "Arábia Saudita"
-        }
-      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-21T07:04:53+00:00"
@@ -2227,29 +1627,11 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [],
-      "cards": [
-        {
-          "name": "Romelu Lukaku",
-          "minute": "3'",
-          "type": "amarelo",
-          "team": "Bélgica"
-        },
-        {
-          "name": "Saeid Ezatolahi",
-          "minute": "33'",
-          "type": "amarelo",
-          "team": "RI do Irã"
-        },
-        {
-          "name": "Nathan Ngoy",
-          "minute": "66'",
-          "type": "vermelho",
-          "team": "Bélgica"
-        }
-      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-21T16:20:32+00:00"
@@ -2271,6 +1653,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "scorers": [
@@ -2295,26 +1679,6 @@
           "side": "away"
         }
       ],
-      "cards": [
-        {
-          "name": "Mohanad Lashin",
-          "minute": "17'",
-          "type": "amarelo",
-          "team": "Egito"
-        },
-        {
-          "name": "Sarpreet Singh",
-          "minute": "20'",
-          "type": "amarelo",
-          "team": "Nova Zelândia"
-        },
-        {
-          "name": "Callum Mccowatt",
-          "minute": "34'",
-          "type": "amarelo",
-          "team": "Nova Zelândia"
-        }
-      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-21T22:39:41+00:00"
@@ -2336,6 +1700,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "scorers": [
@@ -2365,7 +1731,6 @@
           "side": "away"
         }
       ],
-      "cards": [],
       "weather": {
         "tempC": 22,
         "at": "2026-06-22T18:30:41+00:00"
@@ -2387,6 +1752,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "scorers": [
@@ -2404,14 +1771,6 @@
           "name": "Ousmane Dembele",
           "minute": "66'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Amir Alammari",
-          "minute": "6'",
-          "type": "amarelo",
-          "team": "Iraque"
         }
       ],
       "weather": {
@@ -2435,6 +1794,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "scorers": [
@@ -2447,32 +1808,6 @@
           "name": "Lionel Messi",
           "minute": "90'+5'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Stefan Posch",
-          "minute": "40'",
-          "type": "amarelo",
-          "team": "Áustria"
-        },
-        {
-          "name": "Konrad Laimer",
-          "minute": "76'",
-          "type": "amarelo",
-          "team": "Áustria"
-        },
-        {
-          "name": "Facundo Medina",
-          "minute": "76'",
-          "type": "amarelo",
-          "team": "Argentina"
-        },
-        {
-          "name": "Leandro Paredes",
-          "minute": "90'+2'",
-          "type": "amarelo",
-          "team": "Argentina"
         }
       ],
       "weather": {
@@ -2496,6 +1831,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [
@@ -2513,20 +1850,6 @@
           "name": "Amine Gouiri",
           "minute": "82'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Ramiz Zerrouki",
-          "minute": "44'",
-          "type": "amarelo",
-          "team": "Argélia"
-        },
-        {
-          "name": "Husam Abudahab",
-          "minute": "64'",
-          "type": "amarelo",
-          "team": "Jordânia"
         }
       ],
       "weather": {
@@ -2550,23 +1873,11 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [],
-      "cards": [
-        {
-          "name": "Declan Rice",
-          "minute": "41'",
-          "type": "amarelo",
-          "team": "Inglaterra"
-        },
-        {
-          "name": "Inaki Williams",
-          "minute": "60'",
-          "type": "amarelo",
-          "team": "Gana"
-        }
-      ],
       "weather": {
         "tempC": 19,
         "at": "2026-06-23T18:18:58+00:00"
@@ -2588,6 +1899,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "scorers": [
@@ -2595,20 +1908,6 @@
           "name": "Ante Budimir",
           "minute": "54'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Edgar Yoel Barcenas",
-          "minute": "61'",
-          "type": "amarelo",
-          "team": "Panamá"
-        },
-        {
-          "name": "Petar Sucic",
-          "minute": "90'+2'",
-          "type": "amarelo",
-          "team": "Croácia"
         }
       ],
       "weather": {
@@ -2632,6 +1931,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [
@@ -2662,20 +1963,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Odiljon Xamrobekov",
-          "minute": "14'",
-          "type": "amarelo",
-          "team": "Uzbequistão"
-        },
-        {
-          "name": "Renato Veiga",
-          "minute": "68'",
-          "type": "amarelo",
-          "team": "Portugal"
-        }
-      ],
       "weather": {
         "tempC": 33,
         "at": "2026-06-23T04:18:19+00:00"
@@ -2697,6 +1984,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "scorers": [
@@ -2704,26 +1993,6 @@
           "name": "Daniel Munoz",
           "minute": "76'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Jhon Lucumi",
-          "minute": "56'",
-          "type": "amarelo",
-          "team": "Colômbia"
-        },
-        {
-          "name": "Charles Pickel",
-          "minute": "90'+3'",
-          "type": "amarelo",
-          "team": "RD do Congo"
-        },
-        {
-          "name": "Jefferson Lerma",
-          "minute": "90'+4'",
-          "type": "amarelo",
-          "team": "Colômbia"
         }
       ],
       "weather": {
@@ -2747,6 +2016,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "scorers": [
@@ -2764,26 +2035,6 @@
           "name": "Matheus Cunha",
           "minute": "60'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Danilo",
-          "minute": "62'",
-          "type": "amarelo",
-          "team": "Brasil"
-        },
-        {
-          "name": "Fabinho",
-          "minute": "82'",
-          "type": "amarelo",
-          "team": "Brasil"
-        },
-        {
-          "name": "Ryan Christie",
-          "minute": "89'",
-          "type": "amarelo",
-          "team": "Escócia"
         }
       ],
       "weather": {
@@ -2807,6 +2058,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "scorers": [
@@ -2847,26 +2100,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Johny Placide",
-          "minute": "79'",
-          "type": "amarelo",
-          "team": "Haiti"
-        },
-        {
-          "name": "Duckens Nazon",
-          "minute": "79'",
-          "type": "amarelo",
-          "team": "Haiti"
-        },
-        {
-          "name": "Josue Casimir",
-          "minute": "90'+3'",
-          "type": "amarelo",
-          "team": "Haiti"
-        }
-      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-24T04:22:34+00:00"
@@ -2888,6 +2121,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "scorers": [
@@ -2905,26 +2140,6 @@
           "name": "Promise David",
           "minute": "76'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Cyle Larin",
-          "minute": "32'",
-          "type": "amarelo",
-          "team": "Canadá"
-        },
-        {
-          "name": "Granit Xhaka",
-          "minute": "32'",
-          "type": "amarelo",
-          "team": "Suíça"
-        },
-        {
-          "name": "Liam Millar",
-          "minute": "87'",
-          "type": "amarelo",
-          "team": "Canadá"
         }
       ],
       "weather": {
@@ -2948,6 +2163,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Seattle",
       "venue": "Lumen Field",
       "scorers": [
@@ -2973,20 +2190,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Ahmed Fathy",
-          "minute": "78'",
-          "type": "amarelo",
-          "team": "Catar"
-        },
-        {
-          "name": "Ermin Mahmic",
-          "minute": "82'",
-          "type": "amarelo",
-          "team": "Bósnia e Herzegovina"
-        }
-      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-24T04:22:34+00:00"
@@ -3008,6 +2211,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "scorers": [
@@ -3025,14 +2230,6 @@
           "name": "Alvaro Fidalgo",
           "minute": "90'+4'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Edson Alvarez",
-          "minute": "63'",
-          "type": "amarelo",
-          "team": "México"
         }
       ],
       "weather": {
@@ -3056,6 +2253,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "scorers": [
@@ -3063,20 +2262,6 @@
           "name": "Thapelo Maseko",
           "minute": "63'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Aubrey Modiba",
-          "minute": "72'",
-          "type": "amarelo",
-          "team": "África do Sul"
-        },
-        {
-          "name": "Cho Guesung",
-          "minute": "78'",
-          "type": "amarelo",
-          "team": "República da Coreia"
         }
       ],
       "weather": {
@@ -3100,6 +2285,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "scorers": [
@@ -3112,26 +2299,6 @@
           "name": "Nicolas Pepe",
           "minute": "64'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Nicolas Pepe",
-          "minute": "34'",
-          "type": "amarelo",
-          "team": "Costa do Marfim"
-        },
-        {
-          "name": "Juninho Bacuna",
-          "minute": "75'",
-          "type": "amarelo",
-          "team": "Curaçau"
-        },
-        {
-          "name": "Gervane Kastaneer",
-          "minute": "83'",
-          "type": "amarelo",
-          "team": "Curaçau"
         }
       ],
       "weather": {
@@ -3155,6 +2322,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "scorers": [
@@ -3179,32 +2348,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Piero Hincapie",
-          "minute": "43'",
-          "type": "amarelo",
-          "team": "Equador"
-        },
-        {
-          "name": "Aleksandar Pavlovic",
-          "minute": "44'",
-          "type": "amarelo",
-          "team": "Alemanha"
-        },
-        {
-          "name": "Alan Franco",
-          "minute": "50'",
-          "type": "amarelo",
-          "team": "Equador"
-        },
-        {
-          "name": "Gonzalo Plata",
-          "minute": "89'",
-          "type": "amarelo",
-          "team": "Equador"
-        }
-      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-25T09:17:14+00:00"
@@ -3226,6 +2369,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "scorers": [
@@ -3238,26 +2383,6 @@
           "name": "Anthony Elanga",
           "minute": "62'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Isak Hien",
-          "minute": "32'",
-          "type": "amarelo",
-          "team": "Suécia"
-        },
-        {
-          "name": "Shogo Taniguchi",
-          "minute": "77'",
-          "type": "amarelo",
-          "team": "Japão"
-        },
-        {
-          "name": "Viktor Gyokeres",
-          "minute": "84'",
-          "type": "amarelo",
-          "team": "Suécia"
         }
       ],
       "weather": {
@@ -3281,6 +2406,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "scorers": [
@@ -3306,7 +2433,6 @@
           "side": "away"
         }
       ],
-      "cards": [],
       "weather": {
         "tempC": 22,
         "at": "2026-06-25T09:17:14+00:00"
@@ -3328,6 +2454,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [
@@ -3357,14 +2485,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Sebastian Berhalter",
-          "minute": "19'",
-          "type": "amarelo",
-          "team": "EUA"
-        }
-      ],
       "weather": {
         "tempC": 18,
         "at": "2026-06-25T09:17:14+00:00"
@@ -3386,23 +2506,11 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "scorers": [],
-      "cards": [
-        {
-          "name": "Jackson Irvine",
-          "minute": "46'",
-          "type": "amarelo",
-          "team": "Austrália"
-        },
-        {
-          "name": "Diego Gomez",
-          "minute": "77'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        }
-      ],
       "weather": {
         "tempC": 18,
         "at": "2026-06-25T09:17:14+00:00"
@@ -3424,6 +2532,8 @@
       "awayScore": 4,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [
@@ -3453,20 +2563,6 @@
           "side": "away"
         }
       ],
-      "cards": [
-        {
-          "name": "Patrick Berg",
-          "minute": "10'",
-          "type": "amarelo",
-          "team": "Noruega"
-        },
-        {
-          "name": "Aurelien Tchouameni",
-          "minute": "74'",
-          "type": "amarelo",
-          "team": "França"
-        }
-      ],
       "weather": {
         "tempC": 26,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3488,6 +2584,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Toronto",
       "venue": "BMO Field",
       "scorers": [
@@ -3517,38 +2615,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Rebin Sulaka",
-          "minute": "13'",
-          "type": "vermelho",
-          "team": "Iraque"
-        },
-        {
-          "name": "Abdoulaye Seck",
-          "minute": "18'",
-          "type": "amarelo",
-          "team": "Senegal"
-        },
-        {
-          "name": "Amir Alammari",
-          "minute": "75'",
-          "type": "amarelo",
-          "team": "Iraque"
-        },
-        {
-          "name": "Pape Gueye",
-          "minute": "81'",
-          "type": "amarelo",
-          "team": "Senegal"
-        },
-        {
-          "name": "Merchas Doski",
-          "minute": "90'",
-          "type": "amarelo",
-          "team": "Iraque"
-        }
-      ],
       "weather": {
         "tempC": 20,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3570,6 +2636,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Seattle",
       "venue": "Lumen Field",
       "scorers": [
@@ -3582,50 +2650,6 @@
           "name": "Ramin Rezaeian",
           "minute": "14'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Hossein Kanani",
-          "minute": "18'",
-          "type": "amarelo",
-          "team": "RI do Irã"
-        },
-        {
-          "name": "Mahmoud Saber",
-          "minute": "19'",
-          "type": "amarelo",
-          "team": "Egito"
-        },
-        {
-          "name": "Yasser Ibrahim",
-          "minute": "41'",
-          "type": "amarelo",
-          "team": "Egito"
-        },
-        {
-          "name": "Ali Nemati",
-          "minute": "43'",
-          "type": "amarelo",
-          "team": "RI do Irã"
-        },
-        {
-          "name": "Saeid Ezatolahi",
-          "minute": "79'",
-          "type": "amarelo",
-          "team": "RI do Irã"
-        },
-        {
-          "name": "Mohanad Lashin",
-          "minute": "90'+2'",
-          "type": "amarelo",
-          "team": "Egito"
-        },
-        {
-          "name": "Shoja Khalilzadeh",
-          "minute": "90'+4'",
-          "type": "amarelo",
-          "team": "RI do Irã"
         }
       ],
       "weather": {
@@ -3649,6 +2673,8 @@
       "awayScore": 5,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Vancouver",
       "venue": "BC Place",
       "scorers": [
@@ -3683,20 +2709,6 @@
           "side": "away"
         }
       ],
-      "cards": [
-        {
-          "name": "Marko Stamenic",
-          "minute": "46'",
-          "type": "amarelo",
-          "team": "Nova Zelândia"
-        },
-        {
-          "name": "Elijah Just",
-          "minute": "56'",
-          "type": "amarelo",
-          "team": "Nova Zelândia"
-        }
-      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3718,35 +2730,11 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [],
-      "cards": [
-        {
-          "name": "Saud Abdulhamid",
-          "minute": "4'",
-          "type": "amarelo",
-          "team": "Arábia Saudita"
-        },
-        {
-          "name": "Wagner Pina",
-          "minute": "8'",
-          "type": "amarelo",
-          "team": "Cabo Verde"
-        },
-        {
-          "name": "Nasser Aldawsari",
-          "minute": "67'",
-          "type": "amarelo",
-          "team": "Arábia Saudita"
-        },
-        {
-          "name": "Feras Albrikan",
-          "minute": "90'+3'",
-          "type": "amarelo",
-          "team": "Arábia Saudita"
-        }
-      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3768,6 +2756,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Zapopan",
       "venue": "Estadio Akron",
       "scorers": [
@@ -3775,38 +2765,6 @@
           "name": "Alex Baena",
           "minute": "42'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Alex Baena",
-          "minute": "46'",
-          "type": "amarelo",
-          "team": "Espanha"
-        },
-        {
-          "name": "Juan Manuel Sanabria",
-          "minute": "54'",
-          "type": "amarelo",
-          "team": "Uruguai"
-        },
-        {
-          "name": "Guillermo Varela",
-          "minute": "58'",
-          "type": "amarelo",
-          "team": "Uruguai"
-        },
-        {
-          "name": "Nicolas De La Cruz",
-          "minute": "90'+3'",
-          "type": "amarelo",
-          "team": "Uruguai"
-        },
-        {
-          "name": "Agustin Canobbio",
-          "minute": "90'+4'",
-          "type": "vermelho",
-          "team": "Uruguai"
         }
       ],
       "weather": {
@@ -3830,6 +2788,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "scorers": [
@@ -3842,26 +2802,6 @@
           "name": "Harry Kane",
           "minute": "67'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Jose Fajardo",
-          "minute": "53'",
-          "type": "amarelo",
-          "team": "Panamá"
-        },
-        {
-          "name": "Jarell Quansah",
-          "minute": "60'",
-          "type": "amarelo",
-          "team": "Inglaterra"
-        },
-        {
-          "name": "Andres Andrade",
-          "minute": "83'",
-          "type": "amarelo",
-          "team": "Panamá"
         }
       ],
       "weather": {
@@ -3885,6 +2825,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "scorers": [
@@ -3902,20 +2844,6 @@
           "name": "Nikola Vlasic",
           "minute": "83'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Ivan Perisic",
-          "minute": "68'",
-          "type": "amarelo",
-          "team": "Croácia"
-        },
-        {
-          "name": "Kojo Peprah Oppong",
-          "minute": "90'+4'",
-          "type": "amarelo",
-          "team": "Gana"
         }
       ],
       "weather": {
@@ -3939,6 +2867,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "scorers": [
@@ -3973,14 +2903,6 @@
           "side": "away"
         }
       ],
-      "cards": [
-        {
-          "name": "Marko Arnautovic",
-          "minute": "11'",
-          "type": "amarelo",
-          "team": "Áustria"
-        }
-      ],
       "weather": {
         "tempC": 28,
         "at": "2026-06-27T11:00:33+00:00"
@@ -4002,6 +2924,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "scorers": [
@@ -4027,26 +2951,6 @@
           "side": "away"
         }
       ],
-      "cards": [
-        {
-          "name": "Mohannad Abutaha",
-          "minute": "17'",
-          "type": "amarelo",
-          "team": "Jordânia"
-        },
-        {
-          "name": "Yazan Alarab",
-          "minute": "64'",
-          "type": "amarelo",
-          "team": "Jordânia"
-        },
-        {
-          "name": "Mohammad Abuzraiq",
-          "minute": "90'+4'",
-          "type": "amarelo",
-          "team": "Jordânia"
-        }
-      ],
       "weather": {
         "tempC": 30,
         "at": "2026-06-27T11:00:33+00:00"
@@ -4068,17 +2972,11 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "scorers": [],
-      "cards": [
-        {
-          "name": "Gustavo Puerta",
-          "minute": "86'",
-          "type": "amarelo",
-          "team": "Colômbia"
-        }
-      ],
       "weather": {
         "tempC": 30,
         "at": "2026-06-27T11:00:33+00:00"
@@ -4100,6 +2998,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": null,
+      "placeholderB": null,
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "scorers": [
@@ -4125,38 +3025,6 @@
           "side": "home"
         }
       ],
-      "cards": [
-        {
-          "name": "Noah Sadiki",
-          "minute": "21'",
-          "type": "amarelo",
-          "team": "RD do Congo"
-        },
-        {
-          "name": "Abdukodir Khusanov",
-          "minute": "43'",
-          "type": "amarelo",
-          "team": "Uzbequistão"
-        },
-        {
-          "name": "Nathanael Mbuku",
-          "minute": "45'+4'",
-          "type": "amarelo",
-          "team": "RD do Congo"
-        },
-        {
-          "name": "Sherzod Nasrullaev",
-          "minute": "47'",
-          "type": "amarelo",
-          "team": "Uzbequistão"
-        },
-        {
-          "name": "Samuel Moutoussamy",
-          "minute": "62'",
-          "type": "amarelo",
-          "team": "RD do Congo"
-        }
-      ],
       "weather": {
         "tempC": 32,
         "at": "2026-06-27T11:00:33+00:00"
@@ -4178,6 +3046,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "2A",
+      "placeholderB": "2B",
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "scorers": [
@@ -4185,20 +3055,6 @@
           "name": "Stephen Eustaquio",
           "minute": "90'+2'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Nathan Saliba",
-          "minute": "54'",
-          "type": "amarelo",
-          "team": "Canadá"
-        },
-        {
-          "name": "Niko Sigur",
-          "minute": "67'",
-          "type": "amarelo",
-          "team": "Canadá"
         }
       ],
       "weather": {
@@ -4222,6 +3078,8 @@
       "awayScore": 1,
       "homePen": 3,
       "awayPen": 4,
+      "placeholderA": "1E",
+      "placeholderB": "3ABCDF",
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "scorers": [
@@ -4234,56 +3092,6 @@
           "name": "Kai Havertz",
           "minute": "54'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Andres Cubas",
-          "minute": "65'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Gustavo Alfaro",
-          "minute": "105'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Julian Nagelsmann",
-          "minute": "105'+1'",
-          "type": "amarelo",
-          "team": "Alemanha"
-        },
-        {
-          "name": "Kai Havertz",
-          "minute": "106'",
-          "type": "amarelo",
-          "team": "Alemanha"
-        },
-        {
-          "name": "Jamal Musiala",
-          "minute": "115'",
-          "type": "amarelo",
-          "team": "Alemanha"
-        },
-        {
-          "name": "Mads Buttgereit",
-          "minute": "116'",
-          "type": "amarelo",
-          "team": "Alemanha"
-        },
-        {
-          "name": "Alejandro Manograsso",
-          "minute": "117'",
-          "type": "amarelo",
-          "team": "Paraguai"
-        },
-        {
-          "name": "Matias Galarza",
-          "minute": "117'",
-          "type": "amarelo",
-          "team": "Paraguai"
         }
       ],
       "weather": {
@@ -4307,6 +3115,8 @@
       "awayScore": 1,
       "homePen": 2,
       "awayPen": 3,
+      "placeholderA": "1F",
+      "placeholderB": "2C",
       "city": "Guadalupe",
       "venue": "Estadio BBVA",
       "scorers": [
@@ -4319,14 +3129,6 @@
           "name": "Issa Diop",
           "minute": "90'+1'",
           "side": "away"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Issa Diop",
-          "minute": "47'",
-          "type": "amarelo",
-          "team": "Marrocos"
         }
       ],
       "weather": {
@@ -4350,6 +3152,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1C",
+      "placeholderB": "2F",
       "city": "Houston",
       "venue": "NRG Stadium",
       "scorers": [
@@ -4367,38 +3171,6 @@
           "name": "Gabriel Martinelli",
           "minute": "90'+5'",
           "side": "home"
-        }
-      ],
-      "cards": [
-        {
-          "name": "Kaishu Sano",
-          "minute": "12'",
-          "type": "amarelo",
-          "team": "Japão"
-        },
-        {
-          "name": "Casemiro",
-          "minute": "14'",
-          "type": "amarelo",
-          "team": "Brasil"
-        },
-        {
-          "name": "Daichi Kamada",
-          "minute": "45'",
-          "type": "amarelo",
-          "team": "Japão"
-        },
-        {
-          "name": "Danilo",
-          "minute": "48'",
-          "type": "amarelo",
-          "team": "Brasil"
-        },
-        {
-          "name": "Junnosuke Suzuki",
-          "minute": "84'",
-          "type": "amarelo",
-          "team": "Japão"
         }
       ],
       "weather": {
@@ -4422,6 +3194,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1I",
+      "placeholderB": "3CDFGH",
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "prob": {
@@ -4450,6 +3224,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "2E",
+      "placeholderB": "2I",
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "prob": {
@@ -4478,6 +3254,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1A",
+      "placeholderB": "3CEFHI",
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "prob": {
@@ -4506,6 +3284,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1L",
+      "placeholderB": "3EHIJK",
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "prob": {
@@ -4534,6 +3314,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1D",
+      "placeholderB": "3BEFIJ",
       "city": "Santa Clara",
       "venue": "Levi's Stadium",
       "prob": {
@@ -4562,6 +3344,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1G",
+      "placeholderB": "3AEHIJ",
       "city": "Seattle",
       "venue": "Lumen Field",
       "prob": {
@@ -4590,6 +3374,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "2K",
+      "placeholderB": "2L",
       "city": "Toronto",
       "venue": "BMO Field",
       "prob": {
@@ -4618,6 +3404,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1H",
+      "placeholderB": "2J",
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "prob": {
@@ -4646,6 +3434,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1B",
+      "placeholderB": "3EFGIJ",
       "city": "Vancouver",
       "venue": "BC Place",
       "prob": {
@@ -4674,6 +3464,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1J",
+      "placeholderB": "2H",
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "prob": {
@@ -4702,6 +3494,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "1K",
+      "placeholderB": "3DEIJL",
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "prob": {
@@ -4730,6 +3524,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "2D",
+      "placeholderB": "2G",
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "prob": {
@@ -4758,6 +3554,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W74",
+      "placeholderB": "W77",
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
       "weather": {
@@ -4781,6 +3579,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W73",
+      "placeholderB": "W75",
       "city": "Houston",
       "venue": "NRG Stadium",
       "prob": {
@@ -4809,6 +3609,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W76",
+      "placeholderB": "W78",
       "city": "East Rutherford",
       "venue": "MetLife Stadium",
       "weather": {
@@ -4832,6 +3634,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W79",
+      "placeholderB": "W80",
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "weather": {
@@ -4855,6 +3659,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W83",
+      "placeholderB": "W84",
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "weather": {
@@ -4878,6 +3684,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W81",
+      "placeholderB": "W82",
       "city": "Seattle",
       "venue": "Lumen Field",
       "weather": {
@@ -4901,6 +3709,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W86",
+      "placeholderB": "W88",
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "weather": {
@@ -4924,6 +3734,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W85",
+      "placeholderB": "W87",
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
@@ -4947,6 +3759,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W89",
+      "placeholderB": "W90",
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "weather": {
@@ -4970,6 +3784,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W93",
+      "placeholderB": "W94",
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "weather": {
@@ -4993,6 +3809,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W91",
+      "placeholderB": "W92",
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "weather": {
@@ -5016,6 +3834,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W95",
+      "placeholderB": "W96",
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "weather": {
@@ -5039,6 +3859,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W97",
+      "placeholderB": "W98",
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "weather": {
@@ -5062,6 +3884,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W99",
+      "placeholderB": "W100",
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium"
     },
@@ -5081,6 +3905,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "RU101",
+      "placeholderB": "RU102",
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium"
     },
@@ -5100,6 +3926,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "placeholderA": "W101",
+      "placeholderB": "W102",
       "city": "East Rutherford",
       "venue": "MetLife Stadium"
     }
