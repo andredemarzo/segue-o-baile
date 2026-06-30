@@ -1,0 +1,18 @@
+{
+  "project": "segueobaile",
+  "source": null,
+  "recent_deploy_triggers": [
+    "ad_hoc",
+    "ad_hoc",
+    "ad_hoc",
+    "ad_hoc",
+    "ad_hoc",
+    "ad_hoc",
+    "ad_hoc",
+    "ad_hoc",
+    "ad_hoc",
+    "ad_hoc"
+  ],
+  "git_integration": false,
+  "verdict": "DIRECT UPLOAD — só a Action (wrangler) deploya; o gate cobre TODO deploy (FURO FECHADO)"
+}
