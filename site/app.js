@@ -1168,7 +1168,7 @@ function reorderBracketTree(rounds) {
 
 let koSig = null;
 let koAutoScrolled = false;
-let koSectionOpened = false;
+let prevKoShow = null;
 
 // Chaveamento do mata-mata em ÁRVORE HORIZONTAL (mostra os cruzamentos) + hierarquia:
 // com o mata-mata no ar, a seção vira "Mata-mata" e a Classificação desce, recolhida.
@@ -1184,7 +1184,10 @@ function renderKnockout() {
     el.groupsFold.open = !show; // grupos abertos na fase de grupos; recolhidos no mata-mata
   }
   if (el.groupsFoldLabel) el.groupsFoldLabel.textContent = "Fase de grupos · final";
-  if (show && el.standingsSection && !koSectionOpened) { el.standingsSection.open = true; koSectionOpened = true; }
+  // só auto-abre na TRANSIÇÃO grupos→mata-mata DENTRO da sessão (não a cada reload); no boot
+  // prevKoShow=null → NÃO abre, respeitando o default fechado do <details> e a escolha do usuário.
+  if (show && prevKoShow === false && el.standingsSection) el.standingsSection.open = true;
+  prevKoShow = show;
 
   if (!el.knockout) return;
   el.knockout.hidden = !show;
@@ -1289,8 +1292,10 @@ function renderHistory() {
     .map((match) => {
       const kickoff = utcDate(match);
       const fs = finalScore(match);
-      const homeWin = fs.home > fs.away;
-      const awayWin = fs.away > fs.home;
+      const pens = matchPens(match);                       // decisão por pênaltis (mesma lógica do bracket)
+      let homeWin = fs.home > fs.away;
+      let awayWin = fs.away > fs.home;
+      if (!homeWin && !awayWin && pens) { homeWin = pens.home > pens.away; awayWin = pens.away > pens.home; }
       return `
         <article class="result-row">
           <time datetime="${kickoff.toISOString()}">${shortDate(kickoff, BR_TZ, "pt-BR")}</time>
@@ -1299,6 +1304,7 @@ function renderHistory() {
             <span class="result-score">${fs.home} - ${fs.away}</span>
             <span class="result-team away${awayWin ? " win" : ""}">${match.away}</span>
             ${scorersHtml(match)}
+            ${pens ? `<span class="small-muted result-pens">${pens.home}–${pens.away} nos pênaltis</span>` : ""}
             <span class="small-muted result-stage">${stageLabel(match)}</span>
           </div>
         </article>
