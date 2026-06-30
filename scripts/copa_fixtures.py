@@ -30,7 +30,7 @@ TIMELINE_URL = (
 # Diretório do site. Local = Mac; na nuvem (GitHub Actions) vem por COPA_PROJECT_DIR.
 PROJECT_DIR = os.environ.get(
     "COPA_PROJECT_DIR",
-    "/Users/andrelpdemarzo/Documents/Codex/2026-06-11/quero-criar-um-app-que-me",
+    os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "site")),
 )
 OUT = os.path.join(PROJECT_DIR, "data", "matches.json")
 # Backup fica FORA da pasta publicada — senão o .bak é enviado junto no deploy.
@@ -151,33 +151,47 @@ def fetch_scorers(id_stage, id_match):
         if note:
             scorer["note"] = note
         scorers.append(scorer)
-    return scorers
+    # cartões (MESMA timeline, sem fetch extra): Type 2 = amarelo, Type 3 = vermelho. Usados pelo
+    # EDITORIAL (suspensos/pendurados em copa_interpreter/copa_briefing); o front os ignora.
+    # Unificado de editorial-dev (30/06) p/ os 2 coletores serem UM só.
+    cards = []
+    for event in data.get("Event") or []:
+        t = event.get("Type")
+        if t not in (2, 3):
+            continue
+        desc = text(event.get("EventDescription"))
+        name = desc.split(" (")[0].strip() if "(" in desc else text(event.get("PlayerName"))
+        team = desc.split(" (")[1].split(")")[0].strip() if " (" in desc and ")" in desc else ""
+        if not name:
+            continue
+        cards.append({"name": prettify_name(name), "minute": text(event.get("MatchMinute")),
+                      "type": "vermelho" if t == 3 else "amarelo", "team": team})
+    return scorers, cards
 
 
 def enrich_scorers(matches, stage_by_id, prev_by_id):
-    """Para cada jogo ENCERRADO, anexa match['scorers']. Reaproveita o cache do
-    arquivo anterior quando o placar não mudou (evita refazer 100+ chamadas)."""
+    """Para cada jogo ENCERRADO, anexa match['scorers'] e match['cards'] (MESMA timeline,
+    um fetch só). Reaproveita o cache quando o placar não mudou (jogo encerrado não muda).
+    Diferente dos gols, busca também os 0-0 (cartões existem em 0-0)."""
     fetched = 0
     for m in matches:
         if m.get("status") != 0 or m.get("homeScore") is None or m.get("awayScore") is None:
             continue
         prev = prev_by_id.get(m["id"]) or {}
-        cached = prev.get("scorers")
-        if (cached is not None
+        if (prev.get("scorers") is not None and prev.get("cards") is not None
                 and prev.get("homeScore") == m["homeScore"]
                 and prev.get("awayScore") == m["awayScore"]):
-            m["scorers"] = cached
-            continue
-        if (m["homeScore"] or 0) + (m["awayScore"] or 0) == 0:
-            m["scorers"] = []
+            m["scorers"] = prev["scorers"]
+            m["cards"] = prev["cards"]
             continue
         try:
-            m["scorers"] = fetch_scorers(stage_by_id.get(m["id"]), m["idMatch"])
+            m["scorers"], m["cards"] = fetch_scorers(stage_by_id.get(m["id"]), m["idMatch"])
             fetched += 1
         except Exception as exc:  # um timeline falho não derruba o coletor
             print(f"  aviso: timeline do jogo {m['id']} falhou: {exc}")
-            if cached is not None:
-                m["scorers"] = cached
+            if prev.get("scorers") is not None:
+                m["scorers"] = prev["scorers"]
+                m["cards"] = prev.get("cards", [])
     return fetched
 
 
