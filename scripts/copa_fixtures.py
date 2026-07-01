@@ -656,6 +656,34 @@ def write_broadcasts(matches):
     print(f"  broadcasts.json atualizado ({len(doc['games'])} jogos).")
 
 
+def cards_status(matches):
+    """Acumula cartões por jogador (jogos ENCERRADOS) → pendurados e suspensos por seleção, p/ o
+    front exibir (dossiê). PORTADO FIEL de copa_interpreter.cards_status (a MESMA regra do editorial):
+    2 amarelos (jogos diferentes) OU 1 vermelho = SUSPENSO no próximo; 1 amarelo = PENDURADO. Depende
+    do time do cartão JÁ normalizado (TEAM_NAME_OVERRIDES no fetch_scorers)."""
+    yel, red = {}, {}
+    for m in matches:
+        if m.get("status") != 0:
+            continue
+        for c in m.get("cards") or []:
+            key = (c.get("team", ""), c.get("name", ""))
+            if c.get("type") == "vermelho":
+                red[key] = red.get(key, 0) + 1
+            else:
+                yel[key] = yel.get(key, 0) + 1
+    out = {}
+    for key in set(yel) | set(red):
+        team, player = key
+        if not team or not player:
+            continue
+        d = out.setdefault(team, {"pendurados": [], "suspensos": []})
+        if red.get(key, 0) >= 1 or yel.get(key, 0) >= 2:
+            d["suspensos"].append(player)
+        elif yel.get(key, 0) == 1:
+            d["pendurados"].append(player)
+    return out
+
+
 def main():
     # --validate-only: GATE DE DEPLOY (independe de coleta). Lê o matches.json EM DISCO e falha se
     # a estrutura estiver inválida (≠104 jogos, mata-mata sem placeholder de cruzamento, etc.). Roda
@@ -743,6 +771,7 @@ def main():
         "phase": "all",
         "updatedAt": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
         "matches": matches,
+        "cardsStatus": cards_status(matches),   # pendurados/suspensos por seleção p/ o dossiê (front)
     }
 
     if os.path.exists(OUT):

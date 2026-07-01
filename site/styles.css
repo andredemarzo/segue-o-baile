@@ -566,6 +566,85 @@ h2 {
 .tcard-yellow::before { background: #f2c200; }
 .tcard-red::before { background: #d33; }
 
+/* Itens 3-4 — DOSSIÊ VIVO por seleção: painel (bottom-sheet no mobile / card centrado no desktop),
+   abre ao tocar o time no card ou na classificação. A ASSINATURA é a trajetória de formações. */
+.team-clickable, .st-row { cursor: pointer; }
+.st-row:focus-visible, .team-clickable:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+/* Pista de descoberta (affordance): chevron discreto ao lado do nome do time clicável.
+   Escala com o contexto (grande no card, pequeno na classificação); some no não-clicável. */
+.team-cue { margin-left: 5px; color: var(--green); opacity: 0.4; font-weight: 300; }
+/* Aviso de 1ª vez (coach-mark): pílula discreta com seta pra cima apontando aos times. */
+.tap-hint[hidden] { display: none; }
+.tap-hint {
+  position: relative; display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin: 6px auto 14px; max-width: max-content; padding: 7px 8px 7px 14px;
+  background: rgba(19, 138, 82, 0.1); border: 1px solid rgba(19, 138, 82, 0.22);
+  border-radius: 999px; font-size: 0.78rem; color: var(--green-deep);
+  animation: tap-hint-in 0.4s ease both;
+}
+.tap-hint::before {
+  content: ""; position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg);
+  width: 10px; height: 10px; background: rgba(19, 138, 82, 0.1);
+  border-left: 1px solid rgba(19, 138, 82, 0.22); border-top: 1px solid rgba(19, 138, 82, 0.22);
+}
+.tap-hint-x { border: none; background: var(--green); color: #fff; font-size: 0.72rem; font-weight: 600; padding: 4px 11px; border-radius: 999px; cursor: pointer; }
+@keyframes tap-hint-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .tap-hint { animation: none; } }
+.team-panel[hidden] { display: none; }
+.team-panel { position: fixed; inset: 0; z-index: 60; display: flex; align-items: flex-end; justify-content: center; }
+.tp-backdrop { position: absolute; inset: 0; background: rgba(8, 30, 18, 0.42); backdrop-filter: blur(2px); }
+.tp-sheet {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  max-height: 84vh;
+  overflow-y: auto;
+  background: #f2f7ea;
+  border: 1px solid var(--hair);
+  border-radius: 22px 22px 0 0;
+  padding: 22px 20px 26px;
+  box-shadow: 0 -14px 44px rgba(8, 30, 18, 0.2);
+  animation: tp-up 0.22s ease;
+}
+@keyframes tp-up { from { transform: translateY(16px); opacity: 0.5; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .tp-sheet { animation: none; } }
+.tp-close {
+  position: absolute; top: 12px; right: 12px; width: 34px; height: 34px;
+  border-radius: 50%; border: 1px solid var(--hair); background: rgba(255, 255, 255, 0.65);
+  color: var(--green-deep); font-size: 0.9rem; cursor: pointer;
+}
+.tp-team { font-size: 1.5rem; font-weight: 300; letter-spacing: -0.02em; color: var(--green-deep); margin: 0 42px 2px 0; }
+.tp-camp { font-size: 0.8rem; color: rgba(20, 42, 28, 0.7); font-variant-numeric: tabular-nums; margin: 0 0 7px; }
+/* Status ciente da fase: badge + texto. Verde = na competição; vermelho = eliminada; ouro = campeã. */
+.tp-status { margin: 0 0 15px; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: rgba(20, 42, 28, 0.82); }
+.tp-status-k {
+  font-size: 0.58rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700;
+  color: var(--green); background: rgba(19, 138, 82, 0.1); padding: 2px 8px; border-radius: 999px; margin-right: 8px;
+}
+.tp-out { color: #c0392b; font-weight: 600; }
+.tp-out .tp-status-k { color: #c0392b; background: rgba(192, 57, 43, 0.1); }
+.tp-champ .tp-status-k { color: #a9791f; background: rgba(201, 162, 39, 0.18); }
+.tp-sec { margin-top: 16px; }
+.tp-sec h4 {
+  font-size: 0.66rem; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--green); font-weight: 700; margin: 0 0 8px;
+}
+.tp-sec h4 em { font-style: normal; font-weight: 400; color: rgba(20, 42, 28, 0.45); text-transform: none; letter-spacing: 0; }
+.tp-forms { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.tp-forms li {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 6px 12px; border-radius: 10px; background: rgba(19, 138, 82, 0.05);
+}
+.tp-opp { font-size: 0.82rem; color: rgba(20, 42, 28, 0.72); }
+.tp-scorers, .tp-disc { display: flex; flex-wrap: wrap; gap: 5px 14px; margin: 0; font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+.tp-scorer { color: rgba(20, 42, 28, 0.74); }
+.tp-scorer b { color: var(--green); }
+.tp-susp { color: #c0392b; font-weight: 600; }
+.tp-pend { color: rgba(20, 42, 28, 0.66); }
+.tp-next { margin: 0; font-size: 0.85rem; color: rgba(20, 42, 28, 0.74); font-variant-numeric: tabular-nums; }
+.tp-empty { color: rgba(20, 42, 28, 0.55); font-size: 0.85rem; }
+@media (min-width: 620px) { .team-panel { align-items: center; } .tp-sheet { border-radius: 22px; } }
+
 .versus {
   display: grid;
   place-items: center;

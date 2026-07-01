@@ -74,7 +74,7 @@
     }
     </script>
 
-    <link rel="stylesheet" href="styles.css?v=85">
+    <link rel="stylesheet" href="styles.css?v=86">
   </head>
   <body>
     <div class="field-photo" aria-hidden="true"></div>
@@ -169,6 +169,13 @@
           </div>
 
           <div class="scoreline" id="scoreline"></div>
+
+          <!-- Aviso de 1ª vez (coach-mark): ensina que os times são clicáveis. Aparece só no
+               primeiro acesso (localStorage), some ao primeiro toque num time ou no "Entendi". -->
+          <div class="tap-hint" id="tap-hint" hidden>
+            <span class="tap-hint-txt">Toque num time para ver o dossiê da seleção</span>
+            <button type="button" class="tap-hint-x" id="tap-hint-x">Entendi</button>
+          </div>
 
           <div class="predict" id="predict" hidden></div>
 
@@ -305,6 +312,14 @@
       </footer>
     </main>
 
-    <script src="app.js?v=85"></script>
+    <div class="team-panel" id="team-panel" hidden>
+      <div class="tp-backdrop" data-tp-close></div>
+      <div class="tp-sheet" role="dialog" aria-label="Dossiê da seleção">
+        <button type="button" class="tp-close" id="team-panel-close" aria-label="Fechar">✕</button>
+        <div class="tp-body" id="team-panel-body"></div>
+      </div>
+    </div>
+
+    <script src="app.js?v=86"></script>
   </body>
 </html>

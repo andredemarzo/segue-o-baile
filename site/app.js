@@ -15,6 +15,10 @@ const el = {
   matchState: document.querySelector("#match-state"),
   dayStrip: document.querySelector("#day-strip"),
   scoreline: document.querySelector("#scoreline"),
+  teamPanel: document.querySelector("#team-panel"),
+  teamPanelBody: document.querySelector("#team-panel-body"),
+  tapHint: document.querySelector("#tap-hint"),
+  tapHintX: document.querySelector("#tap-hint-x"),
   predict: document.querySelector("#predict"),
   cityVenue: document.querySelector("#city-venue"),
   temp: document.querySelector("#temp"),
@@ -56,6 +60,7 @@ const liveById = {}; // matchId -> { status, home, away, homePen, awayPen, time 
 const liveScorersById = {};
 
 let MATCHES = [];
+let CARDS_STATUS = {}; // pendurados/suspensos por seleção (do coletor) — dossiê
 
 function utcDate(match) {
   const [year, month, day] = match.date.split("-").map(Number);
@@ -385,10 +390,13 @@ function scorelineHtml(match) {
       middle += `<small class="pens">aguardando pênaltis</small>`;
     }
   }
+  const clk = (t) => (t && t !== "A definir" ? ` team-clickable" data-team="${t}" role="button" tabindex="0" aria-label="Dossiê de ${t}` : "");
+  // Pista de descoberta: chevron discreto ao lado do nome sinalizando "toque para o dossiê".
+  const cue = (t) => (t && t !== "A definir" ? `<span class="team-cue" aria-hidden="true">›</span>` : "");
   return `
-    <div class="team">${match.home}${showScore ? teamScorersHtml("home", match) : ""}${teamMetaHtml("home", match)}</div>
+    <div class="team${clk(match.home)}">${match.home}${cue(match.home)}${showScore ? teamScorersHtml("home", match) : ""}${teamMetaHtml("home", match)}</div>
     <div class="versus${showScore ? " has-score" : ""}" id="versus">${middle}</div>
-    <div class="team">${match.away}${showScore ? teamScorersHtml("away", match) : ""}${teamMetaHtml("away", match)}</div>
+    <div class="team${clk(match.away)}">${match.away}${cue(match.away)}${showScore ? teamScorersHtml("away", match) : ""}${teamMetaHtml("away", match)}</div>
   `;
 }
 
@@ -964,6 +972,7 @@ function renderNext() {
     el.scoreline.innerHTML = scorelineHtml(match);
     renderedScoreSig = sig;
   }
+  maybeShowTapHint(); // aviso de 1ª vez (idempotente; some após visto/dispensado)
 
   // Badge = estado + tempo juntos (a contagem "Começa em" entrou aqui). Atualiza todo tick.
   if (phase === "live") {
@@ -1054,6 +1063,135 @@ function computeStandings() {
   return out;
 }
 
+// ===== DOSSIÊ VIVO por seleção (itens 3-4): identidade tática + campanha + artilheiros + disciplina,
+// do dado que já temos client-side. A ASSINATURA é a impressão-digital tática (formações jogo a jogo). =====
+function teamFinishedGames(team) {
+  return MATCHES
+    .filter((m) => m.status === 0 && (m.home === team || m.away === team) && finalScore(m))
+    .sort((a, b) => utcDate(a) - utcDate(b));
+}
+function teamFormations(team, n = 6) {
+  const out = [];
+  for (const m of teamFinishedGames(team)) {
+    const f = m.home === team ? m.homeTactics : m.awayTactics;
+    if (f) out.push({ opp: m.home === team ? m.away : m.home, f });
+  }
+  return out.slice(-n);
+}
+function teamTopScorers(team, n = 3) {
+  const tally = {};
+  for (const m of teamFinishedGames(team)) {
+    for (const s of Array.isArray(m.scorers) ? m.scorers : []) {
+      const st = s.side === "home" ? m.home : m.away;
+      if (st !== team) continue;
+      if (s.note && /gc|contra/i.test(s.note)) continue; // gol contra não conta como artilheiro
+      tally[s.name] = (tally[s.name] || 0) + 1;
+    }
+  }
+  return Object.entries(tally)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "pt-BR"))
+    .slice(0, n);
+}
+function teamCampaign(team) {
+  const st = computeStandings();
+  for (const g of Object.keys(st)) {
+    const i = st[g].findIndex((t) => t.team === team);
+    if (i >= 0) return { group: g, pos: i + 1, ...st[g][i] };
+  }
+  return null;
+}
+function teamNext(team) {
+  const now = new Date();
+  const up = MATCHES
+    .filter((m) => m.status === 1 && (m.home === team || m.away === team) && m.home !== "A definir" && m.away !== "A definir")
+    .sort((a, b) => utcDate(a) - utcDate(b));
+  return up.find((m) => utcDate(m) >= now) || up[0] || null;
+}
+// Status CIENTE DA FASE: próximo jogo (grupos/mata-mata), OU eliminada (perdeu um mata-mata), OU
+// campeã (venceu a Final). Cobre "o que acontece quando a seleção sai": a campanha/histórico segue
+// disponível (formações, artilheiros, disciplina), só o status muda pra "Eliminada · <fase>".
+function teamStatus(team) {
+  const now = new Date();
+  const mine = MATCHES.filter((m) => m.home === team || m.away === team).sort((a, b) => utcDate(a) - utcDate(b));
+  const upcoming = mine.filter((m) => m.status === 1 && utcDate(m) >= now);
+  if (upcoming.length) {
+    const nxt = upcoming[0];
+    const opp = nxt.home === team ? nxt.away : nxt.home;
+    return { kind: "in", label: "Próximo", text: `x ${opp === "A definir" ? "a definir" : opp} · ${nxt.date.slice(8, 10)}/${nxt.date.slice(5, 7)}` };
+  }
+  const finished = mine.filter((m) => m.status === 0 && finalScore(m));
+  const last = finished[finished.length - 1];
+  if (last && !last.group) { // último jogo foi mata-mata → decide se saiu ou avançou/venceu
+    const fs = finalScore(last), pens = matchPens(last);
+    const tS = last.home === team ? fs.home : fs.away, oS = last.home === team ? fs.away : fs.home;
+    const tP = pens ? (last.home === team ? pens.home : pens.away) : null;
+    const oP = pens ? (last.home === team ? pens.away : pens.home) : null;
+    const won = tS > oS || (tP != null && oP != null && tP > oP);
+    if (!won) return { kind: "out", label: "Situação", text: `Eliminada · ${last.stage}` };
+    if (last.stage === "Final") return { kind: "champ", label: "Situação", text: "Campeã 🏆" };
+    return { kind: "in", label: "Situação", text: `Venceu (${last.stage}) · aguarda o próximo` };
+  }
+  return null; // fase de grupos sem próximo definido ainda / borda
+}
+function teamPanelHtml(team) {
+  const camp = teamCampaign(team);
+  const sg = (n) => (n > 0 ? "+" : "") + n;
+  const campLine = camp
+    ? `<p class="tp-camp">Grupo ${camp.group} · ${camp.pos}º · <b>${camp.pts} pts</b> · ${camp.v}V ${camp.e}E ${camp.d}D · SG ${sg(camp.sg)}</p>`
+    : "";
+
+  const forms = teamFormations(team);
+  const formsBlock = forms.length
+    ? `<section class="tp-sec"><h4>Esquemas <em>jogo a jogo</em></h4><ul class="tp-forms">${forms
+        .map((r) => `<li><span class="tp-opp">x ${r.opp}</span><span class="team-form">${r.f}</span></li>`)
+        .join("")}</ul></section>`
+    : "";
+
+  const scorers = teamTopScorers(team);
+  const scorersBlock = scorers.length
+    ? `<section class="tp-sec"><h4>Artilheiros</h4><p class="tp-scorers">${scorers
+        .map(([name, g]) => `<span class="tp-scorer">${name} <b>${g}</b></span>`)
+        .join("")}</p></section>`
+    : "";
+
+  const disc = CARDS_STATUS[team] || { pendurados: [], suspensos: [] };
+  const lines = [];
+  if ((disc.suspensos || []).length) lines.push(`<span class="tp-susp">suspenso: ${disc.suspensos.join(", ")}</span>`);
+  if ((disc.pendurados || []).length) lines.push(`<span class="tp-pend">pendurado: ${disc.pendurados.join(", ")}</span>`);
+  const discBlock = lines.length
+    ? `<section class="tp-sec"><h4>Disciplina</h4><p class="tp-disc">${lines.join("")}</p></section>`
+    : "";
+
+  const stt = teamStatus(team);
+  const statusBlock = stt
+    ? `<p class="tp-status tp-${stt.kind}"><span class="tp-status-k">${stt.label}</span> ${stt.text}</p>`
+    : "";
+
+  const body = formsBlock + scorersBlock + discBlock;
+  return `<h3 class="tp-team">${team}</h3>${campLine}${statusBlock}${body || '<p class="tp-empty">Ainda sem dados de jogo para esta seleção.</p>'}`;
+}
+// Aviso de 1ª vez: ensina que o time é clicável. localStorage garante que aparece só uma vez.
+function dismissTapHint(persist = true) {
+  if (el.tapHint) el.tapHint.hidden = true;
+  if (persist) { try { localStorage.setItem("sb-dossie-hint", "1"); } catch (e) { /* privado/quota */ } }
+}
+function maybeShowTapHint() {
+  if (!el.tapHint) return;
+  let seen = false;
+  try { seen = localStorage.getItem("sb-dossie-hint") === "1"; } catch (e) { seen = false; }
+  const hasClickable = !!document.querySelector("#scoreline .team-clickable");
+  el.tapHint.hidden = seen || !hasClickable; // só no 1º acesso e havendo time clicável
+}
+function openTeamPanel(team) {
+  if (!team || team === "A definir" || !el.teamPanel) return;
+  dismissTapHint(); // primeiro toque num time já ensinou a interação
+  el.teamPanelBody.innerHTML = teamPanelHtml(team);
+  el.teamPanel.hidden = false;
+}
+function closeTeamPanel() {
+  if (el.teamPanel) el.teamPanel.hidden = true;
+}
+
 let stSig = null;
 function renderStandings() {
   if (!el.standings) return;
@@ -1077,9 +1215,9 @@ function renderStandings() {
           </thead>
           <tbody>
             ${table[g].map((t, i) => `
-              <tr class="${i < 2 ? "qualified" : ""}">
+              <tr class="${i < 2 ? "qualified" : ""} st-row" data-team="${t.team}" tabindex="0" role="button" aria-label="Dossiê de ${t.team}">
                 <td class="c-pos">${i + 1}</td>
-                <td class="c-team">${t.team}</td>
+                <td class="c-team">${t.team}<span class="team-cue" aria-hidden="true">›</span></td>
                 <td>${t.j}</td>
                 <td class="c-vd">${t.v}</td><td class="c-vd">${t.e}</td><td class="c-vd">${t.d}</td>
                 <td>${sg(t.sg)}</td>
@@ -1516,6 +1654,24 @@ function bindEvents() {
     openPlayer(link.dataset.embed, link.dataset.title, link.href);
   });
   el.playerClose.addEventListener("click", closePlayer);
+  // Dossiê da seleção: abre ao tocar o time no CARD (.team-clickable) ou na CLASSIFICAÇÃO (.st-row);
+  // fecha no ✕, no backdrop ou Esc. Delegado (as duas superfícies re-renderizam).
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("#tap-hint-x")) { dismissTapHint(); return; }
+    if (event.target.closest("[data-tp-close]") || event.target.closest("#team-panel-close")) {
+      closeTeamPanel();
+      return;
+    }
+    const t = event.target.closest("[data-team]");
+    if (t && t.dataset.team) openTeamPanel(t.dataset.team);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") return closeTeamPanel();
+    if ((event.key === "Enter" || event.key === " ") && event.target.closest && event.target.closest("[data-team]")) {
+      event.preventDefault();
+      openTeamPanel(event.target.closest("[data-team]").dataset.team);
+    }
+  });
   el.regionButtons.forEach((button) => {
     button.addEventListener("click", () => {
       preferredRegion = button.dataset.region;
@@ -1600,6 +1756,7 @@ async function loadData() {
     fetch("data/broadcasts.json", { cache: "no-store" }).then((response) => response.json())
   ]);
   MATCHES = matchesDoc.matches.slice().sort((a, b) => utcDate(a) - utcDate(b));
+  CARDS_STATUS = matchesDoc.cardsStatus || {};
   BROADCASTS = (broadcastsDoc && broadcastsDoc.games) || {};
 }
 
