@@ -15,6 +15,7 @@ const el = {
   matchState: document.querySelector("#match-state"),
   dayStrip: document.querySelector("#day-strip"),
   scoreline: document.querySelector("#scoreline"),
+  matchFicha: document.querySelector("#match-ficha"),
   predict: document.querySelector("#predict"),
   cityVenue: document.querySelector("#city-venue"),
   temp: document.querySelector("#temp"),
@@ -390,6 +391,31 @@ function scorelineHtml(match) {
     <div class="versus${showScore ? " has-score" : ""}" id="versus">${middle}</div>
     <div class="team">${match.away}${showScore ? teamScorersHtml("away", match) : ""}</div>
   `;
+}
+
+// Item 2 — ficha do jogo ENCERRADO: formação realizada (home/awayTactics [D] da FIFA) + cartões
+// (nome@minuto). Torna VISÍVEL na transmissão o dado tático/disciplinar que o coletor já captura.
+// Só em jogo encerrado com dado; string vazia senão (o elemento fica hidden).
+function matchFichaHtml(match) {
+  if (matchPhase(match) !== "finished") return "";
+  const parts = [];
+  if (match.homeTactics && match.awayTactics) {
+    parts.push(
+      `<div class="ficha-form"><span>${match.homeTactics}</span>` +
+      `<em>esquemas</em><span>${match.awayTactics}</span></div>`,
+    );
+  }
+  const cards = Array.isArray(match.cards) ? match.cards : [];
+  if (cards.length) {
+    const chips = cards
+      .map((c) => {
+        const red = c.type === "vermelho";
+        return `<span class="card-chip ${red ? "card-red" : "card-yellow"}">${c.name || ""} ${c.minute || ""}</span>`;
+      })
+      .join("");
+    parts.push(`<div class="ficha-cards">${chips}</div>`);
+  }
+  return parts.join("");
 }
 
 // --- Auto-cura: backfill direto da FIFA, sem depender do coletor ---
@@ -931,6 +957,11 @@ function renderNext() {
     const ls = document.querySelector("#live-streams");
     if (ls) ls.classList.toggle("demoted", phase === "finished");
     renderPredict(match, phase);
+    if (el.matchFicha) {                        // item 2: formação + cartões do jogo encerrado
+      const _fh = matchFichaHtml(match);
+      el.matchFicha.innerHTML = _fh;
+      el.matchFicha.hidden = !_fh;
+    }
     renderedMatchId = match.id;
     renderedPhase = phase;
     maybeCelebrate(match); // efeito festivo se este card virou jogo de Brasil/Portugal (pré-apito)

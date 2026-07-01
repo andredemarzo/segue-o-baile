@@ -27,6 +27,12 @@ API_URL = (
 TIMELINE_URL = (
     "https://api.fifa.com/api/v3/timelines/17/285023/{stage}/{match}?language=pt-BR"
 )
+# Endpoint /live (o MESMO que o front usa p/ o placar ao vivo): traz TÉCNICO (Coaches Role==0) e
+# SUBSTITUIÇÕES (off/on/minuto) por jogo — âncora [D] editorial (o técnico como agente; o que ele
+# mudou / usou o intervalo). LineupX/Y e stats por-jogador vêm NULL na FIFA → só o técnico+subs entram.
+LIVE_URL = (
+    "https://api.fifa.com/api/v3/live/football/17/285023/{stage}/{match}?language=pt-BR"
+)
 # Diretório do site. Local = Mac; na nuvem (GitHub Actions) vem por COPA_PROJECT_DIR.
 PROJECT_DIR = os.environ.get(
     "COPA_PROJECT_DIR",
@@ -195,6 +201,62 @@ def enrich_scorers(matches, stage_by_id, prev_by_id):
     return fetched
 
 
+def fetch_live(id_stage, id_match):
+    """Do endpoint /live: TÉCNICO principal (Coaches Role==0) de cada lado + SUBSTITUIÇÕES
+    (off/on/minuto). Devolve (home_coach, away_coach, [subs]). Escalação nominal e LineupX/Y NÃO
+    entram (bloat sem stats por-jogador; XY=NULL na FIFA — a estrutura em-posse fica pela LENTE/M2)."""
+    url = LIVE_URL.format(stage=id_stage, match=id_match)
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=20) as response:
+        data = json.load(response)
+
+    def head_coach(team):
+        for c in (team.get("Coaches") or []):
+            if c.get("Role") == 0:                       # Role 0 = técnico principal (1 = auxiliar)
+                nm = text(c.get("Name")) or text(c.get("ShortName"))
+                return prettify_name(nm) if nm else ""
+        return ""
+
+    def subs_of(team, side):
+        out = []
+        for s in (team.get("Substitutions") or []):
+            off, on = text(s.get("PlayerOffName")), text(s.get("PlayerOnName"))
+            if not (off or on):
+                continue
+            out.append({"off": prettify_name(off) if off else "", "on": prettify_name(on) if on else "",
+                        "minute": text(s.get("Minute")), "side": side})
+        return out
+
+    home, away = data.get("HomeTeam") or {}, data.get("AwayTeam") or {}
+    return (head_coach(home), head_coach(away),
+            subs_of(home, "home") + subs_of(away, "away"))
+
+
+def enrich_live(matches, stage_by_id, prev_by_id):
+    """Anexa homeCoach/awayCoach/subs a cada jogo ENCERRADO (fetch /live). Cacheado como scorers:
+    reusa quando o placar não mudou (jogo encerrado não muda). Um /live falho não derruba o coletor."""
+    fetched = 0
+    for m in matches:
+        if m.get("status") != 0 or m.get("homeScore") is None or m.get("awayScore") is None:
+            continue
+        prev = prev_by_id.get(m["id"]) or {}
+        if (prev.get("homeCoach") is not None and prev.get("subs") is not None
+                and prev.get("homeScore") == m["homeScore"]
+                and prev.get("awayScore") == m["awayScore"]):
+            m["homeCoach"], m["awayCoach"], m["subs"] = (
+                prev.get("homeCoach"), prev.get("awayCoach"), prev.get("subs"))
+            continue
+        try:
+            m["homeCoach"], m["awayCoach"], m["subs"] = fetch_live(stage_by_id.get(m["id"]), m["idMatch"])
+            fetched += 1
+        except Exception as exc:                          # timeline/live falho não derruba o coletor
+            print(f"  aviso: /live do jogo {m['id']} falhou: {exc}")
+            if prev.get("homeCoach") is not None:
+                m["homeCoach"], m["awayCoach"], m["subs"] = (
+                    prev.get("homeCoach"), prev.get("awayCoach"), prev.get("subs", []))
+    return fetched
+
+
 def offset_hours(local_iso, utc_iso):
     parse = lambda s: datetime.datetime.strptime(s[:19], "%Y-%m-%dT%H:%M:%S")
     return round((parse(local_iso) - parse(utc_iso)).total_seconds() / 3600)
@@ -247,6 +309,12 @@ def build():
             # vencedor. None em jogo de grupo / sem disputa. Campo confirmado no endpoint calendar.
             "homePen": m.get("HomeTeamPenaltyScore") if m.get("MatchStatus") == 0 else None,
             "awayPen": m.get("AwayTeamPenaltyScore") if m.get("MatchStatus") == 0 else None,
+            # Formação tática oficial da FIFA (Home/Away.Tactics: string GRANULAR "4-1-2-3", "3-4-3" —
+            # o "tipo" que a leitura tática exige, não o rótulo grosso 4-3-3). Só de jogo ENCERRADO:
+            # a FIFA só publica pós-jogo (verificado: 79/79 encerrados têm nos 2 lados, 0/25 futuros).
+            # É o lastro [D] que o editorial ancora na análise tática (nunca inventa esquema). None sem dado.
+            "homeTactics": (text((m.get("Home") or {}).get("Tactics")) or None) if m.get("MatchStatus") == 0 else None,
+            "awayTactics": (text((m.get("Away") or {}).get("Tactics")) or None) if m.get("MatchStatus") == 0 else None,
             # Estrutura do chaveamento (só mata-mata): PlaceHolderA/B da FIFA (ex.: "2A" = 2º do grupo A,
             # "W73" = vencedor do jogo 73, "3ABCDF" = melhor 3º). O front desenha o cruzamento
             # ("Venc. J73") enquanto o time não está definido, e preenche o nome real quando a FIFA define.
@@ -642,6 +710,7 @@ def main():
             continue
 
         fetched = enrich_scorers(matches, stage_by_id, prev_by_id)
+        enrich_live(matches, stage_by_id, prev_by_id)      # técnico + substituições ([D] editorial)
         enrich_probabilities(matches, prev_by_id)
         enrich_weather(matches, prev_by_id)
 
