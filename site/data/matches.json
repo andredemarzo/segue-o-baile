@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-07-01T06:45:22+00:00",
+  "updatedAt": "2026-07-01T15:41:30+00:00",
   "matches": [
     {
       "id": 1,
@@ -20,6 +20,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "5-3-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Cidade do México",
@@ -73,6 +75,64 @@
           "type": "vermelho",
           "team": "México"
         }
+      ],
+      "homeCoach": "Javier Aguirre Onaindía",
+      "awayCoach": "Hugo Henri Broos",
+      "subs": [
+        {
+          "off": "Brian Gutierrez",
+          "on": "Luis Chavez",
+          "minute": "66'",
+          "side": "home"
+        },
+        {
+          "off": "Alvaro Fidalgo",
+          "on": "Gilberto Mora",
+          "minute": "66'",
+          "side": "home"
+        },
+        {
+          "off": "Erik Lira",
+          "on": "Edson Alvarez",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Raul Jimenez",
+          "on": "Armando Gonzalez",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Julian Quinones",
+          "on": "Alexis Vega",
+          "minute": "79'",
+          "side": "home"
+        },
+        {
+          "off": "Lyle Foster",
+          "on": "Thalente Mbatha",
+          "minute": "56'",
+          "side": "away"
+        },
+        {
+          "off": "Jayden Adams",
+          "on": "Themba Zwane",
+          "minute": "61'",
+          "side": "away"
+        },
+        {
+          "off": "Iqraam Rayners",
+          "on": "Evidence Makgopa",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Aubrey Modiba",
+          "on": "Oswin Appollis",
+          "minute": "76'",
+          "side": "away"
+        }
       ]
     },
     {
@@ -91,6 +151,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-3",
+      "awayTactics": "5-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Zapopan",
@@ -119,6 +181,64 @@
           "type": "amarelo",
           "team": "República da Coreia"
         }
+      ],
+      "homeCoach": "Myung-Bo Hong",
+      "awayCoach": "Miroslav Koubek",
+      "subs": [
+        {
+          "off": "Lee Jaesung",
+          "on": "Hwang Heechan",
+          "minute": "62'",
+          "side": "home"
+        },
+        {
+          "off": "Son Heungmin",
+          "on": "Oh Hyeongyu",
+          "minute": "69'",
+          "side": "home"
+        },
+        {
+          "off": "Lee Taeseok",
+          "on": "Eom Jisung",
+          "minute": "69'",
+          "side": "home"
+        },
+        {
+          "off": "Hwang Inbeom",
+          "on": "Kim Jingyu",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Paik Seungho",
+          "on": "Park Jinseob",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Pavel Sulc",
+          "on": "Adam Hlozek",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Patrik Schick",
+          "on": "Tomas Chory",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Lukas Provod",
+          "on": "Michal Sadilek",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Alexandr Sojka",
+          "on": "Mojmir Chytil",
+          "minute": "84'",
+          "side": "away"
+        }
       ]
     },
     {
@@ -137,6 +257,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Toronto",
@@ -184,6 +306,70 @@
           "type": "amarelo",
           "team": "Bósnia e Herzegovina"
         }
+      ],
+      "homeCoach": "Jesse Alan Marsch",
+      "awayCoach": "Sergej Barbarez",
+      "subs": [
+        {
+          "off": "Jonathan David",
+          "on": "Promise David",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Tajon Buchanan",
+          "on": "Ali Ahmed",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Liam Millar",
+          "on": "Jacob Shaffelburg",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Tani Oluwaseyi",
+          "on": "Cyle Larin",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Stephen Eustaquio",
+          "on": "Jonathan Osorio",
+          "minute": "90'+1'",
+          "side": "home"
+        },
+        {
+          "off": "Ivan Basic",
+          "on": "Armin Gigovic",
+          "minute": "61'",
+          "side": "away"
+        },
+        {
+          "off": "Jovo Lukic",
+          "on": "Samed Bazdar",
+          "minute": "61'",
+          "side": "away"
+        },
+        {
+          "off": "Amar Memic",
+          "on": "Kerim Alajbegovic",
+          "minute": "74'",
+          "side": "away"
+        },
+        {
+          "off": "Esmir Bajraktarevic",
+          "on": "Ivan Sunjic",
+          "minute": "74'",
+          "side": "away"
+        },
+        {
+          "off": "Sead Kolasinac",
+          "on": "Dzenis Burnic",
+          "minute": "83'",
+          "side": "away"
+        }
       ]
     },
     {
@@ -202,6 +388,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Inglewood",
@@ -271,6 +459,64 @@
           "type": "amarelo",
           "team": "Paraguai"
         }
+      ],
+      "homeCoach": "Mauricio Pochettino",
+      "awayCoach": "Gustavo Alfaro",
+      "subs": [
+        {
+          "off": "Christian Pulisic",
+          "on": "Sebastian Berhalter",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Sergino Dest",
+          "on": "Timothy Weah",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Folarin Balogun",
+          "on": "Ricardo Pepi",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Malik Tillman",
+          "on": "Giovanni Reyna",
+          "minute": "82'",
+          "side": "home"
+        },
+        {
+          "off": "Damian Bobadilla",
+          "on": "Mauricio",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Antonio Sanabria",
+          "on": "Alex Arce",
+          "minute": "62'",
+          "side": "away"
+        },
+        {
+          "off": "Miguel Almiron",
+          "on": "Ramon Sosa",
+          "minute": "79'",
+          "side": "away"
+        },
+        {
+          "off": "Juan Jose Caceres",
+          "on": "Gustavo Velazquez",
+          "minute": "79'",
+          "side": "away"
+        },
+        {
+          "off": "Diego Gomez",
+          "on": "Alejandro Romero Gamarra",
+          "minute": "79'",
+          "side": "away"
+        }
       ]
     },
     {
@@ -289,6 +535,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Foxborough",
@@ -326,6 +574,58 @@
           "team": "Escócia"
         }
       ],
+      "homeCoach": "Sebastien Migne",
+      "awayCoach": "Stephen Clark",
+      "subs": [
+        {
+          "off": "Louicius Deedson",
+          "on": "Josue Casimir",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Wilson Isidor",
+          "on": "Lenny Joseph",
+          "minute": "75'",
+          "side": "home"
+        },
+        {
+          "off": "Ruben Providence",
+          "on": "Yassin Fortune",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Che Adams",
+          "on": "Lyndon Dykes",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Ben Gannon-Doak",
+          "on": "Ryan Christie",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Aaron Hickey",
+          "on": "Nathan Patterson",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "John Mcginn",
+          "on": "Findlay Curtis",
+          "minute": "82'",
+          "side": "away"
+        },
+        {
+          "off": "Lawrence Shankland",
+          "on": "Kenny Mclean",
+          "minute": "82'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-16T12:59:16+00:00"
@@ -347,6 +647,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "5-4-1",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Vancouver",
@@ -371,6 +673,70 @@
           "team": "Turquia"
         }
       ],
+      "homeCoach": "Tony Popović",
+      "awayCoach": "Vincenzo Montella",
+      "subs": [
+        {
+          "off": "Nestory Irankunda",
+          "on": "Nishan Velupillay",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Mohamed Toure",
+          "on": "Tete Yengi",
+          "minute": "74'",
+          "side": "home"
+        },
+        {
+          "off": "Jacob Italiano",
+          "on": "Jason Geria",
+          "minute": "74'",
+          "side": "home"
+        },
+        {
+          "off": "Paul Okon-Engstler",
+          "on": "Jackson Irvine",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Jordan Bos",
+          "on": "Aziz Behich",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Baris Alper Yilmaz",
+          "on": "Kenan Yildiz",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Orkun Kokcu",
+          "on": "Yunus Akgun",
+          "minute": "62'",
+          "side": "away"
+        },
+        {
+          "off": "Ismail Yuksek",
+          "on": "Salih Ozcan",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Zeki Celik",
+          "on": "Mert Muldur",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Kerem Akturkoglu",
+          "on": "Deniz Gul",
+          "minute": "85'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-16T12:59:16+00:00"
@@ -392,6 +758,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "East Rutherford",
@@ -422,6 +790,70 @@
           "team": "Brasil"
         }
       ],
+      "homeCoach": "Carlo Ancelotti",
+      "awayCoach": "Mohamed Ouahbi",
+      "subs": [
+        {
+          "off": "Casemiro",
+          "on": "Fabinho",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Roger Ibanez",
+          "on": "Danilo",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Lucas Paqueta",
+          "on": "Matheus Cunha",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Igor Thiago",
+          "on": "Luiz Henrique",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Bruno Guimaraes",
+          "on": "Danilo Santos",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Brahim Diaz",
+          "on": "Chemsdine Talbi",
+          "minute": "64'",
+          "side": "away"
+        },
+        {
+          "off": "Azzedine Ounahi",
+          "on": "Samir El Mourabet",
+          "minute": "64'",
+          "side": "away"
+        },
+        {
+          "off": "Noussair Mazraoui",
+          "on": "Anass Salah Eddine",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Bilal El Khannouss",
+          "on": "Ayoube Amaimouni",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Ismael Saibari",
+          "on": "Soufiane Rahimi",
+          "minute": "89'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-16T12:59:16+00:00"
@@ -443,6 +875,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-3-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Santa Clara",
@@ -481,6 +915,70 @@
           "team": "Suíça"
         }
       ],
+      "homeCoach": "Julen Lopetegui Argote",
+      "awayCoach": "Murat Yakin",
+      "subs": [
+        {
+          "off": "Ayoub Aloui",
+          "on": "Ahmed Fathy",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Jassem Gaber",
+          "on": "Karim Boudiaf",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Yusuf Abdurisag",
+          "on": "Ahmed Alaaeldin",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Assim Madibo",
+          "on": "Mohamed Manai",
+          "minute": "78'",
+          "side": "home"
+        },
+        {
+          "off": "Edmilson Junior",
+          "on": "Hassan Alhaydos",
+          "minute": "88'",
+          "side": "home"
+        },
+        {
+          "off": "Dan Ndoye",
+          "on": "Johan Manzambi",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Michel Aebischer",
+          "on": "Fabian Rieder",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Ruben Vargas",
+          "on": "Zeki Amdouni",
+          "minute": "79'",
+          "side": "away"
+        },
+        {
+          "off": "Ricardo Rodriguez",
+          "on": "Miro Muheim",
+          "minute": "89'",
+          "side": "away"
+        },
+        {
+          "off": "Remo Freuler",
+          "on": "Ardon Jashari",
+          "minute": "89'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-16T12:59:16+00:00"
@@ -502,6 +1000,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Filadélfia",
@@ -539,6 +1039,64 @@
           "team": "Equador"
         }
       ],
+      "homeCoach": "Emerse Fae",
+      "awayCoach": "Sebastián Andrés Beccacece",
+      "subs": [
+        {
+          "off": "Elye Wahi",
+          "on": "Ange-Yoan Bonny",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Bazoumana Toure",
+          "on": "Amad Diallo",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Seko Fofana",
+          "on": "Ibrahim Sangare",
+          "minute": "77'",
+          "side": "home"
+        },
+        {
+          "off": "Nicolas Pepe",
+          "on": "Christ Inao Oulai",
+          "minute": "77'",
+          "side": "home"
+        },
+        {
+          "off": "Guela Doue",
+          "on": "Odilon Kossounou",
+          "minute": "89'",
+          "side": "home"
+        },
+        {
+          "off": "Alan Minda",
+          "on": "Nilson Angulo",
+          "minute": "56'",
+          "side": "away"
+        },
+        {
+          "off": "John Yeboah",
+          "on": "Angelo Preciado",
+          "minute": "62'",
+          "side": "away"
+        },
+        {
+          "off": "Alan Franco",
+          "on": "Jackson Porozo",
+          "minute": "62'",
+          "side": "away"
+        },
+        {
+          "off": "Enner Valencia",
+          "on": "Kevin Rodriguez",
+          "minute": "77'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-16T12:59:16+00:00"
@@ -560,6 +1118,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-3",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Houston",
@@ -608,6 +1168,58 @@
         }
       ],
       "cards": [],
+      "homeCoach": "Julian Nagelsmann",
+      "awayCoach": "Dick Advocaat",
+      "subs": [
+        {
+          "off": "Jamal Musiala",
+          "on": "Deniz Undav",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Felix Nmecha",
+          "on": "Leon Goretzka",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Jonathan Tah",
+          "on": "Antonio Ruediger",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Nathaniel Brown",
+          "on": "David Raum",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Joshua Kimmich",
+          "on": "Waldemar Anton",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Sontje Hansen",
+          "on": "Jeremy Antonisse",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Juergen Locadia",
+          "on": "Jearl Margaritha",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Tahith Chong",
+          "on": "Gervane Kastaneer",
+          "minute": "82'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 30,
         "at": "2026-06-16T12:59:16+00:00"
@@ -629,6 +1241,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Arlington",
@@ -675,6 +1289,70 @@
           "team": "Holanda"
         }
       ],
+      "homeCoach": "Ronald Koeman",
+      "awayCoach": "Hajime Moriyasu",
+      "subs": [
+        {
+          "off": "Donyell Malen",
+          "on": "Memphis Depay",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Tijjani Reijnders",
+          "on": "Quinten Timber",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Crysencio Summerville",
+          "on": "Teun Koopmeiners",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Ryan Gravenberch",
+          "on": "Nathan Ake",
+          "minute": "81'",
+          "side": "home"
+        },
+        {
+          "off": "Cody Gakpo",
+          "on": "Brian Brobbey",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Daizen Maeda",
+          "on": "Junya Ito",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Tsuyoshi Watanabe",
+          "on": "Takehiro Tomiyasu",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Takefusa Kubo",
+          "on": "Koki Ogawa",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Ritsu Doan",
+          "on": "Yukinari Sugawara",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Ayase Ueda",
+          "on": "Kento Shiogai",
+          "minute": "84'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-16T12:59:16+00:00"
@@ -696,6 +1374,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-1-2",
+      "awayTactics": "5-3-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Guadalupe",
@@ -740,6 +1420,70 @@
           "team": "Tunísia"
         }
       ],
+      "homeCoach": "Graham Potter",
+      "awayCoach": "Sabri Lamouchi",
+      "subs": [
+        {
+          "off": "Benjamin Nygren",
+          "on": "Lucas Bergvall",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Gabriel Gudmundsson",
+          "on": "Elliot Stroud",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Jesper Karlstrom",
+          "on": "Mattias Svanberg",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Alexander Isak",
+          "on": "Anthony Elanga",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Alexander Bernhardsson",
+          "on": "Daniel Svensson",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Ellyes Skhiri",
+          "on": "Elias Achouri",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Yan Valery",
+          "on": "Mohamed Hadj Mahmoud",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Elias Saad",
+          "on": "Sebastian Tounekti",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Anis Slimane",
+          "on": "Firas Chaouat",
+          "minute": "84'",
+          "side": "away"
+        },
+        {
+          "off": "Rani Khedira",
+          "on": "Ismael Gharbi",
+          "minute": "84'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-16T12:59:16+00:00"
@@ -761,6 +1505,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Miami Gardens",
@@ -785,6 +1531,70 @@
           "team": "Arábia Saudita"
         }
       ],
+      "homeCoach": "Georgios Donis",
+      "awayCoach": "Marcelo Bielsa",
+      "subs": [
+        {
+          "off": "Musab Aljuwayr",
+          "on": "Nasser Aldawsari",
+          "minute": "63'",
+          "side": "home"
+        },
+        {
+          "off": "Mohammed Abu Alshamat",
+          "on": "Nawaf Bu Washl",
+          "minute": "81'",
+          "side": "home"
+        },
+        {
+          "off": "Moteb Alharbi",
+          "on": "Abdullah Alhamddan",
+          "minute": "90'+2'",
+          "side": "home"
+        },
+        {
+          "off": "Feras Albrikan",
+          "on": "Ala Alhajji",
+          "minute": "90'+2'",
+          "side": "home"
+        },
+        {
+          "off": "Saud Abdulhamid",
+          "on": "Ali Lajami",
+          "minute": "90'+2'",
+          "side": "home"
+        },
+        {
+          "off": "Darwin Nunez",
+          "on": "Agustin Canobbio",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Matias Vina",
+          "on": "Juan Manuel Sanabria",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Manuel Ugarte",
+          "on": "Nicolas De La Cruz",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Maxi Araujo",
+          "on": "Brian Rodriguez",
+          "minute": "81'",
+          "side": "away"
+        },
+        {
+          "off": "Federico Vinas",
+          "on": "Rodrigo Aguirre",
+          "minute": "90'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 33,
         "at": "2026-06-16T12:59:16+00:00"
@@ -806,6 +1616,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Atlanta",
@@ -823,6 +1635,64 @@
           "minute": "90'+3'",
           "type": "amarelo",
           "team": "Espanha"
+        }
+      ],
+      "homeCoach": "Luis De La Fuente Castillo",
+      "awayCoach": "Pedro Leitão Brito",
+      "subs": [
+        {
+          "off": "Fabian Ruiz",
+          "on": "Mikel Merino",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Gavi",
+          "on": "Lamine Yamal",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Ferran Torres",
+          "on": "Dani Olmo",
+          "minute": "81'",
+          "side": "home"
+        },
+        {
+          "off": "Rodri",
+          "on": "Nico Williams",
+          "minute": "87'",
+          "side": "home"
+        },
+        {
+          "off": "Dailon Livramento",
+          "on": "Nuno Da Costa",
+          "minute": "61'",
+          "side": "away"
+        },
+        {
+          "off": "Jovane Cabral",
+          "on": "Willy Semedo",
+          "minute": "61'",
+          "side": "away"
+        },
+        {
+          "off": "Laros Duarte",
+          "on": "Deroy Duarte",
+          "minute": "61'",
+          "side": "away"
+        },
+        {
+          "off": "Sidny Lopes Cabral",
+          "on": "Joao Paulo",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Jamiro Monteiro",
+          "on": "Telmo Arcanjo",
+          "minute": "79'",
+          "side": "away"
         }
       ],
       "weather": {
@@ -846,6 +1716,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-3-3",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Inglewood",
@@ -880,6 +1752,64 @@
           "team": "RI do Irã"
         }
       ],
+      "homeCoach": "Amir Ghalenoei",
+      "awayCoach": "Darren Bazeley",
+      "subs": [
+        {
+          "off": "Arya Yousefi",
+          "on": "Mehdi Ghayedi",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Shahriyar Moghanloo",
+          "on": "Ali Alipour",
+          "minute": "53'",
+          "side": "home"
+        },
+        {
+          "off": "Saman Ghoddos",
+          "on": "Ehsan Hajisafi",
+          "minute": "65'",
+          "side": "home"
+        },
+        {
+          "off": "Mehdi Taremi",
+          "on": "Amirhossein Hosseinzadeh",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Callum Mccowatt",
+          "on": "Ryan Thomas",
+          "minute": "68'",
+          "side": "away"
+        },
+        {
+          "off": "Liberato Cacace",
+          "on": "Ben Old",
+          "minute": "68'",
+          "side": "away"
+        },
+        {
+          "off": "Tim Payne",
+          "on": "Callan Elliot",
+          "minute": "77'",
+          "side": "away"
+        },
+        {
+          "off": "Sarpreet Singh",
+          "on": "Jesse Randall",
+          "minute": "90'+2'",
+          "side": "away"
+        },
+        {
+          "off": "Marko Stamenic",
+          "on": "Tyler Bindon",
+          "minute": "90'+2'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 20,
         "at": "2026-06-15T19:59:53+00:00"
@@ -901,6 +1831,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Seattle",
@@ -944,6 +1876,70 @@
           "team": "Bélgica"
         }
       ],
+      "homeCoach": "Rudi Garcia",
+      "awayCoach": "Hossam Hassan Hussein",
+      "subs": [
+        {
+          "off": "Timothy Castagne",
+          "on": "Nicolas Raskin",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Amadou Onana",
+          "on": "Maxim De Cuyper",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Charles De Ketelaere",
+          "on": "Romelu Lukaku",
+          "minute": "66'",
+          "side": "home"
+        },
+        {
+          "off": "Kevin De Bruyne",
+          "on": "Hans Vanaken",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Jeremy Doku",
+          "on": "Matias Fernandez-Pardo",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Emam Ashour",
+          "on": "Ramy Rabia",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Mostafa Zico",
+          "on": "Zizo",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Mohamed Salah",
+          "on": "Hamza Abdelkarim",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Ahmed Fatouh",
+          "on": "Karim Hafez",
+          "minute": "88'",
+          "side": "away"
+        },
+        {
+          "off": "Hamdy Fathy",
+          "on": "Ibrahim Adel",
+          "minute": "88'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-16T12:59:16+00:00"
@@ -965,6 +1961,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-3-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "East Rutherford",
@@ -992,6 +1990,52 @@
         }
       ],
       "cards": [],
+      "homeCoach": "Didier Deschamps",
+      "awayCoach": "Pape Thiaw",
+      "subs": [
+        {
+          "off": "Ousmane Dembele",
+          "on": "Bradley Barcola",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Desire Doue",
+          "on": "Rayan Cherki",
+          "minute": "87'",
+          "side": "home"
+        },
+        {
+          "off": "Ismaila Sarr",
+          "on": "Ibrahim Mbaye",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Lamine Camara",
+          "on": "Habib Diarra",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Nicolas Jackson",
+          "on": "Bamba Dieng",
+          "minute": "83'",
+          "side": "away"
+        },
+        {
+          "off": "Pape Gueye",
+          "on": "Iliman Ndiaye",
+          "minute": "83'",
+          "side": "away"
+        },
+        {
+          "off": "Idrissa Gana Gueye",
+          "on": "Pathe Ciss",
+          "minute": "88'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 26,
         "at": "2026-06-16T12:49:25+00:00"
@@ -1013,6 +2057,8 @@
       "awayScore": 4,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Foxborough",
@@ -1053,6 +2099,70 @@
           "team": "Iraque"
         }
       ],
+      "homeCoach": "Graham James Arnold",
+      "awayCoach": "Ståle Solbakken",
+      "subs": [
+        {
+          "off": "Ali Alhamadi",
+          "on": "Marko Farji",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "off": "Zaid Ismael",
+          "on": "Zidane Iqbal",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "off": "Hussein Ali",
+          "on": "Mustafa Saadoon",
+          "minute": "73'",
+          "side": "home"
+        },
+        {
+          "off": "Ali Jasim",
+          "on": "Ahmed Qasem",
+          "minute": "73'",
+          "side": "home"
+        },
+        {
+          "off": "Ibrahim Bayesh",
+          "on": "Mohanad Ali",
+          "minute": "78'",
+          "side": "home"
+        },
+        {
+          "off": "David Moller Wolfe",
+          "on": "Leo Ostigard",
+          "minute": "73'",
+          "side": "away"
+        },
+        {
+          "off": "Fredrik Aursnes",
+          "on": "Kristian Thorstvedt",
+          "minute": "73'",
+          "side": "away"
+        },
+        {
+          "off": "Antonio Nusa",
+          "on": "Andreas Schjelderup",
+          "minute": "73'",
+          "side": "away"
+        },
+        {
+          "off": "Alexander Sorloth",
+          "on": "Oscar Bobb",
+          "minute": "73'",
+          "side": "away"
+        },
+        {
+          "off": "Martin Odegaard",
+          "on": "Patrick Berg",
+          "minute": "81'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-16T19:00:39+00:00"
@@ -1074,6 +2184,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-3-3",
+      "awayTactics": "4-3-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Kansas City",
@@ -1096,6 +2208,70 @@
         }
       ],
       "cards": [],
+      "homeCoach": "Lionel Scaloni",
+      "awayCoach": "Vladimir Petkovic",
+      "subs": [
+        {
+          "off": "Gonzalo Montiel",
+          "on": "Nahuel Molina",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Lautaro Martinez",
+          "on": "Julian Alvarez",
+          "minute": "55'",
+          "side": "home"
+        },
+        {
+          "off": "Thiago Almada",
+          "on": "Nico Gonzalez",
+          "minute": "55'",
+          "side": "home"
+        },
+        {
+          "off": "Cristian Romero",
+          "on": "Nicolas Otamendi",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Lionel Messi",
+          "on": "Nico Paz",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Hicham Boudaoui",
+          "on": "Houssem Aouar",
+          "minute": "64'",
+          "side": "away"
+        },
+        {
+          "off": "Anis Hadj Moussa",
+          "on": "Riyad Mahrez",
+          "minute": "64'",
+          "side": "away"
+        },
+        {
+          "off": "Amine Gouiri",
+          "on": "Mohamed Amoura",
+          "minute": "64'",
+          "side": "away"
+        },
+        {
+          "off": "Nabil Bentaleb",
+          "on": "Ramiz Zerrouki",
+          "minute": "82'",
+          "side": "away"
+        },
+        {
+          "off": "Ibrahim Maza",
+          "on": "Adil Boulbina",
+          "minute": "82'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 28,
         "at": "2026-06-16T19:00:39+00:00"
@@ -1117,6 +2293,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Santa Clara",
@@ -1153,6 +2331,70 @@
           "team": "Áustria"
         }
       ],
+      "homeCoach": "Ralf Rangnick",
+      "awayCoach": "Jamal Sellami",
+      "subs": [
+        {
+          "off": "Sasa Kalajdzic",
+          "on": "Marko Arnautovic",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Xaver Schlager",
+          "on": "Carney Chukwuemeka",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "off": "Phillip Mwene",
+          "on": "Paul Wanner",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "off": "David Alaba",
+          "on": "Kevin Danso",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "off": "Romano Schmid",
+          "on": "Patrick Wimmer",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Mohammad Abualnadi",
+          "on": "Saleem Obaid",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Abdallah Nasib",
+          "on": "Saed Alrosan",
+          "minute": "81'",
+          "side": "away"
+        },
+        {
+          "off": "Ehsan Haddad",
+          "on": "Mahmoud Almardi",
+          "minute": "81'",
+          "side": "away"
+        },
+        {
+          "off": "Odeh Fakhoury",
+          "on": "Ali Azaizeh",
+          "minute": "88'",
+          "side": "away"
+        },
+        {
+          "off": "Mousa Altamari",
+          "on": "Mohammad Aldaoud",
+          "minute": "88'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-17T01:58:37+00:00"
@@ -1174,6 +2416,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Toronto",
@@ -1205,6 +2449,64 @@
           "team": "Panamá"
         }
       ],
+      "homeCoach": "Carlos Queiroz",
+      "awayCoach": "Thomas Christiansen Tarín",
+      "subs": [
+        {
+          "off": "Lawrence Ati Zigi",
+          "on": "Benjamin Asare",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Kamaldeen Sulemana",
+          "on": "Brandon Thomas-Asante",
+          "minute": "58'",
+          "side": "home"
+        },
+        {
+          "off": "Ernest Nuamah",
+          "on": "Abdul Fatawu",
+          "minute": "58'",
+          "side": "home"
+        },
+        {
+          "off": "Elisha Owusu",
+          "on": "Kwasi Sibo",
+          "minute": "78'",
+          "side": "home"
+        },
+        {
+          "off": "Jordan Ayew",
+          "on": "Prince Adu",
+          "minute": "87'",
+          "side": "home"
+        },
+        {
+          "off": "Cecilio Waterman",
+          "on": "Jose Fajardo",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Cristian Martinez",
+          "on": "Azarias Londono",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Jose Luis Rodriguez",
+          "on": "Ismael Diaz",
+          "minute": "74'",
+          "side": "away"
+        },
+        {
+          "off": "Cesar Blackman",
+          "on": "Anibal Godoy",
+          "minute": "90'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 17,
         "at": "2026-06-17T17:49:01+00:00"
@@ -1226,6 +2528,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Arlington",
@@ -1264,6 +2568,70 @@
         }
       ],
       "cards": [],
+      "homeCoach": "Thomas Tuchel",
+      "awayCoach": "Zlatko Dalić",
+      "subs": [
+        {
+          "off": "Declan Rice",
+          "on": "Morgan Rogers",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Noni Madueke",
+          "on": "Bukayo Saka",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Anthony Gordon",
+          "on": "Marcus Rashford",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Jude Bellingham",
+          "on": "Djed Spence",
+          "minute": "79'",
+          "side": "home"
+        },
+        {
+          "off": "John Stones",
+          "on": "Marc Guehi",
+          "minute": "87'",
+          "side": "home"
+        },
+        {
+          "off": "Luka Modric",
+          "on": "Mateo Kovacic",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Petar Musa",
+          "on": "Igor Matanovic",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Luka Vuskovic",
+          "on": "Marco Pasalic",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Mario Pasalic",
+          "on": "Andrej Kramaric",
+          "minute": "78'",
+          "side": "away"
+        },
+        {
+          "off": "Martin Baturina",
+          "on": "Nikola Vlasic",
+          "minute": "78'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 32,
         "at": "2026-06-17T17:49:01+00:00"
@@ -1285,6 +2653,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "5-3-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Houston",
@@ -1327,6 +2697,64 @@
           "team": "Portugal"
         }
       ],
+      "homeCoach": "Roberto Martínez Montoliú",
+      "awayCoach": "Sébastien Desabre",
+      "subs": [
+        {
+          "off": "Bernardo Silva",
+          "on": "Francisco Conceicao",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Pedro Neto",
+          "on": "Rafael Leao",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Nuno Mendes",
+          "on": "Nelson Semedo",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Vitinha",
+          "on": "Goncalo Ramos",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Ngalayel Mukau",
+          "on": "Noah Sadiki",
+          "minute": "57'",
+          "side": "away"
+        },
+        {
+          "off": "Edo Kayembe",
+          "on": "Charles Pickel",
+          "minute": "74'",
+          "side": "away"
+        },
+        {
+          "off": "Arthur Masuaku",
+          "on": "Joris Kayembe",
+          "minute": "74'",
+          "side": "away"
+        },
+        {
+          "off": "Aaron Wan-Bissaka",
+          "on": "Gedeon Kalulu",
+          "minute": "85'",
+          "side": "away"
+        },
+        {
+          "off": "Cedric Bakambu",
+          "on": "Simon Banza",
+          "minute": "85'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-17T01:58:37+00:00"
@@ -1348,6 +2776,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-3",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Cidade do México",
@@ -1388,6 +2818,70 @@
           "team": "Uzbequistão"
         }
       ],
+      "homeCoach": "Fabio Cannavaro",
+      "awayCoach": "Néstor Gabriel Lorenzo",
+      "subs": [
+        {
+          "off": "Sherzod Nasrullaev",
+          "on": "Farrukh Sayfiev",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Oston Urunov",
+          "on": "Dostonbek Khamdamov",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Rustam Ashurmatov",
+          "on": "Jakhongir Urozov",
+          "minute": "77'",
+          "side": "home"
+        },
+        {
+          "off": "Abbosbek Fayzullaev",
+          "on": "Azizbek Amonov",
+          "minute": "77'",
+          "side": "home"
+        },
+        {
+          "off": "Eldor Shomurodov",
+          "on": "Igor Sergeev",
+          "minute": "90'+3'",
+          "side": "home"
+        },
+        {
+          "off": "James Rodriguez",
+          "on": "Jaminton Campaz",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Luis Suarez",
+          "on": "Cucho Hernandez",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Gustavo Puerta",
+          "on": "Richard Rios",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Luis Diaz",
+          "on": "Andres Gomez",
+          "minute": "90'+3'",
+          "side": "away"
+        },
+        {
+          "off": "Jhon Arias",
+          "on": "Kevin Castano",
+          "minute": "90'+3'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 18,
         "at": "2026-06-18T01:59:33+00:00"
@@ -1409,6 +2903,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-5-2",
+      "awayTactics": "4-3-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Atlanta",
@@ -1446,6 +2942,58 @@
           "team": "Tchéquia"
         }
       ],
+      "homeCoach": "Miroslav Koubek",
+      "awayCoach": "Hugo Henri Broos",
+      "subs": [
+        {
+          "off": "Vladimir Darida",
+          "on": "Pavel Sulc",
+          "minute": "55'",
+          "side": "home"
+        },
+        {
+          "off": "Alexandr Sojka",
+          "on": "Jaroslav Zeleny",
+          "minute": "55'",
+          "side": "home"
+        },
+        {
+          "off": "Adam Hlozek",
+          "on": "Lukas Provod",
+          "minute": "67'",
+          "side": "home"
+        },
+        {
+          "off": "Michal Sadilek",
+          "on": "Tomas Soucek",
+          "minute": "67'",
+          "side": "home"
+        },
+        {
+          "off": "Lukas Cerv",
+          "on": "David Zima",
+          "minute": "78'",
+          "side": "home"
+        },
+        {
+          "off": "Jayden Adams",
+          "on": "Relebohile Mofokeng",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Iqraam Rayners",
+          "on": "Evidence Makgopa",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Thapelo Maseko",
+          "on": "Kamogelo Sebelebele",
+          "minute": "84'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-18T01:59:33+00:00"
@@ -1467,6 +3015,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-3-3",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Inglewood",
@@ -1525,6 +3075,70 @@
           "team": "Bósnia e Herzegovina"
         }
       ],
+      "homeCoach": "Murat Yakin",
+      "awayCoach": "Sergej Barbarez",
+      "subs": [
+        {
+          "off": "Dan Ndoye",
+          "on": "Johan Manzambi",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Michel Aebischer",
+          "on": "Djibril Sow",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Fabian Rieder",
+          "on": "Ruben Vargas",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Silvan Widmer",
+          "on": "Luca Jaquez",
+          "minute": "86'",
+          "side": "home"
+        },
+        {
+          "off": "Breel Embolo",
+          "on": "Cedric Itten",
+          "minute": "89'",
+          "side": "home"
+        },
+        {
+          "off": "Benjamin Tahirovic",
+          "on": "Ivan Basic",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Edin Dzeko",
+          "on": "Esmir Bajraktarevic",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Ivan Sunjic",
+          "on": "Amir Hadziahmetovic",
+          "minute": "85'",
+          "side": "away"
+        },
+        {
+          "off": "Ermedin Demirovic",
+          "on": "Jovo Lukic",
+          "minute": "85'",
+          "side": "away"
+        },
+        {
+          "off": "Kerim Alajbegovic",
+          "on": "Ermin Mahmic",
+          "minute": "90'+1'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 21,
         "at": "2026-06-18T17:39:14+00:00"
@@ -1546,6 +3160,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-3-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Vancouver",
@@ -1609,6 +3225,70 @@
           "team": "Catar"
         }
       ],
+      "homeCoach": "Jesse Alan Marsch",
+      "awayCoach": "Julen Lopetegui Argote",
+      "subs": [
+        {
+          "off": "Derek Cornelius",
+          "on": "Moise Bombito",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Ismael Kone",
+          "on": "Nathan Saliba",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Ali Ahmed",
+          "on": "Tani Oluwaseyi",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Luc De Fougerolles",
+          "on": "Jacob Shaffelburg",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Tajon Buchanan",
+          "on": "Niko Sigur",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Yusuf Abdurisag",
+          "on": "Sultan Albrake",
+          "minute": "40'",
+          "side": "away"
+        },
+        {
+          "off": "Edmilson Junior",
+          "on": "Ahmed Fathy",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Jassem Gaber",
+          "on": "Mohamed Manai",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Akram Afif",
+          "on": "Alhashmi Alhussein",
+          "minute": "59'",
+          "side": "away"
+        },
+        {
+          "off": "Ahmed Fathy",
+          "on": "Lucas Mendes",
+          "minute": "87'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-18T17:39:14+00:00"
@@ -1630,6 +3310,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Zapopan",
@@ -1655,6 +3337,70 @@
           "team": "República da Coreia"
         }
       ],
+      "homeCoach": "Javier Aguirre Onaindía",
+      "awayCoach": "Myung-Bo Hong",
+      "subs": [
+        {
+          "off": "Luis Romo",
+          "on": "Obed Vargas",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Brian Gutierrez",
+          "on": "Orbelin Pineda",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Raul Jimenez",
+          "on": "Santiago Gimenez",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Roberto Alvarado",
+          "on": "Israel Reyes",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Julian Quinones",
+          "on": "Cesar Huerta",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Lee Jaesung",
+          "on": "Hwang Heechan",
+          "minute": "57'",
+          "side": "away"
+        },
+        {
+          "off": "Son Heungmin",
+          "on": "Oh Hyeongyu",
+          "minute": "57'",
+          "side": "away"
+        },
+        {
+          "off": "Kim Moonhwan",
+          "on": "Eom Jisung",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Seol Youngwoo",
+          "on": "Yang Hyunjun",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Paik Seungho",
+          "on": "Cho Guesung",
+          "minute": "77'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 20,
         "at": "2026-06-18T17:39:14+00:00"
@@ -1676,6 +3422,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-3-3",
+      "awayTactics": "5-4-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Filadélfia",
@@ -1723,6 +3471,70 @@
           "team": "Haiti"
         }
       ],
+      "homeCoach": "Carlo Ancelotti",
+      "awayCoach": "Sebastien Migne",
+      "subs": [
+        {
+          "off": "Raphinha",
+          "on": "Rayan",
+          "minute": "40'",
+          "side": "home"
+        },
+        {
+          "off": "Matheus Cunha",
+          "on": "Endrick",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Lucas Paqueta",
+          "on": "Gabriel Martinelli",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Vinicius Junior",
+          "on": "Danilo Santos",
+          "minute": "81'",
+          "side": "home"
+        },
+        {
+          "off": "Bruno Guimaraes",
+          "on": "Ederson Silva",
+          "minute": "81'",
+          "side": "home"
+        },
+        {
+          "off": "Carlens Arcus",
+          "on": "Dominique Simon",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Frantzdy Pierrot",
+          "on": "Wilson Isidor",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Josue Casimir",
+          "on": "Louicius Deedson",
+          "minute": "62'",
+          "side": "away"
+        },
+        {
+          "off": "Ruben Providence",
+          "on": "Lenny Joseph",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Jean-Ricner Bellegarde",
+          "on": "Derrick Etienne",
+          "minute": "81'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 26,
         "at": "2026-06-19T18:14:19+00:00"
@@ -1744,6 +3556,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Foxborough",
@@ -1769,6 +3583,64 @@
           "team": "Escócia"
         }
       ],
+      "homeCoach": "Stephen Clark",
+      "awayCoach": "Mohamed Ouahbi",
+      "subs": [
+        {
+          "off": "Kieran Tierney",
+          "on": "Ben Gannon-Doak",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Che Adams",
+          "on": "Lyndon Dykes",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Ryan Christie",
+          "on": "Kenny Mclean",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Nathan Patterson",
+          "on": "Anthony Ralston",
+          "minute": "88'",
+          "side": "home"
+        },
+        {
+          "off": "John Mcginn",
+          "on": "Ross Stewart",
+          "minute": "88'",
+          "side": "home"
+        },
+        {
+          "off": "Ismael Saibari",
+          "on": "Soufiane Rahimi",
+          "minute": "83'",
+          "side": "away"
+        },
+        {
+          "off": "Bilal El Khannouss",
+          "on": "Chemsdine Talbi",
+          "minute": "83'",
+          "side": "away"
+        },
+        {
+          "off": "Brahim Diaz",
+          "on": "Ayoube Amaimouni",
+          "minute": "83'",
+          "side": "away"
+        },
+        {
+          "off": "Azzedine Ounahi",
+          "on": "Samir El Mourabet",
+          "minute": "90'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-19T18:14:19+00:00"
@@ -1790,6 +3662,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Santa Clara",
@@ -1833,6 +3707,70 @@
           "team": "Turquia"
         }
       ],
+      "homeCoach": "Vincenzo Montella",
+      "awayCoach": "Gustavo Alfaro",
+      "subs": [
+        {
+          "off": "Kerem Akturkoglu",
+          "on": "Baris Alper Yilmaz",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Ismail Yuksek",
+          "on": "Can Uzun",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Yunus Akgun",
+          "on": "Deniz Gul",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Ferdi Kadioglu",
+          "on": "Eren Elmali",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Abdulkerim Bardakci",
+          "on": "Orkun Kokcu",
+          "minute": "86'",
+          "side": "home"
+        },
+        {
+          "off": "Isidro Pitta",
+          "on": "Damian Bobadilla",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Diego Gomez",
+          "on": "Gustavo Velazquez",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Juan Jose Caceres",
+          "on": "Alexandro Maidana",
+          "minute": "81'",
+          "side": "away"
+        },
+        {
+          "off": "Julio Enciso",
+          "on": "Gabriel Avalos",
+          "minute": "90'+1'",
+          "side": "away"
+        },
+        {
+          "off": "Matias Galarza",
+          "on": "Jose Canale",
+          "minute": "90'+1'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 19,
         "at": "2026-06-20T02:12:20+00:00"
@@ -1854,6 +3792,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-5-2",
+      "awayTactics": "5-4-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Seattle",
@@ -1915,6 +3855,70 @@
           "team": "EUA"
         }
       ],
+      "homeCoach": "Mauricio Pochettino",
+      "awayCoach": "Tony Popović",
+      "subs": [
+        {
+          "off": "Ricardo Pepi",
+          "on": "Sebastian Berhalter",
+          "minute": "74'",
+          "side": "home"
+        },
+        {
+          "off": "Sergino Dest",
+          "on": "Joe Scally",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Antonee Robinson",
+          "on": "Auston Trusty",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Folarin Balogun",
+          "on": "Haji Wright",
+          "minute": "90'+6'",
+          "side": "home"
+        },
+        {
+          "off": "Weston Mckennie",
+          "on": "Giovanni Reyna",
+          "minute": "90'+6'",
+          "side": "home"
+        },
+        {
+          "off": "Cameron Burgess",
+          "on": "Jason Geria",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Nishan Velupillay",
+          "on": "Connor Metcalfe",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Mohamed Toure",
+          "on": "Nestory Irankunda",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Mathew Leckie",
+          "on": "Cristian Volpato",
+          "minute": "61'",
+          "side": "away"
+        },
+        {
+          "off": "Paul Okon-Engstler",
+          "on": "Jackson Irvine",
+          "minute": "78'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-19T18:14:19+00:00"
@@ -1936,6 +3940,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Toronto",
@@ -1958,6 +3964,70 @@
         }
       ],
       "cards": [],
+      "homeCoach": "Julian Nagelsmann",
+      "awayCoach": "Emerse Fae",
+      "subs": [
+        {
+          "off": "Nico Schlotterbeck",
+          "on": "Antonio Ruediger",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Jamal Musiala",
+          "on": "Deniz Undav",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Aleksandar Pavlovic",
+          "on": "Nadiem Amiri",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Leroy Sane",
+          "on": "Jamie Leweling",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Kai Havertz",
+          "on": "Leon Goretzka",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Amad Diallo",
+          "on": "Simon Adingra",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Ange-Yoan Bonny",
+          "on": "Evann Guessand",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Ibrahim Sangare",
+          "on": "Seko Fofana",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Wilfried Singo",
+          "on": "Guela Doue",
+          "minute": "82'",
+          "side": "away"
+        },
+        {
+          "off": "Yan Diomande",
+          "on": "Nicolas Pepe",
+          "minute": "85'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 23,
         "at": "2026-06-20T16:58:46+00:00"
@@ -1979,6 +4049,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-5-2",
+      "awayTactics": "5-3-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Kansas City",
@@ -2022,6 +4094,64 @@
           "team": "Curaçau"
         }
       ],
+      "homeCoach": "Sebastián Andrés Beccacece",
+      "awayCoach": "Dick Advocaat",
+      "subs": [
+        {
+          "off": "Jordy Alcivar",
+          "on": "Kevin Rodriguez",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Pervis Estupinan",
+          "on": "Nilson Angulo",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Alan Franco",
+          "on": "Angelo Preciado",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "John Yeboah",
+          "on": "Jordy Caicedo",
+          "minute": "89'",
+          "side": "home"
+        },
+        {
+          "off": "Deveron Fonville",
+          "on": "Roshon Van Eijma",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Tahith Chong",
+          "on": "Jearl Margaritha",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Juninho Bacuna",
+          "on": "Kenji Gorre",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Livano Comenencia",
+          "on": "Godfried Roemeratoe",
+          "minute": "83'",
+          "side": "away"
+        },
+        {
+          "off": "Juergen Locadia",
+          "on": "Gervane Kastaneer",
+          "minute": "83'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-20T23:40:52+00:00"
@@ -2043,6 +4173,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-3-3",
+      "awayTactics": "3-5-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Houston",
@@ -2099,6 +4231,70 @@
           "team": "Suécia"
         }
       ],
+      "homeCoach": "Ronald Koeman",
+      "awayCoach": "Graham Potter",
+      "subs": [
+        {
+          "off": "Donyell Malen",
+          "on": "Crysencio Summerville",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Frenkie De Jong",
+          "on": "Teun Koopmeiners",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "off": "Tijjani Reijnders",
+          "on": "Guus Til",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "off": "Brian Brobbey",
+          "on": "Memphis Depay",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Cody Gakpo",
+          "on": "Noa Lang",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Alexander Bernhardsson",
+          "on": "Anthony Elanga",
+          "minute": "55'",
+          "side": "away"
+        },
+        {
+          "off": "Jesper Karlstrom",
+          "on": "Besfort Zeneli",
+          "minute": "55'",
+          "side": "away"
+        },
+        {
+          "off": "Benjamin Nygren",
+          "on": "Lucas Bergvall",
+          "minute": "55'",
+          "side": "away"
+        },
+        {
+          "off": "Yasin Ayari",
+          "on": "Taha Ali",
+          "minute": "79'",
+          "side": "away"
+        },
+        {
+          "off": "Gabriel Gudmundsson",
+          "on": "Elliot Stroud",
+          "minute": "90'+3'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-20T16:58:46+00:00"
@@ -2120,6 +4316,8 @@
       "awayScore": 4,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "5-3-2",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Guadalupe",
@@ -2147,6 +4345,70 @@
         }
       ],
       "cards": [],
+      "homeCoach": "Herve Renard",
+      "awayCoach": "Hajime Moriyasu",
+      "subs": [
+        {
+          "off": "Dylan Bronn",
+          "on": "Mohamed Amine Ben Hmida",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Elias Saad",
+          "on": "Ismael Gharbi",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Sebastian Tounekti",
+          "on": "Firas Chaouat",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Ali Abdi",
+          "on": "Elias Achouri",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Ellyes Skhiri",
+          "on": "Rani Khedira",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Ritsu Doan",
+          "on": "Yukinari Sugawara",
+          "minute": "74'",
+          "side": "away"
+        },
+        {
+          "off": "Daichi Kamada",
+          "on": "Junnosuke Suzuki",
+          "minute": "74'",
+          "side": "away"
+        },
+        {
+          "off": "Keito Nakamura",
+          "on": "Yuito Suzuki",
+          "minute": "78'",
+          "side": "away"
+        },
+        {
+          "off": "Takehiro Tomiyasu",
+          "on": "Ayumu Seko",
+          "minute": "78'",
+          "side": "away"
+        },
+        {
+          "off": "Ayase Ueda",
+          "on": "Keisuke Goto",
+          "minute": "84'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 25,
         "at": "2026-06-20T23:40:52+00:00"
@@ -2168,6 +4430,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Miami Gardens",
@@ -2220,6 +4484,58 @@
           "team": "Cabo Verde"
         }
       ],
+      "homeCoach": "Marcelo Bielsa",
+      "awayCoach": "Pedro Leitão Brito",
+      "subs": [
+        {
+          "off": "Manuel Ugarte",
+          "on": "Nicolas De La Cruz",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Federico Vinas",
+          "on": "Darwin Nunez",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Maxi Araujo",
+          "on": "Brian Rodriguez",
+          "minute": "81'",
+          "side": "home"
+        },
+        {
+          "off": "Telmo Arcanjo",
+          "on": "Deroy Duarte",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Gilson Benchimol",
+          "on": "Nuno Da Costa",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Garry Rodrigues",
+          "on": "Helio Varela",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Kevin Pina",
+          "on": "Laros Duarte",
+          "minute": "70'",
+          "side": "away"
+        },
+        {
+          "off": "Jamiro Monteiro",
+          "on": "Yannick Semedo",
+          "minute": "80'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-21T16:20:32+00:00"
@@ -2241,6 +4557,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "5-4-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Atlanta",
@@ -2282,6 +4600,70 @@
           "team": "Arábia Saudita"
         }
       ],
+      "homeCoach": "Luis De La Fuente Castillo",
+      "awayCoach": "Georgios Donis",
+      "subs": [
+        {
+          "off": "Lamine Yamal",
+          "on": "Yeremy Pino",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Mikel Oyarzabal",
+          "on": "Ferran Torres",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Dani Olmo",
+          "on": "Mikel Merino",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Alex Baena",
+          "on": "Nico Williams",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Pedri",
+          "on": "Fabian Ruiz",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Musab Aljuwayr",
+          "on": "Abdullah Alhamddan",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Abdullah Alkhaibari",
+          "on": "Mohamed Kanno",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Feras Albrikan",
+          "on": "Mohammed Abu Alshamat",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Abdulelah Alamri",
+          "on": "Ala Alhajji",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Nasser Aldawsari",
+          "on": "Khalid Alghannam",
+          "minute": "90'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-21T07:04:53+00:00"
@@ -2303,6 +4685,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "5-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Inglewood",
@@ -2328,6 +4712,70 @@
           "team": "Bélgica"
         }
       ],
+      "homeCoach": "Rudi Garcia",
+      "awayCoach": "Amir Ghalenoei",
+      "subs": [
+        {
+          "off": "Thomas Meunier",
+          "on": "Timothy Castagne",
+          "minute": "58'",
+          "side": "home"
+        },
+        {
+          "off": "Nicolas Raskin",
+          "on": "Hans Vanaken",
+          "minute": "58'",
+          "side": "home"
+        },
+        {
+          "off": "Alexis Saelemaekers",
+          "on": "Dodi Lukebakio",
+          "minute": "58'",
+          "side": "home"
+        },
+        {
+          "off": "Romelu Lukaku",
+          "on": "Arthur Theate",
+          "minute": "73'",
+          "side": "home"
+        },
+        {
+          "off": "Kevin De Bruyne",
+          "on": "Matias Fernandez-Pardo",
+          "minute": "87'",
+          "side": "home"
+        },
+        {
+          "off": "Saleh Hardani",
+          "on": "Alireza Jahanbakhsh",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Mohammad Mohebbi",
+          "on": "Mehdi Torabi",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Ehsan Hajisafi",
+          "on": "Milad Mohammadi",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Saman Ghoddos",
+          "on": "Shahriyar Moghanloo",
+          "minute": "79'",
+          "side": "away"
+        },
+        {
+          "off": "Saeid Ezatolahi",
+          "on": "Amirhossein Hosseinzadeh",
+          "minute": "85'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-21T16:20:32+00:00"
@@ -2349,6 +4797,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Vancouver",
@@ -2395,6 +4845,76 @@
           "team": "Nova Zelândia"
         }
       ],
+      "homeCoach": "Darren Bazeley",
+      "awayCoach": "Hossam Hassan Hussein",
+      "subs": [
+        {
+          "off": "Callum Mccowatt",
+          "on": "Ben Old",
+          "minute": "66'",
+          "side": "home"
+        },
+        {
+          "off": "Liberato Cacace",
+          "on": "Jesse Randall",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Sarpreet Singh",
+          "on": "Ryan Thomas",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Elijah Just",
+          "on": "Francis De Vries",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Tim Payne",
+          "on": "Tyler Bindon",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Hamdy Fathy",
+          "on": "Ramy Rabia",
+          "minute": "41'",
+          "side": "away"
+        },
+        {
+          "off": "Omar Marmoush",
+          "on": "Trezeguet",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Mostafa Zico",
+          "on": "Hamza Abdelkarim",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Mohamed Salah",
+          "on": "Hossam Abdelmaguid",
+          "minute": "84'",
+          "side": "away"
+        },
+        {
+          "off": "Emam Ashour",
+          "on": "Zizo",
+          "minute": "84'",
+          "side": "away"
+        },
+        {
+          "off": "Hossam Abdelmaguid",
+          "on": "Mohamed Abdelmoneim",
+          "minute": "90'+9'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-21T22:39:41+00:00"
@@ -2416,6 +4936,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-3-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "East Rutherford",
@@ -2448,6 +4970,70 @@
         }
       ],
       "cards": [],
+      "homeCoach": "Ståle Solbakken",
+      "awayCoach": "Pape Thiaw",
+      "subs": [
+        {
+          "off": "Julian Ryerson",
+          "on": "Marcus Holmgren Pedersen",
+          "minute": "13'",
+          "side": "home"
+        },
+        {
+          "off": "Fredrik Aursnes",
+          "on": "Patrick Berg",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Antonio Nusa",
+          "on": "Andreas Schjelderup",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Torbjorn Heggem",
+          "on": "Leo Ostigard",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Alexander Sorloth",
+          "on": "Oscar Bobb",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Pape Gueye",
+          "on": "Ibrahim Mbaye",
+          "minute": "54'",
+          "side": "away"
+        },
+        {
+          "off": "El Hadji Malick Diouf",
+          "on": "Ismail Jakobs",
+          "minute": "54'",
+          "side": "away"
+        },
+        {
+          "off": "Edouard Mendy",
+          "on": "Mory Diaw",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Lamine Camara",
+          "on": "Pathe Ciss",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Kalidou Koulibaly",
+          "on": "Pape Matar Sarr",
+          "minute": "72'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-22T18:30:41+00:00"
@@ -2469,6 +5055,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Filadélfia",
@@ -2498,6 +5086,70 @@
           "team": "Iraque"
         }
       ],
+      "homeCoach": "Didier Deschamps",
+      "awayCoach": "Graham James Arnold",
+      "subs": [
+        {
+          "off": "Ousmane Dembele",
+          "on": "Desire Doue",
+          "minute": "68'",
+          "side": "home"
+        },
+        {
+          "off": "Michael Olise",
+          "on": "Rayan Cherki",
+          "minute": "68'",
+          "side": "home"
+        },
+        {
+          "off": "Bradley Barcola",
+          "on": "Maghnes Akliouche",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Jules Kounde",
+          "on": "Malo Gusto",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Kylian Mbappe",
+          "on": "Marcus Thuram",
+          "minute": "90'+1'",
+          "side": "home"
+        },
+        {
+          "off": "Aymen Hussein",
+          "on": "Ali Alhamadi",
+          "minute": "26'",
+          "side": "away"
+        },
+        {
+          "off": "Zaid Tahseen",
+          "on": "Rebin Sulaka",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Zaid Ismael",
+          "on": "Youssef Amyn",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Ibrahim Bayesh",
+          "on": "Marko Farji",
+          "minute": "68'",
+          "side": "away"
+        },
+        {
+          "off": "Amir Alammari",
+          "on": "Aimar Sher",
+          "minute": "68'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-22T18:30:41+00:00"
@@ -2519,6 +5171,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-3-2",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Arlington",
@@ -2561,6 +5215,70 @@
           "team": "Argentina"
         }
       ],
+      "homeCoach": "Lionel Scaloni",
+      "awayCoach": "Ralf Rangnick",
+      "subs": [
+        {
+          "off": "Cristian Romero",
+          "on": "Nicolas Otamendi",
+          "minute": "57'",
+          "side": "home"
+        },
+        {
+          "off": "Thiago Almada",
+          "on": "Julian Alvarez",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Lautaro Martinez",
+          "on": "Nico Gonzalez",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Rodrigo De Paul",
+          "on": "Leandro Paredes",
+          "minute": "82'",
+          "side": "home"
+        },
+        {
+          "off": "Facundo Medina",
+          "on": "Nicolas Tagliafico",
+          "minute": "82'",
+          "side": "home"
+        },
+        {
+          "off": "David Alaba",
+          "on": "Marco Friedl",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Paul Wanner",
+          "on": "Marko Arnautovic",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Stefan Posch",
+          "on": "Alexander Prass",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Romano Schmid",
+          "on": "Patrick Wimmer",
+          "minute": "78'",
+          "side": "away"
+        },
+        {
+          "off": "Michael Gregoritsch",
+          "on": "Carney Chukwuemeka",
+          "minute": "85'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 25,
         "at": "2026-06-22T08:43:19+00:00"
@@ -2582,6 +5300,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-3",
+      "awayTactics": "4-2-1-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Santa Clara",
@@ -2617,6 +5337,70 @@
           "team": "Jordânia"
         }
       ],
+      "homeCoach": "Jamal Sellami",
+      "awayCoach": "Vladimir Petkovic",
+      "subs": [
+        {
+          "off": "Mahmoud Almardi",
+          "on": "Odeh Fakhoury",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Mousa Altamari",
+          "on": "Ali Azaizeh",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Mohannad Abutaha",
+          "on": "Mohammad Abuhasheesh",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Ali Olwan",
+          "on": "Mohammad Abuzraiq",
+          "minute": "90'+1'",
+          "side": "home"
+        },
+        {
+          "off": "Husam Abudahab",
+          "on": "Saleem Obaid",
+          "minute": "90'+1'",
+          "side": "home"
+        },
+        {
+          "off": "Hicham Boudaoui",
+          "on": "Nadhir Benbouali",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Ramiz Zerrouki",
+          "on": "Nabil Bentaleb",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Riyad Mahrez",
+          "on": "Anis Hadj Moussa",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Amine Gouiri",
+          "on": "Zineddine Belaid",
+          "minute": "85'",
+          "side": "away"
+        },
+        {
+          "off": "Rayan Ait-Nouri",
+          "on": "Jaouen Hadjam",
+          "minute": "85'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-22T18:30:41+00:00"
@@ -2638,6 +5422,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Foxborough",
@@ -2655,6 +5441,64 @@
           "minute": "60'",
           "type": "amarelo",
           "team": "Gana"
+        }
+      ],
+      "homeCoach": "Thomas Tuchel",
+      "awayCoach": "Carlos Queiroz",
+      "subs": [
+        {
+          "off": "Anthony Gordon",
+          "on": "Bukayo Saka",
+          "minute": "65'",
+          "side": "home"
+        },
+        {
+          "off": "Djed Spence",
+          "on": "Nico Oreilly",
+          "minute": "65'",
+          "side": "home"
+        },
+        {
+          "off": "Jude Bellingham",
+          "on": "Morgan Rogers",
+          "minute": "74'",
+          "side": "home"
+        },
+        {
+          "off": "Elliot Anderson",
+          "on": "Eberechi Eze",
+          "minute": "74'",
+          "side": "home"
+        },
+        {
+          "off": "Noni Madueke",
+          "on": "Marcus Rashford",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Inaki Williams",
+          "on": "Abdul Fatawu",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Jordan Ayew",
+          "on": "Prince Adu",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Marvin Senaya",
+          "on": "Kojo Peprah Oppong",
+          "minute": "87'",
+          "side": "away"
+        },
+        {
+          "off": "Prince Adu",
+          "on": "Baba Rahman",
+          "minute": "90'+5'",
+          "side": "away"
         }
       ],
       "weather": {
@@ -2678,6 +5522,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-3",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Toronto",
@@ -2703,6 +5549,64 @@
           "team": "Croácia"
         }
       ],
+      "homeCoach": "Thomas Christiansen Tarín",
+      "awayCoach": "Zlatko Dalić",
+      "subs": [
+        {
+          "off": "Jiovany Ramos",
+          "on": "Cecilio Waterman",
+          "minute": "77'",
+          "side": "home"
+        },
+        {
+          "off": "Jose Fajardo",
+          "on": "Azarias Londono",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Cesar Blackman",
+          "on": "Eric Davis",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Edgar Yoel Barcenas",
+          "on": "Tomas Rodriguez",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Petar Musa",
+          "on": "Ante Budimir",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Josko Gvardiol",
+          "on": "Andrej Kramaric",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Mateo Kovacic",
+          "on": "Petar Sucic",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Marco Pasalic",
+          "on": "Luka Sucic",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Luka Modric",
+          "on": "Mario Pasalic",
+          "minute": "81'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-23T18:18:58+00:00"
@@ -2724,6 +5628,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Houston",
@@ -2770,6 +5676,70 @@
           "team": "Portugal"
         }
       ],
+      "homeCoach": "Roberto Martínez Montoliú",
+      "awayCoach": "Fabio Cannavaro",
+      "subs": [
+        {
+          "off": "Joao Cancelo",
+          "on": "Nelson Semedo",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Pedro Neto",
+          "on": "Francisco Conceicao",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Joao Felix",
+          "on": "Francisco Trincao",
+          "minute": "63'",
+          "side": "home"
+        },
+        {
+          "off": "Joao Neves",
+          "on": "Bernardo Silva",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Vitinha",
+          "on": "Rafael Leao",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Sherzod Nasrullaev",
+          "on": "Khojiakbar Alijonov",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Odiljon Xamrobekov",
+          "on": "Akmal Mozgovoy",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Abbosbek Fayzullaev",
+          "on": "Igor Sergeev",
+          "minute": "73'",
+          "side": "away"
+        },
+        {
+          "off": "Behruzjon Karimov",
+          "on": "Ruslanbek Jiyanov",
+          "minute": "90'+2'",
+          "side": "away"
+        },
+        {
+          "off": "Otabek Shukurov",
+          "on": "Sherzod Esanov",
+          "minute": "90'+2'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 33,
         "at": "2026-06-23T04:18:19+00:00"
@@ -2791,6 +5761,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "5-3-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Zapopan",
@@ -2822,6 +5794,58 @@
           "team": "Colômbia"
         }
       ],
+      "homeCoach": "Néstor Gabriel Lorenzo",
+      "awayCoach": "Sébastien Desabre",
+      "subs": [
+        {
+          "off": "James Rodriguez",
+          "on": "Juan Quintero",
+          "minute": "58'",
+          "side": "home"
+        },
+        {
+          "off": "Luis Suarez",
+          "on": "Jhon Cordoba",
+          "minute": "58'",
+          "side": "home"
+        },
+        {
+          "off": "Jhon Arias",
+          "on": "Richard Rios",
+          "minute": "77'",
+          "side": "home"
+        },
+        {
+          "off": "Ngalayel Mukau",
+          "on": "Noah Sadiki",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Cedric Bakambu",
+          "on": "Simon Banza",
+          "minute": "57'",
+          "side": "away"
+        },
+        {
+          "off": "Arthur Masuaku",
+          "on": "Joris Kayembe",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Edo Kayembe",
+          "on": "Charles Pickel",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Samuel Moutoussamy",
+          "on": "Nathanael Mbuku",
+          "minute": "82'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 20,
         "at": "2026-06-23T18:18:58+00:00"
@@ -2843,6 +5867,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-3-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Miami Gardens",
@@ -2884,6 +5910,70 @@
           "team": "Escócia"
         }
       ],
+      "homeCoach": "Stephen Clark",
+      "awayCoach": "Carlo Ancelotti",
+      "subs": [
+        {
+          "off": "Andy Robertson",
+          "on": "Kieran Tierney",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Nathan Patterson",
+          "on": "Anthony Ralston",
+          "minute": "81'",
+          "side": "home"
+        },
+        {
+          "off": "Ben Gannon-Doak",
+          "on": "Ryan Christie",
+          "minute": "81'",
+          "side": "home"
+        },
+        {
+          "off": "John Mcginn",
+          "on": "Findlay Curtis",
+          "minute": "90'+1'",
+          "side": "home"
+        },
+        {
+          "off": "Lawrence Shankland",
+          "on": "Che Adams",
+          "minute": "90'+1'",
+          "side": "home"
+        },
+        {
+          "off": "Casemiro",
+          "on": "Fabinho",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Lucas Paqueta",
+          "on": "Gabriel Martinelli",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Matheus Cunha",
+          "on": "Neymar Jr",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Rayan",
+          "on": "Endrick",
+          "minute": "82'",
+          "side": "away"
+        },
+        {
+          "off": "Douglas Santos",
+          "on": "Alex Sandro",
+          "minute": "82'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 25,
         "at": "2026-06-24T04:22:34+00:00"
@@ -2905,6 +5995,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Atlanta",
@@ -2967,6 +6059,70 @@
           "team": "Haiti"
         }
       ],
+      "homeCoach": "Mohamed Ouahbi",
+      "awayCoach": "Sebastien Migne",
+      "subs": [
+        {
+          "off": "Ayoub El Kaabi",
+          "on": "Gessime Yassine",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Ismael Saibari",
+          "on": "Soufiane Rahimi",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Brahim Diaz",
+          "on": "Azzedine Ounahi",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Neil El Aynaoui",
+          "on": "Samir El Mourabet",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Anass Salah Eddine",
+          "on": "Noussair Mazraoui",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Ruben Providence",
+          "on": "Duckens Nazon",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Wilson Isidor",
+          "on": "Louicius Deedson",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Jean-Kevin Duverne",
+          "on": "Carlens Arcus",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Danley Jean Jacques",
+          "on": "Dominique Simon",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Lenny Joseph",
+          "on": "Frantzdy Pierrot",
+          "minute": "83'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-24T04:22:34+00:00"
@@ -2988,6 +6144,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Vancouver",
@@ -3029,6 +6187,70 @@
           "team": "Canadá"
         }
       ],
+      "homeCoach": "Murat Yakin",
+      "awayCoach": "Jesse Alan Marsch",
+      "subs": [
+        {
+          "off": "Luca Jaquez",
+          "on": "Silvan Widmer",
+          "minute": "74'",
+          "side": "home"
+        },
+        {
+          "off": "Djibril Sow",
+          "on": "Michel Aebischer",
+          "minute": "74'",
+          "side": "home"
+        },
+        {
+          "off": "Ruben Vargas",
+          "on": "Dan Ndoye",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Breel Embolo",
+          "on": "Cedric Itten",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Johan Manzambi",
+          "on": "Christian Fassnacht",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Cyle Larin",
+          "on": "Tani Oluwaseyi",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Mathieu Choiniere",
+          "on": "Stephen Eustaquio",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Ali Ahmed",
+          "on": "Liam Millar",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Tajon Buchanan",
+          "on": "Promise David",
+          "minute": "74'",
+          "side": "away"
+        },
+        {
+          "off": "Richie Laryea",
+          "on": "Jacob Shaffelburg",
+          "minute": "83'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 25,
         "at": "2026-06-24T04:22:34+00:00"
@@ -3050,6 +6272,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Seattle",
@@ -3091,6 +6315,70 @@
           "team": "Bósnia e Herzegovina"
         }
       ],
+      "homeCoach": "Sergej Barbarez",
+      "awayCoach": "Julen Lopetegui Argote",
+      "subs": [
+        {
+          "off": "Arjan Malic",
+          "on": "Amar Memic",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Ivan Sunjic",
+          "on": "Benjamin Tahirovic",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Nikola Katic",
+          "on": "Dennis Hadzikadunic",
+          "minute": "63'",
+          "side": "home"
+        },
+        {
+          "off": "Edin Dzeko",
+          "on": "Ermin Mahmic",
+          "minute": "63'",
+          "side": "home"
+        },
+        {
+          "off": "Kerim Alajbegovic",
+          "on": "Dzenis Burnic",
+          "minute": "82'",
+          "side": "home"
+        },
+        {
+          "off": "Jassem Gaber",
+          "on": "Abdulaziz Hatem",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Hassan Alhaydos",
+          "on": "Ahmed Alganehi",
+          "minute": "55'",
+          "side": "away"
+        },
+        {
+          "off": "Karim Boudiaf",
+          "on": "Almoez Ali",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Ahmed Fathy",
+          "on": "Mohamed Manai",
+          "minute": "79'",
+          "side": "away"
+        },
+        {
+          "off": "Edmilson Junior",
+          "on": "Ahmed Alaaeldin",
+          "minute": "79'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 27,
         "at": "2026-06-24T04:22:34+00:00"
@@ -3112,6 +6400,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "5-2-3",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Cidade do México",
@@ -3141,6 +6431,70 @@
           "team": "México"
         }
       ],
+      "homeCoach": "Miroslav Koubek",
+      "awayCoach": "Javier Aguirre Onaindía",
+      "subs": [
+        {
+          "off": "Denis Visinsky",
+          "on": "Lukas Provod",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Tomas Holes",
+          "on": "Tomas Soucek",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Adam Hlozek",
+          "on": "Patrik Schick",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Lukas Cerv",
+          "on": "Tomas Chory",
+          "minute": "87'",
+          "side": "home"
+        },
+        {
+          "off": "Tomas Soucek",
+          "on": "Alexandr Sojka",
+          "minute": "87'",
+          "side": "home"
+        },
+        {
+          "off": "Guillermo Martinez",
+          "on": "Santiago Gimenez",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Luis Romo",
+          "on": "Obed Vargas",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Gilberto Mora",
+          "on": "Alvaro Fidalgo",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Raul Rangel",
+          "on": "Guillermo Ochoa",
+          "minute": "78'",
+          "side": "away"
+        },
+        {
+          "off": "Mateo Chavez",
+          "on": "Jesus Gallardo",
+          "minute": "78'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 17,
         "at": "2026-06-24T04:22:34+00:00"
@@ -3162,6 +6516,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Guadalupe",
@@ -3187,6 +6543,58 @@
           "team": "República da Coreia"
         }
       ],
+      "homeCoach": "Hugo Henri Broos",
+      "awayCoach": "Myung-Bo Hong",
+      "subs": [
+        {
+          "off": "Oswin Appollis",
+          "on": "Tshepang Moremi",
+          "minute": "62'",
+          "side": "home"
+        },
+        {
+          "off": "Thapelo Maseko",
+          "on": "Iqraam Rayners",
+          "minute": "75'",
+          "side": "home"
+        },
+        {
+          "off": "Relebohile Mofokeng",
+          "on": "Jayden Adams",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Hwang Heechan",
+          "on": "Son Heungmin",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Paik Seungho",
+          "on": "Kim Jingyu",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Lee Taeseok",
+          "on": "Castrop Jens",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Kim Minjae",
+          "on": "Park Jinseob",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Oh Hyeongyu",
+          "on": "Cho Guesung",
+          "minute": "74'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-24T04:22:34+00:00"
@@ -3208,6 +6616,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "5-4-1",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Filadélfia",
@@ -3244,6 +6654,70 @@
           "team": "Curaçau"
         }
       ],
+      "homeCoach": "Dick Advocaat",
+      "awayCoach": "Emerse Fae",
+      "subs": [
+        {
+          "off": "Livano Comenencia",
+          "on": "Jeremy Antonisse",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Jurien Gaari",
+          "on": "Gervane Kastaneer",
+          "minute": "77'",
+          "side": "home"
+        },
+        {
+          "off": "Deveron Fonville",
+          "on": "Tyrese Noslin",
+          "minute": "77'",
+          "side": "home"
+        },
+        {
+          "off": "Joshua Brenet",
+          "on": "Shurandy Sambo",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Juergen Locadia",
+          "on": "Brandley Kuwas",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Amad Diallo",
+          "on": "Christ Inao Oulai",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Nicolas Pepe",
+          "on": "Elye Wahi",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Yan Diomande",
+          "on": "Bazoumana Toure",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Ange-Yoan Bonny",
+          "on": "Oumar Diakite",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Franck Kessie",
+          "on": "Jean Michael Seri",
+          "minute": "77'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 30,
         "at": "2026-06-25T09:17:14+00:00"
@@ -3265,6 +6739,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "East Rutherford",
@@ -3317,6 +6793,70 @@
           "team": "Equador"
         }
       ],
+      "homeCoach": "Sebastián Andrés Beccacece",
+      "awayCoach": "Julian Nagelsmann",
+      "subs": [
+        {
+          "off": "Alan Franco",
+          "on": "Angelo Preciado",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Enner Valencia",
+          "on": "Kevin Rodriguez",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Piero Hincapie",
+          "on": "Pervis Estupinan",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Nilson Angulo",
+          "on": "Jordy Caicedo",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "John Yeboah",
+          "on": "Felix Torres",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Aleksandar Pavlovic",
+          "on": "Angelo Stiller",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Kai Havertz",
+          "on": "Deniz Undav",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Joshua Kimmich",
+          "on": "Malick Thiaw",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Felix Nmecha",
+          "on": "Maximilian Beier",
+          "minute": "64'",
+          "side": "away"
+        },
+        {
+          "off": "Florian Wirtz",
+          "on": "Pascal Gross",
+          "minute": "73'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 29,
         "at": "2026-06-25T09:17:14+00:00"
@@ -3338,6 +6878,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-3",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Arlington",
@@ -3374,6 +6916,70 @@
           "team": "Suécia"
         }
       ],
+      "homeCoach": "Hajime Moriyasu",
+      "awayCoach": "Graham Potter",
+      "subs": [
+        {
+          "off": "Kou Itakura",
+          "on": "Shogo Taniguchi",
+          "minute": "39'",
+          "side": "home"
+        },
+        {
+          "off": "Ayase Ueda",
+          "on": "Koki Ogawa",
+          "minute": "66'",
+          "side": "home"
+        },
+        {
+          "off": "Ritsu Doan",
+          "on": "Junya Ito",
+          "minute": "66'",
+          "side": "home"
+        },
+        {
+          "off": "Keito Nakamura",
+          "on": "Yuto Nagatomo",
+          "minute": "75'",
+          "side": "home"
+        },
+        {
+          "off": "Ayumu Seko",
+          "on": "Tsuyoshi Watanabe",
+          "minute": "75'",
+          "side": "home"
+        },
+        {
+          "off": "Isak Hien",
+          "on": "Lucas Bergvall",
+          "minute": "37'",
+          "side": "away"
+        },
+        {
+          "off": "Alexander Bernhardsson",
+          "on": "Daniel Svensson",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Elliot Stroud",
+          "on": "Ken Sema",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Victor Lindelof",
+          "on": "Carl Starfelt",
+          "minute": "87'",
+          "side": "away"
+        },
+        {
+          "off": "Gabriel Gudmundsson",
+          "on": "Benjamin Nygren",
+          "minute": "87'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 32,
         "at": "2026-06-25T09:17:14+00:00"
@@ -3395,6 +7001,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "5-4-1",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Kansas City",
@@ -3423,6 +7031,70 @@
         }
       ],
       "cards": [],
+      "homeCoach": "Herve Renard",
+      "awayCoach": "Ronald Koeman",
+      "subs": [
+        {
+          "off": "Rani Khedira",
+          "on": "Mohamed Hadj Mahmoud",
+          "minute": "67'",
+          "side": "home"
+        },
+        {
+          "off": "Anis Slimane",
+          "on": "Elias Achouri",
+          "minute": "67'",
+          "side": "home"
+        },
+        {
+          "off": "Mohamed Amine Ben Hmida",
+          "on": "Mortadha Ben Ouanes",
+          "minute": "67'",
+          "side": "home"
+        },
+        {
+          "off": "Ismael Gharbi",
+          "on": "Firas Chaouat",
+          "minute": "75'",
+          "side": "home"
+        },
+        {
+          "off": "Hazem Mastouri",
+          "on": "Sebastian Tounekti",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Frenkie De Jong",
+          "on": "Teun Koopmeiners",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Tijjani Reijnders",
+          "on": "Justin Kluivert",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Donyell Malen",
+          "on": "Crysencio Summerville",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Brian Brobbey",
+          "on": "Memphis Depay",
+          "minute": "77'",
+          "side": "away"
+        },
+        {
+          "off": "Cody Gakpo",
+          "on": "Noa Lang",
+          "minute": "84'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 22,
         "at": "2026-06-25T09:17:14+00:00"
@@ -3444,6 +7116,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-3",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Inglewood",
@@ -3483,6 +7157,70 @@
           "team": "EUA"
         }
       ],
+      "homeCoach": "Vincenzo Montella",
+      "awayCoach": "Mauricio Pochettino",
+      "subs": [
+        {
+          "off": "Kenan Yildiz",
+          "on": "Can Uzun",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Zeki Celik",
+          "on": "Caglar Soyuncu",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Orkun Kokcu",
+          "on": "Kaan Ayhan",
+          "minute": "88'",
+          "side": "home"
+        },
+        {
+          "off": "Oguz Aydin",
+          "on": "Mert Muldur",
+          "minute": "90'+1'",
+          "side": "home"
+        },
+        {
+          "off": "Baris Alper Yilmaz",
+          "on": "Irfan Can Kahveci",
+          "minute": "90'+1'",
+          "side": "home"
+        },
+        {
+          "off": "Timothy Weah",
+          "on": "Christian Pulisic",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Giovanni Reyna",
+          "on": "Sergino Dest",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Brenden Aaronson",
+          "on": "Alex Zendejas",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Joe Scally",
+          "on": "Alex Freeman",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Weston Mckennie",
+          "on": "Malik Tillman",
+          "minute": "86'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 18,
         "at": "2026-06-25T09:17:14+00:00"
@@ -3504,6 +7242,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "5-3-2",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Santa Clara",
@@ -3521,6 +7261,58 @@
           "minute": "77'",
           "type": "amarelo",
           "team": "Paraguai"
+        }
+      ],
+      "homeCoach": "Gustavo Alfaro",
+      "awayCoach": "Tony Popović",
+      "subs": [
+        {
+          "off": "Alexandro Maidana",
+          "on": "Mauricio",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Gabriel Avalos",
+          "on": "Alex Arce",
+          "minute": "67'",
+          "side": "home"
+        },
+        {
+          "off": "Omar Alderete",
+          "on": "Jose Canale",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Matias Galarza",
+          "on": "Junior Alonso",
+          "minute": "90'+2'",
+          "side": "home"
+        },
+        {
+          "off": "Diego Gomez",
+          "on": "Damian Bobadilla",
+          "minute": "90'+2'",
+          "side": "home"
+        },
+        {
+          "off": "Cristian Volpato",
+          "on": "Ajdin Hrustic",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Jackson Irvine",
+          "on": "Paul Okon-Engstler",
+          "minute": "84'",
+          "side": "away"
+        },
+        {
+          "off": "Nestory Irankunda",
+          "on": "Tete Yengi",
+          "minute": "84'",
+          "side": "away"
         }
       ],
       "weather": {
@@ -3544,6 +7336,8 @@
       "awayScore": 4,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Foxborough",
@@ -3589,6 +7383,70 @@
           "team": "França"
         }
       ],
+      "homeCoach": "Ståle Solbakken",
+      "awayCoach": "",
+      "subs": [
+        {
+          "off": "Kristian Thorstvedt",
+          "on": "Morten Thorsby",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Fredrik Andre Bjorkan",
+          "on": "Marcus Holmgren Pedersen",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Henrik Falchener",
+          "on": "Sondre Langas",
+          "minute": "66'",
+          "side": "home"
+        },
+        {
+          "off": "Andreas Schjelderup",
+          "on": "Jens Petter Hauge",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Oscar Bobb",
+          "on": "Antonio Nusa",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Ousmane Dembele",
+          "on": "Bradley Barcola",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Michael Olise",
+          "on": "Rayan Cherki",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Dayot Upamecano",
+          "on": "Ibrahima Konate",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Jules Kounde",
+          "on": "Malo Gusto",
+          "minute": "86'",
+          "side": "away"
+        },
+        {
+          "off": "Kylian Mbappe",
+          "on": "Jean-Philippe Mateta",
+          "minute": "86'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 26,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3610,6 +7468,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Toronto",
@@ -3673,6 +7533,70 @@
           "team": "Iraque"
         }
       ],
+      "homeCoach": "Pape Thiaw",
+      "awayCoach": "Graham James Arnold",
+      "subs": [
+        {
+          "off": "Lamine Camara",
+          "on": "Nicolas Jackson",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Habib Diarra",
+          "on": "Pape Gueye",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Ibrahim Mbaye",
+          "on": "Iliman Ndiaye",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Abdoulaye Seck",
+          "on": "Pathe Ciss",
+          "minute": "58'",
+          "side": "home"
+        },
+        {
+          "off": "Ismaila Sarr",
+          "on": "Assane Diao",
+          "minute": "81'",
+          "side": "home"
+        },
+        {
+          "off": "Ahmed Qasem",
+          "on": "Munaf Younus",
+          "minute": "16'",
+          "side": "away"
+        },
+        {
+          "off": "Ahmed Basil",
+          "on": "Jalal Hassan",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Ali Jasim",
+          "on": "Ahmed Maknazi",
+          "minute": "57'",
+          "side": "away"
+        },
+        {
+          "off": "Ali Alhamadi",
+          "on": "Ali Yousif",
+          "minute": "57'",
+          "side": "away"
+        },
+        {
+          "off": "Zidane Iqbal",
+          "on": "Kevin Yakob",
+          "minute": "67'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 20,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3694,6 +7618,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "5-4-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Seattle",
@@ -3754,6 +7680,58 @@
           "team": "RI do Irã"
         }
       ],
+      "homeCoach": "Hossam Hassan Hussein",
+      "awayCoach": "Amir Ghalenoei",
+      "subs": [
+        {
+          "off": "Mohamed Abdelmoneim",
+          "on": "Yasser Ibrahim",
+          "minute": "14'",
+          "side": "home"
+        },
+        {
+          "off": "Mahmoud Saber",
+          "on": "Marawan Attia",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Emam Ashour",
+          "on": "Omar Marmoush",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Mohamed Salah",
+          "on": "Zizo",
+          "minute": "57'",
+          "side": "home"
+        },
+        {
+          "off": "Mostafa Zico",
+          "on": "Hamza Abdelkarim",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Hossein Kanani",
+          "on": "Saleh Hardani",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Saman Ghoddos",
+          "on": "Shahriyar Moghanloo",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Mohammad Mohebbi",
+          "on": "Alireza Jahanbakhsh",
+          "minute": "90'+1'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3775,6 +7753,8 @@
       "awayScore": 5,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Vancouver",
@@ -3825,6 +7805,70 @@
           "team": "Nova Zelândia"
         }
       ],
+      "homeCoach": "Darren Bazeley",
+      "awayCoach": "Rudi Garcia",
+      "subs": [
+        {
+          "off": "Ryan Thomas",
+          "on": "Ben Old",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Sarpreet Singh",
+          "on": "Jesse Randall",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Joe Bell",
+          "on": "Callum Mccowatt",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Tim Payne",
+          "on": "Michael Boxall",
+          "minute": "64'",
+          "side": "home"
+        },
+        {
+          "off": "Liberato Cacace",
+          "on": "Francis De Vries",
+          "minute": "79'",
+          "side": "home"
+        },
+        {
+          "off": "Jeremy Doku",
+          "on": "Matias Fernandez-Pardo",
+          "minute": "56'",
+          "side": "away"
+        },
+        {
+          "off": "Leandro Trossard",
+          "on": "Alexis Saelemaekers",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Kevin De Bruyne",
+          "on": "Amadou Onana",
+          "minute": "72'",
+          "side": "away"
+        },
+        {
+          "off": "Youri Tielemans",
+          "on": "Nicolas Raskin",
+          "minute": "85'",
+          "side": "away"
+        },
+        {
+          "off": "Charles De Ketelaere",
+          "on": "Romelu Lukaku",
+          "minute": "85'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 16,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3846,6 +7890,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-4-2",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Houston",
@@ -3877,6 +7923,70 @@
           "team": "Arábia Saudita"
         }
       ],
+      "homeCoach": "Pedro Leitão Brito",
+      "awayCoach": "Georgios Donis",
+      "subs": [
+        {
+          "off": "Willy Semedo",
+          "on": "Helio Varela",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Dailon Livramento",
+          "on": "Nuno Da Costa",
+          "minute": "61'",
+          "side": "home"
+        },
+        {
+          "off": "Jamiro Monteiro",
+          "on": "Laros Duarte",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Ryan Mendes",
+          "on": "Garry Rodrigues",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Wagner Pina",
+          "on": "Steven Moreira",
+          "minute": "90'+4'",
+          "side": "home"
+        },
+        {
+          "off": "Hassan Altambakti",
+          "on": "Ali Lajami",
+          "minute": "33'",
+          "side": "away"
+        },
+        {
+          "off": "Abdullah Alkhaibari",
+          "on": "Musab Aljuwayr",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Sultan Mandash",
+          "on": "Abdullah Alhamddan",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Salem Aldawsari",
+          "on": "Mohammed Abu Alshamat",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Nawaf Bu Washl",
+          "on": "Moteb Alharbi",
+          "minute": "82'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 31,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3898,6 +8008,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Zapopan",
@@ -3941,6 +8053,64 @@
           "team": "Uruguai"
         }
       ],
+      "homeCoach": "Marcelo Bielsa",
+      "awayCoach": "Luis De La Fuente Castillo",
+      "subs": [
+        {
+          "off": "Manuel Ugarte",
+          "on": "Nicolas De La Cruz",
+          "minute": "45'",
+          "side": "home"
+        },
+        {
+          "off": "Fernando Muslera",
+          "on": "Sergio Rochet",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Federico Valverde",
+          "on": "Federico Vinas",
+          "minute": "56'",
+          "side": "home"
+        },
+        {
+          "off": "Juan Manuel Sanabria",
+          "on": "Brian Rodriguez",
+          "minute": "70'",
+          "side": "home"
+        },
+        {
+          "off": "Pedri",
+          "on": "Fabian Ruiz",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Mikel Merino",
+          "on": "Dani Olmo",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Alex Baena",
+          "on": "Yeremy Pino",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Mikel Oyarzabal",
+          "on": "Nico Williams",
+          "minute": "76'",
+          "side": "away"
+        },
+        {
+          "off": "Lamine Yamal",
+          "on": "Ferran Torres",
+          "minute": "76'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 19,
         "at": "2026-06-26T11:29:51+00:00"
@@ -3962,6 +8132,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-3",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "East Rutherford",
@@ -3998,6 +8170,70 @@
           "team": "Panamá"
         }
       ],
+      "homeCoach": "Thomas Christiansen Tarín",
+      "awayCoach": "Thomas Tuchel",
+      "subs": [
+        {
+          "off": "Tomas Rodriguez",
+          "on": "Jose Fajardo",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Edgar Yoel Barcenas",
+          "on": "Ismael Diaz",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Jose Luis Rodriguez",
+          "on": "Azarias Londono",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Carlos Harvey",
+          "on": "Alberto Quintero",
+          "minute": "88'",
+          "side": "home"
+        },
+        {
+          "off": "Jorge Gutierrez",
+          "on": "Eric Davis",
+          "minute": "88'",
+          "side": "home"
+        },
+        {
+          "off": "Jarell Quansah",
+          "on": "Djed Spence",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Bukayo Saka",
+          "on": "Noni Madueke",
+          "minute": "63'",
+          "side": "away"
+        },
+        {
+          "off": "Jude Bellingham",
+          "on": "Eberechi Eze",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Elliot Anderson",
+          "on": "Jordan Henderson",
+          "minute": "84'",
+          "side": "away"
+        },
+        {
+          "off": "Harry Kane",
+          "on": "Ollie Watkins",
+          "minute": "84'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 21,
         "at": "2026-06-27T11:00:33+00:00"
@@ -4019,6 +8255,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Filadélfia",
@@ -4054,6 +8292,64 @@
           "team": "Gana"
         }
       ],
+      "homeCoach": "Zlatko Dalić",
+      "awayCoach": "Carlos Queiroz",
+      "subs": [
+        {
+          "off": "Ante Budimir",
+          "on": "Igor Matanovic",
+          "minute": "66'",
+          "side": "home"
+        },
+        {
+          "off": "Mateo Kovacic",
+          "on": "Mario Pasalic",
+          "minute": "78'",
+          "side": "home"
+        },
+        {
+          "off": "Martin Baturina",
+          "on": "Marco Pasalic",
+          "minute": "88'",
+          "side": "home"
+        },
+        {
+          "off": "Nikola Vlasic",
+          "on": "Josko Gvardiol",
+          "minute": "88'",
+          "side": "home"
+        },
+        {
+          "off": "Jonas Adjetey",
+          "on": "Kojo Peprah Oppong",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Elisha Owusu",
+          "on": "Abdul Fatawu",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Jordan Ayew",
+          "on": "Brandon Thomas-Asante",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Kamaldeen Sulemana",
+          "on": "Ernest Nuamah",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Kwasi Sibo",
+          "on": "Caleb Yirenkyi",
+          "minute": "85'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-27T11:00:33+00:00"
@@ -4075,6 +8371,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Kansas City",
@@ -4119,6 +8417,64 @@
           "team": "Áustria"
         }
       ],
+      "homeCoach": "Vladimir Petkovic",
+      "awayCoach": "Ralf Rangnick",
+      "subs": [
+        {
+          "off": "Jaouen Hadjam",
+          "on": "Rayan Ait-Nouri",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Amine Gouiri",
+          "on": "Zineddine Belaid",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Rafik Belghali",
+          "on": "Samir Chergui",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Houssem Aouar",
+          "on": "Fares Ghedjemis",
+          "minute": "90'+4'",
+          "side": "home"
+        },
+        {
+          "off": "Marko Arnautovic",
+          "on": "Michael Gregoritsch",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Romano Schmid",
+          "on": "Paul Wanner",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Xaver Schlager",
+          "on": "Florian Grillitsch",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "David Alaba",
+          "on": "Kevin Danso",
+          "minute": "62'",
+          "side": "away"
+        },
+        {
+          "off": "Phillip Mwene",
+          "on": "Sasa Kalajdzic",
+          "minute": "90'+5'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 28,
         "at": "2026-06-27T11:00:33+00:00"
@@ -4140,6 +8496,8 @@
       "awayScore": 3,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "3-4-3",
+      "awayTactics": "4-1-2-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Arlington",
@@ -4187,6 +8545,70 @@
           "team": "Jordânia"
         }
       ],
+      "homeCoach": "Jamal Sellami",
+      "awayCoach": "Lionel Scaloni",
+      "subs": [
+        {
+          "off": "Odeh Fakhoury",
+          "on": "Mahmoud Almardi",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Ali Azaizeh",
+          "on": "Mousa Altamari",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Nizar Alrashdan",
+          "on": "Amer Jamous",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Ali Olwan",
+          "on": "Mohammad Abuzraiq",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Husam Abudahab",
+          "on": "Saleem Obaid",
+          "minute": "90'",
+          "side": "home"
+        },
+        {
+          "off": "Giovani Lo Celso",
+          "on": "Thiago Almada",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Lautaro Martinez",
+          "on": "Lionel Messi",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Nico Paz",
+          "on": "Alexis Mac Allister",
+          "minute": "60'",
+          "side": "away"
+        },
+        {
+          "off": "Giuliano Simeone",
+          "on": "Valentin Barco",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Julian Alvarez",
+          "on": "Jose Manuel Lopez",
+          "minute": "82'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 30,
         "at": "2026-06-27T11:00:33+00:00"
@@ -4208,6 +8630,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-2-3-1",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Miami Gardens",
@@ -4219,6 +8643,70 @@
           "minute": "86'",
           "type": "amarelo",
           "team": "Colômbia"
+        }
+      ],
+      "homeCoach": "Néstor Gabriel Lorenzo",
+      "awayCoach": "Roberto Martínez Montoliú",
+      "subs": [
+        {
+          "off": "Jefferson Lerma",
+          "on": "Richard Rios",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Jhon Cordoba",
+          "on": "Luis Suarez",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Jhon Arias",
+          "on": "Kevin Castano",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "James Rodriguez",
+          "on": "Juan Quintero",
+          "minute": "76'",
+          "side": "home"
+        },
+        {
+          "off": "Santiago Arias",
+          "on": "Daniel Munoz",
+          "minute": "87'",
+          "side": "home"
+        },
+        {
+          "off": "Ruben Neves",
+          "on": "Joao Neves",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Joao Cancelo",
+          "on": "Diogo Dalot",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Joao Felix",
+          "on": "Rafael Leao",
+          "minute": "70'",
+          "side": "away"
+        },
+        {
+          "off": "Vitinha",
+          "on": "Samu Costa",
+          "minute": "70'",
+          "side": "away"
+        },
+        {
+          "off": "Nuno Mendes",
+          "on": "Matheus Nunes",
+          "minute": "90'+2'",
+          "side": "away"
         }
       ],
       "weather": {
@@ -4242,6 +8730,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "3-4-3",
       "placeholderA": null,
       "placeholderB": null,
       "city": "Atlanta",
@@ -4301,6 +8791,70 @@
           "team": "RD do Congo"
         }
       ],
+      "homeCoach": "Sébastien Desabre",
+      "awayCoach": "Fabio Cannavaro",
+      "subs": [
+        {
+          "off": "Cedric Bakambu",
+          "on": "Fiston Mayele",
+          "minute": "51'",
+          "side": "home"
+        },
+        {
+          "off": "Samuel Moutoussamy",
+          "on": "Ngalayel Mukau",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Nathanael Mbuku",
+          "on": "Meschack Elia",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Brian Cipenga",
+          "on": "Theo Bongonda",
+          "minute": "72'",
+          "side": "home"
+        },
+        {
+          "off": "Arthur Masuaku",
+          "on": "Joris Kayembe",
+          "minute": "83'",
+          "side": "home"
+        },
+        {
+          "off": "Otabek Shukurov",
+          "on": "Odiljon Xamrobekov",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Dostonbek Khamdamov",
+          "on": "Azizjon Ganiev",
+          "minute": "58'",
+          "side": "away"
+        },
+        {
+          "off": "Abbosbek Fayzullaev",
+          "on": "Oston Urunov",
+          "minute": "73'",
+          "side": "away"
+        },
+        {
+          "off": "Akmal Mozgovoy",
+          "on": "Jamshid Iskanderov",
+          "minute": "82'",
+          "side": "away"
+        },
+        {
+          "off": "Jakhongir Urozov",
+          "on": "Igor Sergeev",
+          "minute": "82'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 32,
         "at": "2026-06-27T11:00:33+00:00"
@@ -4322,6 +8876,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-4-2",
       "placeholderA": "2A",
       "placeholderB": "2B",
       "city": "Inglewood",
@@ -4347,6 +8903,58 @@
           "team": "Canadá"
         }
       ],
+      "homeCoach": "Hugo Henri Broos",
+      "awayCoach": "Jesse Alan Marsch",
+      "subs": [
+        {
+          "off": "Relebohile Mofokeng",
+          "on": "Thalente Mbatha",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Evidence Makgopa",
+          "on": "Iqraam Rayners",
+          "minute": "86'",
+          "side": "home"
+        },
+        {
+          "off": "Thapelo Maseko",
+          "on": "Tshepang Moremi",
+          "minute": "86'",
+          "side": "home"
+        },
+        {
+          "off": "Nathan Saliba",
+          "on": "Niko Sigur",
+          "minute": "59'",
+          "side": "away"
+        },
+        {
+          "off": "Moise Bombito",
+          "on": "Luc De Fougerolles",
+          "minute": "59'",
+          "side": "away"
+        },
+        {
+          "off": "Tani Oluwaseyi",
+          "on": "Promise David",
+          "minute": "70'",
+          "side": "away"
+        },
+        {
+          "off": "Liam Millar",
+          "on": "Jacob Shaffelburg",
+          "minute": "70'",
+          "side": "away"
+        },
+        {
+          "off": "Tajon Buchanan",
+          "on": "Alphonso Davies",
+          "minute": "75'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 24,
         "at": "2026-06-28T09:32:28+00:00"
@@ -4368,6 +8976,8 @@
       "awayScore": 1,
       "homePen": 3,
       "awayPen": 4,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-4-2",
       "placeholderA": "1E",
       "placeholderB": "3ABCDF",
       "city": "Foxborough",
@@ -4434,6 +9044,82 @@
           "team": "Paraguai"
         }
       ],
+      "homeCoach": "Julian Nagelsmann",
+      "awayCoach": "Gustavo Alfaro",
+      "subs": [
+        {
+          "off": "Felix Nmecha",
+          "on": "Leon Goretzka",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Deniz Undav",
+          "on": "Jamal Musiala",
+          "minute": "63'",
+          "side": "home"
+        },
+        {
+          "off": "Aleksandar Pavlovic",
+          "on": "Waldemar Anton",
+          "minute": "79'",
+          "side": "home"
+        },
+        {
+          "off": "Leroy Sane",
+          "on": "Nick Woltemade",
+          "minute": "88'",
+          "side": "home"
+        },
+        {
+          "off": "Antonio Ruediger",
+          "on": "Malick Thiaw",
+          "minute": "110'",
+          "side": "home"
+        },
+        {
+          "off": "Florian Wirtz",
+          "on": "Nadiem Amiri",
+          "minute": "110'",
+          "side": "home"
+        },
+        {
+          "off": "Gabriel Avalos",
+          "on": "Gustavo Caballero",
+          "minute": "55'",
+          "side": "away"
+        },
+        {
+          "off": "Julio Enciso",
+          "on": "Mauricio",
+          "minute": "57'",
+          "side": "away"
+        },
+        {
+          "off": "Miguel Almiron",
+          "on": "Gustavo Velazquez",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Juan Jose Caceres",
+          "on": "Braian Ojeda",
+          "minute": "99'",
+          "side": "away"
+        },
+        {
+          "off": "Damian Bobadilla",
+          "on": "Antonio Sanabria",
+          "minute": "99'",
+          "side": "away"
+        },
+        {
+          "off": "Junior Alonso",
+          "on": "Fabian Balbuena",
+          "minute": "120'+2'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 26,
         "at": "2026-06-29T09:12:29+00:00"
@@ -4455,6 +9141,8 @@
       "awayScore": 1,
       "homePen": 2,
       "awayPen": 3,
+      "homeTactics": "3-4-3",
+      "awayTactics": "4-2-3-1",
       "placeholderA": "1F",
       "placeholderB": "2C",
       "city": "Guadalupe",
@@ -4479,6 +9167,76 @@
           "team": "Marrocos"
         }
       ],
+      "homeCoach": "Ronald Koeman",
+      "awayCoach": "Mohamed Ouahbi",
+      "subs": [
+        {
+          "off": "Nathan Ake",
+          "on": "Teun Koopmeiners",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Brian Brobbey",
+          "on": "Wout Weghorst",
+          "minute": "71'",
+          "side": "home"
+        },
+        {
+          "off": "Ryan Gravenberch",
+          "on": "Quinten Timber",
+          "minute": "86'",
+          "side": "home"
+        },
+        {
+          "off": "Micky Van De Ven",
+          "on": "Jorrel Hato",
+          "minute": "86'",
+          "side": "home"
+        },
+        {
+          "off": "Frenkie De Jong",
+          "on": "Marten De Roon",
+          "minute": "110'",
+          "side": "home"
+        },
+        {
+          "off": "Cody Gakpo",
+          "on": "Justin Kluivert",
+          "minute": "113'",
+          "side": "home"
+        },
+        {
+          "off": "Chadi Riad",
+          "on": "Anass Salah Eddine",
+          "minute": "75'",
+          "side": "away"
+        },
+        {
+          "off": "Brahim Diaz",
+          "on": "Gessime Yassine",
+          "minute": "79'",
+          "side": "away"
+        },
+        {
+          "off": "Ayyoub Bouaddi",
+          "on": "Samir El Mourabet",
+          "minute": "79'",
+          "side": "away"
+        },
+        {
+          "off": "Azzedine Ounahi",
+          "on": "Soufiane Rahimi",
+          "minute": "86'",
+          "side": "away"
+        },
+        {
+          "off": "Bilal El Khannouss",
+          "on": "Chemsdine Talbi",
+          "minute": "86'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 32,
         "at": "2026-06-29T09:12:29+00:00"
@@ -4500,6 +9258,8 @@
       "awayScore": 1,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "3-4-3",
       "placeholderA": "1C",
       "placeholderB": "2F",
       "city": "Houston",
@@ -4553,6 +9313,64 @@
           "team": "Japão"
         }
       ],
+      "homeCoach": "Carlo Ancelotti",
+      "awayCoach": "Hajime Moriyasu",
+      "subs": [
+        {
+          "off": "Lucas Paqueta",
+          "on": "Endrick",
+          "minute": "",
+          "side": "home"
+        },
+        {
+          "off": "Matheus Cunha",
+          "on": "Gabriel Martinelli",
+          "minute": "65'",
+          "side": "home"
+        },
+        {
+          "off": "Casemiro",
+          "on": "Fabinho",
+          "minute": "90'+1'",
+          "side": "home"
+        },
+        {
+          "off": "Bruno Guimaraes",
+          "on": "Danilo Santos",
+          "minute": "90'+7'",
+          "side": "home"
+        },
+        {
+          "off": "Keito Nakamura",
+          "on": "Junnosuke Suzuki",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Ritsu Doan",
+          "on": "Yukinari Sugawara",
+          "minute": "66'",
+          "side": "away"
+        },
+        {
+          "off": "Junya Ito",
+          "on": "Shuto Machino",
+          "minute": "78'",
+          "side": "away"
+        },
+        {
+          "off": "Daichi Kamada",
+          "on": "Ao Tanaka",
+          "minute": "78'",
+          "side": "away"
+        },
+        {
+          "off": "Daizen Maeda",
+          "on": "Koki Ogawa",
+          "minute": "90'+7'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 34,
         "at": "2026-06-29T09:12:29+00:00"
@@ -4574,6 +9392,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-2-3-1",
+      "awayTactics": "4-4-2",
       "placeholderA": "1I",
       "placeholderB": "3CDFGH",
       "city": "East Rutherford",
@@ -4596,6 +9416,70 @@
         }
       ],
       "cards": [],
+      "homeCoach": "Didier Deschamps",
+      "awayCoach": "Graham Potter",
+      "subs": [
+        {
+          "off": "Ousmane Dembele",
+          "on": "Desire Doue",
+          "minute": "75'",
+          "side": "home"
+        },
+        {
+          "off": "Jules Kounde",
+          "on": "Malo Gusto",
+          "minute": "75'",
+          "side": "home"
+        },
+        {
+          "off": "Lucas Digne",
+          "on": "Theo Hernandez",
+          "minute": "78'",
+          "side": "home"
+        },
+        {
+          "off": "Kylian Mbappe",
+          "on": "Jean-Philippe Mateta",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Michael Olise",
+          "on": "Rayan Cherki",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Elliot Stroud",
+          "on": "Taha Ali",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Lucas Bergvall",
+          "on": "Besfort Zeneli",
+          "minute": "65'",
+          "side": "away"
+        },
+        {
+          "off": "Daniel Svensson",
+          "on": "Mattias Svanberg",
+          "minute": "82'",
+          "side": "away"
+        },
+        {
+          "off": "Yasin Ayari",
+          "on": "Benjamin Nygren",
+          "minute": "82'",
+          "side": "away"
+        },
+        {
+          "off": "Alexander Isak",
+          "on": "Gustaf Nilsson",
+          "minute": "89'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 34,
         "at": "2026-06-30T17:13:28+00:00"
@@ -4617,6 +9501,8 @@
       "awayScore": 2,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-2-1-3",
       "placeholderA": "2E",
       "placeholderB": "2I",
       "city": "Arlington",
@@ -4646,6 +9532,58 @@
           "team": "Noruega"
         }
       ],
+      "homeCoach": "Emerse Fae",
+      "awayCoach": "Ståle Solbakken",
+      "subs": [
+        {
+          "off": "Christ Inao Oulai",
+          "on": "Amad Diallo",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Ange-Yoan Bonny",
+          "on": "Elye Wahi",
+          "minute": "60'",
+          "side": "home"
+        },
+        {
+          "off": "Nicolas Pepe",
+          "on": "Oumar Diakite",
+          "minute": "87'",
+          "side": "home"
+        },
+        {
+          "off": "Yan Diomande",
+          "on": "Evann Guessand",
+          "minute": "90'+3'",
+          "side": "home"
+        },
+        {
+          "off": "Ghislain Konan",
+          "on": "Bazoumana Toure",
+          "minute": "90'+3'",
+          "side": "home"
+        },
+        {
+          "off": "Antonio Nusa",
+          "on": "Andreas Schjelderup",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Alexander Sorloth",
+          "on": "Oscar Bobb",
+          "minute": "71'",
+          "side": "away"
+        },
+        {
+          "off": "Marcus Holmgren Pedersen",
+          "on": "Fredrik Aursnes",
+          "minute": "83'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 32,
         "at": "2026-06-30T08:46:49+00:00"
@@ -4667,6 +9605,8 @@
       "awayScore": 0,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": "4-1-2-3",
+      "awayTactics": "4-4-2",
       "placeholderA": "1A",
       "placeholderB": "3CEFHI",
       "city": "Cidade do México",
@@ -4709,6 +9649,70 @@
           "team": "Equador"
         }
       ],
+      "homeCoach": "Javier Aguirre Onaindía",
+      "awayCoach": "Sebastián Andrés Beccacece",
+      "subs": [
+        {
+          "off": "Gilberto Mora",
+          "on": "Brian Gutierrez",
+          "minute": "59'",
+          "side": "home"
+        },
+        {
+          "off": "Raul Jimenez",
+          "on": "Santiago Gimenez",
+          "minute": "73'",
+          "side": "home"
+        },
+        {
+          "off": "Luis Romo",
+          "on": "Obed Vargas",
+          "minute": "73'",
+          "side": "home"
+        },
+        {
+          "off": "Julian Quinones",
+          "on": "Orbelin Pineda",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Roberto Alvarado",
+          "on": "Israel Reyes",
+          "minute": "80'",
+          "side": "home"
+        },
+        {
+          "off": "Alan Franco",
+          "on": "Yaimar Medina",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Joel Ordonez",
+          "on": "Angelo Preciado",
+          "minute": "",
+          "side": "away"
+        },
+        {
+          "off": "Enner Valencia",
+          "on": "Kevin Rodriguez",
+          "minute": "59'",
+          "side": "away"
+        },
+        {
+          "off": "John Yeboah",
+          "on": "Jordy Caicedo",
+          "minute": "79'",
+          "side": "away"
+        },
+        {
+          "off": "Nilson Angulo",
+          "on": "Kendry Paez",
+          "minute": "79'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 18,
         "at": "2026-06-30T23:48:03+00:00"
@@ -4730,6 +9734,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "1L",
       "placeholderB": "3EHIJK",
       "city": "Atlanta",
@@ -4740,8 +9746,8 @@
         "away": 9
       },
       "weather": {
-        "tempC": 34,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 33,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -4760,6 +9766,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "1D",
       "placeholderB": "3BEFIJ",
       "city": "Santa Clara",
@@ -4770,8 +9778,8 @@
         "away": 20
       },
       "weather": {
-        "tempC": 24,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 22,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -4790,6 +9798,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "1G",
       "placeholderB": "3AEHIJ",
       "city": "Seattle",
@@ -4801,7 +9811,7 @@
       },
       "weather": {
         "tempC": 17,
-        "at": "2026-07-01T06:44:53+00:00"
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -4820,6 +9830,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "2K",
       "placeholderB": "2L",
       "city": "Toronto",
@@ -4830,8 +9842,8 @@
         "away": 26
       },
       "weather": {
-        "tempC": 26,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 34,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -4850,6 +9862,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "1H",
       "placeholderB": "2J",
       "city": "Inglewood",
@@ -4861,7 +9875,7 @@
       },
       "weather": {
         "tempC": 22,
-        "at": "2026-07-01T06:44:53+00:00"
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -4880,6 +9894,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "1B",
       "placeholderB": "3EFGIJ",
       "city": "Vancouver",
@@ -4891,7 +9907,7 @@
       },
       "weather": {
         "tempC": 15,
-        "at": "2026-07-01T06:44:53+00:00"
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -4910,6 +9926,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "1J",
       "placeholderB": "2H",
       "city": "Miami Gardens",
@@ -4920,8 +9938,8 @@
         "away": 3
       },
       "weather": {
-        "tempC": 33,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 32,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -4940,6 +9958,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "1K",
       "placeholderB": "3DEIJL",
       "city": "Kansas City",
@@ -4950,8 +9970,8 @@
         "away": 5
       },
       "weather": {
-        "tempC": 28,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 27,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -4970,6 +9990,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "2D",
       "placeholderB": "2G",
       "city": "Arlington",
@@ -4981,7 +10003,7 @@
       },
       "weather": {
         "tempC": 35,
-        "at": "2026-07-01T06:44:53+00:00"
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5000,6 +10022,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W74",
       "placeholderB": "W77",
       "city": "Filadélfia",
@@ -5010,8 +10034,8 @@
         "away": 81
       },
       "weather": {
-        "tempC": 37,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 38,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5030,6 +10054,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W73",
       "placeholderB": "W75",
       "city": "Houston",
@@ -5040,8 +10066,8 @@
         "away": 57
       },
       "weather": {
-        "tempC": 34,
-        "at": "2026-07-01T02:14:45+00:00"
+        "tempC": 33,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5060,6 +10086,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W76",
       "placeholderB": "W78",
       "city": "East Rutherford",
@@ -5070,8 +10098,8 @@
         "away": 25
       },
       "weather": {
-        "tempC": 27,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 35,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5090,13 +10118,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W79",
       "placeholderB": "W80",
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "weather": {
-        "tempC": 18,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 17,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5115,6 +10145,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W83",
       "placeholderB": "W84",
       "city": "Arlington",
@@ -5140,13 +10172,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W81",
       "placeholderB": "W82",
       "city": "Seattle",
       "venue": "Lumen Field",
       "weather": {
-        "tempC": 22,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 29,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5165,13 +10199,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W86",
       "placeholderB": "W88",
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "weather": {
-        "tempC": 33,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 31,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5190,13 +10226,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W85",
       "placeholderB": "W87",
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
-        "tempC": 14,
-        "at": "2026-07-01T02:14:45+00:00"
+        "tempC": 19,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5215,13 +10253,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W89",
       "placeholderB": "W90",
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "weather": {
-        "tempC": 32,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 31,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5240,13 +10280,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W93",
       "placeholderB": "W94",
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "weather": {
-        "tempC": 24,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 25,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5265,13 +10307,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W91",
       "placeholderB": "W92",
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
       "weather": {
-        "tempC": 34,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 35,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5290,13 +10334,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W95",
       "placeholderB": "W96",
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "weather": {
-        "tempC": 28,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 29,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5315,13 +10361,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W97",
       "placeholderB": "W98",
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "weather": {
-        "tempC": 40,
-        "at": "2026-07-01T06:44:53+00:00"
+        "tempC": 38,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5340,13 +10388,15 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W99",
       "placeholderB": "W100",
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "weather": {
-        "tempC": 33,
-        "at": "2026-07-01T02:14:45+00:00"
+        "tempC": 34,
+        "at": "2026-07-01T15:40:59+00:00"
       }
     },
     {
@@ -5365,6 +10415,8 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "RU101",
       "placeholderB": "RU102",
       "city": "Miami Gardens",
@@ -5386,10 +10438,463 @@
       "awayScore": null,
       "homePen": null,
       "awayPen": null,
+      "homeTactics": null,
+      "awayTactics": null,
       "placeholderA": "W101",
       "placeholderB": "W102",
       "city": "East Rutherford",
       "venue": "MetLife Stadium"
     }
-  ]
+  ],
+  "cardsStatus": {
+    "Haiti": {
+      "pendurados": [
+        "Carlens Arcus",
+        "Duckens Nazon",
+        "Jean-Ricner Bellegarde",
+        "Josue Casimir",
+        "Frantzdy Pierrot",
+        "Johny Placide",
+        "Danley Jean Jacques"
+      ],
+      "suspensos": []
+    },
+    "Suíça": {
+      "pendurados": [
+        "Nico Elvedi",
+        "Denis Zakaria",
+        "Granit Xhaka"
+      ],
+      "suspensos": []
+    },
+    "Paraguai": {
+      "pendurados": [
+        "Gustavo Alfaro",
+        "Juan Jose Caceres",
+        "Andres Cubas",
+        "Alex Arce",
+        "Alejandro Manograsso",
+        "Carlos Gonzalez",
+        "Junior Alonso"
+      ],
+      "suspensos": [
+        "Matias Galarza",
+        "Miguel Almiron",
+        "Diego Gomez"
+      ]
+    },
+    "Bósnia e Herzegovina": {
+      "pendurados": [
+        "Jovo Lukic",
+        "Nikola Katic",
+        "Amar Dedic",
+        "Ermedin Demirovic",
+        "Ermin Mahmic",
+        "Edin Dzeko"
+      ],
+      "suspensos": [
+        "Tarik Muharemovic"
+      ]
+    },
+    "República da Coreia": {
+      "pendurados": [
+        "Lee Gihyuk",
+        "Lee Kangin",
+        "Cho Guesung",
+        "Paik Seungho"
+      ],
+      "suspensos": []
+    },
+    "Curaçau": {
+      "pendurados": [
+        "Jurien Gaari",
+        "Leandro Bacuna",
+        "Livano Comenencia"
+      ],
+      "suspensos": [
+        "Gervane Kastaneer",
+        "Juninho Bacuna"
+      ]
+    },
+    "Equador": {
+      "pendurados": [
+        "Jackson Porozo",
+        "Gonzalo Plata",
+        "Kendry Paez",
+        "Moises Caicedo",
+        "Jordy Alcivar"
+      ],
+      "suspensos": [
+        "Piero Hincapie",
+        "Alan Franco"
+      ]
+    },
+    "Panamá": {
+      "pendurados": [
+        "Cesar Blackman",
+        "Jose Fajardo",
+        "Andres Andrade",
+        "Edgar Yoel Barcenas",
+        "Carlos Harvey"
+      ],
+      "suspensos": []
+    },
+    "RD do Congo": {
+      "pendurados": [
+        "Noah Sadiki",
+        "Nathanael Mbuku",
+        "Samuel Moutoussamy",
+        "Chancel Mbemba",
+        "Charles Pickel"
+      ],
+      "suspensos": []
+    },
+    "África do Sul": {
+      "pendurados": [
+        "Aubrey Modiba",
+        "Thalente Mbatha",
+        "Nkosinathi Sibisi"
+      ],
+      "suspensos": [
+        "Teboho Mokoena",
+        "Sphephelo Sithole",
+        "Themba Zwane"
+      ]
+    },
+    "Bélgica": {
+      "pendurados": [
+        "Maxim De Cuyper",
+        "Timothy Castagne",
+        "Romelu Lukaku"
+      ],
+      "suspensos": [
+        "Nathan Ngoy"
+      ]
+    },
+    "Canadá": {
+      "pendurados": [
+        "Niko Sigur",
+        "Derek Cornelius",
+        "Cyle Larin",
+        "Liam Millar",
+        "Nathan Saliba",
+        "Luc De Fougerolles",
+        "Alistair Johnston"
+      ],
+      "suspensos": []
+    },
+    "Senegal": {
+      "pendurados": [
+        "Pape Gueye",
+        "Abdoulaye Seck"
+      ],
+      "suspensos": []
+    },
+    "Brasil": {
+      "pendurados": [
+        "Fabinho",
+        "Douglas Santos",
+        "Roger Ibanez"
+      ],
+      "suspensos": [
+        "Casemiro",
+        "Danilo"
+      ]
+    },
+    "Costa do Marfim": {
+      "pendurados": [
+        "Guela Doue",
+        "Nicolas Pepe",
+        "Franck Kessie",
+        "Seko Fofana"
+      ],
+      "suspensos": []
+    },
+    "EUA": {
+      "pendurados": [
+        "Tyler Adams",
+        "Folarin Balogun",
+        "Antonee Robinson",
+        "Chris Richards",
+        "Sebastian Berhalter"
+      ],
+      "suspensos": []
+    },
+    "Turquia": {
+      "pendurados": [
+        "Eren Elmali",
+        "Vincenzo Montella",
+        "Yunus Akgun"
+      ],
+      "suspensos": []
+    },
+    "Argentina": {
+      "pendurados": [
+        "Facundo Medina",
+        "Leandro Paredes"
+      ],
+      "suspensos": []
+    },
+    "Arábia Saudita": {
+      "pendurados": [
+        "Abdulelah Alamri",
+        "Feras Albrikan",
+        "Nasser Aldawsari",
+        "Salem Aldawsari",
+        "Saud Abdulhamid",
+        "Mohamed Kanno"
+      ],
+      "suspensos": []
+    },
+    "RI do Irã": {
+      "pendurados": [
+        "Ehsan Hajisafi",
+        "Hossein Kanani",
+        "Shoja Khalilzadeh",
+        "Ali Nemati"
+      ],
+      "suspensos": [
+        "Saeid Ezatolahi"
+      ]
+    },
+    "Colômbia": {
+      "pendurados": [
+        "Jhon Lucumi",
+        "Gustavo Puerta",
+        "Jefferson Lerma",
+        "Johan Mojica"
+      ],
+      "suspensos": []
+    },
+    "Escócia": {
+      "pendurados": [
+        "Andy Robertson",
+        "Findlay Curtis",
+        "Kenny Mclean",
+        "Aaron Hickey",
+        "Ryan Christie"
+      ],
+      "suspensos": []
+    },
+    "Holanda": {
+      "pendurados": [
+        "Memphis Depay",
+        "Crysencio Summerville",
+        "Micky Van De Ven"
+      ],
+      "suspensos": []
+    },
+    "Alemanha": {
+      "pendurados": [
+        "Julian Nagelsmann",
+        "Jamal Musiala",
+        "Aleksandar Pavlovic",
+        "Kai Havertz",
+        "Mads Buttgereit"
+      ],
+      "suspensos": []
+    },
+    "Nova Zelândia": {
+      "pendurados": [
+        "Marko Stamenic",
+        "Sarpreet Singh",
+        "Callum Mccowatt",
+        "Elijah Just"
+      ],
+      "suspensos": []
+    },
+    "Uruguai": {
+      "pendurados": [
+        "Nicolas De La Cruz",
+        "Guillermo Varela",
+        "Rodrigo Bentancur",
+        "Mathias Olivera",
+        "Juan Manuel Sanabria"
+      ],
+      "suspensos": [
+        "Agustin Canobbio"
+      ]
+    },
+    "Tunísia": {
+      "pendurados": [
+        "Rani Khedira"
+      ],
+      "suspensos": []
+    },
+    "Portugal": {
+      "pendurados": [
+        "Renato Veiga",
+        "Tomas Araujo",
+        "Nelson Semedo",
+        "Bernardo Silva"
+      ],
+      "suspensos": []
+    },
+    "Uzbequistão": {
+      "pendurados": [
+        "Odiljon Xamrobekov",
+        "Sherzod Nasrullaev"
+      ],
+      "suspensos": [
+        "Abdukodir Khusanov"
+      ]
+    },
+    "Gana": {
+      "pendurados": [
+        "Kojo Peprah Oppong",
+        "Caleb Yirenkyi",
+        "Inaki Williams"
+      ],
+      "suspensos": []
+    },
+    "Cabo Verde": {
+      "pendurados": [
+        "Diney Borges",
+        "Wagner Pina"
+      ],
+      "suspensos": [
+        "Sidny Lopes Cabral"
+      ]
+    },
+    "Áustria": {
+      "pendurados": [
+        "Marcel Sabitzer",
+        "Stefan Posch",
+        "Marko Arnautovic",
+        "Konrad Laimer"
+      ],
+      "suspensos": []
+    },
+    "Japão": {
+      "pendurados": [
+        "Shogo Taniguchi",
+        "Kaishu Sano",
+        "Junnosuke Suzuki",
+        "Daichi Kamada"
+      ],
+      "suspensos": []
+    },
+    "Suécia": {
+      "pendurados": [
+        "Lucas Bergvall",
+        "Yasin Ayari",
+        "Isak Hien",
+        "Viktor Gyokeres",
+        "Gabriel Gudmundsson"
+      ],
+      "suspensos": []
+    },
+    "Inglaterra": {
+      "pendurados": [
+        "Jarell Quansah",
+        "Declan Rice"
+      ],
+      "suspensos": []
+    },
+    "Egito": {
+      "pendurados": [
+        "Mahmoud Saber",
+        "Ahmed Fatouh",
+        "Marawan Attia",
+        "Yasser Ibrahim"
+      ],
+      "suspensos": [
+        "Mohanad Lashin"
+      ]
+    },
+    "Jordânia": {
+      "pendurados": [
+        "Yazan Alarab",
+        "Mohammad Abuzraiq",
+        "Husam Abudahab",
+        "Mohannad Abutaha"
+      ],
+      "suspensos": []
+    },
+    "Iraque": {
+      "pendurados": [
+        "Merchas Doski",
+        "Zaid Tahseen"
+      ],
+      "suspensos": [
+        "Rebin Sulaka",
+        "Amir Alammari"
+      ]
+    },
+    "Austrália": {
+      "pendurados": [
+        "Jackson Irvine",
+        "Harry Souttar",
+        "Jacob Italiano",
+        "Jordan Bos",
+        "Alessandro Circati"
+      ],
+      "suspensos": []
+    },
+    "Croácia": {
+      "pendurados": [
+        "Ivan Perisic",
+        "Petar Sucic"
+      ],
+      "suspensos": []
+    },
+    "Noruega": {
+      "pendurados": [
+        "Antonio Nusa",
+        "Patrick Berg"
+      ],
+      "suspensos": []
+    },
+    "Argélia": {
+      "pendurados": [
+        "Ramiz Zerrouki"
+      ],
+      "suspensos": []
+    },
+    "Catar": {
+      "pendurados": [
+        "Mahmoud Abunada",
+        "Jassem Gaber"
+      ],
+      "suspensos": [
+        "Assim Madibo",
+        "Homam Ahmed",
+        "Ahmed Fathy"
+      ]
+    },
+    "México": {
+      "pendurados": [
+        "Edson Alvarez",
+        "Brian Gutierrez"
+      ],
+      "suspensos": [
+        "Cesar Montes"
+      ]
+    },
+    "Espanha": {
+      "pendurados": [
+        "Alex Baena",
+        "Pedri"
+      ],
+      "suspensos": []
+    },
+    "Tchéquia": {
+      "pendurados": [
+        "Ladislav Krejci"
+      ],
+      "suspensos": []
+    },
+    "Marrocos": {
+      "pendurados": [],
+      "suspensos": [
+        "Issa Diop"
+      ]
+    },
+    "França": {
+      "pendurados": [
+        "Aurelien Tchouameni"
+      ],
+      "suspensos": []
+    }
+  }
 }
