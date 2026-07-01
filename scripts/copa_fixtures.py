@@ -168,7 +168,8 @@ def fetch_scorers(id_stage, id_match):
         desc = text(event.get("EventDescription"))
         name = desc.split(" (")[0].strip() if "(" in desc else text(event.get("PlayerName"))
         team = desc.split(" (")[1].split(")")[0].strip() if " (" in desc and ")" in desc else ""
-        if not name:
+        team = TEAM_NAME_OVERRIDES.get(team, team)   # normaliza p/ CASAR com m['home']/m['away']
+        if not name:                                 # (senão "Holanda"≠"Países Baixos" e o cartão vira órfão)
             continue
         cards.append({"name": prettify_name(name), "minute": text(event.get("MatchMinute")),
                       "type": "vermelho" if t == 3 else "amarelo", "team": team})

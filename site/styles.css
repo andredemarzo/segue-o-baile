@@ -520,36 +520,41 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
-/* Item 2 — ficha do jogo encerrado: formação realizada ([D] da FIFA) + cartões (nome@min). */
+/* Item 2 — ficha do jogo encerrado: UMA linha por TIME (nome + formação [D] + os cartões DAQUELE
+   time). Por-time p/ evitar a confusão no mobile (times empilhados) de "de quem é este cartão?". */
 .match-ficha {
   margin: 12px 0 2px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
 }
-.ficha-form {
+.ficha-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
-  font-variant-numeric: tabular-nums;
+  gap: 6px 10px;
+  padding: 7px 11px;
+  border-radius: 12px;
+  background: rgba(19, 138, 82, 0.055);
+}
+.ficha-team {
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   color: var(--green);
 }
-.ficha-form em {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.62rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(20, 42, 28, 0.5);
+.ficha-form {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: rgba(20, 42, 28, 0.74);
+  padding: 1px 9px;
+  border-radius: 999px;
+  background: rgba(19, 138, 82, 0.13);
 }
 .ficha-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  justify-content: center;
 }
 .card-chip {
   display: inline-flex;

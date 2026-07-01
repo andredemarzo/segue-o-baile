@@ -398,24 +398,39 @@ function scorelineHtml(match) {
 // Só em jogo encerrado com dado; string vazia senão (o elemento fica hidden).
 function matchFichaHtml(match) {
   if (matchPhase(match) !== "finished") return "";
-  const parts = [];
-  if (match.homeTactics && match.awayTactics) {
-    parts.push(
-      `<div class="ficha-form"><span>${match.homeTactics}</span>` +
-      `<em>esquemas</em><span>${match.awayTactics}</span></div>`,
-    );
-  }
   const cards = Array.isArray(match.cards) ? match.cards : [];
-  if (cards.length) {
+  // UMA linha por TIME (mobile: os times ficam empilhados; a ficha por-time evita a confusão de
+  // "de quem é este cartão?"). Cada linha: nome do time + formação [D] + os cartões DAQUELE time.
+  const rowFor = (team, formation) => {
     const chips = cards
+      .filter((c) => c.team === team)
       .map((c) => {
         const red = c.type === "vermelho";
         return `<span class="card-chip ${red ? "card-red" : "card-yellow"}">${c.name || ""} ${c.minute || ""}</span>`;
       })
       .join("");
-    parts.push(`<div class="ficha-cards">${chips}</div>`);
-  }
-  return parts.join("");
+    if (!formation && !chips) return "";
+    return (
+      `<div class="ficha-row"><span class="ficha-team">${team}</span>` +
+      (formation ? `<span class="ficha-form">${formation}</span>` : "") +
+      (chips ? `<span class="ficha-cards">${chips}</span>` : "") +
+      `</div>`
+    );
+  };
+  // defensivo: cartão cujo time não casa nenhum lado (não deve ocorrer após a normalização no
+  // coletor) NÃO some — vai numa 3ª linha sem rótulo, pra nunca perder informação.
+  const orphan = cards
+    .filter((c) => c.team !== match.home && c.team !== match.away)
+    .map((c) => {
+      const red = c.type === "vermelho";
+      return `<span class="card-chip ${red ? "card-red" : "card-yellow"}">${c.name || ""} ${c.minute || ""} (${c.team || "?"})</span>`;
+    })
+    .join("");
+  return (
+    rowFor(match.home, match.homeTactics) +
+    rowFor(match.away, match.awayTactics) +
+    (orphan ? `<div class="ficha-row"><span class="ficha-cards">${orphan}</span></div>` : "")
+  );
 }
 
 // --- Auto-cura: backfill direto da FIFA, sem depender do coletor ---
