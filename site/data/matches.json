@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-07-01T02:14:48+00:00",
+  "updatedAt": "2026-07-01T06:45:22+00:00",
   "matches": [
     {
       "id": 1,
@@ -4662,20 +4662,53 @@
       "offset": -6,
       "home": "México",
       "away": "Equador",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 2,
+      "awayScore": 0,
       "homePen": null,
       "awayPen": null,
       "placeholderA": "1A",
       "placeholderB": "3CEFHI",
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
-      "prob": {
-        "home": 37,
-        "draw": 29,
-        "away": 34
-      },
+      "scorers": [
+        {
+          "name": "Julian Quinones",
+          "minute": "22'",
+          "side": "home"
+        },
+        {
+          "name": "Raul Jimenez",
+          "minute": "31'",
+          "side": "home"
+        }
+      ],
+      "cards": [
+        {
+          "name": "Alan Franco",
+          "minute": "45'+1'",
+          "type": "amarelo",
+          "team": "Equador"
+        },
+        {
+          "name": "Kendry Paez",
+          "minute": "90'+3'",
+          "type": "amarelo",
+          "team": "Equador"
+        },
+        {
+          "name": "Piero Hincapie",
+          "minute": "90'+5'",
+          "type": "vermelho",
+          "team": "Equador"
+        },
+        {
+          "name": "Moises Caicedo",
+          "minute": "90'+9'",
+          "type": "amarelo",
+          "team": "Equador"
+        }
+      ],
       "weather": {
         "tempC": 18,
         "at": "2026-06-30T23:48:03+00:00"
@@ -4707,8 +4740,8 @@
         "away": 9
       },
       "weather": {
-        "tempC": 33,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 34,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -4738,7 +4771,7 @@
       },
       "weather": {
         "tempC": 24,
-        "at": "2026-06-30T23:48:03+00:00"
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -4767,8 +4800,8 @@
         "away": 31
       },
       "weather": {
-        "tempC": 18,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 17,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -4797,8 +4830,8 @@
         "away": 26
       },
       "weather": {
-        "tempC": 34,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 26,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -4828,7 +4861,7 @@
       },
       "weather": {
         "tempC": 22,
-        "at": "2026-06-30T23:48:03+00:00"
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -4857,8 +4890,8 @@
         "away": 23
       },
       "weather": {
-        "tempC": 16,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 15,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -4888,7 +4921,7 @@
       },
       "weather": {
         "tempC": 33,
-        "at": "2026-06-30T23:48:03+00:00"
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -4918,7 +4951,7 @@
       },
       "weather": {
         "tempC": 28,
-        "at": "2026-06-30T23:48:03+00:00"
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -4948,7 +4981,7 @@
       },
       "weather": {
         "tempC": 35,
-        "at": "2026-06-30T23:48:03+00:00"
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -4977,8 +5010,8 @@
         "away": 81
       },
       "weather": {
-        "tempC": 39,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 37,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -5037,8 +5070,8 @@
         "away": 25
       },
       "weather": {
-        "tempC": 32,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 27,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -5050,7 +5083,7 @@
       "date": "2026-07-05",
       "time": "18:00",
       "offset": -6,
-      "home": "A definir",
+      "home": "México",
       "away": "A definir",
       "status": 1,
       "homeScore": null,
@@ -5062,8 +5095,8 @@
       "city": "Cidade do México",
       "venue": "Estadio Azteca",
       "weather": {
-        "tempC": 19,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 18,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -5088,7 +5121,7 @@
       "venue": "AT&T Stadium",
       "weather": {
         "tempC": 35,
-        "at": "2026-06-30T23:48:03+00:00"
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -5137,8 +5170,8 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "weather": {
-        "tempC": 32,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 33,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -5187,8 +5220,8 @@
       "city": "Foxborough",
       "venue": "Gillette Stadium",
       "weather": {
-        "tempC": 29,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 32,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -5212,8 +5245,8 @@
       "city": "Inglewood",
       "venue": "SoFi Stadium",
       "weather": {
-        "tempC": 25,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 24,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -5238,7 +5271,7 @@
       "venue": "Hard Rock Stadium",
       "weather": {
         "tempC": 34,
-        "at": "2026-06-30T23:48:03+00:00"
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -5262,8 +5295,8 @@
       "city": "Kansas City",
       "venue": "Arrowhead Stadium",
       "weather": {
-        "tempC": 24,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 28,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
@@ -5287,8 +5320,8 @@
       "city": "Arlington",
       "venue": "AT&T Stadium",
       "weather": {
-        "tempC": 29,
-        "at": "2026-06-30T23:48:03+00:00"
+        "tempC": 40,
+        "at": "2026-07-01T06:44:53+00:00"
       }
     },
     {
