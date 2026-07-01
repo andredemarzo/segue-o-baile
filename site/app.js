@@ -15,7 +15,6 @@ const el = {
   matchState: document.querySelector("#match-state"),
   dayStrip: document.querySelector("#day-strip"),
   scoreline: document.querySelector("#scoreline"),
-  matchFicha: document.querySelector("#match-ficha"),
   predict: document.querySelector("#predict"),
   cityVenue: document.querySelector("#city-venue"),
   temp: document.querySelector("#temp"),
@@ -387,49 +386,30 @@ function scorelineHtml(match) {
     }
   }
   return `
-    <div class="team">${match.home}${showScore ? teamScorersHtml("home", match) : ""}</div>
+    <div class="team">${match.home}${showScore ? teamScorersHtml("home", match) : ""}${teamMetaHtml("home", match)}</div>
     <div class="versus${showScore ? " has-score" : ""}" id="versus">${middle}</div>
-    <div class="team">${match.away}${showScore ? teamScorersHtml("away", match) : ""}</div>
+    <div class="team">${match.away}${showScore ? teamScorersHtml("away", match) : ""}${teamMetaHtml("away", match)}</div>
   `;
 }
 
-// Item 2 — ficha do jogo ENCERRADO: formação realizada (home/awayTactics [D] da FIFA) + cartões
-// (nome@minuto). Torna VISÍVEL na transmissão o dado tático/disciplinar que o coletor já captura.
-// Só em jogo encerrado com dado; string vazia senão (o elemento fica hidden).
-function matchFichaHtml(match) {
+// Item 2 — a info tática/disciplinar do jogo encerrado ACOPLADA a cada time (dentro do bloco do
+// placar, sob o nome + artilheiros) — NÃO um bloco separado que repetiria o nome. Cada time carrega
+// a SUA formação ([D] da FIFA) e os SEUS cartões (nome@min, marcador amarelo/vermelho). Vazio em jogo
+// não-encerrado ou sem dado. Alinha com o time (home à esquerda, away à direita, via .team:last-child).
+function teamMetaHtml(side, match) {
   if (matchPhase(match) !== "finished") return "";
-  const cards = Array.isArray(match.cards) ? match.cards : [];
-  // UMA linha por TIME (mobile: os times ficam empilhados; a ficha por-time evita a confusão de
-  // "de quem é este cartão?"). Cada linha: nome do time + formação [D] + os cartões DAQUELE time.
-  const rowFor = (team, formation) => {
-    const chips = cards
-      .filter((c) => c.team === team)
-      .map((c) => {
-        const red = c.type === "vermelho";
-        return `<span class="card-chip ${red ? "card-red" : "card-yellow"}">${c.name || ""} ${c.minute || ""}</span>`;
-      })
-      .join("");
-    if (!formation && !chips) return "";
-    return (
-      `<div class="ficha-row"><span class="ficha-team">${team}</span>` +
-      (formation ? `<span class="ficha-form">${formation}</span>` : "") +
-      (chips ? `<span class="ficha-cards">${chips}</span>` : "") +
-      `</div>`
-    );
-  };
-  // defensivo: cartão cujo time não casa nenhum lado (não deve ocorrer após a normalização no
-  // coletor) NÃO some — vai numa 3ª linha sem rótulo, pra nunca perder informação.
-  const orphan = cards
-    .filter((c) => c.team !== match.home && c.team !== match.away)
-    .map((c) => {
-      const red = c.type === "vermelho";
-      return `<span class="card-chip ${red ? "card-red" : "card-yellow"}">${c.name || ""} ${c.minute || ""} (${c.team || "?"})</span>`;
-    })
+  const team = side === "home" ? match.home : match.away;
+  const formation = side === "home" ? match.homeTactics : match.awayTactics;
+  const cards = (Array.isArray(match.cards) ? match.cards : []).filter((c) => c.team === team);
+  if (!formation && !cards.length) return "";
+  const chips = cards
+    .map((c) => `<span class="tcard tcard-${c.type === "vermelho" ? "red" : "yellow"}">${c.name || ""} ${c.minute || ""}</span>`)
     .join("");
   return (
-    rowFor(match.home, match.homeTactics) +
-    rowFor(match.away, match.awayTactics) +
-    (orphan ? `<div class="ficha-row"><span class="ficha-cards">${orphan}</span></div>` : "")
+    `<span class="team-meta">` +
+    (formation ? `<span class="team-form">${formation}</span>` : "") +
+    (chips ? `<span class="team-cards">${chips}</span>` : "") +
+    `</span>`
   );
 }
 
@@ -972,11 +952,6 @@ function renderNext() {
     const ls = document.querySelector("#live-streams");
     if (ls) ls.classList.toggle("demoted", phase === "finished");
     renderPredict(match, phase);
-    if (el.matchFicha) {                        // item 2: formação + cartões do jogo encerrado
-      const _fh = matchFichaHtml(match);
-      el.matchFicha.innerHTML = _fh;
-      el.matchFicha.hidden = !_fh;
-    }
     renderedMatchId = match.id;
     renderedPhase = phase;
     maybeCelebrate(match); // efeito festivo se este card virou jogo de Brasil/Portugal (pré-apito)

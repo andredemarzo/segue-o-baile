@@ -520,62 +520,51 @@ h2 {
   font-variant-numeric: tabular-nums;
 }
 
-/* Item 2 — ficha do jogo encerrado: UMA linha por TIME (nome + formação [D] + os cartões DAQUELE
-   time). Por-time p/ evitar a confusão no mobile (times empilhados) de "de quem é este cartão?". */
-.match-ficha {
-  margin: 12px 0 2px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+/* Item 2 — info tática/disciplinar ACOPLADA a cada time (dentro do bloco do placar, sob nome +
+   artilheiros): a formação [D] como TAG-assinatura discreta + os cartões do time como marcadores.
+   Sem repetir o nome (ele já está no placar). Alinha com o time (away herda o text-align:right). */
+.team-meta {
+  display: block;
+  margin-top: 11px;
+  font-weight: 400;
+  letter-spacing: 0;
 }
-.ficha-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 10px;
-  padding: 7px 11px;
-  border-radius: 12px;
-  background: rgba(19, 138, 82, 0.055);
-}
-.ficha-team {
+.team-form {
+  display: inline-block;
+  font-size: 0.7rem;
   font-weight: 600;
-  font-size: 0.82rem;
-  color: var(--green);
-}
-.ficha-form {
   font-variant-numeric: tabular-nums;
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: rgba(20, 42, 28, 0.74);
-  padding: 1px 9px;
+  letter-spacing: 0.03em;
+  color: var(--green);
+  padding: 2px 9px;
+  border: 1px solid rgba(19, 138, 82, 0.3);
   border-radius: 999px;
-  background: rgba(19, 138, 82, 0.13);
 }
-.ficha-cards {
+.team-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 3px 12px;
+  margin-top: 8px;
 }
-.card-chip {
+.team:last-child .team-cards { justify-content: flex-end; }
+.tcard {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 2px 9px 2px 7px;
-  border-radius: 999px;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-variant-numeric: tabular-nums;
-  color: rgba(20, 42, 28, 0.72);
-  background: rgba(20, 42, 28, 0.05);
+  color: rgba(20, 42, 28, 0.6);
+  white-space: nowrap;
 }
-.card-chip::before {
+.tcard::before {
   content: "";
-  width: 8px;
-  height: 11px;
-  border-radius: 2px;
-  display: inline-block;
+  width: 7px;
+  height: 10px;
+  border-radius: 1.5px;
+  flex: none;
 }
-.card-chip.card-yellow::before { background: #f2c200; }
-.card-chip.card-red::before { background: #d33; }
+.tcard-yellow::before { background: #f2c200; }
+.tcard-red::before { background: #d33; }
 
 .versus {
   display: grid;
