@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-06-30T23:48:34+00:00",
+  "updatedAt": "2026-07-01T02:14:48+00:00",
   "matches": [
     {
       "id": 1,
@@ -4658,7 +4658,7 @@
       "stage": "16-avos de final",
       "group": "",
       "date": "2026-06-30",
-      "time": "19:00",
+      "time": "20:00",
       "offset": -6,
       "home": "México",
       "away": "Equador",
@@ -4971,6 +4971,11 @@
       "placeholderB": "W77",
       "city": "Filadélfia",
       "venue": "Lincoln Financial Field",
+      "prob": {
+        "home": 10,
+        "draw": 9,
+        "away": 81
+      },
       "weather": {
         "tempC": 39,
         "at": "2026-06-30T23:48:03+00:00"
@@ -5003,7 +5008,7 @@
       },
       "weather": {
         "tempC": 34,
-        "at": "2026-06-30T19:05:19+00:00"
+        "at": "2026-07-01T02:14:45+00:00"
       }
     },
     {
@@ -5157,8 +5162,8 @@
       "city": "Vancouver",
       "venue": "BC Place",
       "weather": {
-        "tempC": 21,
-        "at": "2026-06-30T17:13:28+00:00"
+        "tempC": 14,
+        "at": "2026-07-01T02:14:45+00:00"
       }
     },
     {
@@ -5307,8 +5312,8 @@
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
       "weather": {
-        "tempC": 34,
-        "at": "2026-06-30T19:05:19+00:00"
+        "tempC": 33,
+        "at": "2026-07-01T02:14:45+00:00"
       }
     },
     {
