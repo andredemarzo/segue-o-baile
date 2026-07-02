@@ -58,6 +58,11 @@ const liveById = {}; // matchId -> { status, home, away, homePen, awayPen, time 
 // Antes era um par GLOBAL (liveScorers/liveScorersId) só do jogo focal — perdia o artilheiro pós-jogo e
 // nos simultâneos atribuía ao jogo errado. Agora indexado por id: persiste e cobre TODOS os jogos.
 const liveScorersById = {};
+// Formação + cartões AO VIVO (overlay por jogo, espelha liveScorersById): match.id ->
+// { homeTactics, awayTactics, homeCards:[{name,minute,type}], awayCards:[...] }. Lido do MESMO
+// payload /live que já buscamos p/ o placar (m.HomeTeam.Tactics + .Bookings) — sem nova chamada.
+// O pós-jogo (encerrado) segue lendo o matches.json; este overlay é só p/ a janela ao vivo.
+const liveMetaById = {};
 
 let MATCHES = [];
 let CARDS_STATUS = {}; // pendurados/suspensos por seleção (do coletor) — dossiê
@@ -351,6 +356,28 @@ async function fetchScorers(idStage, idMatch) {
   return scorers;
 }
 
+// Extrai formação + cartões do payload /live (o MESMO objeto já buscado p/ o placar). Formato dos
+// cartões IDÊNTICO ao do coletor/pós-jogo ({name, minute:"19'", type:"amarelo"/"vermelho"}) p/ o
+// mesmo render. Bookings.Card: 1=amarelo, 2 (2º amarelo) e 3 (direto)=vermelho. Nome via IdPlayer→Players.
+function parseLiveMeta(m) {
+  const side = (teamObj) => {
+    const t = teamObj || {};
+    const nameById = {};
+    for (const p of t.Players || []) nameById[p.IdPlayer] = fifaText(p.PlayerName) || fifaText(p.ShortName) || "";
+    const cards = (t.Bookings || [])
+      .map((b) => ({
+        name: prettyName(nameById[b.IdPlayer] || ""),
+        minute: fifaText(b.Minute) || "",
+        type: b.Card === 1 ? "amarelo" : "vermelho",
+      }))
+      .filter((c) => c.name);
+    return { tactics: fifaText(t.Tactics) || null, cards };
+  };
+  const h = side(m.HomeTeam);
+  const a = side(m.AwayTeam);
+  return { homeTactics: h.tactics, awayTactics: a.tactics, homeCards: h.cards, awayCards: a.cards };
+}
+
 function teamScorersHtml(side, match) {
   // ao vivo/recém-encerrado: liveScorersById[id] (overlay por jogo); fallback: match.scorers do JSON.
   const live = liveScorersById[match.id];
@@ -405,10 +432,32 @@ function scorelineHtml(match) {
 // a SUA formação ([D] da FIFA) e os SEUS cartões (nome@min, marcador amarelo/vermelho). Vazio em jogo
 // não-encerrado ou sem dado. Alinha com o time (home à esquerda, away à direita, via .team:last-child).
 function teamMetaHtml(side, match) {
-  if (matchPhase(match) !== "finished") return "";
+  const phase = matchPhase(match);
   const team = side === "home" ? match.home : match.away;
-  const formation = side === "home" ? match.homeTactics : match.awayTactics;
-  const cards = (Array.isArray(match.cards) ? match.cards : []).filter((c) => c.team === team);
+  let formation = null;
+  let cards = [];
+  if (phase === "finished") {
+    // PÓS-JOGO (inalterado — funcionou): a ficha vem do matches.json de produção.
+    formation = side === "home" ? match.homeTactics : match.awayTactics;
+    cards = (Array.isArray(match.cards) ? match.cards : []).filter((c) => c.team === team);
+    // Fallback recém-encerrado: o coletor ainda não escreveu a ficha → reusa o overlay ao vivo que já
+    // temos em mão (não deixa formação/cartões PISCAREM na transição vivo→encerrado). Aditivo: só entra
+    // quando o matches.json está vazio; assim que o coletor escreve, ele manda.
+    if (!formation && !cards.length && liveMetaById[match.id]) {
+      const lm = liveMetaById[match.id];
+      formation = side === "home" ? lm.homeTactics : lm.awayTactics;
+      cards = side === "home" ? lm.homeCards : lm.awayCards;
+    }
+  } else if (phase === "live") {
+    // AO VIVO: overlay do payload /live (mesma origem do placar). Sem overlay ainda → nada (não quebra).
+    const lm = liveMetaById[match.id];
+    if (!lm) return "";
+    formation = side === "home" ? lm.homeTactics : lm.awayTactics;
+    cards = side === "home" ? lm.homeCards : lm.awayCards;
+  } else {
+    return ""; // jogo futuro: sem ficha
+  }
+  cards = cards || [];
   if (!formation && !cards.length) return "";
   const chips = cards
     .map((c) => `<span class="tcard tcard-${c.type === "vermelho" ? "red" : "yellow"}">${c.name || ""} ${c.minute || ""}</span>`)
@@ -454,6 +503,7 @@ async function healRecentMatches(now = new Date()) {
         awayPen: m.AwayTeamPenaltyScore,
         time: m.MatchTime,
       };
+      liveMetaById[match.id] = parseLiveMeta(m); // formação + cartões do mesmo payload
       // C3: artilheiros por jogo (all-games). Busca a timeline de jogo ENCERRADO COM gols que ainda não
       // temos — SELETIVO (1× por jogo) p/ não estourar a FIFA. Cobre simultâneos e Resultados sem o cron.
       const goals = (m.HomeTeam ? m.HomeTeam.Score || 0 : 0) + (m.AwayTeam ? m.AwayTeam.Score || 0 : 0);
@@ -499,6 +549,7 @@ async function updateLiveScore() {
       awayPen: m.AwayTeamPenaltyScore,
       time: m.MatchTime,
     };
+    liveMetaById[match.id] = parseLiveMeta(m); // formação + cartões do mesmo payload
     // Artilheiros: só com jogo ao vivo/encerrado e com gols (timeline oficial).
     if ((m.MatchStatus === 3 || m.MatchStatus === 0) && ((home || 0) + (away || 0)) > 0) {
       try {
@@ -965,9 +1016,11 @@ function renderNext() {
     maybeCelebrate(match); // efeito festivo se este card virou jogo de Brasil/Portugal (pré-apito)
   }
 
-  // Placar + marcadores: re-renderiza quando o jogo, a fase OU o placar ao vivo muda.
-  // (Único ponto que escreve o placar — sem dois renderizadores brigando.)
-  const sig = `${match.id}|${phase}|${live ? `${live.home}-${live.away}/${live.homePen}-${live.awayPen}/${live.time}` : ""}|${liveScorersById[match.id] ? liveScorersById[match.id].length : 0}`;
+  // Placar + marcadores: re-renderiza quando o jogo, a fase, o placar ao vivo OU a ficha ao vivo
+  // (formação/cartões) muda. (Único ponto que escreve o placar — sem dois renderizadores brigando.)
+  const lm = liveMetaById[match.id];
+  const metaSig = lm ? `${lm.homeTactics || ""}-${lm.awayTactics || ""}-${(lm.homeCards || []).length}-${(lm.awayCards || []).length}` : "";
+  const sig = `${match.id}|${phase}|${live ? `${live.home}-${live.away}/${live.homePen}-${live.awayPen}/${live.time}` : ""}|${liveScorersById[match.id] ? liveScorersById[match.id].length : 0}|${metaSig}`;
   if (sig !== renderedScoreSig) {
     el.scoreline.innerHTML = scorelineHtml(match);
     renderedScoreSig = sig;

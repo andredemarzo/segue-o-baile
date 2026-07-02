@@ -1798,6 +1798,10 @@ summary:focus-visible {
   .team:last-child {
     text-align: left;
   }
+  /* No stack vertical do mobile o away NÃO espelha (tudo à esquerda). O text-align acima já cuida do
+     nome/artilheiros/formação; os cartões são flex, então o justify precisa do mesmo reset (senão só
+     eles ficam à direita — a inconsistência reportada). */
+  .team:last-child .team-cards { justify-content: flex-start; }
 
   .versus {
     width: 34px;
