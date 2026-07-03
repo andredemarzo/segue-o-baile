@@ -3700,7 +3700,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/hfenWvZ5HAU"
+          "embed": "https://www.youtube.com/embed/F428IT4kc_c"
         },
         {
           "canal": "Globo",
@@ -4047,6 +4047,39 @@
           "regiao": "PT",
           "url": "https://www.sporttv.pt/",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "RTP1",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.rtp.pt/play/direto/rtp1",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "SIC",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://opto.sic.pt/",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "TVI",
+          "tipo": "aberta",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://tviplayer.iol.pt/direto",
+          "confianca": "provavel"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "provavel",
+          "embed": "https://www.youtube.com/embed/live_stream?channel=UCrYhacSar0c5Oq_Qdl3SH-g"
         }
       ]
     },
@@ -4558,5 +4591,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-02T21:57:57+00:00"
+  "updatedAt": "2026-07-03T04:15:31+00:00"
 }
