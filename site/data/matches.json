@@ -2,7 +2,7 @@
   "source": "API oficial da FIFA — api.fifa.com (idCompetition=17, idSeason=285023, language=pt-BR)",
   "sourceUrl": "https://api.fifa.com/api/v3/calendar/matches?idCompetition=17&idSeason=285023&count=400&language=pt-BR",
   "phase": "all",
-  "updatedAt": "2026-07-03T22:39:35+00:00",
+  "updatedAt": "2026-07-04T01:19:19+00:00",
   "matches": [
     {
       "id": 1,
@@ -10463,22 +10463,129 @@
       "offset": -4,
       "home": "Argentina",
       "away": "Cabo Verde",
-      "status": 1,
-      "homeScore": null,
-      "awayScore": null,
+      "status": 0,
+      "homeScore": 3,
+      "awayScore": 2,
       "homePen": null,
       "awayPen": null,
-      "homeTactics": null,
-      "awayTactics": null,
+      "homeTactics": "4-4-2",
+      "awayTactics": "4-1-4-1",
       "placeholderA": "1J",
       "placeholderB": "2H",
       "city": "Miami Gardens",
       "venue": "Hard Rock Stadium",
-      "prob": {
-        "home": 94,
-        "draw": 3,
-        "away": 3
-      },
+      "scorers": [
+        {
+          "name": "Lionel Messi",
+          "minute": "29'",
+          "side": "home"
+        },
+        {
+          "name": "Deroy Duarte",
+          "minute": "59'",
+          "side": "away"
+        },
+        {
+          "name": "Lisandro Martinez",
+          "minute": "92'",
+          "side": "home"
+        },
+        {
+          "name": "Sidny Lopes Cabral",
+          "minute": "103'",
+          "side": "away"
+        },
+        {
+          "name": "Diney Borges",
+          "minute": "111'",
+          "side": "home",
+          "note": "gc"
+        }
+      ],
+      "cards": [
+        {
+          "name": "Kevin Pina",
+          "minute": "68'",
+          "type": "amarelo",
+          "team": "Cabo Verde"
+        },
+        {
+          "name": "Gonzalo Montiel",
+          "minute": "115'",
+          "type": "amarelo",
+          "team": "Argentina"
+        }
+      ],
+      "homeCoach": "Lionel Scaloni",
+      "awayCoach": "Pedro Leitão Brito",
+      "subs": [
+        {
+          "off": "Thiago Almada",
+          "on": "Nico Gonzalez",
+          "minute": "63'",
+          "side": "home"
+        },
+        {
+          "off": "Lautaro Martinez",
+          "on": "Julian Alvarez",
+          "minute": "63'",
+          "side": "home"
+        },
+        {
+          "off": "Rodrigo De Paul",
+          "on": "Leandro Paredes",
+          "minute": "84'",
+          "side": "home"
+        },
+        {
+          "off": "Facundo Medina",
+          "on": "Nicolas Tagliafico",
+          "minute": "85'",
+          "side": "home"
+        },
+        {
+          "off": "Nahuel Molina",
+          "on": "Gonzalo Montiel",
+          "minute": "104'",
+          "side": "home"
+        },
+        {
+          "off": "Nuno Da Costa",
+          "on": "Dailon Livramento",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Laros Duarte",
+          "on": "Jamiro Monteiro",
+          "minute": "67'",
+          "side": "away"
+        },
+        {
+          "off": "Jovane Cabral",
+          "on": "Helio Varela",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Ryan Mendes",
+          "on": "Willy Semedo",
+          "minute": "80'",
+          "side": "away"
+        },
+        {
+          "off": "Kevin Pina",
+          "on": "Gilson Benchimol",
+          "minute": "100'",
+          "side": "away"
+        },
+        {
+          "off": "Deroy Duarte",
+          "on": "Yannick Semedo",
+          "minute": "100'",
+          "side": "away"
+        }
+      ],
       "weather": {
         "tempC": 25,
         "at": "2026-07-03T17:45:32+00:00"
@@ -10847,7 +10954,7 @@
       "date": "2026-07-07",
       "time": "12:00",
       "offset": -4,
-      "home": "A definir",
+      "home": "Argentina",
       "away": "Egito",
       "status": 1,
       "homeScore": null,
@@ -10860,6 +10967,11 @@
       "placeholderB": "W88",
       "city": "Atlanta",
       "venue": "Mercedes-Benz Stadium",
+      "prob": {
+        "home": 88,
+        "draw": 5,
+        "away": 7
+      },
       "weather": {
         "tempC": 31,
         "at": "2026-07-03T17:45:32+00:00"
@@ -11106,111 +11218,68 @@
     }
   ],
   "cardsStatus": {
-    "Escócia": {
+    "Japão": {
       "pendurados": [
-        "Findlay Curtis",
-        "Kenny Mclean",
-        "Aaron Hickey",
-        "Ryan Christie",
-        "Andy Robertson"
+        "Kaishu Sano",
+        "Shogo Taniguchi",
+        "Junnosuke Suzuki",
+        "Daichi Kamada"
       ],
       "suspensos": []
     },
-    "Nova Zelândia": {
+    "RI do Irã": {
       "pendurados": [
-        "Elijah Just",
-        "Sarpreet Singh",
-        "Callum Mccowatt",
-        "Marko Stamenic"
+        "Hossein Kanani",
+        "Ehsan Hajisafi",
+        "Shoja Khalilzadeh",
+        "Ali Nemati"
+      ],
+      "suspensos": [
+        "Saeid Ezatolahi"
+      ]
+    },
+    "Portugal": {
+      "pendurados": [
+        "Ruben Dias",
+        "Nelson Semedo",
+        "Tomas Araujo",
+        "Bernardo Silva",
+        "Renato Veiga"
       ],
       "suspensos": []
     },
-    "Canadá": {
+    "República da Coreia": {
       "pendurados": [
-        "Nathan Saliba",
-        "Derek Cornelius",
-        "Alistair Johnston",
-        "Niko Sigur",
-        "Liam Millar",
-        "Cyle Larin",
-        "Luc De Fougerolles"
+        "Cho Guesung",
+        "Lee Kangin",
+        "Lee Gihyuk",
+        "Paik Seungho"
       ],
       "suspensos": []
     },
-    "Paraguai": {
+    "Bósnia e Herzegovina": {
       "pendurados": [
-        "Gustavo Alfaro",
-        "Carlos Gonzalez",
-        "Andres Cubas",
-        "Alex Arce",
-        "Juan Jose Caceres",
-        "Alejandro Manograsso",
-        "Junior Alonso"
+        "Amar Dedic",
+        "Nikola Katic",
+        "Stjepan Radeljic",
+        "Jovo Lukic",
+        "Edin Dzeko",
+        "Ermin Mahmic",
+        "Ermedin Demirovic",
+        "Sergej Barbarez"
       ],
       "suspensos": [
-        "Matias Galarza",
-        "Miguel Almiron",
-        "Diego Gomez"
+        "Tarik Muharemovic"
       ]
     },
-    "Estados Unidos": {
-      "pendurados": [],
-      "suspensos": [
-        "Folarin Balogun"
-      ]
-    },
-    "Áustria": {
+    "Colômbia": {
       "pendurados": [
-        "Konrad Laimer",
-        "Marcel Sabitzer",
-        "Marko Arnautovic"
-      ],
-      "suspensos": [
-        "Stefan Posch"
-      ]
-    },
-    "Suécia": {
-      "pendurados": [
-        "Isak Hien",
-        "Lucas Bergvall",
-        "Yasin Ayari",
-        "Viktor Gyokeres",
-        "Gabriel Gudmundsson"
+        "Jhon Lucumi",
+        "Johan Mojica",
+        "Jefferson Lerma",
+        "Gustavo Puerta"
       ],
       "suspensos": []
-    },
-    "Equador": {
-      "pendurados": [
-        "Moises Caicedo",
-        "Kendry Paez",
-        "Jordy Alcivar",
-        "Gonzalo Plata",
-        "Jackson Porozo"
-      ],
-      "suspensos": [
-        "Alan Franco",
-        "Piero Hincapie"
-      ]
-    },
-    "Holanda": {
-      "pendurados": [
-        "Crysencio Summerville",
-        "Memphis Depay",
-        "Micky Van De Ven"
-      ],
-      "suspensos": []
-    },
-    "África do Sul": {
-      "pendurados": [
-        "Thalente Mbatha",
-        "Nkosinathi Sibisi",
-        "Aubrey Modiba"
-      ],
-      "suspensos": [
-        "Teboho Mokoena",
-        "Themba Zwane",
-        "Sphephelo Sithole"
-      ]
     },
     "Croácia": {
       "pendurados": [
@@ -11221,196 +11290,221 @@
         "Ivan Perisic"
       ]
     },
-    "Panamá": {
+    "Gana": {
       "pendurados": [
-        "Jose Fajardo",
-        "Cesar Blackman",
-        "Carlos Harvey",
-        "Andres Andrade",
-        "Edgar Yoel Barcenas"
-      ],
-      "suspensos": []
-    },
-    "Colômbia": {
-      "pendurados": [
-        "Jefferson Lerma",
-        "Gustavo Puerta",
-        "Johan Mojica",
-        "Jhon Lucumi"
-      ],
-      "suspensos": []
-    },
-    "Inglaterra": {
-      "pendurados": [
-        "Declan Rice",
-        "Jarell Quansah",
-        "Jude Bellingham"
-      ],
-      "suspensos": []
-    },
-    "Catar": {
-      "pendurados": [
-        "Mahmoud Abunada",
-        "Jassem Gaber"
-      ],
-      "suspensos": [
-        "Ahmed Fathy",
-        "Assim Madibo",
-        "Homam Ahmed"
-      ]
-    },
-    "Bósnia e Herzegovina": {
-      "pendurados": [
-        "Sergej Barbarez",
-        "Ermin Mahmic",
-        "Nikola Katic",
-        "Ermedin Demirovic",
-        "Jovo Lukic",
-        "Stjepan Radeljic",
-        "Edin Dzeko",
-        "Amar Dedic"
-      ],
-      "suspensos": [
-        "Tarik Muharemovic"
-      ]
-    },
-    "Tunísia": {
-      "pendurados": [
-        "Rani Khedira"
-      ],
-      "suspensos": []
-    },
-    "Arábia Saudita": {
-      "pendurados": [
-        "Saud Abdulhamid",
-        "Feras Albrikan",
-        "Mohamed Kanno",
-        "Nasser Aldawsari",
-        "Salem Aldawsari",
-        "Abdulelah Alamri"
-      ],
-      "suspensos": []
-    },
-    "Jordânia": {
-      "pendurados": [
-        "Husam Abudahab",
-        "Mohannad Abutaha",
-        "Mohammad Abuzraiq",
-        "Yazan Alarab"
+        "Kojo Peprah Oppong",
+        "Inaki Williams",
+        "Caleb Yirenkyi"
       ],
       "suspensos": []
     },
     "Austrália": {
       "pendurados": [
         "Jackson Irvine",
-        "Jacob Italiano",
         "Harry Souttar",
+        "Alessandro Circati",
         "Jordan Bos",
-        "Alessandro Circati"
+        "Jacob Italiano"
       ],
       "suspensos": []
     },
-    "RD Congo": {
+    "RD do Congo": {
       "pendurados": [
-        "Noah Sadiki"
+        "Nathanael Mbuku",
+        "Samuel Moutoussamy",
+        "Noah Sadiki",
+        "Chancel Mbemba",
+        "Charles Pickel"
       ],
       "suspensos": []
     },
-    "Cabo Verde": {
+    "Escócia": {
       "pendurados": [
-        "Wagner Pina",
-        "Diney Borges"
+        "Aaron Hickey",
+        "Findlay Curtis",
+        "Andy Robertson",
+        "Ryan Christie",
+        "Kenny Mclean"
       ],
+      "suspensos": []
+    },
+    "Estados Unidos": {
+      "pendurados": [],
       "suspensos": [
-        "Sidny Lopes Cabral"
+        "Folarin Balogun"
       ]
     },
-    "RI do Irã": {
+    "Argélia": {
       "pendurados": [
-        "Hossein Kanani",
-        "Ali Nemati",
-        "Ehsan Hajisafi",
-        "Shoja Khalilzadeh"
-      ],
-      "suspensos": [
-        "Saeid Ezatolahi"
-      ]
-    },
-    "Egito": {
-      "pendurados": [
-        "Mahmoud Saber",
-        "Marawan Attia",
-        "Ahmed Fatouh",
-        "Haissem Hassan"
-      ],
-      "suspensos": [
-        "Mohanad Lashin",
-        "Yasser Ibrahim"
-      ]
-    },
-    "Turquia": {
-      "pendurados": [
-        "Eren Elmali",
-        "Yunus Akgun",
-        "Vincenzo Montella"
+        "Fares Chaibi",
+        "Ramiz Zerrouki",
+        "Hicham Boudaoui"
       ],
       "suspensos": []
     },
-    "Costa do Marfim": {
+    "Panamá": {
       "pendurados": [
-        "Nicolas Pepe",
-        "Guela Doue",
-        "Franck Kessie",
-        "Seko Fofana"
+        "Cesar Blackman",
+        "Edgar Yoel Barcenas",
+        "Carlos Harvey",
+        "Andres Andrade",
+        "Jose Fajardo"
       ],
       "suspensos": []
     },
-    "Haiti": {
+    "África do Sul": {
       "pendurados": [
-        "Frantzdy Pierrot",
-        "Johny Placide",
-        "Carlens Arcus",
-        "Jean-Ricner Bellegarde",
-        "Josue Casimir",
-        "Danley Jean Jacques",
-        "Duckens Nazon"
-      ],
-      "suspensos": []
-    },
-    "Bélgica": {
-      "pendurados": [
-        "Rudi Garcia",
-        "Maxim De Cuyper",
-        "Timothy Castagne",
-        "Brandon Mechele",
-        "Romelu Lukaku"
+        "Nkosinathi Sibisi",
+        "Aubrey Modiba",
+        "Thalente Mbatha"
       ],
       "suspensos": [
-        "Nathan Ngoy"
+        "Sphephelo Sithole",
+        "Themba Zwane",
+        "Teboho Mokoena"
       ]
+    },
+    "Jordânia": {
+      "pendurados": [
+        "Mohammad Abuzraiq",
+        "Husam Abudahab",
+        "Mohannad Abutaha",
+        "Yazan Alarab"
+      ],
+      "suspensos": []
     },
     "EUA": {
       "pendurados": [
-        "Sebastian Berhalter",
         "Folarin Balogun",
+        "Sebastian Berhalter",
+        "Tyler Adams",
         "Chris Richards",
-        "Antonee Robinson",
-        "Tyler Adams"
+        "Antonee Robinson"
       ],
       "suspensos": []
     },
-    "Uzbequistão": {
+    "Argentina": {
       "pendurados": [
-        "Sherzod Nasrullaev",
-        "Odiljon Xamrobekov"
+        "Facundo Medina",
+        "Gonzalo Montiel",
+        "Leandro Paredes"
+      ],
+      "suspensos": []
+    },
+    "Egito": {
+      "pendurados": [
+        "Ahmed Fatouh",
+        "Haissem Hassan",
+        "Mahmoud Saber",
+        "Marawan Attia"
       ],
       "suspensos": [
-        "Abdukodir Khusanov"
+        "Yasser Ibrahim",
+        "Mohanad Lashin"
       ]
     },
-    "Staff": {
+    "Tchéquia": {
       "pendurados": [
-        "Saafan Elsaghir"
+        "Ladislav Krejci"
+      ],
+      "suspensos": []
+    },
+    "Canadá": {
+      "pendurados": [
+        "Nathan Saliba",
+        "Alistair Johnston",
+        "Niko Sigur",
+        "Cyle Larin",
+        "Liam Millar",
+        "Derek Cornelius",
+        "Luc De Fougerolles"
+      ],
+      "suspensos": []
+    },
+    "Paraguai": {
+      "pendurados": [
+        "Junior Alonso",
+        "Alejandro Manograsso",
+        "Juan Jose Caceres",
+        "Carlos Gonzalez",
+        "Alex Arce",
+        "Andres Cubas",
+        "Gustavo Alfaro"
+      ],
+      "suspensos": [
+        "Diego Gomez",
+        "Miguel Almiron",
+        "Matias Galarza"
+      ]
+    },
+    "Uruguai": {
+      "pendurados": [
+        "Nicolas De La Cruz",
+        "Guillermo Varela",
+        "Juan Manuel Sanabria",
+        "Mathias Olivera",
+        "Rodrigo Bentancur"
+      ],
+      "suspensos": [
+        "Agustin Canobbio"
+      ]
+    },
+    "Brasil": {
+      "pendurados": [
+        "Fabinho",
+        "Douglas Santos",
+        "Roger Ibanez"
+      ],
+      "suspensos": [
+        "Danilo",
+        "Casemiro"
+      ]
+    },
+    "Haiti": {
+      "pendurados": [
+        "Josue Casimir",
+        "Jean-Ricner Bellegarde",
+        "Frantzdy Pierrot",
+        "Duckens Nazon",
+        "Johny Placide",
+        "Danley Jean Jacques",
+        "Carlens Arcus"
+      ],
+      "suspensos": []
+    },
+    "Noruega": {
+      "pendurados": [
+        "Patrick Berg",
+        "Antonio Nusa"
+      ],
+      "suspensos": []
+    },
+    "Arábia Saudita": {
+      "pendurados": [
+        "Salem Aldawsari",
+        "Mohamed Kanno",
+        "Nasser Aldawsari",
+        "Feras Albrikan",
+        "Abdulelah Alamri",
+        "Saud Abdulhamid"
+      ],
+      "suspensos": []
+    },
+    "Suíça": {
+      "pendurados": [
+        "Granit Xhaka",
+        "Nico Elvedi",
+        "Denis Zakaria"
+      ],
+      "suspensos": []
+    },
+    "Alemanha": {
+      "pendurados": [
+        "Julian Nagelsmann",
+        "Kai Havertz",
+        "Mads Buttgereit",
+        "Jamal Musiala",
+        "Aleksandar Pavlovic"
       ],
       "suspensos": []
     },
@@ -11423,160 +11517,66 @@
         "Cesar Montes"
       ]
     },
-    "Argélia": {
+    "Iraque": {
       "pendurados": [
-        "Hicham Boudaoui",
-        "Fares Chaibi",
-        "Ramiz Zerrouki"
-      ],
-      "suspensos": []
-    },
-    "Gana": {
-      "pendurados": [
-        "Inaki Williams",
-        "Caleb Yirenkyi",
-        "Kojo Peprah Oppong"
-      ],
-      "suspensos": []
-    },
-    "Uruguai": {
-      "pendurados": [
-        "Guillermo Varela",
-        "Nicolas De La Cruz",
-        "Rodrigo Bentancur",
-        "Mathias Olivera",
-        "Juan Manuel Sanabria"
+        "Zaid Tahseen",
+        "Merchas Doski"
       ],
       "suspensos": [
-        "Agustin Canobbio"
+        "Rebin Sulaka",
+        "Amir Alammari"
       ]
     },
-    "RD do Congo": {
+    "Bélgica": {
       "pendurados": [
-        "Chancel Mbemba",
-        "Samuel Moutoussamy",
-        "Nathanael Mbuku",
-        "Noah Sadiki",
-        "Charles Pickel"
-      ],
-      "suspensos": []
-    },
-    "República da Coreia": {
-      "pendurados": [
-        "Lee Gihyuk",
-        "Cho Guesung",
-        "Paik Seungho",
-        "Lee Kangin"
-      ],
-      "suspensos": []
-    },
-    "Brasil": {
-      "pendurados": [
-        "Douglas Santos",
-        "Roger Ibanez",
-        "Fabinho"
+        "Brandon Mechele",
+        "Timothy Castagne",
+        "Maxim De Cuyper",
+        "Romelu Lukaku",
+        "Rudi Garcia"
       ],
       "suspensos": [
-        "Danilo",
-        "Casemiro"
+        "Nathan Ngoy"
       ]
-    },
-    "Espanha": {
-      "pendurados": [
-        "Alex Baena",
-        "Pedri"
-      ],
-      "suspensos": []
-    },
-    "Portugal": {
-      "pendurados": [
-        "Bernardo Silva",
-        "Tomas Araujo",
-        "Nelson Semedo",
-        "Renato Veiga",
-        "Ruben Dias"
-      ],
-      "suspensos": []
-    },
-    "Alemanha": {
-      "pendurados": [
-        "Kai Havertz",
-        "Mads Buttgereit",
-        "Aleksandar Pavlovic",
-        "Jamal Musiala",
-        "Julian Nagelsmann"
-      ],
-      "suspensos": []
     },
     "Curaçau": {
       "pendurados": [
-        "Leandro Bacuna",
         "Jurien Gaari",
-        "Livano Comenencia"
+        "Livano Comenencia",
+        "Leandro Bacuna"
       ],
       "suspensos": [
-        "Gervane Kastaneer",
-        "Juninho Bacuna"
+        "Juninho Bacuna",
+        "Gervane Kastaneer"
       ]
     },
-    "Iraque": {
+    "Nova Zelândia": {
       "pendurados": [
-        "Merchas Doski",
-        "Zaid Tahseen"
-      ],
-      "suspensos": [
-        "Amir Alammari",
-        "Rebin Sulaka"
-      ]
-    },
-    "Japão": {
-      "pendurados": [
-        "Shogo Taniguchi",
-        "Junnosuke Suzuki",
-        "Kaishu Sano",
-        "Daichi Kamada"
+        "Marko Stamenic",
+        "Sarpreet Singh",
+        "Callum Mccowatt",
+        "Elijah Just"
       ],
       "suspensos": []
     },
-    "França": {
+    "Costa do Marfim": {
       "pendurados": [
-        "Aurelien Tchouameni"
+        "Franck Kessie",
+        "Guela Doue",
+        "Seko Fofana",
+        "Nicolas Pepe"
       ],
       "suspensos": []
     },
-    "Suíça": {
+    "Suécia": {
       "pendurados": [
-        "Nico Elvedi",
-        "Granit Xhaka",
-        "Denis Zakaria"
+        "Viktor Gyokeres",
+        "Lucas Bergvall",
+        "Yasin Ayari",
+        "Gabriel Gudmundsson",
+        "Isak Hien"
       ],
       "suspensos": []
-    },
-    "Noruega": {
-      "pendurados": [
-        "Patrick Berg",
-        "Antonio Nusa"
-      ],
-      "suspensos": []
-    },
-    "Argentina": {
-      "pendurados": [
-        "Leandro Paredes",
-        "Facundo Medina"
-      ],
-      "suspensos": []
-    },
-    "Tchéquia": {
-      "pendurados": [
-        "Ladislav Krejci"
-      ],
-      "suspensos": []
-    },
-    "Marrocos": {
-      "pendurados": [],
-      "suspensos": [
-        "Issa Diop"
-      ]
     },
     "Senegal": {
       "pendurados": [
@@ -11585,6 +11585,120 @@
         "Abdoulaye Seck"
       ],
       "suspensos": []
+    },
+    "Uzbequistão": {
+      "pendurados": [
+        "Sherzod Nasrullaev",
+        "Odiljon Xamrobekov"
+      ],
+      "suspensos": [
+        "Abdukodir Khusanov"
+      ]
+    },
+    "Inglaterra": {
+      "pendurados": [
+        "Declan Rice",
+        "Jude Bellingham",
+        "Jarell Quansah"
+      ],
+      "suspensos": []
+    },
+    "Equador": {
+      "pendurados": [
+        "Kendry Paez",
+        "Moises Caicedo",
+        "Jordy Alcivar",
+        "Jackson Porozo",
+        "Gonzalo Plata"
+      ],
+      "suspensos": [
+        "Alan Franco",
+        "Piero Hincapie"
+      ]
+    },
+    "Holanda": {
+      "pendurados": [
+        "Micky Van De Ven",
+        "Crysencio Summerville",
+        "Memphis Depay"
+      ],
+      "suspensos": []
+    },
+    "Catar": {
+      "pendurados": [
+        "Mahmoud Abunada",
+        "Jassem Gaber"
+      ],
+      "suspensos": [
+        "Homam Ahmed",
+        "Assim Madibo",
+        "Ahmed Fathy"
+      ]
+    },
+    "Turquia": {
+      "pendurados": [
+        "Yunus Akgun",
+        "Eren Elmali",
+        "Vincenzo Montella"
+      ],
+      "suspensos": []
+    },
+    "Áustria": {
+      "pendurados": [
+        "Marko Arnautovic",
+        "Konrad Laimer",
+        "Marcel Sabitzer"
+      ],
+      "suspensos": [
+        "Stefan Posch"
+      ]
+    },
+    "França": {
+      "pendurados": [
+        "Aurelien Tchouameni"
+      ],
+      "suspensos": []
+    },
+    "Espanha": {
+      "pendurados": [
+        "Pedri",
+        "Alex Baena"
+      ],
+      "suspensos": []
+    },
+    "Cabo Verde": {
+      "pendurados": [
+        "Wagner Pina",
+        "Diney Borges",
+        "Kevin Pina"
+      ],
+      "suspensos": [
+        "Sidny Lopes Cabral"
+      ]
+    },
+    "Tunísia": {
+      "pendurados": [
+        "Rani Khedira"
+      ],
+      "suspensos": []
+    },
+    "RD Congo": {
+      "pendurados": [
+        "Noah Sadiki"
+      ],
+      "suspensos": []
+    },
+    "Staff": {
+      "pendurados": [
+        "Saafan Elsaghir"
+      ],
+      "suspensos": []
+    },
+    "Marrocos": {
+      "pendurados": [],
+      "suspensos": [
+        "Issa Diop"
+      ]
     }
   }
 }
