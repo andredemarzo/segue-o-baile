@@ -3923,7 +3923,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/yZ7CApJ15L0"
+          "embed": "https://www.youtube.com/embed/nJtyshk43Xo"
         },
         {
           "canal": "Globo",
@@ -4271,6 +4271,15 @@
           "regiao": "PT",
           "url": "https://www.sporttv.pt/",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/d0y2AtEnzpo"
         }
       ]
     },
@@ -4618,5 +4627,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-05T12:02:25+00:00"
+  "updatedAt": "2026-07-05T19:58:29+00:00"
 }
