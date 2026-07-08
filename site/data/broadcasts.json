@@ -4321,6 +4321,15 @@
           "regiao": "PT",
           "url": "https://www.sporttv.pt/",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/tSbjXBWwRIA"
         }
       ]
     },
@@ -4362,6 +4371,15 @@
           "regiao": "PT",
           "url": "https://www.sporttv.pt/",
           "confianca": "confirmado"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/UA44pR_tosw"
         }
       ]
     },
@@ -4627,5 +4645,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-07T23:26:44+00:00"
+  "updatedAt": "2026-07-08T18:12:41+00:00"
 }
