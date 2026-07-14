@@ -4435,7 +4435,7 @@
           "regiao": "BR",
           "url": "https://www.youtube.com/@CazeTV/live",
           "confianca": "confirmado",
-          "embed": "https://www.youtube.com/embed/oT27XPYJo_U"
+          "embed": "https://www.youtube.com/embed/42gE-e0g2zQ"
         },
         {
           "canal": "Globo",
@@ -4486,6 +4486,15 @@
           "regiao": "PT",
           "url": "https://tviplayer.iol.pt/direto",
           "confianca": "provavel"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/SSABQ3fW58o"
         }
       ]
     },
@@ -4551,6 +4560,15 @@
           "regiao": "PT",
           "url": "https://tviplayer.iol.pt/direto",
           "confianca": "provavel"
+        },
+        {
+          "canal": "LiveModeTV",
+          "tipo": "streaming",
+          "acesso": "grátis",
+          "regiao": "PT",
+          "url": "https://www.youtube.com/@LiveModeTV_PT/live",
+          "confianca": "confirmado",
+          "embed": "https://www.youtube.com/embed/M9lgKC8X30k"
         }
       ]
     },
@@ -4645,5 +4663,5 @@
       ]
     }
   },
-  "updatedAt": "2026-07-12T12:13:21+00:00"
+  "updatedAt": "2026-07-14T18:47:52+00:00"
 }
