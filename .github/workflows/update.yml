@@ -2,9 +2,11 @@ name: Atualiza dados da Copa
 
 # Roda na nuvem (independente de qualquer Mac). A coleta é "gated" por janela de
 # jogo dentro do script, então a maioria das execuções é um no-op barato.
+# ⛔ CONGELADO (20/07/2026, decisão do operador): a Copa terminou (Espanha campeã, 19/07) e o site
+# fica no ar como REGISTRO — o `schedule` de coleta foi REMOVIDO para congelar o dado (nenhuma
+# escrita automática pode mais alterar o registro; e a FIFA pode desligar o endpoint da temporada).
+# O deploy continua funcionando normalmente via `push` e `workflow_dispatch` (com force, se preciso).
 on:
-  schedule:
-    - cron: "*/15 * * * *"   # a cada ~15 min (agendador do GitHub é best-effort)
   push:                       # mudanças de código/dados publicam na hora
     branches: [main]
     paths:
